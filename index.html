@@ -414,7 +414,7 @@ input,select{font-family:var(--font);outline:none}
 </div>
 
 <!-- MAIN APP -->
-<div id="app">
+<div id="app" style="display:none">
   <header class="topbar">
     <div class="logo">Kick<span>ly</span></div>
     <div class="league-chips" id="leagueChips">
@@ -624,15 +624,10 @@ async function handleAuth() {
     if (authMode === 'login') {
       const { data, error } = await sb.auth.signInWithPassword({ email, password: pass });
       if (error) throw error;
-      // onAuthStateChange dispara showApp — si no lo hace en 3s, lo forzamos
-      setTimeout(async () => {
-        const { data: sd } = await sb.auth.getSession();
-        if (sd?.session?.user && document.getElementById('app').style.display !== 'flex') {
-          currentUser = sd.session.user;
-          await loadPlan();
-          showApp();
-        }
-      }, 1500);
+      // Forzar entrada si onAuthStateChange tarda (red lenta)
+      if (data?.session?.user) {
+        await initApp(data.session.user);
+      }
 
     } else {
       const { data, error } = await sb.auth.signUp({
@@ -699,39 +694,67 @@ document.addEventListener('keydown', e => {
   }
 });
 async function logout(){
+  appShown = false;
   await sb.auth.signOut();
-  document.getElementById('app').classList.remove('visible');
-  document.getElementById('authWall').style.display = 'flex';
+  showAuthWall();
   switchAuthTab('login');
   document.getElementById('authEmail').value = '';
   document.getElementById('authPass').value = '';
   document.getElementById('authPassConfirm').value = '';
 }
 
-// Procesar token del email de confirmación en la URL
-(async () => {
-  const hash = window.location.hash;
-  if (hash && hash.includes('access_token')) {
-    // Supabase pone el token en el hash — lo procesamos
-    const { data, error } = await sb.auth.getSession();
-    if (!error && data.session) {
-      window.history.replaceState(null, '', window.location.pathname);
-    }
-  }
-})();
+// ── GESTIÓN DE SESIÓN ──────────────────
+let appShown = false;
 
+function showAuthWall() {
+  appShown = false;
+  document.getElementById('authWall').style.display = 'flex';
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('app').classList.remove('visible');
+  setAuthLoading(false);
+}
+
+async function initApp(user) {
+  if (appShown) return;
+  appShown = true;
+  currentUser = user;
+  setAuthLoading(false);
+  try { await loadPlan(); } catch(e) { userPlan = 'free'; }
+  document.getElementById('authWall').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
+  document.getElementById('app').classList.add('visible');
+  const badge = document.getElementById('planBadge');
+  badge.textContent = userPlan.toUpperCase();
+  badge.className = 'plan-badge plan-' + userPlan;
+  document.getElementById('tgBanner').style.display = userPlan !== 'free' ? 'flex' : 'none';
+  buildCalendar();
+  loadMatches();
+}
+
+// Listener principal de sesión
 sb.auth.onAuthStateChange(async (event, session) => {
+  console.log('Auth event:', event, !!session);
   if (session?.user) {
-    currentUser = session.user;
-    setAuthLoading(false); // resetear botón por si acaso
-    await loadPlan();
-    showApp();
-  } else {
-    document.getElementById('authWall').style.display = 'flex';
-    document.getElementById('app').classList.remove('visible');
-    setAuthLoading(false); // resetear botón
+    await initApp(session.user);
+  } else if (event === 'SIGNED_OUT' || event === 'INITIAL_SESSION') {
+    showAuthWall();
   }
 });
+
+// Comprobar sesión existente al cargar (por si onAuthStateChange no dispara)
+setTimeout(async () => {
+  if (appShown) return;
+  try {
+    const { data } = await sb.auth.getSession();
+    if (data?.session?.user) {
+      await initApp(data.session.user);
+    } else {
+      showAuthWall();
+    }
+  } catch(e) {
+    showAuthWall();
+  }
+}, 800);
 
 async function loadPlan(){
   try{
@@ -743,16 +766,7 @@ async function loadPlan(){
     userPlan='free';
   }
 }
-function showApp(){
-  document.getElementById('authWall').style.display='none';
-  document.getElementById('app').classList.add('visible');
-  const badge=document.getElementById('planBadge');
-  badge.textContent=userPlan.toUpperCase();
-  badge.className='plan-badge plan-'+userPlan;
-  document.getElementById('tgBanner').style.display=userPlan!=='free'?'flex':'none';
-  buildCalendar();
-  loadMatches();
-}
+// showApp reemplazada por initApp arriba
 
 /* ═══════════════════════════════════════
    CALENDAR
