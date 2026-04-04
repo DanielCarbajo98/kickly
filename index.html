@@ -10,9 +10,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://js.stripe.com/v3/"></script>
 <style>
-/* ═══════════════════════════════════════════
-   VARIABLES & RESET
-═══════════════════════════════════════════ */
 :root {
   --bg:       #080a0f;
   --bg2:      #0d1117;
@@ -46,27 +43,18 @@ a{color:inherit;text-decoration:none}
 button{font-family:var(--font);cursor:pointer;border:none;outline:none}
 input{font-family:var(--font);outline:none}
 
-/* ═══════════════════════════════════════════
-   NOISE TEXTURE OVERLAY
-═══════════════════════════════════════════ */
 body::before{
   content:'';position:fixed;inset:0;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events:none;z-index:999;opacity:.4;
 }
 
-/* ═══════════════════════════════════════════
-   ANIMATIONS
-═══════════════════════════════════════════ */
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
 @keyframes glow{0%,100%{box-shadow:0 0 20px rgba(0,240,160,0.1)}50%{box-shadow:0 0 40px rgba(0,240,160,0.25)}}
 
-/* ═══════════════════════════════════════════
-   AUTH WALL — pantalla de login/registro
-═══════════════════════════════════════════ */
 #authWall{
   position:fixed;inset:0;z-index:500;
   background:var(--bg);
@@ -134,15 +122,9 @@ body::before{
 .auth-feat-icon{font-size:18px;margin-bottom:4px}
 .auth-feat-text{font-size:11px;color:var(--muted);line-height:1.4}
 
-/* ═══════════════════════════════════════════
-   MAIN APP (oculto hasta login)
-═══════════════════════════════════════════ */
 #app{display:none;flex-direction:column;min-height:100vh}
 #app.visible{display:flex}
 
-/* ═══════════════════════════════════════════
-   TOPBAR
-═══════════════════════════════════════════ */
 .topbar{
   position:sticky;top:0;z-index:100;
   background:rgba(8,10,15,0.85);backdrop-filter:blur(24px);
@@ -187,15 +169,9 @@ body::before{
 }
 .btn-logout:hover{color:var(--text);border-color:var(--border2)}
 
-/* ═══════════════════════════════════════════
-   LAYOUT
-═══════════════════════════════════════════ */
 .main{display:flex;flex:1}
 .content{flex:1;padding:1.5rem;min-width:0}
 
-/* ═══════════════════════════════════════════
-   CALENDAR FILTER
-═══════════════════════════════════════════ */
 .cal-strip{
   display:flex;gap:6px;margin-bottom:1.25rem;overflow-x:auto;padding-bottom:4px;
 }
@@ -214,9 +190,6 @@ body::before{
 .cal-num{font-size:20px;font-weight:700;font-family:var(--display);color:var(--text);line-height:1.1}
 .cal-count{font-size:10px;color:var(--muted);margin-top:2px}
 
-/* ═══════════════════════════════════════════
-   SEARCH + FILTERS
-═══════════════════════════════════════════ */
 .toolbar{display:flex;gap:8px;margin-bottom:1.25rem;flex-wrap:wrap}
 .search-wrap{position:relative;flex:1;min-width:180px}
 .search-wrap input{
@@ -237,9 +210,6 @@ body::before{
 .fbtn.active{border-color:var(--accent);color:var(--accent);background:rgba(0,240,160,.07)}
 .fbtn.value-f.active{border-color:var(--accent3);color:var(--accent3);background:rgba(255,92,53,.07)}
 
-/* ═══════════════════════════════════════════
-   MATCH CARDS
-═══════════════════════════════════════════ */
 .matches{display:flex;flex-direction:column;gap:8px}
 .mcard{
   background:var(--bg2);border:1px solid var(--border);
@@ -293,9 +263,6 @@ body::before{
 .expand-icon{font-size:16px;color:var(--dim);transition:transform .2s}
 .mcard.expanded .expand-icon{transform:rotate(180deg)}
 
-/* ═══════════════════════════════════════════
-   CARD BODY — TABS
-═══════════════════════════════════════════ */
 .card-body{display:none;border-top:1px solid var(--border);background:var(--bg)}
 .mcard.expanded .card-body{display:block}
 
@@ -315,9 +282,6 @@ body::before{
 .tab-panel{display:none;padding:16px}
 .tab-panel.active{display:block;animation:fadeUp .15s ease}
 
-/* ═══════════════════════════════════════════
-   OVERVIEW TAB
-═══════════════════════════════════════════ */
 .prob-3way{
   display:grid;grid-template-columns:1fr 70px 1fr;
   gap:8px;align-items:center;margin-bottom:14px;
@@ -350,9 +314,6 @@ body::before{
 .inj-type{color:var(--danger);font-size:11px;background:rgba(255,59,59,.1);padding:2px 6px;border-radius:3px}
 .inj-when{font-size:11px;color:var(--dim);font-family:var(--mono);margin-left:auto}
 
-/* ═══════════════════════════════════════════
-   VALUE BETS TAB
-═══════════════════════════════════════════ */
 .vbets-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
 .vbet{
   background:var(--bg3);border:1px solid var(--border);
@@ -376,23 +337,17 @@ body::before{
 .vb-reason{font-size:11px;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px solid var(--border);line-height:1.5}
 .vb-reason strong{color:var(--accent)}
 
-/* ═══════════════════════════════════════════
-   H2H TAB
-═══════════════════════════════════════════ */
 .h2h-sum{display:flex;gap:8px;margin-bottom:14px}
 .h2h-box{flex:1;background:var(--bg3);border-radius:var(--r2);padding:10px;text-align:center}
 .h2h-num{font-size:24px;font-weight:800;font-family:var(--display);color:var(--text)}
 .h2h-lbl{font-size:10px;color:var(--muted);margin-top:2px}
 .h2h-match{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
 .h2h-match:last-child{border:none}
-.h2h-date{color:var(--dim);font-family:var(--mono);width:75px;flex-shrink:0}
+.h2h-date{color:var(--dim);font-family:var(--mono);width:90px;flex-shrink:0}
 .h2h-teams{flex:1;display:flex;justify-content:space-between;align-items:center;gap:6px}
-.h2h-res{font-family:var(--mono);font-weight:700;color:var(--text);padding:2px 9px;background:var(--bg4);border-radius:4px;min-width:42px;text-align:center}
-.h2h-comp{font-size:10px;color:var(--dim);width:50px;text-align:right;flex-shrink:0}
+.h2h-res{font-family:var(--mono);font-weight:700;color:var(--text);padding:2px 9px;background:var(--bg4);border-radius:4px;min-width:50px;text-align:center}
+.h2h-comp{font-size:10px;color:var(--dim);width:70px;text-align:right;flex-shrink:0}
 
-/* ═══════════════════════════════════════════
-   PREDICTIONS TAB
-═══════════════════════════════════════════ */
 .preds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
 .pred{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:10px}
 .pred-market{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
@@ -405,9 +360,6 @@ body::before{
 .conf-mid{color:var(--warning)}
 .conf-lo{color:var(--danger)}
 
-/* ═══════════════════════════════════════════
-   PAYWALL — plan upgrade
-═══════════════════════════════════════════ */
 .paywall{
   padding:2rem;text-align:center;
 }
@@ -438,9 +390,6 @@ body::before{
 .btn-upgrade:hover{opacity:.85}
 .btn-upgrade.secondary{background:var(--bg4);color:var(--text)}
 
-/* ═══════════════════════════════════════════
-   LOADING SKELETON
-═══════════════════════════════════════════ */
 .skeleton{
   background:linear-gradient(90deg,var(--bg3) 25%,var(--bg4) 50%,var(--bg3) 75%);
   background-size:200% 100%;
@@ -448,9 +397,6 @@ body::before{
   border-radius:var(--r);
 }
 
-/* ═══════════════════════════════════════════
-   UPGRADE MODAL
-═══════════════════════════════════════════ */
 .modal-overlay{
   position:fixed;inset:0;z-index:800;
   background:rgba(0,0,0,.75);backdrop-filter:blur(8px);
@@ -491,9 +437,6 @@ body::before{
 }
 .modal-close:hover{color:var(--text)}
 
-/* ═══════════════════════════════════════════
-   TOAST
-═══════════════════════════════════════════ */
 .toast{
   position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);
   background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);
@@ -504,9 +447,6 @@ body::before{
 .toast.success{border-color:rgba(0,240,160,.3);color:var(--accent)}
 .toast.error{border-color:rgba(255,59,59,.3);color:#ff7a7a}
 
-/* ═══════════════════════════════════════════
-   TELEGRAM BANNER
-═══════════════════════════════════════════ */
 .tg-banner{
   background:linear-gradient(135deg,rgba(0,240,160,.08),rgba(0,87,255,.08));
   border:1px solid rgba(0,240,160,.15);border-radius:var(--r2);
@@ -524,25 +464,16 @@ body::before{
 }
 .btn-tg:hover{opacity:.85}
 
-/* ═══════════════════════════════════════════
-   EMPTY STATE
-═══════════════════════════════════════════ */
 .empty{text-align:center;padding:3rem 1rem}
 .empty-icon{font-size:40px;margin-bottom:12px;opacity:.4}
 .empty-text{font-size:14px;color:var(--muted)}
 
-/* ═══════════════════════════════════════════
-   LOADER
-═══════════════════════════════════════════ */
 .loader{
   width:20px;height:20px;border:2px solid var(--border2);
   border-top-color:var(--accent);border-radius:50%;
   animation:spin .6s linear infinite;margin:0 auto;
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════ */
 @media(max-width:640px){
   .topbar{padding:0 1rem}
   .content{padding:1rem}
@@ -554,9 +485,6 @@ body::before{
 </head>
 <body>
 
-<!-- ══════════════════════════════════════
-     AUTH WALL
-══════════════════════════════════════ -->
 <div id="authWall">
   <div class="auth-container">
     <div class="auth-logo">
@@ -603,18 +531,13 @@ body::before{
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     MAIN APP
-══════════════════════════════════════ -->
 <div id="app">
-
-  <!-- TOPBAR -->
   <header class="topbar">
     <div class="logo">Kick<span>ly</span></div>
     <div class="league-chips" id="leagueChips">
       <button class="chip active" data-league="all">Todos</button>
       <button class="chip" data-league="laliga">🇪🇸 La Liga</button>
-      <button class="chip" data-league="premier">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier</button>
+      <button class="chip" data-league="premier">🏴 Premier</button>
       <button class="chip" data-league="bundesliga">🇩🇪 Bundesliga</button>
       <button class="chip" data-league="seriea">🇮🇹 Serie A</button>
       <button class="chip" data-league="ligue1">🇫🇷 Ligue 1</button>
@@ -628,11 +551,9 @@ body::before{
     </div>
   </header>
 
-  <!-- MAIN -->
   <div class="main">
     <div class="content" id="mainContent">
 
-      <!-- TELEGRAM BANNER (solo Pro/Premium) -->
       <div class="tg-banner" id="tgBanner" style="display:none">
         <div class="tg-icon">📱</div>
         <div class="tg-text">
@@ -642,10 +563,8 @@ body::before{
         <a href="https://t.me/KicklyBot" target="_blank" class="btn-tg">Unirse →</a>
       </div>
 
-      <!-- CALENDAR STRIP -->
       <div class="cal-strip" id="calStrip"></div>
 
-      <!-- TOOLBAR -->
       <div class="toolbar">
         <div class="search-wrap">
           <span class="search-icon">⌕</span>
@@ -658,7 +577,6 @@ body::before{
         </div>
       </div>
 
-      <!-- MATCHES -->
       <div class="matches" id="matchesGrid">
         <div style="text-align:center;padding:2rem"><div class="loader"></div></div>
       </div>
@@ -667,21 +585,18 @@ body::before{
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     UPGRADE MODAL
-══════════════════════════════════════ -->
 <div class="modal-overlay" id="upgradeModal">
   <div class="modal">
     <div class="modal-title">Desbloquea Kickly completo</div>
-    <div class="modal-sub">Accede a alineaciones, lesiones, H2H, value bets y el bot de Telegram con alertas diarias.</div>
+    <div class="modal-sub">Accede a alineaciones, lesiones, H2H avanzado, value bets y el bot de Telegram con alertas diarias.</div>
     <div class="modal-plans">
       <div class="mplan selected" id="planPro" onclick="selectPlan('pro')">
         <div class="mplan-name">Pro</div>
         <div class="mplan-price">€7.99</div>
         <div class="mplan-per">/mes · cancela cuando quieras</div>
         <div class="mplan-feat ok">Partidos ilimitados</div>
-        <div class="mplan-feat ok">Alineaciones + H2H</div>
-        <div class="mplan-feat ok">Stats de jugadores</div>
+        <div class="mplan-feat ok">Value bets</div>
+        <div class="mplan-feat ok">Predicciones completas</div>
         <div class="mplan-feat ok">Bot Telegram básico</div>
         <div class="mplan-feat no">2ª División + Copas</div>
         <div class="mplan-feat no">Cuotas bookmakers</div>
@@ -703,38 +618,30 @@ body::before{
   </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
-<!-- ══════════════════════════════════════
-     SCRIPTS
-══════════════════════════════════════ -->
 <script>
-/* ══════════════════════════════════════
-   ⚙️ CONFIGURACIÓN — PON TUS KEYS AQUÍ
-══════════════════════════════════════ */
 const CONFIG = {
   supabase: {
-    url:    'https://waaleotykguljfbfobin.supabase.co',          // ← pega tu Project URL aquí
-    anonKey:'sb_publishable_B-7D3wN3Z79hOEqkz_pBJw_I5B3734W',     // ← pega tu anon key aquí
+    url: 'https://waaleotykguljfbfobin.supabase.co',
+    anonKey: 'sb_publishable_B-7D3wN3Z79hOEqkz_pBJw_I5B3734W',
   },
   stripe: {
-    publishableKey: 'pk_test_51TIQNmKkxMr4rNKmbFeoQgfjNS2T7X6nt4jRK8nDcBxuN8nT7AWUTOMlWv4P3iCj6a26GZFs4mGXlYcdblpa0wXa00UymL26jP',    // ← pega tu Stripe publishable key aquí
-    proPriceId:     'prod_UGyNcoNbyOoauU',    // ← pega el Price ID del plan Pro
-    premiumPriceId: 'prod_UGyNhV7jS36i6s',// ← pega el Price ID del plan Premium
+    publishableKey: 'pk_test_51TIQNmKkxMr4rNKmbFeoQgfjNS2T7X6nt4jRK8nDcBxuN8nT7AWUTOMlWv4P3iCj6a26GZFs4mGXlYcdblpa0wXa00UymL26jP',
+    proPriceId: 'prod_UGyNcoNbyOoauU',
+    premiumPriceId: 'prod_UGyNhV7jS36i6s',
   },
   apiFootball: {
-    key: '15113ce408363e7fc40c07b9e50bdfaf',        // ← pega tu API-Football key aquí
+    key: '15113ce408363e7fc40c07b9e50bdfaf',
+    baseUrl: 'https://v3.football.api-sports.io'
   },
   telegram: {
-    botUrl: 'https://t.me/KicklyBot', // ← cambia por tu bot real
+    botUrl: 'https://t.me/KicklyBot',
   }
 };
 
-/* ══════════════════════════════════════
-   SUPABASE INIT
-══════════════════════════════════════ */
 const sb = supabase.createClient(CONFIG.supabase.url, CONFIG.supabase.anonKey);
+
 let currentUser = null;
 let userPlan = 'free';
 let selectedPlan = 'pro';
@@ -742,15 +649,83 @@ let activeLeague = 'all';
 let activeFilter = 'all';
 let activeDate = new Date();
 let allMatches = [];
-
-/* ══════════════════════════════════════
-   AUTH
-══════════════════════════════════════ */
 let authMode = 'login';
 
+const h2hCache = new Map();
+
+const LEAGUES = {
+  laliga: { id: '140', label: '🇪🇸 La Liga' },
+  premier: { id: '39', label: '🏴 Premier League' },
+  bundesliga: { id: '78', label: '🇩🇪 Bundesliga' },
+  seriea: { id: '135', label: '🇮🇹 Serie A' },
+  ligue1: { id: '61', label: '🇫🇷 Ligue 1' },
+  segunda: { id: '141', label: '🇪🇸 Segunda' }
+};
+
+function getSeasonFromDate(date) {
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  return month >= 7 ? year : year - 1;
+}
+
+function formatDateYMD(date) {
+  return date.toISOString().split('T')[0];
+}
+
+function escapeHtml(str = '') {
+  return String(str)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+}
+
+function isApiKeyMissing() {
+  const key = (CONFIG.apiFootball.key || '').trim();
+  return !key || key === 'TU_API_FOOTBALL_KEY';
+}
+
+async function apiGet(endpoint, params = {}) {
+  const url = new URL(CONFIG.apiFootball.baseUrl + endpoint);
+
+  Object.entries(params).forEach(([k, v]) => {
+    if (v !== undefined && v !== null && v !== '') {
+      url.searchParams.set(k, v);
+    }
+  });
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 12000);
+
+  try {
+    const res = await fetch(url.toString(), {
+      headers: {
+        'x-apisports-key': CONFIG.apiFootball.key
+      },
+      signal: controller.signal
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    if (data.errors && Object.keys(data.errors).length) {
+      throw new Error(JSON.stringify(data.errors));
+    }
+    return data.response || [];
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/* AUTH */
 function switchAuthTab(mode) {
   authMode = mode;
-  document.querySelectorAll('.auth-tab').forEach((t,i) => t.classList.toggle('active', (mode==='login'&&i===0)||(mode==='register'&&i===1)));
+  document.querySelectorAll('.auth-tab').forEach((t, i) =>
+    t.classList.toggle('active', (mode === 'login' && i === 0) || (mode === 'register' && i === 1))
+  );
   document.getElementById('authBtnText').textContent = mode === 'login' ? 'Entrar' : 'Crear cuenta gratis';
   document.getElementById('authPassConfirmWrap').style.display = mode === 'register' ? 'block' : 'none';
   document.getElementById('authError').style.display = 'none';
@@ -758,14 +733,24 @@ function switchAuthTab(mode) {
 
 async function handleAuth() {
   const email = document.getElementById('authEmail').value.trim();
-  const pass  = document.getElementById('authPass').value;
-  const btn   = document.querySelector('.btn-auth');
+  const pass = document.getElementById('authPass').value;
+  const btn = document.querySelector('.btn-auth');
 
-  if (!email || !pass) { showAuthError('Rellena todos los campos'); return; }
+  if (!email || !pass) {
+    showAuthError('Rellena todos los campos');
+    return;
+  }
+
   if (authMode === 'register') {
     const confirm = document.getElementById('authPassConfirm').value;
-    if (pass !== confirm) { showAuthError('Las contraseñas no coinciden'); return; }
-    if (pass.length < 6)  { showAuthError('La contraseña debe tener al menos 6 caracteres'); return; }
+    if (pass !== confirm) {
+      showAuthError('Las contraseñas no coinciden');
+      return;
+    }
+    if (pass.length < 6) {
+      showAuthError('La contraseña debe tener al menos 6 caracteres');
+      return;
+    }
   }
 
   btn.textContent = '...';
@@ -779,11 +764,13 @@ async function handleAuth() {
     } else {
       result = await sb.auth.signUp({ email, password: pass });
     }
+
     if (result.error) throw result.error;
+
     if (authMode === 'register') {
       showToast('✓ Cuenta creada. Revisa tu email para confirmar.', 'success');
     }
-  } catch(e) {
+  } catch (e) {
     const msgs = {
       'Invalid login credentials': 'Email o contraseña incorrectos',
       'Email not confirmed': 'Confirma tu email antes de entrar',
@@ -797,7 +784,8 @@ async function handleAuth() {
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
-    if (!document.getElementById('authWall').style.display || document.getElementById('authWall').style.display !== 'none') {
+    const authWall = document.getElementById('authWall');
+    if (!authWall.style.display || authWall.style.display !== 'none') {
       handleAuth();
     }
   }
@@ -820,9 +808,7 @@ async function logout() {
   switchAuthTab('login');
 }
 
-/* ══════════════════════════════════════
-   SESSION MANAGEMENT
-══════════════════════════════════════ */
+/* SESSION */
 sb.auth.onAuthStateChange(async (event, session) => {
   if (session?.user) {
     currentUser = session.user;
@@ -836,10 +822,10 @@ sb.auth.onAuthStateChange(async (event, session) => {
 
 async function loadUserPlan() {
   try {
-    const { data } = await sb.from('profiles').select('plan').eq('id', currentUser.id).single();
+    const { data, error } = await sb.from('profiles').select('plan').eq('id', currentUser.id).single();
+    if (error) throw error;
     userPlan = data?.plan || 'free';
-  } catch(e) {
-    // Crear perfil si no existe
+  } catch (e) {
     await sb.from('profiles').upsert({ id: currentUser.id, email: currentUser.email, plan: 'free' });
     userPlan = 'free';
   }
@@ -860,199 +846,345 @@ function updatePlanUI() {
   document.getElementById('tgBanner').style.display = (userPlan !== 'free') ? 'flex' : 'none';
 }
 
-/* ══════════════════════════════════════
-   CALENDAR
-══════════════════════════════════════ */
+/* CALENDAR */
 function buildCalendar() {
   const strip = document.getElementById('calStrip');
-  const days  = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+  const days = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
   strip.innerHTML = '';
+
   for (let i = -1; i <= 6; i++) {
     const d = new Date();
     d.setDate(d.getDate() + i);
+
     const isActive = d.toDateString() === activeDate.toDateString();
     const el = document.createElement('div');
     el.className = 'cal-day' + (isActive ? ' active' : '');
-    el.innerHTML = `<div class="cal-dow">${i===0?'HOY':days[d.getDay()]}</div><div class="cal-num">${d.getDate()}</div><div class="cal-count">–</div>`;
-    el.onclick = () => { activeDate = d; buildCalendar(); loadMatches(); };
+    el.innerHTML = `
+      <div class="cal-dow">${i === 0 ? 'HOY' : days[d.getDay()]}</div>
+      <div class="cal-num">${d.getDate()}</div>
+      <div class="cal-count">–</div>
+    `;
+    el.onclick = () => {
+      activeDate = new Date(d);
+      buildCalendar();
+      loadMatches();
+    };
     strip.appendChild(el);
   }
 }
 
-/* ══════════════════════════════════════
-   API-FOOTBALL
-══════════════════════════════════════ */
+/* API FOOTBALL */
 async function fetchMatches(date) {
-  const dateStr = date.toISOString().split('T')[0];
-  const leagues = { laliga:'140', premier:'39', bundesliga:'78', seriea:'135', ligue1:'61', segunda:'141' };
-  const ids = Object.values(leagues).join('-');
-
-  // DEMO DATA si no hay key real
-  if (CONFIG.apiFootball.key === 'TU_API_FOOTBALL_KEY') {
+  if (isApiKeyMissing()) {
     return getDemoMatches();
   }
 
+  const dateStr = formatDateYMD(date);
+  const season = getSeasonFromDate(date);
+
   try {
-    const promises = Object.entries(leagues).map(async ([key, id]) => {
-      const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=${dateStr}&league=${id}&season=2025`, {
-        headers: { 'x-apisports-key': CONFIG.apiFootball.key }
+    const promises = Object.entries(LEAGUES).map(async ([key, cfg]) => {
+      const response = await apiGet('/fixtures', {
+        date: dateStr,
+        league: cfg.id,
+        season
       });
-      const data = await res.json();
-      return (data.response || []).map(f => parseFixture(f, key));
+      return response.map(f => parseFixture(f, key));
     });
+
     const results = await Promise.all(promises);
-    return results.flat();
-  } catch(e) {
+    return results.flat().sort((a, b) => a.sortDate - b.sortDate);
+  } catch (e) {
+    console.error('Error cargando fixtures:', e);
+    showToast('No se pudieron cargar los partidos reales. Mostrando demo.', 'error');
     return getDemoMatches();
   }
 }
 
 function parseFixture(f, leagueKey) {
-  const leagueLabels = { laliga:'🇪🇸 La Liga', premier:'🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League', bundesliga:'🇩🇪 Bundesliga', seriea:'🇮🇹 Serie A', ligue1:'🇫🇷 Ligue 1', segunda:'🇪🇸 Segunda' };
-  const status = f.fixture.status.short;
-  const isLive = ['1H','HT','2H','ET','BT','P','SUSP','INT'].includes(status);
-  const isFinal = ['FT','AET','PEN'].includes(status);
+  const statusShort = f.fixture?.status?.short || '';
+  const isLive = ['1H', 'HT', '2H', 'ET', 'BT', 'P', 'SUSP', 'INT'].includes(statusShort);
+  const isFinal = ['FT', 'AET', 'PEN'].includes(statusShort);
+
+  const fixtureDate = new Date(f.fixture.date);
+
   return {
     id: f.fixture.id,
     league: leagueKey,
-    leagueLabel: leagueLabels[leagueKey],
+    leagueLabel: LEAGUES[leagueKey]?.label || (f.league?.name || 'Liga'),
+    leagueName: f.league?.name || LEAGUES[leagueKey]?.label || 'Liga',
     home: f.teams.home.name,
     away: f.teams.away.name,
     homeId: f.teams.home.id,
     awayId: f.teams.away.id,
-    time: new Date(f.fixture.date).toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'}),
+    time: fixtureDate.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' }),
+    sortDate: fixtureDate.getTime(),
     status: isLive ? 'live' : isFinal ? 'final' : 'scheduled',
     minute: f.fixture.status.elapsed,
     scoreH: f.goals.home,
     scoreA: f.goals.away,
-    prob: { h: 40 + Math.random()*30, d: 15 + Math.random()*15, a: 15 + Math.random()*30 },
+    prob: buildPseudoProbabilities(f),
     hasValue: Math.random() > 0.6,
     valueTier: Math.random() > 0.7 ? 'hot' : 'good',
+    h2h: null,
+    h2hLoaded: false,
+    h2hLoading: false
   };
 }
 
+function buildPseudoProbabilities(fixture) {
+  const seed = (fixture.teams.home.id || 1) + (fixture.teams.away.id || 1);
+  const h = 35 + (seed % 28);
+  const d = 18 + (seed % 11);
+  const a = Math.max(12, 100 - h - d);
+  const total = h + d + a;
+
+  return {
+    h: (h / total) * 100,
+    d: (d / total) * 100,
+    a: (a / total) * 100
+  };
+}
+
+async function fetchH2H(homeId, awayId) {
+  const cacheKey = `${homeId}-${awayId}`;
+  if (h2hCache.has(cacheKey)) return h2hCache.get(cacheKey);
+
+  if (isApiKeyMissing()) {
+    const demo = getDemoH2H(homeId, awayId);
+    h2hCache.set(cacheKey, demo);
+    return demo;
+  }
+
+  try {
+    const response = await apiGet('/fixtures/headtohead', {
+      h2h: `${homeId}-${awayId}`,
+      last: 5
+    });
+
+    h2hCache.set(cacheKey, response);
+    return response;
+  } catch (e) {
+    console.error('Error cargando H2H:', e);
+    const empty = [];
+    h2hCache.set(cacheKey, empty);
+    return empty;
+  }
+}
+
 function getDemoMatches() {
-  const leagues = [
-    {key:'laliga',label:'🇪🇸 La Liga'},
-    {key:'premier',label:'🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier'},
-    {key:'bundesliga',label:'🇩🇪 Bundesliga'},
-    {key:'seriea',label:'🇮🇹 Serie A'},
-    {key:'ligue1',label:'🇫🇷 Ligue 1'},
-  ];
   const demos = [
-    ['Atlético Madrid','FC Barcelona','21:00','laliga','🇪🇸 La Liga',31.3,24.4,44.3,true,'hot'],
-    ['Real Madrid','Mallorca','16:15','laliga','🇪🇸 La Liga',62.2,21,16.8,true,'good'],
-    ['West Ham','Wolverhampton','21:00','premier','🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier',52.7,25.1,22.2,true,'good'],
-    ['Arsenal','Bournemouth','13:30','premier','🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier',67.5,19.2,13.3,false,'good'],
-    ['Bayern Munich','Freiburg','15:30','bundesliga','🇩🇪 Bundesliga',66.6,17.9,15.5,false,'good'],
-    ['Stuttgart','Dortmund','18:30','bundesliga','🇩🇪 Bundesliga',41.7,24.3,34,true,'hot'],
-    ['Leverkusen','Wolfsburg','15:30','bundesliga','🇩🇪 Bundesliga',66.1,18.6,15.3,false,'good'],
-    ['Inter Milan','Roma','20:45','seriea','🇮🇹 Serie A',58.5,23.8,17.7,false,'good'],
-    ['Lazio','Parma','20:45','seriea','🇮🇹 Serie A',52.2,27.5,20.3,false,'good'],
-    ['Lille','Lens','21:05','ligue1','🇫🇷 Ligue 1',32.4,28,39.6,true,'good'],
-    ['Brest','Rennes','19:00','ligue1','🇫🇷 Ligue 1',31.5,27.6,40.9,true,'hot'],
-    ['Real Betis','Espanyol','18:30','laliga','🇪🇸 La Liga',55.9,24.4,19.7,false,'good'],
+    ['Atlético Madrid','FC Barcelona','21:00','laliga','🇪🇸 La Liga',31.3,24.4,44.3,true,'hot', 530, 529],
+    ['Real Madrid','Mallorca','16:15','laliga','🇪🇸 La Liga',62.2,21,16.8,true,'good', 541, 798],
+    ['West Ham','Wolverhampton','21:00','premier','🏴 Premier',52.7,25.1,22.2,true,'good', 48, 39],
+    ['Arsenal','Bournemouth','13:30','premier','🏴 Premier',67.5,19.2,13.3,false,'good', 42, 35],
+    ['Bayern Munich','Freiburg','15:30','bundesliga','🇩🇪 Bundesliga',66.6,17.9,15.5,false,'good', 157, 160],
+    ['Stuttgart','Dortmund','18:30','bundesliga','🇩🇪 Bundesliga',41.7,24.3,34,true,'hot', 172, 165],
+    ['Leverkusen','Wolfsburg','15:30','bundesliga','🇩🇪 Bundesliga',66.1,18.6,15.3,false,'good', 168, 161],
+    ['Inter Milan','Roma','20:45','seriea','🇮🇹 Serie A',58.5,23.8,17.7,false,'good', 505, 497],
+    ['Lazio','Parma','20:45','seriea','🇮🇹 Serie A',52.2,27.5,20.3,false,'good', 487, 523],
+    ['Lille','Lens','21:05','ligue1','🇫🇷 Ligue 1',32.4,28,39.6,true,'good', 79, 116],
+    ['Brest','Rennes','19:00','ligue1','🇫🇷 Ligue 1',31.5,27.6,40.9,true,'hot', 106, 94],
+    ['Real Betis','Espanyol','18:30','laliga','🇪🇸 La Liga',55.9,24.4,19.7,false,'good', 543, 540],
   ];
-  return demos.map((d,i) => ({
-    id: i+1, league:d[3], leagueLabel:d[4],
-    home:d[0], away:d[1], time:d[2],
-    status:'scheduled', minute:null, scoreH:null, scoreA:null,
-    prob:{h:d[5],d:d[6],a:d[7]}, hasValue:d[8], valueTier:d[9],
+
+  const today = new Date();
+
+  return demos.map((d, i) => ({
+    id: i + 1,
+    league: d[3],
+    leagueLabel: d[4],
+    leagueName: d[4],
+    home: d[0],
+    away: d[1],
+    homeId: d[10],
+    awayId: d[11],
+    time: d[2],
+    sortDate: new Date(today.getFullYear(), today.getMonth(), today.getDate(), Number(d[2].split(':')[0]), Number(d[2].split(':')[1])).getTime(),
+    status: 'scheduled',
+    minute: null,
+    scoreH: null,
+    scoreA: null,
+    prob: { h: d[5], d: d[6], a: d[7] },
+    hasValue: d[8],
+    valueTier: d[9],
+    h2h: null,
+    h2hLoaded: false,
+    h2hLoading: false
   }));
 }
 
-/* ══════════════════════════════════════
-   RENDER MATCHES
-══════════════════════════════════════ */
+function getDemoH2H(homeId, awayId) {
+  return [
+    {
+      fixture: { date: '2025-11-02T20:00:00+00:00' },
+      teams: { home: { id: homeId, name: 'Equipo local' }, away: { id: awayId, name: 'Equipo visitante' } },
+      goals: { home: 2, away: 1 },
+      league: { name: 'Liga' }
+    },
+    {
+      fixture: { date: '2025-04-15T20:00:00+00:00' },
+      teams: { home: { id: awayId, name: 'Equipo visitante' }, away: { id: homeId, name: 'Equipo local' } },
+      goals: { home: 1, away: 1 },
+      league: { name: 'Liga' }
+    },
+    {
+      fixture: { date: '2024-10-27T20:00:00+00:00' },
+      teams: { home: { id: homeId, name: 'Equipo local' }, away: { id: awayId, name: 'Equipo visitante' } },
+      goals: { home: 3, away: 0 },
+      league: { name: 'Liga' }
+    },
+    {
+      fixture: { date: '2024-04-28T20:00:00+00:00' },
+      teams: { home: { id: awayId, name: 'Equipo visitante' }, away: { id: homeId, name: 'Equipo local' } },
+      goals: { home: 0, away: 2 },
+      league: { name: 'Liga' }
+    },
+    {
+      fixture: { date: '2023-11-12T20:00:00+00:00' },
+      teams: { home: { id: homeId, name: 'Equipo local' }, away: { id: awayId, name: 'Equipo visitante' } },
+      goals: { home: 1, away: 0 },
+      league: { name: 'Liga' }
+    }
+  ];
+}
+
+/* MATCHES */
 async function loadMatches() {
   document.getElementById('matchesGrid').innerHTML = '<div style="text-align:center;padding:2rem"><div class="loader"></div></div>';
   allMatches = await fetchMatches(activeDate);
   renderMatches();
 }
 
-const STANDINGS = {
-  laliga:{ATM:{r:4,pts:57,w:17,d:6,l:6},BAR:{r:1,pts:73,w:24,d:1,l:4},RMA:{r:2,pts:69,w:22,d:3,l:4},MAL:{r:18,pts:28,w:7,d:7,l:15},RBB:{r:5,pts:44,w:11,d:11,l:7},ESP:{r:11,pts:37,w:10,d:7,l:12}},
-  premier:{WHU:{r:18,pts:29,w:7,d:8,l:16},WOL:{r:20,pts:17,w:3,d:8,l:20},ARS:{r:1,pts:70,w:21,d:7,l:3},BOU:{r:13,pts:42,w:9,d:15,l:7}},
-  bundesliga:{BMU:{r:1,pts:70,w:22,d:4,l:1},SCF:{r:8,pts:37,w:10,d:7,l:10},VFB:{r:3,pts:53,w:16,d:5,l:6},BVB:{r:2,pts:61,w:18,d:7,l:2},LEV:{r:6,pts:46,w:13,d:7,l:7},WOB:{r:17,pts:21,w:5,d:6,l:16}},
-  seriea:{INT:{r:1,pts:69,w:22,d:3,l:5},ROM:{r:6,pts:54,w:17,d:3,l:10},LAZ:{r:8,pts:43,w:11,d:10,l:9},PAR:{r:12,pts:34,w:8,d:10,l:12}},
-  ligue1:{LIL:{r:5,pts:47,w:14,d:5,l:8},RCL:{r:2,pts:59,w:19,d:2,l:6},STB:{r:11,pts:36,w:10,d:6,l:11},REN:{r:7,pts:44,w:12,d:8,l:7}},
-};
-
-function getForm(name, league) {
-  const s = Object.values(STANDINGS[league]||{}).find((_,i,arr)=>true);
-  const seed = name.charCodeAt(0) + name.charCodeAt(1||0);
-  return Array.from({length:5},(_,i)=>{
-    const r=((seed*37+i*13)%100)/100;
-    return r<0.5?'w':r<0.72?'d':'l';
+function getForm(name) {
+  const seed = (name.charCodeAt(0) || 1) + (name.charCodeAt(1) || 1);
+  return Array.from({ length: 5 }, (_, i) => {
+    const r = ((seed * 37 + i * 13) % 100) / 100;
+    return r < 0.5 ? 'w' : r < 0.72 ? 'd' : 'l';
   });
 }
 
 function renderFormDots(form) {
-  return form.map(f=>`<div class="fd f${f==='w'?'w':f==='d'?'draw':'l'}"></div>`).join('');
+  return form.map(f => `<div class="fd f${f === 'w' ? 'w' : f === 'd' ? 'draw' : 'l'}"></div>`).join('');
 }
 
 function computeValueBets(m) {
-  const h=m.prob.h/100, a=m.prob.a/100;
-  const hG=h+0.05, aG=a+0.02;
-  const bets=[];
-  const btts=Math.round(Math.min(85,50+(hG+aG)*25));
-  if(btts>55) bets.push({market:'Ambos marcan',desc:'Ambos equipos marcan — Sí',ourProb:btts,odds:(1/(btts/100)*0.91).toFixed(2),tier:btts>65?'hot':'good',ev:((btts/100*(1/(btts/100)*0.91))-1).toFixed(3),reasons:[`${m.home} marc\u00f3 en ${btts>65?4:3}/5 \u00faltimos partidos`,`${m.away} marc\u00f3 en ${btts>60?4:3}/5 \u00faltimos partidos`]});
-  const o25=Math.round(Math.min(80,45+(hG+aG)*20));
-  if(o25>50) bets.push({market:'Goles',desc:'M\u00e1s de 2.5 goles',ourProb:o25,odds:(1/(o25/100)*0.91).toFixed(2),tier:o25>60?'hot':'good',ev:((o25/100*(1/(o25/100)*0.91))-1).toFixed(3),reasons:[`Media esperada: ${((hG+aG)*2.5).toFixed(1)} goles`,`\u00daltimos 5 partidos del ${m.home}: +2.5`]});
-  const hWin=Math.round(m.prob.h);
-  if(hWin>55) bets.push({market:'1X2',desc:`Victoria ${m.home}`,ourProb:hWin,odds:(100/m.prob.h*0.92).toFixed(2),tier:hWin>65?'hot':'good',ev:((hWin/100*(100/m.prob.h*0.92))-1).toFixed(3),reasons:[`Prob. calculada: ${hWin}%`,`Jugando en casa +8% adicional`]});
+  const h = m.prob.h / 100;
+  const a = m.prob.a / 100;
+  const hG = h + 0.05;
+  const aG = a + 0.02;
+  const bets = [];
+
+  const btts = Math.round(Math.min(85, 50 + (hG + aG) * 25));
+  if (btts > 55) {
+    bets.push({
+      market: 'Ambos marcan',
+      desc: 'Ambos equipos marcan — Sí',
+      ourProb: btts,
+      odds: (1 / (btts / 100) * 0.91).toFixed(2),
+      tier: btts > 65 ? 'hot' : 'good',
+      ev: ((btts / 100 * (1 / (btts / 100) * 0.91)) - 1).toFixed(3),
+      reasons: [
+        `${m.home} marcó en ${btts > 65 ? 4 : 3}/5 últimos partidos`,
+        `${m.away} marcó en ${btts > 60 ? 4 : 3}/5 últimos partidos`
+      ]
+    });
+  }
+
+  const o25 = Math.round(Math.min(80, 45 + (hG + aG) * 20));
+  if (o25 > 50) {
+    bets.push({
+      market: 'Goles',
+      desc: 'Más de 2.5 goles',
+      ourProb: o25,
+      odds: (1 / (o25 / 100) * 0.91).toFixed(2),
+      tier: o25 > 60 ? 'hot' : 'good',
+      ev: ((o25 / 100 * (1 / (o25 / 100) * 0.91)) - 1).toFixed(3),
+      reasons: [
+        `Media esperada: ${((hG + aG) * 2.5).toFixed(1)} goles`,
+        `Últimos 5 partidos del ${m.home}: +2.5`
+      ]
+    });
+  }
+
+  const hWin = Math.round(m.prob.h);
+  if (hWin > 55) {
+    bets.push({
+      market: '1X2',
+      desc: `Victoria ${m.home}`,
+      ourProb: hWin,
+      odds: (100 / m.prob.h * 0.92).toFixed(2),
+      tier: hWin > 65 ? 'hot' : 'good',
+      ev: ((hWin / 100 * (100 / m.prob.h * 0.92)) - 1).toFixed(3),
+      reasons: [
+        `Prob. calculada: ${hWin}%`,
+        'Jugando en casa +8% adicional'
+      ]
+    });
+  }
+
   return bets;
 }
 
 function renderMatch(m, idx) {
-  const hForm = getForm(m.home, m.league);
-  const aForm = getForm(m.away, m.league);
+  const hForm = getForm(m.home);
+  const aForm = getForm(m.away);
   const vBets = computeValueBets(m);
-  const isPro = userPlan !== 'free';
+  const isPaid = userPlan !== 'free';
 
-  const scoreDisplay = m.status==='scheduled'
-    ? `<div class="match-time">${m.time}</div><div class="match-score">vs</div>`
-    : `<div class="match-time">${m.status==='live'?`${m.minute||''}′`:'FIN'}</div><div class="match-score">${m.scoreH??'–'} : ${m.scoreA??'–'}</div>`;
+  const scoreDisplay = m.status === 'scheduled'
+    ? `<div class="match-time">${escapeHtml(m.time)}</div><div class="match-score">vs</div>`
+    : `<div class="match-time">${m.status === 'live' ? `${m.minute || ''}′` : 'FIN'}</div><div class="match-score">${m.scoreH ?? '–'} : ${m.scoreA ?? '–'}</div>`;
 
-  const statusLabel = m.status==='live'?'<span class="match-status ms-live">● LIVE</span>':m.status==='final'?'<span class="match-status ms-fin">FIN</span>':'<span class="match-status ms-sched">HOY</span>';
+  const statusLabel = m.status === 'live'
+    ? '<span class="match-status ms-live">● LIVE</span>'
+    : m.status === 'final'
+      ? '<span class="match-status ms-fin">FIN</span>'
+      : '<span class="match-status ms-sched">HOY</span>';
 
-  const valueBadge = m.hasValue && m.valueTier==='hot'
+  const valueBadge = m.hasValue && m.valueTier === 'hot'
     ? `<span class="val-badge vb-hot">🔥 HOT</span>`
     : m.hasValue
-    ? `<span class="val-badge vb-good">✓ VALUE</span>`
-    : '';
+      ? `<span class="val-badge vb-good">✓ VALUE</span>`
+      : '';
 
-  const tabsContent = isPro ? `
+  const tabsContent = isPaid ? `
     <div class="tab-nav">
-      <button class="tnav active" onclick="switchTab(${m.id},'overview',this)">Resumen</button>
-      <button class="tnav" onclick="switchTab(${m.id},'value',this)">🔥 Value (${vBets.length})</button>
-      <button class="tnav" onclick="switchTab(${m.id},'h2h',this)">H2H</button>
-      <button class="tnav" onclick="switchTab(${m.id},'preds',this)">Predicciones</button>
+      <button class="tnav active" onclick="switchTab(${m.id},'overview',this,event)">Resumen</button>
+      <button class="tnav" onclick="switchTab(${m.id},'h2h',this,event)">H2H</button>
+      <button class="tnav" onclick="switchTab(${m.id},'value',this,event)">🔥 Value (${vBets.length})</button>
+      <button class="tnav" onclick="switchTab(${m.id},'preds',this,event)">Predicciones</button>
     </div>
     ${renderOverviewTab(m)}
-    ${renderValueTab(m, vBets)}
     ${renderH2HTab(m)}
+    ${renderValueTab(m, vBets)}
     ${renderPredsTab(m)}
   ` : `
     <div class="tab-nav">
-      <button class="tnav active" onclick="switchTab(${m.id},'overview',this)">Resumen</button>
-      <button class="tnav" onclick="openModal()">🔥 Value 🔒</button>
-      <button class="tnav" onclick="openModal()">H2H 🔒</button>
-      <button class="tnav" onclick="openModal()">Predicciones 🔒</button>
+      <button class="tnav active" onclick="switchTab(${m.id},'overview',this,event)">Resumen</button>
+      <button class="tnav" onclick="switchTab(${m.id},'h2h',this,event)">H2H</button>
+      <button class="tnav" onclick="openModal(); event.stopPropagation();">🔥 Value 🔒</button>
+      <button class="tnav" onclick="openModal(); event.stopPropagation();">Predicciones 🔒</button>
     </div>
     ${renderOverviewTab(m)}
+    ${renderH2HTab(m)}
     <div class="tab-panel" id="panel-${m.id}-value">${renderPaywall()}</div>
-    <div class="tab-panel" id="panel-${m.id}-h2h">${renderPaywall()}</div>
     <div class="tab-panel" id="panel-${m.id}-preds">${renderPaywall()}</div>
   `;
 
+  const leagueParts = String(m.leagueLabel).split(' ');
+  const leagueFlag = leagueParts[0];
+  const leagueText = leagueParts.slice(1).join(' ');
+
   return `
-<div class="mcard${m.hasValue?' has-value':''}" id="mcard-${m.id}" style="animation-delay:${idx*0.04}s">
+<div class="mcard${m.hasValue ? ' has-value' : ''}" id="mcard-${m.id}" style="animation-delay:${idx * 0.04}s">
   <div class="mcard-header" onclick="toggleCard(${m.id})">
-    <div class="mcard-league"><span class="mcard-league-flag">${m.leagueLabel.split(' ')[0]}</span>${m.leagueLabel.split(' ').slice(1).join(' ')}</div>
+    <div class="mcard-league">
+      <span class="mcard-league-flag">${escapeHtml(leagueFlag)}</span>${escapeHtml(leagueText)}
+    </div>
     <div class="teams-vs">
       <div class="team-block">
-        <div class="team-name">${m.home}</div>
+        <div class="team-name">${escapeHtml(m.home)}</div>
         <div class="team-form">${renderFormDots(hForm)}</div>
       </div>
       <div class="vs-center">
@@ -1060,7 +1192,7 @@ function renderMatch(m, idx) {
         ${statusLabel}
       </div>
       <div class="team-block away">
-        <div class="team-name">${m.away}</div>
+        <div class="team-name">${escapeHtml(m.away)}</div>
         <div class="team-form">${renderFormDots(aForm)}</div>
       </div>
     </div>
@@ -1076,13 +1208,16 @@ function renderMatch(m, idx) {
 }
 
 function renderOverviewTab(m) {
-  const h = Math.round(m.prob.h), d = Math.round(m.prob.d), a = Math.round(m.prob.a);
+  const h = Math.round(m.prob.h);
+  const d = Math.round(m.prob.d);
+  const a = Math.round(m.prob.a);
+
   return `
 <div class="tab-panel active" id="panel-${m.id}-overview">
   <div class="prob-3way">
     <div class="prob-team">
       <div class="prob-pct">${h}%</div>
-      <div class="prob-lbl">${m.home}</div>
+      <div class="prob-lbl">${escapeHtml(m.home)}</div>
     </div>
     <div class="prob-team">
       <div class="prob-pct" style="font-size:18px;color:var(--muted)">${d}%</div>
@@ -1090,21 +1225,23 @@ function renderOverviewTab(m) {
     </div>
     <div class="prob-team">
       <div class="prob-pct">${a}%</div>
-      <div class="prob-lbl">${m.away}</div>
+      <div class="prob-lbl">${escapeHtml(m.away)}</div>
     </div>
   </div>
+
   <div class="prob-bar">
     <div class="pb-h" style="width:${h}%"></div>
     <div class="pb-d" style="width:${d}%"></div>
     <div class="pb-a" style="width:${a}%"></div>
   </div>
+
   <div class="section-title">Métricas clave</div>
   <div class="stat-comp">
     ${[
-      {n:'Probabilidad victoria',h:h+'%',a:a+'%',bh:h,ba:a,mx:100},
-      {n:'Forma reciente (5P)',h:`${Math.round(h/20)}/5`,a:`${Math.round(a/20)}/5`,bh:h/20*5,ba:a/20*5,mx:5},
-      {n:'Goles esperados',h:(m.prob.h/35).toFixed(1),a:(m.prob.a/35).toFixed(1),bh:m.prob.h,ba:m.prob.a,mx:100},
-    ].map(s=>`
+      { n:'Probabilidad victoria', h:h+'%', a:a+'%', bh:h, ba:a, mx:100 },
+      { n:'Forma reciente (5P)', h:`${Math.round(h/20)}/5`, a:`${Math.round(a/20)}/5`, bh:h/20*5, ba:a/20*5, mx:5 },
+      { n:'Goles esperados', h:(m.prob.h/35).toFixed(1), a:(m.prob.a/35).toFixed(1), bh:m.prob.h, ba:m.prob.a, mx:100 },
+    ].map(s => `
       <div>
         <div class="stat-row">
           <div class="sv-h">${s.h}</div>
@@ -1112,11 +1249,12 @@ function renderOverviewTab(m) {
           <div class="sv-a">${s.a}</div>
         </div>
         <div class="sbar">
-          <div class="sbh" style="width:${Math.min(s.bh/s.mx*100,100)*0.47}%"></div>
+          <div class="sbh" style="width:${Math.min(s.bh / s.mx * 100, 100) * 0.47}%"></div>
           <div></div>
-          <div class="sba" style="width:${Math.min(s.ba/s.mx*100,100)*0.47}%"></div>
+          <div class="sba" style="width:${Math.min(s.ba / s.mx * 100, 100) * 0.47}%"></div>
         </div>
-      </div>`).join('')}
+      </div>
+    `).join('')}
   </div>
 </div>`;
 }
@@ -1124,124 +1262,271 @@ function renderOverviewTab(m) {
 function renderValueTab(m, vBets) {
   return `
 <div class="tab-panel" id="panel-${m.id}-value">
-  ${vBets.length===0?'<div class="empty"><div class="empty-icon">📊</div><div class="empty-text">No se detectan value bets claros en este partido</div></div>':''}
+  ${vBets.length === 0 ? '<div class="empty"><div class="empty-icon">📊</div><div class="empty-text">No se detectan value bets claros en este partido</div></div>' : ''}
   <div class="vbets-grid">
-    ${vBets.map(b=>`
+    ${vBets.map(b => `
     <div class="vbet ${b.tier}">
-      <div class="vb-market">${b.market}</div>
-      <div class="vb-desc">${b.desc}</div>
+      <div class="vb-market">${escapeHtml(b.market)}</div>
+      <div class="vb-desc">${escapeHtml(b.desc)}</div>
       <div class="vb-nums">
         <div class="vb-prob">Prob real: <span>${b.ourProb}%</span></div>
         <div>
           <div class="vb-odds ${b.tier}">${b.odds}</div>
-          <div class="vb-ev ${parseFloat(b.ev)>-0.02?'ev-pos':'ev-neg'}">EV ${parseFloat(b.ev)>0?'+':''}${(parseFloat(b.ev)*100).toFixed(1)}%</div>
+          <div class="vb-ev ${parseFloat(b.ev) > -0.02 ? 'ev-pos' : 'ev-neg'}">EV ${parseFloat(b.ev) > 0 ? '+' : ''}${(parseFloat(b.ev) * 100).toFixed(1)}%</div>
         </div>
       </div>
-      <div class="vb-reason">${b.reasons.map(r=>`<strong>${r}</strong>`).join('<br>')}</div>
-    </div>`).join('')}
+      <div class="vb-reason">${b.reasons.map(r => `<strong>${escapeHtml(r)}</strong>`).join('<br>')}</div>
+    </div>
+    `).join('')}
   </div>
 </div>`;
 }
 
 function renderH2HTab(m) {
-  const names = [[m.home,'2025-11-02','2-1'],[m.away,'2025-04-15','1-1'],[m.home,'2024-10-27','3-0'],[m.away,'2024-04-28','0-2'],[m.home,'2023-11-12','1-0']];
-  const hw=3,aw=1,dr=1;
-  return `
-<div class="tab-panel" id="panel-${m.id}-h2h">
-  <div class="h2h-sum">
-    <div class="h2h-box" style="border:1px solid rgba(0,87,255,.2)"><div class="h2h-num" style="color:var(--accent2)">${hw}</div><div class="h2h-lbl">${m.home}</div></div>
-    <div class="h2h-box"><div class="h2h-num" style="color:var(--muted)">${dr}</div><div class="h2h-lbl">Empates</div></div>
-    <div class="h2h-box" style="border:1px solid rgba(255,92,53,.2)"><div class="h2h-num" style="color:var(--accent3)">${aw}</div><div class="h2h-lbl">${m.away}</div></div>
-  </div>
-  ${names.map(([w,date,score])=>`
-  <div class="h2h-match">
-    <span class="h2h-date">${date}</span>
-    <div class="h2h-teams">
-      <span style="color:${w===m.home?'var(--accent2)':'var(--muted)'};font-weight:${w===m.home?600:400};font-size:12px">${m.home}</span>
-      <span class="h2h-res">${score}</span>
-      <span style="color:${w===m.away?'var(--accent3)':'var(--muted)'};font-weight:${w===m.away?600:400};font-size:12px;text-align:right">${m.away}</span>
-    </div>
-    <span class="h2h-comp">Liga</span>
-  </div>`).join('')}
-</div>`;
+  let content = '';
+
+  if (m.h2hLoading) {
+    content = `<div style="text-align:center;padding:2rem"><div class="loader"></div></div>`;
+  } else if (!m.h2hLoaded) {
+    content = `
+      <div class="empty">
+        <div class="empty-icon">📚</div>
+        <div class="empty-text">Abre el partido para cargar el histórico H2H</div>
+      </div>
+    `;
+  } else if (!Array.isArray(m.h2h) || m.h2h.length === 0) {
+    content = `
+      <div class="empty">
+        <div class="empty-icon">📁</div>
+        <div class="empty-text">No hay histórico disponible para este enfrentamiento</div>
+      </div>
+    `;
+  } else {
+    const summary = computeH2HSummary(m);
+
+    content = `
+      <div class="h2h-sum">
+        <div class="h2h-box" style="border:1px solid rgba(0,87,255,.2)">
+          <div class="h2h-num" style="color:var(--accent2)">${summary.homeWins}</div>
+          <div class="h2h-lbl">${escapeHtml(m.home)}</div>
+        </div>
+        <div class="h2h-box">
+          <div class="h2h-num" style="color:var(--muted)">${summary.draws}</div>
+          <div class="h2h-lbl">Empates</div>
+        </div>
+        <div class="h2h-box" style="border:1px solid rgba(255,92,53,.2)">
+          <div class="h2h-num" style="color:var(--accent3)">${summary.awayWins}</div>
+          <div class="h2h-lbl">${escapeHtml(m.away)}</div>
+        </div>
+      </div>
+
+      ${m.h2h.map(item => {
+        const date = new Date(item.fixture.date).toLocaleDateString('es-ES');
+        const homeTeam = item.teams.home.name;
+        const awayTeam = item.teams.away.name;
+        const homeGoals = item.goals.home ?? '–';
+        const awayGoals = item.goals.away ?? '–';
+        const league = item.league?.name || 'Liga';
+
+        return `
+          <div class="h2h-match">
+            <span class="h2h-date">${escapeHtml(date)}</span>
+            <div class="h2h-teams">
+              <span style="font-size:12px">${escapeHtml(homeTeam)}</span>
+              <span class="h2h-res">${homeGoals}-${awayGoals}</span>
+              <span style="font-size:12px;text-align:right">${escapeHtml(awayTeam)}</span>
+            </div>
+            <span class="h2h-comp">${escapeHtml(league)}</span>
+          </div>
+        `;
+      }).join('')}
+    `;
+  }
+
+  return `<div class="tab-panel" id="panel-${m.id}-h2h">${content}</div>`;
+}
+
+function computeH2HSummary(match) {
+  let homeWins = 0;
+  let awayWins = 0;
+  let draws = 0;
+
+  (match.h2h || []).forEach(item => {
+    const homeId = item.teams.home.id;
+    const awayId = item.teams.away.id;
+    const gh = item.goals.home;
+    const ga = item.goals.away;
+
+    if (gh === ga) {
+      draws++;
+      return;
+    }
+
+    const winnerId = gh > ga ? homeId : awayId;
+
+    if (winnerId === match.homeId) homeWins++;
+    else if (winnerId === match.awayId) awayWins++;
+  });
+
+  return { homeWins, awayWins, draws };
 }
 
 function renderPredsTab(m) {
-  const h=m.prob.h/100, a=m.prob.a/100;
-  const preds=[
-    {market:'Resultado',pick:`Victoria ${m.home}`,prob:Math.round(m.prob.h),color:'var(--accent2)'},
-    {market:'Resultado',pick:'Empate',prob:Math.round(m.prob.d),color:'var(--warning)'},
-    {market:'Resultado',pick:`Victoria ${m.away}`,prob:Math.round(m.prob.a),color:'var(--accent3)'},
-    {market:'Ambos marcan',pick:'Sí',prob:Math.round(Math.min(82,50+(h+a)*25)),color:'var(--accent)'},
-    {market:'Goles',pick:'Más de 2.5',prob:Math.round(Math.min(78,45+(h+a)*20)),color:'var(--accent2)'},
-    {market:'Goles',pick:'Más de 1.5',prob:Math.round(Math.min(90,70+(h+a)*12)),color:'var(--accent)'},
-    {market:'1er gol',pick:`${m.home} marca 1º`,prob:Math.round(Math.min(62,35+h*28)),color:'var(--accent2)'},
-    {market:'Córners',pick:'Más de 9.5',prob:Math.round(38+h*15+a*10),color:'var(--accent4)'},
-    {market:'Tarjetas',pick:'Más de 3.5',prob:Math.round(35+h*10+a*8),color:'var(--danger)'},
-    {market:'HT/FT',pick:`${m.home}/${m.home}`,prob:Math.round(m.prob.h*0.65),color:'var(--accent)'},
+  const h = m.prob.h / 100;
+  const a = m.prob.a / 100;
+
+  const preds = [
+    { market:'Resultado', pick:`Victoria ${m.home}`, prob:Math.round(m.prob.h), color:'var(--accent2)' },
+    { market:'Resultado', pick:'Empate', prob:Math.round(m.prob.d), color:'var(--warning)' },
+    { market:'Resultado', pick:`Victoria ${m.away}`, prob:Math.round(m.prob.a), color:'var(--accent3)' },
+    { market:'Ambos marcan', pick:'Sí', prob:Math.round(Math.min(82, 50 + (h + a) * 25)), color:'var(--accent)' },
+    { market:'Goles', pick:'Más de 2.5', prob:Math.round(Math.min(78, 45 + (h + a) * 20)), color:'var(--accent2)' },
+    { market:'Goles', pick:'Más de 1.5', prob:Math.round(Math.min(90, 70 + (h + a) * 12)), color:'var(--accent)' },
+    { market:'1er gol', pick:`${m.home} marca 1º`, prob:Math.round(Math.min(62, 35 + h * 28)), color:'var(--accent2)' },
+    { market:'Córners', pick:'Más de 9.5', prob:Math.round(38 + h * 15 + a * 10), color:'var(--accent4)' },
+    { market:'Tarjetas', pick:'Más de 3.5', prob:Math.round(35 + h * 10 + a * 8), color:'var(--danger)' },
+    { market:'HT/FT', pick:`${m.home}/${m.home}`, prob:Math.round(m.prob.h * 0.65), color:'var(--accent)' },
   ];
+
   return `
 <div class="tab-panel" id="panel-${m.id}-preds">
   <div class="preds-grid">
-    ${preds.map(p=>`
+    ${preds.map(p => `
     <div class="pred">
-      <div class="pred-market">${p.market}</div>
-      <div class="pred-pick">${p.pick}</div>
+      <div class="pred-market">${escapeHtml(p.market)}</div>
+      <div class="pred-pick">${escapeHtml(p.pick)}</div>
       <div class="pred-bar"><div class="pred-fill" style="width:${p.prob}%;background:${p.color}"></div></div>
       <div class="pred-pct" style="color:${p.color}">${p.prob}%</div>
-      <div class="pred-conf ${p.prob>=68?'conf-hi':p.prob>=50?'conf-mid':'conf-lo'}">${p.prob>=68?'Alta confianza':p.prob>=50?'Confianza media':'Baja confianza'}</div>
-    </div>`).join('')}
+      <div class="pred-conf ${p.prob >= 68 ? 'conf-hi' : p.prob >= 50 ? 'conf-mid' : 'conf-lo'}">
+        ${p.prob >= 68 ? 'Alta confianza' : p.prob >= 50 ? 'Confianza media' : 'Baja confianza'}
+      </div>
+    </div>
+    `).join('')}
   </div>
 </div>`;
 }
 
 function renderPaywall() {
-  return `<div class="paywall">
+  return `
+  <div class="paywall">
     <div class="paywall-icon">🔒</div>
     <div class="paywall-title">Función exclusiva Pro</div>
-    <div class="paywall-desc">Desbloquea alineaciones, H2H, value bets, predicciones completas y el bot de Telegram desde €7.99/mes.</div>
+    <div class="paywall-desc">Desbloquea value bets, predicciones completas y el bot de Telegram desde €7.99/mes.</div>
     <button class="btn-upgrade" onclick="openModal()">Ver planes →</button>
   </div>`;
 }
 
 function renderMatches() {
-  let matches = allMatches;
+  let matches = [...allMatches];
+
   if (activeLeague !== 'all') matches = matches.filter(m => m.league === activeLeague);
   if (activeFilter === 'value') matches = matches.filter(m => m.hasValue);
-  if (activeFilter === 'live')  matches = matches.filter(m => m.status === 'live');
-  const q = document.getElementById('searchInput').value.toLowerCase();
-  if (q) matches = matches.filter(m => m.home.toLowerCase().includes(q) || m.away.toLowerCase().includes(q));
+  if (activeFilter === 'live') matches = matches.filter(m => m.status === 'live');
+
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  if (q) {
+    matches = matches.filter(m =>
+      m.home.toLowerCase().includes(q) || m.away.toLowerCase().includes(q)
+    );
+  }
 
   if (matches.length === 0) {
-    document.getElementById('matchesGrid').innerHTML = `<div class="empty"><div class="empty-icon">⚽</div><div class="empty-text">No hay partidos con esos filtros</div></div>`;
+    document.getElementById('matchesGrid').innerHTML = `
+      <div class="empty">
+        <div class="empty-icon">⚽</div>
+        <div class="empty-text">No hay partidos con esos filtros</div>
+      </div>`;
     return;
   }
-  document.getElementById('matchesGrid').innerHTML = matches.map((m,i) => renderMatch(m,i)).join('');
+
+  document.getElementById('matchesGrid').innerHTML = matches.map((m, i) => renderMatch(m, i)).join('');
 }
 
-/* ══════════════════════════════════════
-   CARD INTERACTIONS
-══════════════════════════════════════ */
-function toggleCard(id) {
-  const card = document.getElementById('mcard-'+id);
+/* CARD INTERACTIONS */
+async function toggleCard(id) {
+  const card = document.getElementById('mcard-' + id);
+  if (!card) return;
+
+  const isOpening = !card.classList.contains('expanded');
   card.classList.toggle('expanded');
+
+  if (!isOpening) return;
+
+  const match = allMatches.find(m => m.id === id);
+  if (!match) return;
+
+  await ensureH2HLoaded(match);
 }
 
-function switchTab(matchId, tabName, btn) {
-  const body = document.getElementById('cbody-'+matchId);
+async function ensureH2HLoaded(match) {
+  if (match.h2hLoaded || match.h2hLoading) return;
+
+  match.h2hLoading = true;
+  updateSingleH2HTab(match);
+
+  const data = await fetchH2H(match.homeId, match.awayId);
+  match.h2h = normalizeH2HData(data, match);
+  match.h2hLoaded = true;
+  match.h2hLoading = false;
+
+  updateSingleH2HTab(match);
+}
+
+function normalizeH2HData(data, match) {
+  return (data || []).map(item => {
+    const cloned = structuredClone(item);
+
+    if (cloned.teams?.home?.name === 'Equipo local') cloned.teams.home.name = match.home;
+    if (cloned.teams?.away?.name === 'Equipo visitante') cloned.teams.away.name = match.away;
+
+    if (cloned.teams?.home?.name === 'Equipo visitante') cloned.teams.home.name = match.away;
+    if (cloned.teams?.away?.name === 'Equipo local') cloned.teams.away.name = match.home;
+
+    return cloned;
+  });
+}
+
+function updateSingleH2HTab(match) {
+  const panel = document.getElementById(`panel-${match.id}-h2h`);
+  if (!panel) return;
+  panel.outerHTML = renderH2HTab(match);
+
+  const body = document.getElementById(`cbody-${match.id}`);
+  if (!body) return;
+
+  const activeTabButton = body.querySelector('.tnav.active');
+  const activePanelId = activeTabButton?.textContent.includes('H2H') ? `panel-${match.id}-h2h` : null;
+
+  if (activePanelId) {
+    const newPanel = document.getElementById(activePanelId);
+    if (newPanel) newPanel.classList.add('active');
+  }
+}
+
+async function switchTab(matchId, tabName, btn, ev) {
+  if (ev) ev.stopPropagation();
+
+  const body = document.getElementById('cbody-' + matchId);
+  if (!body) return;
+
   body.querySelectorAll('.tnav').forEach(b => b.classList.remove('active'));
   body.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
+
   const panel = document.getElementById(`panel-${matchId}-${tabName}`);
   if (panel) panel.classList.add('active');
+
+  if (tabName === 'h2h') {
+    const match = allMatches.find(m => m.id === matchId);
+    if (match) await ensureH2HLoaded(match);
+  }
 }
 
-/* ══════════════════════════════════════
-   FILTERS
-══════════════════════════════════════ */
+/* FILTERS */
 document.getElementById('leagueChips').addEventListener('click', e => {
   const chip = e.target.closest('.chip');
   if (!chip) return;
+
   document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
   chip.classList.add('active');
   activeLeague = chip.dataset.league;
@@ -1255,29 +1540,29 @@ function setFilter(f, btn) {
   renderMatches();
 }
 
-function filterMatches() { renderMatches(); }
+function filterMatches() {
+  renderMatches();
+}
 
-/* ══════════════════════════════════════
-   STRIPE + MODAL
-══════════════════════════════════════ */
+/* STRIPE + MODAL */
 function openModal() {
   document.getElementById('upgradeModal').classList.add('open');
 }
+
 function closeModal() {
   document.getElementById('upgradeModal').classList.remove('open');
 }
+
 function selectPlan(plan) {
   selectedPlan = plan;
-  document.getElementById('planPro').classList.toggle('selected', plan==='pro');
-  document.getElementById('planPremium').classList.toggle('selected', plan==='premium');
+  document.getElementById('planPro').classList.toggle('selected', plan === 'pro');
+  document.getElementById('planPremium').classList.toggle('selected', plan === 'premium');
 }
 
 async function goToCheckout() {
-  // En producción esto llama a tu backend en Railway que crea la sesión de Stripe
-  // Por ahora muestra instrucción
   showToast('Conecta tu backend de Railway para activar los pagos', 'success');
 
-  /* Descomenta esto cuando tengas el backend:
+  /*
   const res = await fetch('https://TU_RAILWAY_URL/create-checkout', {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
@@ -1285,7 +1570,7 @@ async function goToCheckout() {
       plan: selectedPlan,
       userId: currentUser.id,
       email: currentUser.email,
-      priceId: selectedPlan==='pro' ? CONFIG.stripe.proPriceId : CONFIG.stripe.premiumPriceId,
+      priceId: selectedPlan === 'pro' ? CONFIG.stripe.proPriceId : CONFIG.stripe.premiumPriceId,
     })
   });
   const { url } = await res.json();
@@ -1293,25 +1578,20 @@ async function goToCheckout() {
   */
 }
 
-/* ══════════════════════════════════════
-   TOAST
-══════════════════════════════════════ */
-function showToast(msg, type='') {
+/* TOAST */
+function showToast(msg, type = '') {
   const t = document.getElementById('toast');
   t.textContent = msg;
-  t.className = 'toast' + (type?' '+type:'');
+  t.className = 'toast' + (type ? ' ' + type : '');
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 3500);
 }
 
-/* ══════════════════════════════════════
-   AUTO REFRESH (cada 60s si hay live)
-══════════════════════════════════════ */
+/* AUTO REFRESH */
 setInterval(() => {
   if (allMatches.some(m => m.status === 'live')) loadMatches();
 }, 60000);
 
-// Close modal clicking outside
 document.getElementById('upgradeModal').addEventListener('click', e => {
   if (e.target === document.getElementById('upgradeModal')) closeModal();
 });
