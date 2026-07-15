@@ -13,6 +13,7 @@ const SPORTS = { futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", uf
 
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "data/events.json"), "utf8"));
 const events = data.events || [];
+const WATCH = data.watch || {};
 
 const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const title = ev => ev.away ? `${ev.home} – ${ev.away}` : ev.home;
@@ -49,16 +50,25 @@ function eventLd(ev) {
   return ld;
 }
 
+function globalSources() {
+  if (!WATCH.url || !(WATCH.buttons || []).length) return [];
+  return WATCH.buttons.map(label => ({ label, url: WATCH.url }));
+}
+
 function sourcesPanelStatic(ev) {
-  const srcs = (ev.sources || []).filter(s => s && s.url);
-  if (srcs.length) {
-    const btns = srcs.map((s, i) =>
-      `<a class="src-btn" href="${esc(s.url)}" target="_blank" rel="nofollow noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>${esc(s.label || ("Enlace " + (i + 1)))}</a>`
-    ).join("");
-    return `<div class="sources"><div class="sources-head">Dónde ver ${esc(title(ev))}</div><div class="sources-btns">${btns}</div></div>`;
-  }
-  if (ev.status === "finished") return "";
-  return `<div class="sources"><div class="sources-head">Enlaces del partido</div><div class="sources-soon">Los enlaces para ver ${esc(title(ev))} se publicarán poco antes del inicio (${esc(longDate(ev.date))} h). Vuelve entonces.</div></div>`;
+  const srcs = ((ev.sources && ev.sources.length) ? ev.sources : globalSources()).filter(s => s && s.url);
+  if (!srcs.length) return "";
+  const btns = srcs.map((s, i) =>
+    `<a class="src-btn" href="${esc(s.url)}" target="_blank" rel="nofollow noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>${esc(s.label || ("Enlace " + (i + 1)))}</a>`
+  ).join("");
+  return `<div class="sources"><div class="sources-head">Dónde ver ${esc(title(ev))} en directo</div><div class="sources-btns">${btns}</div></div>`;
+}
+
+function broadcastersStatic(ev) {
+  const bs = ev.broadcasters || [];
+  if (!bs.length) return "";
+  const rows = bs.map(b => `<tr><th>${esc(b.country)}</th><td>${esc(b.channels)}</td></tr>`).join("");
+  return `<section class="section"><h2>Dónde ver ${esc(title(ev))} por país</h2><table class="bcast"><tbody>${rows}</tbody></table></section>`;
 }
 
 const MARK = `<svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 36a20 20 0 0 1 28 0" stroke="#ff4655" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M8 26a34 34 0 0 1 48 0" stroke="#ff4655" stroke-width="7" fill="none" stroke-linecap="round" opacity=".5"/><circle cx="32" cy="47" r="8" fill="#ff4655"/></svg>`;
@@ -143,6 +153,7 @@ ${MULTITAG}
         <div class="meta"><span>${esc(sportName(ev))} · ${esc(ev.competitionName)}</span><time datetime="${esc(ev.date)}">${esc(longDate(ev.date))} h</time></div>
       </header>
       ${ev.description ? `<p class="ev-desc">${esc(ev.description)}</p>` : ""}
+      ${broadcastersStatic(ev)}
     </div>
     <div class="ad" id="ad-bottom"></div>
   </div>

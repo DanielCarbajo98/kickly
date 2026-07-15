@@ -3,6 +3,7 @@
   "use strict";
   var CFG = window.KICKLY || {};
   var ROOT = document.body.getAttribute("data-root") || ".";
+  var WATCH = {};
 
   /* ---------- Monetag ---------- */
   function loadMonetag() {
@@ -76,16 +77,35 @@
     return '<div class="cards">' + list.map(function (e) { return card(e, showDay); }).join("") + "</div>";
   }
 
-  // Botones de fuentes/enlaces (modelo agregador: abren en pestaña nueva)
+  // Botones de enlaces (modelo agregador: abren en pestaña nueva).
+  // Se usan los botones globales de WATCH en todos los eventos; si el evento
+  // define 'sources' propios, tienen prioridad.
   function sourceButtons(ev) {
-    var srcs = ev.sources || [];
-    if (!srcs.length) return "";
+    var srcs = (ev.sources && ev.sources.length) ? ev.sources : globalSources();
     return srcs.map(function (s, i) {
       if (!s || !s.url) return "";
       return '<a class="src-btn" href="' + esc(s.url) + '" target="_blank" rel="nofollow noopener">' +
         '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>' +
         esc(s.label || ("Enlace " + (i + 1))) + "</a>";
     }).join("");
+  }
+
+  function globalSources() {
+    var w = WATCH || {};
+    if (!w.url || !(w.buttons || []).length) return [];
+    return w.buttons.map(function (label) { return { label: label, url: w.url }; });
+  }
+
+  // Tabla "dónde ver por país"
+  function broadcastersTable(ev) {
+    var bs = ev.broadcasters || [];
+    if (!bs.length) return "";
+    return '<section class="section"><h2>Dónde ver ' + esc(title(ev)) + ' por país</h2>' +
+      '<table class="bcast"><tbody>' +
+      bs.map(function (b) {
+        return "<tr><th>" + esc(b.country) + "</th><td>" + esc(b.channels) + "</td></tr>";
+      }).join("") +
+      "</tbody></table></section>";
   }
 
   function injectJsonLd(obj) {
@@ -135,7 +155,7 @@
   function loadEvents() {
     return fetch(ROOT + "/data/events.json", { cache: "no-cache" })
       .then(function (r) { return r.json(); })
-      .then(function (d) { return d.events || []; })
+      .then(function (d) { WATCH = d.watch || {}; return d.events || []; })
       .catch(function () { return []; });
   }
 
@@ -217,6 +237,7 @@
       '<div class="meta"><span>' + esc(sportName(ev)) + " · " + esc(ev.competitionName) + '</span><time datetime="' + esc(ev.date) + '">' + esc(longDate(ev.date)) + " h</time>" + pill(ev) + "</div></header>" +
       (ev.description ? '<p class="ev-desc">' + esc(ev.description) + "</p>" : "") +
       '<div class="ad" id="ad-under-player"></div>' +
+      broadcastersTable(ev) +
       '<section class="section"><h2>También en Kickly</h2><div id="related"></div></section>';
 
     bindSimulator(ev);
