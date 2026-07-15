@@ -1,5 +1,5 @@
 {
-  "_ayuda": "Añade aquí tus eventos. 'sport' debe ser un slug de config.js (futbol, baloncesto, tenis, ufc). 'status': scheduled | live | finished. En 'embed' pon la URL del iframe de tu emisión (con derechos) o en 'hls' una URL .m3u8. Vacíos = cuenta atrás.",
+  "_ayuda": "Añade aquí tus eventos. 'sport' debe ser un slug de config.js (futbol, baloncesto, tenis, ufc). 'status': scheduled | live | finished. En 'sources' pon una lista de enlaces donde ver el evento: cada uno {\"label\":\"Enlace 1\",\"url\":\"https://...\"}. Se abren en una pestaña nueva (modelo agregador, no se reproduce aquí). Sin sources = cuenta atrás.",
   "events": [
     {
       "id": "espana-vs-francia-mundial-2026-semifinal",
@@ -21,8 +21,9 @@
       "away": "Argentina",
       "date": "2026-07-15T21:00:00+02:00",
       "status": "live",
-      "embed": "https://www.youtube.com/embed/LIHo_-_tEXc?autoplay=1",
-      "hls": "",
+      "sources": [
+        { "label": "Enlace 1 · HD", "url": "https://www.youtube.com/watch?v=LIHo_-_tEXc" }
+      ],
       "description": "Semifinal de la Copa del Mundo 2026: Inglaterra y Argentina se juegan el pase a la final contra España. Hoy a las 21:00 (hora española)."
     },
     {

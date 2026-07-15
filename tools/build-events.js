@@ -49,6 +49,18 @@ function eventLd(ev) {
   return ld;
 }
 
+function sourcesPanelStatic(ev) {
+  const srcs = (ev.sources || []).filter(s => s && s.url);
+  if (srcs.length) {
+    const btns = srcs.map((s, i) =>
+      `<a class="src-btn" href="${esc(s.url)}" target="_blank" rel="nofollow noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>${esc(s.label || ("Enlace " + (i + 1)))}</a>`
+    ).join("");
+    return `<div class="sources"><div class="sources-head">Dónde ver ${esc(title(ev))}</div><div class="sources-btns">${btns}</div></div>`;
+  }
+  if (ev.status === "finished") return "";
+  return `<div class="sources"><div class="sources-head">Enlaces del partido</div><div class="sources-soon">Los enlaces para ver ${esc(title(ev))} se publicarán poco antes del inicio (${esc(longDate(ev.date))} h). Vuelve entonces.</div></div>`;
+}
+
 const MARK = `<svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 36a20 20 0 0 1 28 0" stroke="#ff4655" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M8 26a34 34 0 0 1 48 0" stroke="#ff4655" stroke-width="7" fill="none" stroke-linecap="round" opacity=".5"/><circle cx="32" cy="47" r="8" fill="#ff4655"/></svg>`;
 const FAVICON = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316181d'/%3E%3Cpath d='M18 36a20 20 0 0 1 28 0' stroke='%23ff4655' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M8 26a34 34 0 0 1 48 0' stroke='%23ff4655' stroke-width='7' fill='none' stroke-linecap='round' opacity='.5'/%3E%3Ccircle cx='32' cy='47' r='8' fill='%23ff4655'/%3E%3C/svg%3E`;
 const MULTITAG = `<script src="https://quge5.com/88/tag.min.js" data-zone="259826" async data-cfasync="false"></script>`;
@@ -121,11 +133,12 @@ ${MULTITAG}
       <nav class="crumbs" aria-label="Ruta"><a href="../">Inicio</a><span class="sep">/</span><a href="../deportes/${esc(ev.sport)}.html">${esc(sportName(ev))}</a><span class="sep">/</span><span>${esc(title(ev))}</span></nav>
       <div class="player">
         <div class="sim"><div class="sim-scene ${esc(scene)}"></div>
-          <button class="play-btn" aria-label="Reproducir ${esc(title(ev))}"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+          <button class="play-btn" aria-label="Ver ${esc(title(ev))}"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
           <div class="sim-title">${esc(title(ev))}</div>
           <div class="sim-sub">${esc(longDate(ev.date))} h</div>
         </div>
       </div>
+      ${sourcesPanelStatic(ev)}
       <header class="ev-head"><h1>Ver ${esc(title(ev))} en directo online gratis</h1>
         <div class="meta"><span>${esc(sportName(ev))} · ${esc(ev.competitionName)}</span><time datetime="${esc(ev.date)}">${esc(longDate(ev.date))} h</time></div>
       </header>

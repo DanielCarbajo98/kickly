@@ -56,13 +56,36 @@
     return "";
   }
 
-  function row(ev, showDay) {
-    return '<a class="row' + (ev.status === "live" ? " is-live" : "") + '" href="' + evUrl(ev) + '">' +
-      '<div class="row-time">' + (ev.status === "live" ? "LIVE" : timeHM(ev.date)) +
-        (showDay ? '<span class="day">' + esc(fmt(ev.date, { day: "numeric", month: "short" })) + "</span>" : "") + "</div>" +
-      '<div class="row-teams"><b>' + esc(ev.home) + "</b>" + (ev.away ? "<b>" + esc(ev.away) + "</b>" : "") + "</div>" +
-      '<div class="row-meta"><span class="row-comp">' + esc(sportName(ev)) + " · " + esc(ev.competitionName) + "</span>" + pill(ev) +
-      '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></div></a>';
+  function scene(ev) { return (CFG.sports[ev.sport]) ? ev.sport : "futbol"; }
+
+  // Tarjeta con miniatura (escena difuminada del deporte + overlay de play)
+  function card(ev, showDay) {
+    var when = ev.status === "live" ? "EN DIRECTO"
+      : (showDay ? esc(fmt(ev.date, { day: "numeric", month: "short" })) + " · " : "") + timeHM(ev.date) + " h";
+    return '<a class="card' + (ev.status === "live" ? " is-live" : "") + '" href="' + evUrl(ev) + '">' +
+      '<div class="card-thumb"><div class="sim-scene ' + esc(scene(ev)) + '"></div>' +
+        '<span class="card-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>' +
+        '<span class="card-pillwrap">' + pill(ev) + "</span>" +
+      "</div>" +
+      '<div class="card-body"><div class="card-comp">' + esc(sportName(ev)) + " · " + esc(ev.competitionName) + "</div>" +
+        '<div class="card-teams">' + esc(ev.home) + (ev.away ? ' <span class="vs">vs</span> ' + esc(ev.away) : "") + "</div>" +
+        '<div class="card-time">' + when + "</div></div></a>";
+  }
+
+  function grid(list, showDay) {
+    return '<div class="cards">' + list.map(function (e) { return card(e, showDay); }).join("") + "</div>";
+  }
+
+  // Botones de fuentes/enlaces (modelo agregador: abren en pestaña nueva)
+  function sourceButtons(ev) {
+    var srcs = ev.sources || [];
+    if (!srcs.length) return "";
+    return srcs.map(function (s, i) {
+      if (!s || !s.url) return "";
+      return '<a class="src-btn" href="' + esc(s.url) + '" target="_blank" rel="nofollow noopener">' +
+        '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>' +
+        esc(s.label || ("Enlace " + (i + 1))) + "</a>";
+    }).join("");
   }
 
   function injectJsonLd(obj) {
@@ -130,8 +153,7 @@
 
     var html = "";
     if (live.length) {
-      html += '<div class="group"><div class="group-head is-live"><i></i>En directo ahora</div><div class="list">' +
-        live.map(function (e) { return row(e); }).join("") + "</div></div>";
+      html += '<div class="group"><div class="group-head is-live"><i></i>En directo ahora</div>' + grid(live) + "</div>";
     }
     if (upcoming.length) {
       var byDay = {};
@@ -141,16 +163,14 @@
       });
       Object.keys(byDay).forEach(function (k) {
         var list = byDay[k];
-        html += '<div class="group"><div class="group-head"><i></i>' + esc(dayLabel(list[0].date)) + '</div><div class="list">' +
-          list.map(function (e) { return row(e); }).join("") + "</div></div>";
+        html += '<div class="group"><div class="group-head"><i></i>' + esc(dayLabel(list[0].date)) + "</div>" + grid(list) + "</div>";
       });
     }
     if (finished.length) {
-      html += '<div class="group"><div class="group-head"><i></i>Finalizados</div><div class="list">' +
-        finished.map(function (e) { return row(e, true); }).join("") + "</div></div>";
+      html += '<div class="group"><div class="group-head"><i></i>Finalizados</div>' + grid(finished, true) + "</div>";
     }
     if (!html) {
-      html = '<div class="group"><div class="list"><div class="empty">No hay eventos programados en esta categoría todavía.<br>Consulta la <a href="' + ROOT + '/">agenda completa</a>.</div></div></div>';
+      html = '<div class="empty">No hay eventos programados en esta categoría todavía.<br>Consulta la <a href="' + ROOT + '/">agenda completa</a>.</div>';
     }
     box.innerHTML = html;
 
@@ -192,6 +212,7 @@
       '<nav class="crumbs" aria-label="Ruta"><a href="' + ROOT + '/">Inicio</a><span class="sep">/</span>' +
       '<a href="' + ROOT + "/deportes/" + esc(ev.sport) + '.html">' + esc(sportName(ev)) + '</a><span class="sep">/</span><span>' + esc(title(ev)) + "</span></nav>" +
       '<div class="player" id="player-box">' + simulator(ev) + "</div>" +
+      sourcesPanel(ev) +
       '<header class="ev-head"><h1>Ver ' + esc(title(ev)) + " en directo online gratis</h1>" +
       '<div class="meta"><span>' + esc(sportName(ev)) + " · " + esc(ev.competitionName) + '</span><time datetime="' + esc(ev.date) + '">' + esc(longDate(ev.date)) + " h</time>" + pill(ev) + "</div></header>" +
       (ev.description ? '<p class="ev-desc">' + esc(ev.description) + "</p>" : "") +
@@ -203,8 +224,8 @@
 
     var related = events.filter(function (x) { return x.id !== ev.id && x.status !== "finished"; }).slice(0, 6);
     document.getElementById("related").innerHTML = related.length
-      ? '<div class="list">' + related.map(function (e) { return row(e, true); }).join("") + "</div>"
-      : '<div class="list"><div class="empty">No hay más eventos programados.</div></div>';
+      ? grid(related, true)
+      : '<div class="empty">No hay más eventos programados.</div>';
 
     var ld = eventLd(ev);
     ld["@context"] = "https://schema.org";
@@ -230,21 +251,34 @@
     });
   }
 
+  // Panel de enlaces bajo el reproductor (modelo agregador)
+  function sourcesPanel(ev) {
+    var btns = sourceButtons(ev);
+    if (btns) {
+      return '<div class="sources" id="sources"><div class="sources-head">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007 0l3-3a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-3 3a5 5 0 007 7l1-1"/></svg>' +
+        "Dónde ver " + esc(title(ev)) + "</div><div class=\"sources-btns\">" + btns + "</div></div>";
+    }
+    if (ev.status === "finished") return "";
+    return '<div class="sources" id="sources"><div class="sources-head">Enlaces del partido</div>' +
+      '<div class="sources-soon">Los enlaces para ver ' + esc(title(ev)) + ' se publicarán poco antes del inicio (' + esc(longDate(ev.date)) + " h). Vuelve entonces.</div></div>";
+  }
+
   /* Reproductor simulado: escena difuminada del deporte + botón de play */
   function simulator(ev) {
-    var scene = (CFG.sports[ev.sport]) ? ev.sport : "futbol";
     var isLive = ev.status === "live";
+    var hasLinks = (ev.sources || []).length > 0;
     var sub = ev.status === "finished" ? "Este evento ha finalizado"
-      : isLive ? "Emisión en curso — pulsa play"
+      : isLive ? (hasLinks ? "En directo — pulsa para ver los enlaces" : "En directo")
       : longDate(ev.date) + " h";
     return '<div class="sim' + '" id="sim">' +
-      '<div class="sim-scene ' + esc(scene) + '"></div>' +
-      '<button class="play-btn" id="play-btn" aria-label="Reproducir ' + esc(title(ev)) + '">' +
+      '<div class="sim-scene ' + esc(scene(ev)) + '"></div>' +
+      '<button class="play-btn" id="play-btn" aria-label="Ver ' + esc(title(ev)) + '">' +
         '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>' +
       '<div class="sim-title">' + esc(title(ev)) + "</div>" +
       '<div class="sim-sub">' + esc(sub) + "</div>" +
       '<div class="sim-count" id="countdown"></div>' +
-      '<div class="sim-loader" id="sim-loader"><span class="spinner"></span>Conectando con la emisión…</div>' +
+      '<div class="sim-links" id="sim-links"></div>' +
       '<div class="sim-msg" id="sim-msg"></div>' +
       '<div class="sim-bar">' +
         '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>' +
@@ -259,30 +293,25 @@
   function bindSimulator(ev) {
     var sim = document.getElementById("sim");
     if (!sim) return;
-    var launched = false;
-    sim.addEventListener("click", function () {
-      if (launched) return;
-      launched = true;
-      // Estado de carga real: se muestra unos segundos antes de resolver
-      sim.classList.add("loading-on");
-      var loader = document.getElementById("sim-loader");
-      if (loader) loader.textContent = "Conectando con la emisión…";
-      setTimeout(function () {
-        var boxEl = document.getElementById("player-box");
-        if (ev.embed) {
-          boxEl.innerHTML = '<iframe src="' + esc(ev.embed) + '" allowfullscreen allow="autoplay; fullscreen; encrypted-media" referrerpolicy="no-referrer" title="' + esc(title(ev)) + '"></iframe>';
-        } else if (ev.hls) {
-          boxEl.innerHTML = '<video id="hls-player" controls autoplay playsinline></video>';
-          initHls(ev.hls);
-        } else {
-          sim.classList.remove("loading-on");
-          var msg = document.getElementById("sim-msg");
-          msg.textContent = ev.status === "finished"
-            ? "Este evento ya ha terminado. Consulta la agenda para ver los próximos."
-            : "La emisión se activará justo antes del inicio (" + longDate(ev.date) + " h). Vuelve entonces y pulsa play.";
-          sim.classList.add("msg-on");
+    var btns = sourceButtons(ev);
+    sim.addEventListener("click", function (e) {
+      // No interceptar clics en los propios enlaces
+      if (e.target.closest(".src-btn")) return;
+      if (btns) {
+        var links = document.getElementById("sim-links");
+        if (links && !links.innerHTML) {
+          links.innerHTML = '<div class="sim-links-h">Elige dónde ver el partido</div>' + btns;
         }
-      }, 2600);
+        sim.classList.add("links-on");
+        var panel = document.getElementById("sources");
+        if (panel) panel.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        var msg = document.getElementById("sim-msg");
+        msg.textContent = ev.status === "finished"
+          ? "Este evento ya ha terminado. Consulta la agenda para ver los próximos."
+          : "Los enlaces para ver el partido se publicarán poco antes del inicio (" + longDate(ev.date) + " h).";
+        sim.classList.add("msg-on");
+      }
     });
   }
 
