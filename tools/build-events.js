@@ -168,8 +168,10 @@ function footer(lang) {
         <ul>${sp("futbol")}${sp("baloncesto")}${sp("tenis")}${sp("ufc")}${sp("ciclismo")}</ul>
       </div>
       <div>
-        <h3>${t.footKickly}</h3>
-        <ul><li><a href="${abs(lang, "/")}">${t.todayAgenda}</a></li></ul>
+        <h3>${lang === "es" ? "Por país" : t.footKickly}</h3>
+        <ul>${lang === "es"
+          ? COUNTRIES.map(c => `<li><a href="/pais/${c.slug}.html">${c.flag} ${c.name}</a></li>`).join("")
+          : `<li><a href="${abs(lang, "/")}">${t.todayAgenda}</a></li>`}</ul>
       </div>
     </div>
     <div class="ft-base"><span>© 2026 Kickly</span><span>${t.footTag}</span></div>
@@ -363,6 +365,102 @@ ${footer(lang)}
   return `${headTop(lang, t.sportTitle(n), t.sportDesc(n), `/deportes/${sport}.html`, "website")}\n${body}\n`;
 }
 
+/* ---------- Páginas por país (SEO evergreen, en español) ---------- */
+const COUNTRIES = [
+  { slug: "espana", name: "España", flag: "🇪🇸", channels: {
+    futbol: "Movistar Plus+, DAZN, RTVE y LALIGA TV", baloncesto: "DAZN (ACB), Movistar Plus+ y NBA League Pass",
+    tenis: "Movistar Plus+ (Vamos) y Eurosport", ufc: "DAZN", ciclismo: "RTVE (Teledeporte) y Eurosport / Max" } },
+  { slug: "mexico", name: "México", flag: "🇲🇽", channels: {
+    futbol: "Televisa, TUDN, TV Azteca, ViX y Fox Sports", baloncesto: "NBA League Pass y ESPN",
+    tenis: "ESPN y Disney+", ufc: "Fox Sports y Disney+", ciclismo: "ESPN y Eurosport" } },
+  { slug: "argentina", name: "Argentina", flag: "🇦🇷", channels: {
+    futbol: "TyC Sports, ESPN, Disney+ y TV Pública", baloncesto: "NBA League Pass y ESPN",
+    tenis: "ESPN y Disney+", ufc: "Fox Sports y Disney+", ciclismo: "ESPN" } },
+  { slug: "colombia", name: "Colombia", flag: "🇨🇴", channels: {
+    futbol: "Win Sports, RCN, Caracol y DSports", baloncesto: "NBA League Pass y ESPN",
+    tenis: "ESPN y Disney+", ufc: "ESPN y Disney+", ciclismo: "ESPN (y Caracol/RCN en el Tour)" } },
+  { slug: "chile", name: "Chile", flag: "🇨🇱", channels: {
+    futbol: "TNT Sports, Chilevisión y DSports", baloncesto: "NBA League Pass y ESPN",
+    tenis: "ESPN y Disney+", ufc: "ESPN y Disney+", ciclismo: "ESPN" } },
+  { slug: "peru", name: "Perú", flag: "🇵🇪", channels: {
+    futbol: "Movistar Deportes, América TV y DSports", baloncesto: "NBA League Pass y ESPN",
+    tenis: "ESPN y Disney+", ufc: "ESPN y Disney+", ciclismo: "ESPN" } },
+  { slug: "estados-unidos", name: "Estados Unidos", flag: "🇺🇸", channels: {
+    futbol: "FOX, FS1, Telemundo, Peacock y ESPN", baloncesto: "ESPN, ABC, TNT, ION y NBA/WNBA League Pass",
+    tenis: "Tennis Channel y ESPN", ufc: "ESPN+ y Paramount+", ciclismo: "NBC Sports y Peacock" } },
+  { slug: "brasil", name: "Brasil", flag: "🇧🇷", channels: {
+    futbol: "Globo, SporTV y CazéTV", baloncesto: "NBA League Pass, ESPN y Disney+",
+    tenis: "ESPN y Disney+", ufc: "UFC Fight Pass y Bandsports", ciclismo: "Eurosport / Max" } }
+];
+
+function countryPage(c) {
+  const titleStr = `Ver Deporte en Directo en ${c.name} — Fútbol, Baloncesto, Tenis, UFC y Ciclismo | Kickly`;
+  const desc = `Dónde ver deporte en directo en ${c.name}: canales de fútbol, baloncesto, tenis, UFC y ciclismo, más la agenda de partidos de hoy con horarios y enlaces.`;
+  const canonPath = `/pais/${c.slug}.html`;
+  const rows = SPORT_ORDER.map(s => `<tr><th>${SVGICON[s]} ${SPORTS[s]}</th><td>${esc(c.channels[s])}</td></tr>`).join("");
+  const faqLd = {
+    "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
+      { "@type": "Question", name: `¿Dónde ver fútbol en directo en ${c.name}?`,
+        acceptedAnswer: { "@type": "Answer", text: `En ${c.name} el fútbol en directo se emite en ${c.channels.futbol}. En Kickly tienes la agenda de partidos con horarios y enlaces para verlos.` } },
+      { "@type": "Question", name: `¿Qué canales emiten deporte en ${c.name}?`,
+        acceptedAnswer: { "@type": "Answer", text: `Fútbol: ${c.channels.futbol}. Baloncesto: ${c.channels.baloncesto}. Tenis: ${c.channels.tenis}. UFC: ${c.channels.ufc}. Ciclismo: ${c.channels.ciclismo}.` } }
+    ]
+  };
+  const bcLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: `${SITE}/` },
+    { "@type": "ListItem", position: 2, name: c.name }
+  ]};
+  const extraLd = `<script type="application/ld+json">${JSON.stringify(faqLd)}</script>\n<script type="application/ld+json">${JSON.stringify(bcLd)}</script>`;
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${MULTITAG}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${esc(titleStr)}</title>
+<meta name="description" content="${esc(desc)}">
+<meta name="keywords" content="ver deporte en ${c.name}, ver futbol en ${c.name}, donde ver futbol ${c.name}, ver deporte online ${c.name}, canales deporte ${c.name}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="${SITE}${canonPath}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kickly">
+<meta property="og:title" content="${esc(titleStr)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:url" content="${SITE}${canonPath}">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b0c0f">
+<link rel="icon" href="${FAVICON}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+${extraLd}
+</head>
+<body data-root="" data-langroot="">
+${header("es")}
+<main>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="/">Inicio</a><span class="sep">/</span><span>${c.flag} ${esc(c.name)}</span></nav>
+    <div class="page-head"><h1>Ver deporte en directo en ${c.flag} ${esc(c.name)}</h1>
+      <p>Qué canales emiten cada deporte en ${esc(c.name)} y la agenda de partidos de hoy con horarios en tu zona horaria y dónde verlos.</p></div>
+    <div class="ad" id="ad-top"></div>
+    <section class="section"><h2>Dónde ver cada deporte en ${esc(c.name)}</h2>
+      <table class="bcast"><tbody>${rows}</tbody></table></section>
+    <section class="section"><h2>Agenda de hoy</h2>
+      <div id="agenda"><div class="group"><div class="empty">Cargando agenda…</div></div></div></section>
+    <section class="section prose"><h2>Ver deporte online en ${esc(c.name)}</h2>
+      <p>En Kickly encuentras la agenda completa del deporte en directo para ${esc(c.name)}: <strong>fútbol, baloncesto, tenis, UFC y ciclismo</strong>, con el horario de cada evento adaptado a tu zona horaria y los enlaces y canales oficiales para verlo. Consulta también la <a href="/">agenda completa</a> de todos los países.</p></section>
+  </div>
+</main>
+${footer("es")}
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/app.js" defer></script>
+</body>
+</html>
+`;
+}
+
 /* ---------- Escritura ---------- */
 function write(rel, content) {
   const full = path.join(ROOT, rel);
@@ -386,6 +484,10 @@ for (const L of LANGS) {
 }
 console.log(`Generadas ${count} páginas de evento (${events.length} × ${LANGS.length} idiomas) + home/deportes en/pt`);
 
+// Páginas por país
+for (const c of COUNTRIES) write(`pais/${c.slug}.html`, countryPage(c));
+console.log(`Generadas ${COUNTRIES.length} páginas por país`);
+
 /* ---------- Sitemap con hreflang ---------- */
 const today = new Date().toISOString().slice(0, 10);
 function urlEntry(pathAfter, freq, pri) {
@@ -403,6 +505,7 @@ const eventPaths = events.filter(e => e.status !== "finished").map(e => [`/ver/$
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${[...staticPaths, ...eventPaths].map(([p, f, pr]) => urlEntry(p, f, pr)).join("\n")}
+${COUNTRIES.map(c => `  <url><loc>${SITE}/pais/${c.slug}.html</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>`).join("\n")}
   <url><loc>${SITE}/aviso-legal.html</loc><lastmod>${today}</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
 `;
