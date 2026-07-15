@@ -2,8 +2,70 @@
 (function () {
   "use strict";
   var CFG = window.KICKLY || {};
-  var ROOT = document.body.getAttribute("data-root") || ".";
+  var _r = document.body.getAttribute("data-root");
+  var ROOT = _r === null ? "." : _r;                                  // raíz del sitio (datos, assets); "" = absoluta
+  var _lr = document.body.getAttribute("data-langroot");
+  var LANGROOT = _lr === null ? ROOT : _lr;                           // raíz de la sección de idioma (enlaces)
   var WATCH = {};
+  var LANG = (document.documentElement.getAttribute("lang") || "es").slice(0, 2);
+  var LOCALE = { es: "es-ES", en: "en-GB", pt: "pt-BR" }[LANG] || "es-ES";
+  var LPREFIX = LANG === "es" ? "" : "/" + LANG;
+
+  /* ---------- i18n ---------- */
+  var I18N = {
+    es: {
+      liveNow: "En directo ahora", today: "Hoy", tomorrow: "Mañana", finished: "Finalizados",
+      loading: "Cargando agenda…", noneCat: "No hay eventos programados en esta categoría todavía.",
+      fullAgenda: "agenda completa", noMatch: "No hay eventos que coincidan con tu búsqueda.",
+      live: "EN DIRECTO", ended: "FINALIZADO", soon: "EMPIEZA PRONTO",
+      titleTpl: function (t, c) { return "Ver " + t + " Online Gratis — " + c + " en directo | " + CFG.siteName; },
+      descTpl: function (t, sp, c, d) { return "Ver " + t + " gratis y online: " + sp + " · " + c + ", " + d + " h. "; },
+      descTail: "Dónde ver el evento en directo en Kickly.",
+      h1: function (t) { return "Ver " + t + " en directo online gratis"; },
+      whereWatch: function (t) { return "Dónde ver " + t; }, chooseWatch: "Elige dónde ver el partido",
+      linksSoon: function (d) { return "Los enlaces para ver el partido se publicarán poco antes del inicio (" + d + " h)."; },
+      endedMsg: "Este evento ya ha terminado. Consulta la agenda para ver los próximos.",
+      startsIn: "Comienza en", startingNow: "¡El evento está comenzando! Actualizando…",
+      alsoOn: "También en Kickly", byCountry: function (t) { return "Dónde ver " + t + " por país"; },
+      home: "Inicio", noMore: "No hay más eventos programados.", notFound: "Evento no encontrado.", back: "Volver a la agenda",
+      d: "d", h: "h", min: "min", s: "s", offline: "OFFLINE", linksHead: "Enlaces del partido"
+    },
+    en: {
+      liveNow: "Live now", today: "Today", tomorrow: "Tomorrow", finished: "Finished",
+      loading: "Loading schedule…", noneCat: "No events scheduled in this category yet.",
+      fullAgenda: "full schedule", noMatch: "No events match your search.",
+      live: "LIVE", ended: "FINISHED", soon: "STARTING SOON",
+      titleTpl: function (t, c) { return "Watch " + t + " Free Online — " + c + " live | " + CFG.siteName; },
+      descTpl: function (t, sp, c, d) { return "Watch " + t + " free and online: " + sp + " · " + c + ", " + d + ". "; },
+      descTail: "Where to watch the event live on Kickly.",
+      h1: function (t) { return "Watch " + t + " live free online"; },
+      whereWatch: function (t) { return "Where to watch " + t; }, chooseWatch: "Choose where to watch",
+      linksSoon: function (d) { return "The links to watch will be published shortly before kick-off (" + d + ")."; },
+      endedMsg: "This event has ended. Check the schedule for upcoming ones.",
+      startsIn: "Starts in", startingNow: "The event is starting! Refreshing…",
+      alsoOn: "Also on Kickly", byCountry: function (t) { return "Where to watch " + t + " by country"; },
+      home: "Home", noMore: "No more scheduled events.", notFound: "Event not found.", back: "Back to the schedule",
+      d: "d", h: "h", min: "min", s: "s", offline: "OFFLINE", linksHead: "Event links"
+    },
+    pt: {
+      liveNow: "Ao vivo agora", today: "Hoje", tomorrow: "Amanhã", finished: "Encerrados",
+      loading: "Carregando agenda…", noneCat: "Ainda não há eventos nesta categoria.",
+      fullAgenda: "agenda completa", noMatch: "Nenhum evento corresponde à sua busca.",
+      live: "AO VIVO", ended: "ENCERRADO", soon: "COMEÇA EM BREVE",
+      titleTpl: function (t, c) { return "Assistir " + t + " Online Grátis — " + c + " ao vivo | " + CFG.siteName; },
+      descTpl: function (t, sp, c, d) { return "Assistir " + t + " grátis e online: " + sp + " · " + c + ", " + d + ". "; },
+      descTail: "Onde assistir ao evento ao vivo na Kickly.",
+      h1: function (t) { return "Assistir " + t + " ao vivo online grátis"; },
+      whereWatch: function (t) { return "Onde assistir " + t; }, chooseWatch: "Escolha onde assistir",
+      linksSoon: function (d) { return "Os links para assistir serão publicados pouco antes do início (" + d + ")."; },
+      endedMsg: "Este evento terminou. Confira a agenda para os próximos.",
+      startsIn: "Começa em", startingNow: "O evento está começando! Atualizando…",
+      alsoOn: "Também na Kickly", byCountry: function (t) { return "Onde assistir " + t + " por país"; },
+      home: "Início", noMore: "Não há mais eventos agendados.", notFound: "Evento não encontrado.", back: "Voltar à agenda",
+      d: "d", h: "h", min: "min", s: "s", offline: "OFFLINE", linksHead: "Links do evento"
+    }
+  };
+  var T = I18N[LANG] || I18N.es;
 
   /* ---------- Monetag ---------- */
   function loadMonetag() {
@@ -29,7 +91,7 @@
     });
   }
   function fmt(iso, opts) {
-    try { return new Intl.DateTimeFormat("es-ES", opts).format(new Date(iso)); }
+    try { return new Intl.DateTimeFormat(LOCALE, opts).format(new Date(iso)); }
     catch (e) { return iso; }
   }
   function timeHM(iso) { return fmt(iso, { hour: "2-digit", minute: "2-digit" }); }
@@ -40,20 +102,20 @@
     var tomorrow = dayKey(new Date(Date.now() + 864e5).toISOString());
     var k = dayKey(iso);
     var name = fmt(iso, { weekday: "long", day: "numeric", month: "long" });
-    if (k === today) return "Hoy · " + name;
-    if (k === tomorrow) return "Mañana · " + name;
+    if (k === today) return T.today + " · " + name;
+    if (k === tomorrow) return T.tomorrow + " · " + name;
     return name;
   }
   function title(ev) { return ev.away ? ev.home + " – " + ev.away : ev.home; }
   function sportName(ev) { return (CFG.sports[ev.sport] || {}).name || ev.sport; }
-  function evUrl(ev) { return ROOT + "/ver/" + encodeURIComponent(ev.id) + ".html"; }
-  function evCanonical(ev) { return CFG.siteUrl + "/ver/" + encodeURIComponent(ev.id) + ".html"; }
+  function evUrl(ev) { return LANGROOT + "/ver/" + encodeURIComponent(ev.id) + ".html"; }
+  function evCanonical(ev) { return CFG.siteUrl + LPREFIX + "/ver/" + encodeURIComponent(ev.id) + ".html"; }
 
   function pill(ev) {
-    if (ev.status === "live") return '<span class="pill pill-live">EN DIRECTO</span>';
-    if (ev.status === "finished") return '<span class="pill pill-end">FINALIZADO</span>';
+    if (ev.status === "live") return '<span class="pill pill-live">' + T.live + '</span>';
+    if (ev.status === "finished") return '<span class="pill pill-end">' + T.ended + '</span>';
     var diff = new Date(ev.date).getTime() - Date.now();
-    if (diff > 0 && diff < 36e5) return '<span class="pill pill-soon">EMPIEZA PRONTO</span>';
+    if (diff > 0 && diff < 36e5) return '<span class="pill pill-soon">' + T.soon + '</span>';
     return "";
   }
 
@@ -61,8 +123,8 @@
 
   // Tarjeta con miniatura (escena difuminada del deporte + overlay de play)
   function card(ev, showDay) {
-    var when = ev.status === "live" ? "EN DIRECTO"
-      : (showDay ? esc(fmt(ev.date, { day: "numeric", month: "short" })) + " · " : "") + timeHM(ev.date) + " h";
+    var when = ev.status === "live" ? T.live
+      : (showDay ? esc(fmt(ev.date, { day: "numeric", month: "short" })) + " · " : "") + timeHM(ev.date);
     return '<a class="card' + (ev.status === "live" ? " is-live" : "") + '" href="' + evUrl(ev) + '">' +
       '<div class="card-thumb"><div class="sim-scene ' + esc(scene(ev)) + '"></div>' +
         '<span class="card-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>' +
@@ -100,7 +162,7 @@
   function broadcastersTable(ev) {
     var bs = ev.broadcasters || [];
     if (!bs.length) return "";
-    return '<section class="section"><h2>Dónde ver ' + esc(title(ev)) + ' por país</h2>' +
+    return '<section class="section"><h2>' + esc(T.byCountry(title(ev))) + '</h2>' +
       '<table class="bcast"><tbody>' +
       bs.map(function (b) {
         var ch = b.url
@@ -188,7 +250,7 @@
 
     var html = "";
     if (live.length) {
-      html += '<div class="group"><div class="group-head is-live"><i></i>En directo ahora</div>' + grid(live) + "</div>";
+      html += '<div class="group"><div class="group-head is-live"><i></i>' + esc(T.liveNow) + "</div>" + grid(live) + "</div>";
     }
     if (upcoming.length) {
       var byDay = {};
@@ -202,12 +264,12 @@
       });
     }
     if (finished.length) {
-      html += '<div class="group"><div class="group-head"><i></i>Finalizados</div>' + grid(finished, true) + "</div>";
+      html += '<div class="group"><div class="group-head"><i></i>' + esc(T.finished) + "</div>" + grid(finished, true) + "</div>";
     }
     if (!html) {
       html = (agendaFilter.q || agendaFilter.sport)
-        ? '<div class="empty">No hay eventos que coincidan con tu búsqueda.</div>'
-        : '<div class="empty">No hay eventos programados en esta categoría todavía.<br>Consulta la <a href="' + ROOT + '/">agenda completa</a>.</div>';
+        ? '<div class="empty">' + esc(T.noMatch) + "</div>"
+        : '<div class="empty">' + esc(T.noneCat) + '<br><a href="' + LANGROOT + '/">' + esc(T.fullAgenda) + "</a>.</div>";
     }
     box.innerHTML = html;
 
@@ -253,15 +315,15 @@
     var ev = events.find(function (x) { return x.id === id; });
 
     if (!ev) {
-      box.innerHTML = '<div class="list" style="margin-top:24px"><div class="empty">Evento no encontrado. <a href="' + ROOT + '/">Volver a la agenda</a>.</div></div>';
+      box.innerHTML = '<div class="list" style="margin-top:24px"><div class="empty">' + esc(T.notFound) + ' <a href="' + LANGROOT + '/">' + esc(T.back) + '</a>.</div></div>';
       return;
     }
 
-    var t = "Ver " + title(ev) + " Online Gratis — " + ev.competitionName + " en directo | " + CFG.siteName;
+    var t = T.titleTpl(title(ev), ev.competitionName);
     document.title = t;
     setMeta("description",
-      "Ver " + title(ev) + " gratis y online: " + sportName(ev) + " · " + ev.competitionName + ", " + longDate(ev.date) + " h. " +
-      (ev.description ? ev.description + " " : "") + "Emisión en directo en Kickly.");
+      T.descTpl(title(ev), sportName(ev), ev.competitionName, longDate(ev.date)) +
+      (ev.description ? ev.description + " " : "") + T.descTail);
     setMeta("keywords", buildKeywords(ev).join(", "));
     setCanonical(evCanonical(ev));
     setMeta("og:title", t, true);
@@ -269,16 +331,16 @@
     setMeta("og:type", "video.other", true);
 
     box.innerHTML =
-      '<nav class="crumbs" aria-label="Ruta"><a href="' + ROOT + '/">Inicio</a><span class="sep">/</span>' +
-      '<a href="' + ROOT + "/deportes/" + esc(ev.sport) + '.html">' + esc(sportName(ev)) + '</a><span class="sep">/</span><span>' + esc(title(ev)) + "</span></nav>" +
+      '<nav class="crumbs" aria-label="breadcrumb"><a href="' + LANGROOT + '/">' + esc(T.home) + '</a><span class="sep">/</span>' +
+      '<a href="' + LANGROOT + "/deportes/" + esc(ev.sport) + '.html">' + esc(sportName(ev)) + '</a><span class="sep">/</span><span>' + esc(title(ev)) + "</span></nav>" +
       '<div class="player" id="player-box">' + simulator(ev) + "</div>" +
       sourcesPanel(ev) +
-      '<header class="ev-head"><h1>Ver ' + esc(title(ev)) + " en directo online gratis</h1>" +
-      '<div class="meta"><span>' + esc(sportName(ev)) + " · " + esc(ev.competitionName) + '</span><time datetime="' + esc(ev.date) + '">' + esc(longDate(ev.date)) + " h</time>" + pill(ev) + "</div></header>" +
+      '<header class="ev-head"><h1>' + esc(T.h1(title(ev))) + "</h1>" +
+      '<div class="meta"><span>' + esc(sportName(ev)) + " · " + esc(ev.competitionName) + '</span><time datetime="' + esc(ev.date) + '">' + esc(longDate(ev.date)) + "</time>" + pill(ev) + "</div></header>" +
       (ev.description ? '<p class="ev-desc">' + esc(ev.description) + "</p>" : "") +
       '<div class="ad" id="ad-under-player"></div>' +
       broadcastersTable(ev) +
-      '<section class="section"><h2>También en Kickly</h2><div id="related"></div></section>';
+      '<section class="section"><h2>' + esc(T.alsoOn) + '</h2><div id="related"></div></section>';
 
     bindSimulator(ev);
     startCountdown(ev);
@@ -286,7 +348,7 @@
     var related = events.filter(function (x) { return x.id !== ev.id && x.status !== "finished"; }).slice(0, 6);
     document.getElementById("related").innerHTML = related.length
       ? grid(related, true)
-      : '<div class="empty">No hay más eventos programados.</div>';
+      : '<div class="empty">' + esc(T.noMore) + "</div>";
 
     var ld = eventLd(ev);
     ld["@context"] = "https://schema.org";
@@ -294,10 +356,10 @@
     injectJsonLd({
       "@context": "https://schema.org",
       "@type": "BroadcastEvent",
-      "name": "Ver " + title(ev) + " online gratis",
+      "name": T.whereWatch(title(ev)),
       "isLiveBroadcast": true,
       "videoFormat": "HD",
-      "inLanguage": "es",
+      "inLanguage": LANG,
       "startDate": ev.date,
       "broadcastOfEvent": eventLd(ev)
     });
@@ -305,8 +367,8 @@
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": CFG.siteUrl + "/" },
-        { "@type": "ListItem", "position": 2, "name": sportName(ev), "item": CFG.siteUrl + "/deportes/" + ev.sport + ".html" },
+        { "@type": "ListItem", "position": 1, "name": T.home, "item": CFG.siteUrl + LPREFIX + "/" },
+        { "@type": "ListItem", "position": 2, "name": sportName(ev), "item": CFG.siteUrl + LPREFIX + "/deportes/" + ev.sport + ".html" },
         { "@type": "ListItem", "position": 3, "name": title(ev) }
       ]
     });
@@ -318,20 +380,20 @@
     if (btns) {
       return '<div class="sources" id="sources"><div class="sources-head">' +
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007 0l3-3a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-3 3a5 5 0 007 7l1-1"/></svg>' +
-        "Dónde ver " + esc(title(ev)) + "</div><div class=\"sources-btns\">" + btns + "</div></div>";
+        esc(T.whereWatch(title(ev))) + "</div><div class=\"sources-btns\">" + btns + "</div></div>";
     }
     if (ev.status === "finished") return "";
-    return '<div class="sources" id="sources"><div class="sources-head">Enlaces del partido</div>' +
-      '<div class="sources-soon">Los enlaces para ver ' + esc(title(ev)) + ' se publicarán poco antes del inicio (' + esc(longDate(ev.date)) + " h). Vuelve entonces.</div></div>";
+    return '<div class="sources" id="sources"><div class="sources-head">' + esc(T.linksHead) + "</div>" +
+      '<div class="sources-soon">' + esc(T.linksSoon(longDate(ev.date))) + "</div></div>";
   }
 
   /* Reproductor simulado: escena difuminada del deporte + botón de play */
   function simulator(ev) {
     var isLive = ev.status === "live";
-    var hasLinks = (ev.sources || []).length > 0;
-    var sub = ev.status === "finished" ? "Este evento ha finalizado"
-      : isLive ? (hasLinks ? "En directo — pulsa para ver los enlaces" : "En directo")
-      : longDate(ev.date) + " h";
+    var hasLinks = true;
+    var sub = ev.status === "finished" ? T.ended
+      : isLive ? T.live
+      : longDate(ev.date);
     return '<div class="sim' + '" id="sim">' +
       '<div class="sim-scene ' + esc(scene(ev)) + '"></div>' +
       '<button class="play-btn" id="play-btn" aria-label="Ver ' + esc(title(ev)) + '">' +
@@ -343,7 +405,7 @@
       '<div class="sim-msg" id="sim-msg"></div>' +
       '<div class="sim-bar">' +
         '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>' +
-        '<span class="sim-live-tag' + (isLive ? "" : " off") + '">' + (isLive ? "EN DIRECTO" : "OFFLINE") + "</span>" +
+        '<span class="sim-live-tag' + (isLive ? "" : " off") + '">' + (isLive ? T.live : T.offline) + "</span>" +
         '<div class="sim-progress"><i></i></div>' +
         '<span class="sim-clock">' + (isLive ? "LIVE" : timeHM(ev.date)) + "</span>" +
         '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg>' +
@@ -361,16 +423,14 @@
       if (btns) {
         var links = document.getElementById("sim-links");
         if (links && !links.innerHTML) {
-          links.innerHTML = '<div class="sim-links-h">Elige dónde ver el partido</div>' + btns;
+          links.innerHTML = '<div class="sim-links-h">' + esc(T.chooseWatch) + "</div>" + btns;
         }
         sim.classList.add("links-on");
         var panel = document.getElementById("sources");
         if (panel) panel.scrollIntoView({ behavior: "smooth", block: "center" });
       } else {
         var msg = document.getElementById("sim-msg");
-        msg.textContent = ev.status === "finished"
-          ? "Este evento ya ha terminado. Consulta la agenda para ver los próximos."
-          : "Los enlaces para ver el partido se publicarán poco antes del inicio (" + longDate(ev.date) + " h).";
+        msg.textContent = ev.status === "finished" ? T.endedMsg : T.linksSoon(longDate(ev.date));
         sim.classList.add("msg-on");
       }
     });
@@ -398,13 +458,13 @@
     function tick() {
       var diff = new Date(ev.date).getTime() - Date.now();
       if (diff <= 0) {
-        el.textContent = "¡El evento está comenzando! Actualizando…";
+        el.textContent = T.startingNow;
         setTimeout(function () { location.reload(); }, 5000);
         return;
       }
       var d = Math.floor(diff / 864e5), h = Math.floor(diff % 864e5 / 36e5),
           m = Math.floor(diff % 36e5 / 6e4), s = Math.floor(diff % 6e4 / 1e3);
-      el.textContent = "Comienza en " + (d ? d + " d " : "") + h + " h " + m + " min " + s + " s";
+      el.textContent = T.startsIn + " " + (d ? d + " " + T.d + " " : "") + h + " " + T.h + " " + m + " " + T.min + " " + s + " " + T.s;
       setTimeout(tick, 1000);
     }
     tick();
