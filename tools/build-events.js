@@ -9,7 +9,7 @@ const path = require("path");
 
 const SITE = "https://kickly.app";
 const ROOT = path.join(__dirname, "..");
-const SPORTS = { futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC · MMA" };
+const SPORTS = { futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC · MMA", ciclismo: "Ciclismo" };
 
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "data/events.json"), "utf8"));
 const events = data.events || [];
@@ -137,6 +137,7 @@ ${MULTITAG}
       <a href="../deportes/baloncesto.html">Baloncesto</a>
       <a href="../deportes/tenis.html">Tenis</a>
       <a href="../deportes/ufc.html">UFC</a>
+      <a href="../deportes/ciclismo.html">Ciclismo</a>
     </nav>
     <div class="hd-live" id="live-indicator"><i></i><span>DIRECTO</span></div>
   </div>
@@ -178,6 +179,7 @@ ${MULTITAG}
           <li><a href="../deportes/baloncesto.html">Baloncesto en directo</a></li>
           <li><a href="../deportes/tenis.html">Tenis en directo</a></li>
           <li><a href="../deportes/ufc.html">UFC · MMA en directo</a></li>
+          <li><a href="../deportes/ciclismo.html">Ciclismo en directo</a></li>
         </ul>
       </div>
       <div>
@@ -216,6 +218,7 @@ const staticUrls = [
   { loc: `${SITE}/deportes/baloncesto.html`, freq: "daily", pri: "0.8" },
   { loc: `${SITE}/deportes/tenis.html`, freq: "daily", pri: "0.8" },
   { loc: `${SITE}/deportes/ufc.html`, freq: "daily", pri: "0.8" },
+  { loc: `${SITE}/deportes/ciclismo.html`, freq: "daily", pri: "0.8" },
   { loc: `${SITE}/aviso-legal.html`, freq: "yearly", pri: "0.2" }
 ];
 const eventUrls = events

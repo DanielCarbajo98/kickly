@@ -207,6 +207,16 @@ main{flex:1;width:100%}
   repeating-linear-gradient(-52deg,rgba(255,255,255,.06) 0 2px,transparent 2px 26px),
   linear-gradient(180deg,#181a22 44%,#101218 100%)}
 
+.sim-scene.ciclismo{background:
+  radial-gradient(circle at 20% 12%,rgba(255,255,230,.4) 0 2%,transparent 7%),
+  radial-gradient(circle at 80% 10%,rgba(255,255,230,.35) 0 2%,transparent 7%),
+  radial-gradient(circle at 12% 26%,rgba(233,84,84,.4) 0 .8%,transparent 1.5%),
+  radial-gradient(circle at 30% 20%,rgba(255,209,84,.4) 0 .7%,transparent 1.4%),
+  radial-gradient(circle at 66% 24%,rgba(84,140,233,.4) 0 .7%,transparent 1.4%),
+  radial-gradient(circle at 88% 20%,rgba(84,233,150,.35) 0 .7%,transparent 1.4%),
+  linear-gradient(180deg,#7fb4e8 0%,#a9cdec 22%,#3f7a44 34%,#356b3a 44%,transparent 44%),
+  linear-gradient(90deg,transparent 47%,rgba(255,255,255,.55) 47.5% 48%,transparent 48.5%,transparent 52%,rgba(255,255,255,.55) 52% 52.5%,transparent 53%),
+  repeating-linear-gradient(90deg,#3a3d45 0 6%,#33363d 6% 12%)}
 .sim-title{font-size:clamp(18px,2.8vw,26px);font-weight:800;letter-spacing:-.02em;position:relative;text-shadow:0 2px 18px rgba(0,0,0,.7)}
 .sim-sub{color:#cfd4dd;font-size:13.5px;position:relative;text-shadow:0 1px 12px rgba(0,0,0,.7)}
 .sim-count{font-size:13px;font-weight:600;color:#fff;background:rgba(10,12,16,.55);border:1px solid rgba(255,70,85,.45);padding:6px 14px;border-radius:20px;font-variant-numeric:tabular-nums;position:relative;backdrop-filter:blur(4px)}
