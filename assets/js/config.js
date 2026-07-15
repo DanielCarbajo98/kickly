@@ -25,7 +25,10 @@ window.KICKLY = {
    *    y activa pushServiceWorker: true.
    */
   monetag: {
+    // El MultiTag (zona 259826) está pegado directamente en el <head> de
+    // cada página HTML. Añade aquí solo zonas adicionales si creas más.
     zones: [],
-    pushServiceWorker: false
+    // sw.js contiene el service worker de Push de Monetag (zona 11299357)
+    pushServiceWorker: true
   }
 };
