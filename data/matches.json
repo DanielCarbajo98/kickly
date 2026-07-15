@@ -1,0 +1,41 @@
+{
+  "_ayuda": "Añade aquí tus partidos. 'id' debe ser único y en formato-url. 'status': 'scheduled' | 'live' | 'finished'. En 'embed' pon la URL del iframe de tu emisión (con derechos) o en 'hls' una URL .m3u8. Si ambos están vacíos se muestra la cuenta atrás.",
+  "matches": [
+    {
+      "id": "real-madrid-vs-barcelona-2026-07-19",
+      "competition": "la-liga",
+      "competitionName": "La Liga",
+      "home": "Real Madrid",
+      "away": "FC Barcelona",
+      "date": "2026-07-19T21:00:00+02:00",
+      "status": "scheduled",
+      "embed": "",
+      "hls": "",
+      "description": "El Clásico de la jornada. Sigue el Real Madrid contra el FC Barcelona en directo."
+    },
+    {
+      "id": "arsenal-vs-liverpool-2026-07-18",
+      "competition": "premier-league",
+      "competitionName": "Premier League",
+      "home": "Arsenal",
+      "away": "Liverpool",
+      "date": "2026-07-18T18:30:00+02:00",
+      "status": "scheduled",
+      "embed": "",
+      "hls": "",
+      "description": "Duelo de la Premier League entre Arsenal y Liverpool en directo."
+    },
+    {
+      "id": "psg-vs-bayern-2026-07-21",
+      "competition": "champions-league",
+      "competitionName": "Champions League",
+      "home": "PSG",
+      "away": "Bayern de Múnich",
+      "date": "2026-07-21T21:00:00+02:00",
+      "status": "scheduled",
+      "embed": "",
+      "hls": "",
+      "description": "Partidazo de Champions League: PSG contra Bayern de Múnich en directo."
+    }
+  ]
+}

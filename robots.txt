@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danielcarbajo98.github.io/kickly/sitemap.xml
