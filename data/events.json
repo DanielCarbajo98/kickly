@@ -20,8 +20,8 @@
       "home": "Inglaterra",
       "away": "Argentina",
       "date": "2026-07-15T21:00:00+02:00",
-      "status": "scheduled",
-      "embed": "",
+      "status": "live",
+      "embed": "https://www.youtube.com/embed/LIHo_-_tEXc?autoplay=1",
       "hls": "",
       "description": "Semifinal de la Copa del Mundo 2026: Inglaterra y Argentina se juegan el pase a la final contra España. Hoy a las 21:00 (hora española)."
     },
