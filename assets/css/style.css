@@ -279,3 +279,17 @@ main{flex:1;width:100%}
 .bcast th{text-align:left;font-weight:600;color:var(--text);padding:11px 14px;white-space:nowrap;width:1%;vertical-align:top;border-right:1px solid var(--line)}
 .bcast td{padding:11px 14px;color:var(--dim)}
 @media (max-width:560px){.bcast th{white-space:normal}}
+
+
+/* ---------- Buscador y filtros ---------- */
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:18px 0 6px}
+.search{position:relative;flex:1;min-width:220px}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--faint);pointer-events:none}
+.search input{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 14px 11px 40px;color:var(--text);font-size:14px;font-family:inherit}
+.search input:focus{outline:none;border-color:var(--line-2)}
+.search input::placeholder{color:var(--faint)}
+.filters{display:flex;gap:7px;flex-wrap:wrap}
+.filter{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:9px 15px;color:var(--dim);font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .12s}
+.filter:hover{color:var(--text);border-color:var(--line-2)}
+.filter.on{background:var(--live);border-color:var(--live);color:#fff}
+@media (max-width:560px){.filters{width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}}

@@ -163,11 +163,23 @@
   }
 
   /* ---------- Agenda (portada y páginas de deporte) ---------- */
+  var AGENDA_EVENTS = null, agendaFilter = { sport: "", q: "" };
+
   function renderAgenda(events) {
     var box = document.getElementById("agenda");
     if (!box) return;
-    var sport = document.body.getAttribute("data-sport");
-    if (sport) events = events.filter(function (e) { return e.sport === sport; });
+    var pageSport = document.body.getAttribute("data-sport");
+    if (pageSport) events = events.filter(function (e) { return e.sport === pageSport; });
+    if (AGENDA_EVENTS === null) { AGENDA_EVENTS = events; bindAgendaControls(); }
+
+    // Filtros de buscador/deporte (solo portada)
+    if (agendaFilter.sport) events = events.filter(function (e) { return e.sport === agendaFilter.sport; });
+    if (agendaFilter.q) {
+      var q = agendaFilter.q.toLowerCase();
+      events = events.filter(function (e) {
+        return (e.home + " " + (e.away || "") + " " + e.competitionName + " " + sportName(e)).toLowerCase().indexOf(q) >= 0;
+      });
+    }
     events.sort(function (a, b) { return new Date(a.date) - new Date(b.date); });
 
     var live = events.filter(function (e) { return e.status === "live"; });
@@ -193,17 +205,42 @@
       html += '<div class="group"><div class="group-head"><i></i>Finalizados</div>' + grid(finished, true) + "</div>";
     }
     if (!html) {
-      html = '<div class="empty">No hay eventos programados en esta categoría todavía.<br>Consulta la <a href="' + ROOT + '/">agenda completa</a>.</div>';
+      html = (agendaFilter.q || agendaFilter.sport)
+        ? '<div class="empty">No hay eventos que coincidan con tu búsqueda.</div>'
+        : '<div class="empty">No hay eventos programados en esta categoría todavía.<br>Consulta la <a href="' + ROOT + '/">agenda completa</a>.</div>';
     }
     box.innerHTML = html;
 
-    if (events.length) {
+    if (events.length && !agendaLdDone) {
+      agendaLdDone = true;
       injectJsonLd({
         "@context": "https://schema.org",
         "@type": "ItemList",
         "itemListElement": events.slice(0, 25).map(function (e, i) {
           return { "@type": "ListItem", "position": i + 1, "item": eventLd(e) };
         })
+      });
+    }
+  }
+  var agendaLdDone = false;
+
+  function bindAgendaControls() {
+    var input = document.getElementById("q");
+    var filters = document.getElementById("filters");
+    if (input) {
+      input.addEventListener("input", function () {
+        agendaFilter.q = input.value.trim();
+        renderAgenda(AGENDA_EVENTS);
+      });
+    }
+    if (filters) {
+      filters.addEventListener("click", function (e) {
+        var btn = e.target.closest(".filter");
+        if (!btn) return;
+        agendaFilter.sport = btn.getAttribute("data-sport") || "";
+        [].forEach.call(filters.querySelectorAll(".filter"), function (b) { b.classList.remove("on"); });
+        btn.classList.add("on");
+        renderAgenda(AGENDA_EVENTS);
       });
     }
   }
