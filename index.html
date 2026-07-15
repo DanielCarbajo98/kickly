@@ -3,36 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kickly — Ver fútbol en directo online: agenda de partidos hoy</title>
-<meta name="description" content="Agenda de partidos de fútbol en directo: La Liga, Premier League y Champions League. Consulta horarios y sigue los partidos de hoy online en Kickly.">
+<title>Kickly — Deporte en directo: fútbol, baloncesto, tenis y UFC online</title>
+<meta name="description" content="Agenda del deporte en directo: partidos de fútbol, baloncesto, tenis y veladas UFC de hoy. Horarios en tu zona horaria y emisión online en kickly.app.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://danielcarbajo98.github.io/kickly/">
-
-<!-- MONETAG: pega aquí tu meta tag de verificación del sitio, por ejemplo:
-     <meta name="monetag" content="TU_CODIGO_DE_VERIFICACION"> -->
-
-<!-- Open Graph -->
+<link rel="canonical" href="https://kickly.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kickly">
-<meta property="og:title" content="Kickly — Ver fútbol en directo online">
-<meta property="og:description" content="Agenda de partidos de fútbol en directo: horarios de La Liga, Premier League y Champions League. Los partidos de hoy, online.">
-<meta property="og:url" content="https://danielcarbajo98.github.io/kickly/">
+<meta property="og:title" content="Kickly — Deporte en directo: fútbol, baloncesto, tenis y UFC online">
+<meta property="og:description" content="Agenda del deporte en directo: partidos de fútbol, baloncesto, tenis y veladas UFC de hoy. Horarios en tu zona horaria y emisión online en kickly.app.">
+<meta property="og:url" content="https://kickly.app/">
 <meta property="og:locale" content="es_ES">
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kickly — Ver fútbol en directo online">
-<meta name="twitter:description" content="Agenda de partidos de fútbol en directo con horarios y emisiones de los partidos de hoy.">
-
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/style.css">
-
+<meta name="theme-color" content="#0b0c0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff4655'/%3E%3Cpath d='M26 20l18 12-18 12z' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/style.css">
+<!-- MONETAG: pega aquí tu meta tag de verificación, por ejemplo:
+     <meta name="monetag" content="TU_CODIGO"> -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Kickly",
-  "url": "https://danielcarbajo98.github.io/kickly/",
-  "description": "Agenda de partidos de fútbol en directo online.",
+  "url": "https://kickly.app/",
+  "description": "Agenda del deporte en directo: fútbol, baloncesto, tenis y UFC online.",
   "inLanguage": "es"
 }
 </script>
@@ -41,101 +37,92 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cómo puedo ver los partidos de hoy en Kickly?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Consulta la agenda de la portada: cada tarjeta muestra el horario del partido en tu zona horaria. Cuando el partido está en directo, entra en su página y la emisión se reproduce automáticamente."}
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué competiciones cubre Kickly?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Kickly cubre La Liga, la Premier League y la Champions League, y la agenda se amplía continuamente con nuevos partidos y competiciones."}
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito registrarme para ver los partidos?",
-      "acceptedAnswer": {"@type": "Answer", "text": "No. Kickly es accesible directamente desde el navegador, tanto en móvil como en ordenador, sin necesidad de crear una cuenta."}
-    }
+    {"@type": "Question", "name": "¿Cómo veo los eventos de hoy en Kickly?", "acceptedAnswer": {"@type": "Answer", "text": "La portada muestra la agenda del día ordenada por hora y adaptada a tu zona horaria. Cuando un evento está en directo, entra en su página y la emisión se reproduce directamente."}},
+    {"@type": "Question", "name": "¿Qué deportes cubre Kickly?", "acceptedAnswer": {"@type": "Answer", "text": "Fútbol, baloncesto, tenis y UFC/MMA, con nuevas competiciones añadiéndose continuamente."}},
+    {"@type": "Question", "name": "¿Necesito registrarme?", "acceptedAnswer": {"@type": "Answer", "text": "No. Kickly funciona directamente en el navegador, sin cuentas ni instalaciones."}}
   ]
 }
 </script>
 </head>
-<body data-root=".">
-<header class="site-header">
-  <div class="container">
-    <a class="logo" href="./">Kick<span>ly</span></a>
-    <nav class="main-nav" aria-label="Principal">
-      <a href="./" aria-current="page">Inicio</a>
-      <a href="ligas/la-liga.html">La Liga</a>
-      <a href="ligas/premier-league.html">Premier League</a>
-      <a href="ligas/champions-league.html">Champions</a>
+<body data-root="." >
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="brand" href="./" aria-label="Kickly — inicio"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#ff4655"/><path d="M26 20l18 12-18 12z" fill="#fff"/></svg><span class="brand-name">kickly</span></a>
+    <nav class="hd-nav" aria-label="Deportes">
+      <a href="./" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Agenda</a>
+      <a href="./deportes/futbol.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8l3.8 2.8-1.5 4.4H9.7L8.2 10.8z"/></svg> Fútbol</a>
+      <a href="./deportes/baloncesto.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 2.5 3 15.5 0 18M12 3c-3 2.5-3 15.5 0 18"/></svg> Baloncesto</a>
+      <a href="./deportes/tenis.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M4.5 6a11 11 0 010 12M19.5 6a11 11 0 000 12"/></svg> Tenis</a>
+      <a href="./deportes/ufc.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8.5 3h7l5 5v8l-5 5h-7l-5-5V8z"/></svg> UFC</a>
     </nav>
+    <div class="hd-live" id="live-indicator"><i></i><span>DIRECTO</span></div>
   </div>
 </header>
 
 <main>
-  <section class="hero container">
-    <h1>Fútbol <em>en directo</em>: los partidos de hoy, online</h1>
-    <p>Consulta la agenda de partidos de La Liga, Premier League y Champions League y sigue las emisiones en directo desde cualquier dispositivo.</p>
-  </section>
-
-  <div class="container">
-    <div class="ad-slot" id="ad-top"></div>
-
-    <section class="section" id="en-directo">
-      <h2><span class="dot live"></span> En directo ahora</h2>
-      <div class="match-grid" id="list-live"><div class="empty">Cargando partidos…</div></div>
-    </section>
-
-    <section class="section" id="proximos">
-      <h2><span class="dot"></span> Próximos partidos</h2>
-      <div class="match-grid" id="list-upcoming"><div class="empty">Cargando agenda…</div></div>
-    </section>
-
-    <section class="section" id="finalizados">
-      <h2><span class="dot"></span> Finalizados</h2>
-      <div class="match-grid" id="list-finished"></div>
-    </section>
-
-    <div class="ad-slot" id="ad-mid"></div>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Deporte en directo, hoy</h1>
+      <p>La agenda completa del deporte en vivo: fútbol, baloncesto, tenis y UFC. Horarios en tu zona horaria y emisión en la página de cada evento.</p>
+    </div>
+    <div class="ad" id="ad-top"></div>
+    <div id="agenda"><div class="group"><div class="list"><div class="empty">Cargando agenda…</div></div></div></div>
 
     <section class="section prose">
-      <h2>Ver fútbol online en Kickly</h2>
-      <p>Kickly es tu agenda de <strong>fútbol en directo</strong>: reunimos en un solo lugar los horarios de los partidos de <a href="ligas/la-liga.html">La Liga</a>, la <a href="ligas/premier-league.html">Premier League</a> y la <a href="ligas/champions-league.html">Champions League</a>, con la emisión disponible en la página de cada partido cuando comienza el encuentro.</p>
-      <p>Los horarios se muestran automáticamente en tu zona horaria y la web funciona en móvil, tablet y ordenador sin instalar nada.</p>
+      <h2>Ver deporte online en Kickly</h2>
+      <p>Kickly reúne en un solo lugar los horarios y emisiones del mejor deporte en directo: <a href="deportes/futbol.html">fútbol</a> (Mundial, ligas europeas y competiciones internacionales), <a href="deportes/baloncesto.html">baloncesto</a>, <a href="deportes/tenis.html">tenis</a> y <a href="deportes/ufc.html">UFC</a>.</p>
+      <p>Cada evento tiene su propia página con <strong>cuenta atrás, horario adaptado a tu zona horaria y reproductor en directo</strong> cuando comienza. Sin registros y desde cualquier dispositivo.</p>
     </section>
 
-    <section class="section" id="faq">
+    <section class="section">
       <h2>Preguntas frecuentes</h2>
-      <details class="faq">
-        <summary>¿Cómo puedo ver los partidos de hoy?</summary>
-        <p>Consulta la agenda de la portada: cada tarjeta muestra el horario en tu zona horaria. Cuando el partido está en directo, entra en su página y la emisión se reproduce automáticamente.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Qué competiciones cubre Kickly?</summary>
-        <p>La Liga, la Premier League y la Champions League, y la agenda se amplía continuamente con nuevos partidos y competiciones.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Necesito registrarme?</summary>
-        <p>No. Kickly funciona directamente en el navegador, sin cuentas ni instalaciones.</p>
-      </details>
+      <div class="faq">
+        <details>
+          <summary>¿Cómo veo los eventos de hoy?</summary>
+          <p>La portada muestra la agenda del día ordenada por hora, ya convertida a tu zona horaria. Cuando un evento está en directo aparece marcado en rojo: entra en su página y la emisión se reproduce directamente.</p>
+        </details>
+        <details>
+          <summary>¿Qué deportes cubre Kickly?</summary>
+          <p>Fútbol, baloncesto, tenis y UFC/MMA, con nuevas competiciones añadiéndose continuamente a la agenda.</p>
+        </details>
+        <details>
+          <summary>¿Necesito registrarme o instalar algo?</summary>
+          <p>No. Kickly funciona directamente en el navegador del móvil, la tablet o el ordenador.</p>
+        </details>
+      </div>
     </section>
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <span>© 2026 Kickly · Fútbol en directo online</span>
-    <nav aria-label="Legal">
-      <a href="ligas/la-liga.html">La Liga</a>
-      <a href="ligas/premier-league.html">Premier League</a>
-      <a href="ligas/champions-league.html">Champions League</a>
-      <a href="aviso-legal.html">Aviso legal</a>
-    </nav>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-in">
+      <div>
+        <a class="brand" href="./" aria-label="Kickly"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#ff4655"/><path d="M26 20l18 12-18 12z" fill="#fff"/></svg><span class="brand-name">kickly</span></a>
+        <p>La agenda del deporte en directo: horarios y emisiones de fútbol, baloncesto, tenis y UFC, en tu zona horaria y desde cualquier dispositivo.</p>
+      </div>
+      <div>
+        <h3>Deportes</h3>
+        <ul>
+          <li><a href="./deportes/futbol.html">Fútbol en directo</a></li>
+          <li><a href="./deportes/baloncesto.html">Baloncesto en directo</a></li>
+          <li><a href="./deportes/tenis.html">Tenis en directo</a></li>
+          <li><a href="./deportes/ufc.html">UFC · MMA en directo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kickly</h3>
+        <ul>
+          <li><a href="./">Agenda de hoy</a></li>
+          <li><a href="./aviso-legal.html">Aviso legal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-base"><span>© 2026 Kickly</span><span>kickly.app · deporte en directo</span></div>
   </div>
 </footer>
 
-<script src="assets/js/config.js"></script>
-<script src="assets/js/app.js" defer></script>
+<script src="./assets/js/config.js"></script>
+<script src="./assets/js/app.js" defer></script>
 </body>
 </html>
