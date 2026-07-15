@@ -226,3 +226,10 @@ main{flex:1;width:100%}
 .sim-progress i{display:block;height:100%;width:22%;background:var(--live);border-radius:2px;animation:buffer 3.2s ease-in-out infinite alternate}
 @keyframes buffer{to{width:34%}}
 .sim-clock{font-variant-numeric:tabular-nums;color:#9aa1ae}
+
+/* Estado de carga del simulador */
+.sim.loading-on .play-btn,.sim.loading-on .sim-count{display:none}
+.sim-loader{display:none;align-items:center;gap:10px;position:relative;color:#fff;font-size:13.5px;font-weight:500;background:rgba(10,12,16,.6);border:1px solid var(--line-2);border-radius:10px;padding:10px 16px;backdrop-filter:blur(4px)}
+.sim.loading-on .sim-loader{display:inline-flex}
+.spinner{width:18px;height:18px;border-radius:50%;border:2.5px solid rgba(255,255,255,.25);border-top-color:var(--live);animation:spin .8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
