@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://danielcarbajo98.github.io/kickly/</loc>
+    <loc>https://kickly.app/</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://danielcarbajo98.github.io/kickly/ligas/la-liga.html</loc>
+    <loc>https://kickly.app/deportes/futbol.html</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://danielcarbajo98.github.io/kickly/ligas/premier-league.html</loc>
+    <loc>https://kickly.app/deportes/baloncesto.html</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://danielcarbajo98.github.io/kickly/ligas/champions-league.html</loc>
+    <loc>https://kickly.app/deportes/tenis.html</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://danielcarbajo98.github.io/kickly/partido.html</loc>
+    <loc>https://kickly.app/deportes/ufc.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kickly.app/evento.html</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kickly.app/aviso-legal.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 </urlset>
