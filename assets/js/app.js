@@ -45,7 +45,8 @@
   }
   function title(ev) { return ev.away ? ev.home + " – " + ev.away : ev.home; }
   function sportName(ev) { return (CFG.sports[ev.sport] || {}).name || ev.sport; }
-  function evUrl(ev) { return ROOT + "/evento.html?e=" + encodeURIComponent(ev.id); }
+  function evUrl(ev) { return ROOT + "/ver/" + encodeURIComponent(ev.id) + ".html"; }
+  function evCanonical(ev) { return CFG.siteUrl + "/ver/" + encodeURIComponent(ev.id) + ".html"; }
 
   function pill(ev) {
     if (ev.status === "live") return '<span class="pill pill-live">EN DIRECTO</span>';
@@ -85,7 +86,7 @@
   }
 
   function eventLd(ev) {
-    var url = CFG.siteUrl + "/evento.html?e=" + encodeURIComponent(ev.id);
+    var url = evCanonical(ev);
     var ld = {
       "@type": "SportsEvent",
       "name": title(ev) + " — " + ev.competitionName,
@@ -168,7 +169,7 @@
   function renderEvent(events) {
     var box = document.getElementById("event-page");
     if (!box) return;
-    var id = new URLSearchParams(location.search).get("e");
+    var id = document.body.getAttribute("data-event-id") || new URLSearchParams(location.search).get("e");
     var ev = events.find(function (x) { return x.id === id; });
 
     if (!ev) {
@@ -182,36 +183,22 @@
       "Ver " + title(ev) + " gratis y online: " + sportName(ev) + " · " + ev.competitionName + ", " + longDate(ev.date) + " h. " +
       (ev.description ? ev.description + " " : "") + "Emisión en directo en Kickly.");
     setMeta("keywords", buildKeywords(ev).join(", "));
-    var canonical = CFG.siteUrl + "/evento.html?e=" + encodeURIComponent(ev.id);
-    setCanonical(canonical);
+    setCanonical(evCanonical(ev));
     setMeta("og:title", t, true);
-    setMeta("og:url", canonical, true);
+    setMeta("og:url", evCanonical(ev), true);
     setMeta("og:type", "video.other", true);
-
-    var player;
-    if (ev.embed) {
-      player = '<iframe src="' + esc(ev.embed) + '" allowfullscreen loading="lazy" referrerpolicy="no-referrer" title="' + esc(title(ev)) + '"></iframe>';
-    } else if (ev.hls) {
-      player = '<video id="hls-player" controls playsinline></video>';
-    } else if (ev.status === "finished") {
-      player = '<div class="player-idle"><div class="vs">' + esc(title(ev)) + '</div><div class="when">Este evento ha finalizado.</div></div>';
-    } else {
-      player = '<div class="player-idle"><div class="vs">' + esc(title(ev)) + '</div>' +
-        '<div class="when">' + esc(longDate(ev.date)) + " h</div>" +
-        '<div class="count" id="countdown"></div></div>';
-    }
 
     box.innerHTML =
       '<nav class="crumbs" aria-label="Ruta"><a href="' + ROOT + '/">Inicio</a><span class="sep">/</span>' +
       '<a href="' + ROOT + "/deportes/" + esc(ev.sport) + '.html">' + esc(sportName(ev)) + '</a><span class="sep">/</span><span>' + esc(title(ev)) + "</span></nav>" +
-      '<div class="player">' + player + "</div>" +
+      '<div class="player" id="player-box">' + simulator(ev) + "</div>" +
       '<header class="ev-head"><h1>Ver ' + esc(title(ev)) + " en directo online gratis</h1>" +
       '<div class="meta"><span>' + esc(sportName(ev)) + " · " + esc(ev.competitionName) + '</span><time datetime="' + esc(ev.date) + '">' + esc(longDate(ev.date)) + " h</time>" + pill(ev) + "</div></header>" +
       (ev.description ? '<p class="ev-desc">' + esc(ev.description) + "</p>" : "") +
       '<div class="ad" id="ad-under-player"></div>' +
       '<section class="section"><h2>También en Kickly</h2><div id="related"></div></section>';
 
-    if (!ev.embed && ev.hls) initHls(ev.hls);
+    bindSimulator(ev);
     startCountdown(ev);
 
     var related = events.filter(function (x) { return x.id !== ev.id && x.status !== "finished"; }).slice(0, 6);
@@ -243,6 +230,51 @@
     });
   }
 
+  /* Reproductor simulado: escena difuminada del deporte + botón de play */
+  function simulator(ev) {
+    var scene = (CFG.sports[ev.sport]) ? ev.sport : "futbol";
+    var isLive = ev.status === "live";
+    var sub = ev.status === "finished" ? "Este evento ha finalizado"
+      : isLive ? "Emisión en curso — pulsa play"
+      : longDate(ev.date) + " h";
+    return '<div class="sim' + '" id="sim">' +
+      '<div class="sim-scene ' + esc(scene) + '"></div>' +
+      '<button class="play-btn" id="play-btn" aria-label="Reproducir ' + esc(title(ev)) + '">' +
+        '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>' +
+      '<div class="sim-title">' + esc(title(ev)) + "</div>" +
+      '<div class="sim-sub">' + esc(sub) + "</div>" +
+      '<div class="sim-count" id="countdown"></div>' +
+      '<div class="sim-msg" id="sim-msg"></div>' +
+      '<div class="sim-bar">' +
+        '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>' +
+        '<span class="sim-live-tag' + (isLive ? "" : " off") + '">' + (isLive ? "EN DIRECTO" : "OFFLINE") + "</span>" +
+        '<div class="sim-progress"><i></i></div>' +
+        '<span class="sim-clock">' + (isLive ? "LIVE" : timeHM(ev.date)) + "</span>" +
+        '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg>' +
+        '<svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>' +
+      "</div></div>";
+  }
+
+  function bindSimulator(ev) {
+    var sim = document.getElementById("sim");
+    if (!sim) return;
+    sim.addEventListener("click", function () {
+      var boxEl = document.getElementById("player-box");
+      if (ev.embed) {
+        boxEl.innerHTML = '<iframe src="' + esc(ev.embed) + '" allowfullscreen allow="autoplay; fullscreen; encrypted-media" referrerpolicy="no-referrer" title="' + esc(title(ev)) + '"></iframe>';
+      } else if (ev.hls) {
+        boxEl.innerHTML = '<video id="hls-player" controls autoplay playsinline></video>';
+        initHls(ev.hls);
+      } else {
+        var msg = document.getElementById("sim-msg");
+        msg.textContent = ev.status === "finished"
+          ? "Este evento ya ha terminado. Consulta la agenda para ver los próximos."
+          : "La emisión se activará justo antes del inicio (" + longDate(ev.date) + " h). Vuelve entonces y pulsa play.";
+        sim.classList.add("msg-on");
+      }
+    });
+  }
+
   function initHls(src) {
     var video = document.getElementById("hls-player");
     if (!video) return;
@@ -264,7 +296,11 @@
     if (!el) return;
     function tick() {
       var diff = new Date(ev.date).getTime() - Date.now();
-      if (diff <= 0) { el.textContent = "El evento está a punto de comenzar — recarga la página."; return; }
+      if (diff <= 0) {
+        el.textContent = "¡El evento está comenzando! Actualizando…";
+        setTimeout(function () { location.reload(); }, 5000);
+        return;
+      }
       var d = Math.floor(diff / 864e5), h = Math.floor(diff % 864e5 / 36e5),
           m = Math.floor(diff % 36e5 / 6e4), s = Math.floor(diff % 6e4 / 1e3);
       el.textContent = "Comienza en " + (d ? d + " d " : "") + h + " h " + m + " min " + s + " s";
