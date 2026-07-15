@@ -1,0 +1,81 @@
+/* Kickly — estilos globales */
+:root{
+  --bg:#0b0e14;--bg2:#111623;--bg3:#181f30;--border:rgba(255,255,255,.08);
+  --tx:#eef2ff;--mu:#8b96ad;--ac:#00e08a;--ac-dark:#00b06c;--live:#ff3b52;
+  --r:10px;--r2:16px;--maxw:1080px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--font);font-size:16px;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ac);text-decoration:none}
+a:hover{text-decoration:underline}
+img,video,iframe{max-width:100%}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 1rem}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.site-header .container{display:flex;align-items:center;gap:1rem;height:60px}
+.logo{font-size:1.4rem;font-weight:800;letter-spacing:-.5px;color:var(--tx)}
+.logo span{color:var(--ac)}
+.main-nav{margin-left:auto;display:flex;gap:.25rem;overflow-x:auto}
+.main-nav a{color:var(--mu);font-size:.9rem;font-weight:500;padding:.4rem .8rem;border-radius:20px;white-space:nowrap}
+.main-nav a:hover,.main-nav a[aria-current="page"]{color:var(--tx);background:var(--bg3);text-decoration:none}
+
+/* Hero */
+.hero{padding:3rem 0 2rem;text-align:center}
+.hero h1{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800;letter-spacing:-1px;line-height:1.2}
+.hero h1 em{color:var(--ac);font-style:normal}
+.hero p{color:var(--mu);max-width:640px;margin:.8rem auto 0}
+
+/* Secciones */
+main{flex:1}
+.section{padding:1.5rem 0}
+.section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.section h2 .dot{width:9px;height:9px;border-radius:50%;background:var(--ac);display:inline-block}
+.section h2 .dot.live{background:var(--live);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.35}}
+
+/* Tarjetas de partido */
+.match-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.9rem}
+.match-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:1rem;display:block;color:var(--tx);transition:transform .15s,border-color .15s}
+.match-card:hover{transform:translateY(-2px);border-color:var(--ac);text-decoration:none}
+.match-card .comp{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--mu);display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.badge{font-size:.68rem;font-weight:700;padding:.15rem .55rem;border-radius:12px;background:var(--bg3);color:var(--mu)}
+.badge.live{background:rgba(255,59,82,.15);color:var(--live)}
+.badge.soon{background:rgba(0,224,138,.12);color:var(--ac)}
+.teams{display:flex;align-items:center;justify-content:space-between;gap:.5rem;font-weight:700;font-size:1.02rem}
+.teams .vs{color:var(--mu);font-size:.8rem;font-weight:400}
+.match-card time{display:block;margin-top:.6rem;font-size:.85rem;color:var(--mu)}
+.empty{color:var(--mu);background:var(--bg2);border:1px dashed var(--border);border-radius:var(--r2);padding:1.5rem;text-align:center}
+
+/* Reproductor */
+.player-wrap{background:#000;border-radius:var(--r2);overflow:hidden;aspect-ratio:16/9;position:relative;border:1px solid var(--border)}
+.player-wrap iframe,.player-wrap video{width:100%;height:100%;border:0;display:block}
+.player-msg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;color:var(--mu);text-align:center;padding:1rem}
+.match-head{margin:1.2rem 0}
+.match-head h1{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.match-head .meta{color:var(--mu);font-size:.9rem;margin-top:.3rem}
+
+/* Texto SEO / FAQ */
+.prose{color:var(--mu);max-width:760px}
+.prose h2,.prose h3{color:var(--tx);margin:1.4rem 0 .5rem}
+.prose p{margin-bottom:.8rem}
+details.faq{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:.9rem 1.1rem;margin-bottom:.6rem}
+details.faq summary{font-weight:600;cursor:pointer;color:var(--tx)}
+details.faq p{color:var(--mu);margin-top:.6rem}
+
+/* Zonas de anuncios (Monetag) */
+.ad-slot{min-height:90px;display:flex;align-items:center;justify-content:center;background:var(--bg2);border:1px dashed var(--border);border-radius:var(--r);color:var(--mu);font-size:.75rem;margin:1.5rem 0}
+.ad-slot:empty{display:none}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border);margin-top:2rem;padding:1.5rem 0;color:var(--mu);font-size:.85rem}
+.site-footer .container{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+.site-footer nav{display:flex;gap:1rem;flex-wrap:wrap}
+.site-footer a{color:var(--mu)}
+
+@media (max-width:600px){
+  .hero{padding:2rem 0 1.2rem}
+  .main-nav a{padding:.35rem .6rem;font-size:.82rem}
+}
