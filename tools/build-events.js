@@ -67,7 +67,12 @@ function sourcesPanelStatic(ev) {
 function broadcastersStatic(ev) {
   const bs = ev.broadcasters || [];
   if (!bs.length) return "";
-  const rows = bs.map(b => `<tr><th>${esc(b.country)}</th><td>${esc(b.channels)}</td></tr>`).join("");
+  const rows = bs.map(b => {
+    const ch = b.url
+      ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.channels)}</a>`
+      : esc(b.channels);
+    return `<tr><th>${esc(b.country)}</th><td>${ch}</td></tr>`;
+  }).join("");
   return `<section class="section"><h2>Dónde ver ${esc(title(ev))} por país</h2><table class="bcast"><tbody>${rows}</tbody></table></section>`;
 }
 

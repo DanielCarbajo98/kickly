@@ -31,21 +31,81 @@
       "status": "live",
       "description": "Semifinal de la Copa del Mundo 2026: Inglaterra y Argentina se juegan el pase a la final contra España. Hoy a las 21:00 (hora española).",
       "broadcasters": [
-        { "country": "🇪🇸 España", "channels": "RTVE (La 1, Teledeporte, RTVE Play) y DAZN" },
-        { "country": "🇦🇷 Argentina", "channels": "Telefe, TV Pública, TyC Sports y DSports (DGO)" },
-        { "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido", "channels": "BBC (iPlayer) e ITV (ITVX)" },
-        { "country": "🇺🇸 Estados Unidos", "channels": "FOX y FS1 (inglés), Telemundo y Universo (español), Peacock" },
-        { "country": "🇲🇽 México", "channels": "Televisa, TUDN, TV Azteca y ViX Premium" },
-        { "country": "🇧🇷 Brasil", "channels": "Globo y CazéTV (YouTube, gratis)" },
-        { "country": "🇫🇷 Francia", "channels": "TF1 y M6" },
-        { "country": "🇩🇪 Alemania", "channels": "ARD, ZDF y MagentaTV" },
-        { "country": "🇮🇹 Italia", "channels": "RAI (RaiPlay) y Sky Italia" },
-        { "country": "🇨🇦 Canadá", "channels": "TSN, RDS y CTV (Bell Media)" },
-        { "country": "🇨🇴 Colombia", "channels": "DSports (DGO) y ESPN / Disney+" },
-        { "country": "🇨🇱 Chile", "channels": "DSports (DGO) y ESPN / Disney+" },
-        { "country": "🇺🇾 Uruguay", "channels": "DSports (DGO) y ESPN / Disney+" },
-        { "country": "🇪🇨 Ecuador", "channels": "DSports (DGO) y ESPN / Disney+" },
-        { "country": "🌍 Resto del mundo", "channels": "Consulta el emisor oficial de la FIFA para tu país en fifa.com" }
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1, Teledeporte, RTVE Play) y DAZN",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇦🇷 Argentina",
+          "channels": "Telefe, TV Pública, TyC Sports y DSports (DGO)",
+          "url": "https://www.tycsports.com/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "BBC (iPlayer) e ITV (ITVX)",
+          "url": "https://www.bbc.co.uk/iplayer"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "FOX y FS1 (inglés), Telemundo y Universo (español), Peacock",
+          "url": "https://www.foxsports.com/soccer/fifa-world-cup"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Televisa, TUDN, TV Azteca y ViX Premium",
+          "url": "https://vix.com/"
+        },
+        {
+          "country": "🇧🇷 Brasil",
+          "channels": "Globo y CazéTV (YouTube, gratis)",
+          "url": "https://globoplay.globo.com/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "TF1 y M6",
+          "url": "https://www.tf1.fr/"
+        },
+        {
+          "country": "🇩🇪 Alemania",
+          "channels": "ARD, ZDF y MagentaTV",
+          "url": "https://www.ard.de/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "RAI (RaiPlay) y Sky Italia",
+          "url": "https://www.raiplay.it/"
+        },
+        {
+          "country": "🇨🇦 Canadá",
+          "channels": "TSN, RDS y CTV (Bell Media)",
+          "url": "https://www.tsn.ca/"
+        },
+        {
+          "country": "🇨🇴 Colombia",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🇨🇱 Chile",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🇺🇾 Uruguay",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🇪🇨 Ecuador",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Resto del mundo",
+          "channels": "Consulta el emisor oficial de la FIFA para tu país en fifa.com",
+          "url": "https://www.fifa.com/"
+        }
       ]
     },
     {
@@ -58,21 +118,81 @@
       "status": "scheduled",
       "description": "La gran final de la Copa del Mundo 2026 en el MetLife Stadium de Nueva York: España contra el ganador del Inglaterra-Argentina. Domingo 19 de julio a las 21:00 (hora española).",
       "broadcasters": [
-        { "country": "🇪🇸 España", "channels": "RTVE (La 1, Teledeporte, RTVE Play) y DAZN" },
-        { "country": "🇦🇷 Argentina", "channels": "Telefe, TV Pública, TyC Sports y DSports (DGO)" },
-        { "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido", "channels": "BBC (iPlayer) e ITV (ITVX)" },
-        { "country": "🇺🇸 Estados Unidos", "channels": "FOX y FS1 (inglés), Telemundo y Universo (español), Peacock" },
-        { "country": "🇲🇽 México", "channels": "Televisa, TUDN, TV Azteca y ViX Premium" },
-        { "country": "🇧🇷 Brasil", "channels": "Globo y CazéTV (YouTube, gratis)" },
-        { "country": "🇫🇷 Francia", "channels": "TF1 y M6" },
-        { "country": "🇩🇪 Alemania", "channels": "ARD, ZDF y MagentaTV" },
-        { "country": "🇮🇹 Italia", "channels": "RAI (RaiPlay) y Sky Italia" },
-        { "country": "🇨🇦 Canadá", "channels": "TSN, RDS y CTV (Bell Media)" },
-        { "country": "🇨🇴 Colombia", "channels": "DSports (DGO) y ESPN / Disney+" },
-        { "country": "🇨🇱 Chile", "channels": "DSports (DGO) y ESPN / Disney+" },
-        { "country": "🇺🇾 Uruguay", "channels": "DSports (DGO) y ESPN / Disney+" },
-        { "country": "🇪🇨 Ecuador", "channels": "DSports (DGO) y ESPN / Disney+" },
-        { "country": "🌍 Resto del mundo", "channels": "Consulta el emisor oficial de la FIFA para tu país en fifa.com" }
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1, Teledeporte, RTVE Play) y DAZN",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇦🇷 Argentina",
+          "channels": "Telefe, TV Pública, TyC Sports y DSports (DGO)",
+          "url": "https://www.tycsports.com/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "BBC (iPlayer) e ITV (ITVX)",
+          "url": "https://www.bbc.co.uk/iplayer"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "FOX y FS1 (inglés), Telemundo y Universo (español), Peacock",
+          "url": "https://www.foxsports.com/soccer/fifa-world-cup"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Televisa, TUDN, TV Azteca y ViX Premium",
+          "url": "https://vix.com/"
+        },
+        {
+          "country": "🇧🇷 Brasil",
+          "channels": "Globo y CazéTV (YouTube, gratis)",
+          "url": "https://globoplay.globo.com/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "TF1 y M6",
+          "url": "https://www.tf1.fr/"
+        },
+        {
+          "country": "🇩🇪 Alemania",
+          "channels": "ARD, ZDF y MagentaTV",
+          "url": "https://www.ard.de/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "RAI (RaiPlay) y Sky Italia",
+          "url": "https://www.raiplay.it/"
+        },
+        {
+          "country": "🇨🇦 Canadá",
+          "channels": "TSN, RDS y CTV (Bell Media)",
+          "url": "https://www.tsn.ca/"
+        },
+        {
+          "country": "🇨🇴 Colombia",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🇨🇱 Chile",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🇺🇾 Uruguay",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🇪🇨 Ecuador",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Resto del mundo",
+          "channels": "Consulta el emisor oficial de la FIFA para tu país en fifa.com",
+          "url": "https://www.fifa.com/"
+        }
       ]
     },
     {
@@ -85,9 +205,21 @@
       "status": "scheduled",
       "description": "La WNBA en directo: Indiana Fever recibe a Golden State Valkyries en el Gainbridge Fieldhouse.",
       "broadcasters": [
-        { "country": "🇺🇸 Estados Unidos", "channels": "ESPN, ABC, CBS, ION y WNBA League Pass" },
-        { "country": "🇪🇸 España", "channels": "WNBA League Pass" },
-        { "country": "🌍 Internacional", "channels": "WNBA League Pass (stream global)" }
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN, ABC, CBS, ION y WNBA League Pass",
+          "url": "https://www.wnba.com/"
+        },
+        {
+          "country": "🇪🇸 España",
+          "channels": "WNBA League Pass",
+          "url": "https://www.wnba.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "WNBA League Pass (stream global)",
+          "url": "https://www.wnba.com/"
+        }
       ]
     },
     {
@@ -100,10 +232,26 @@
       "status": "scheduled",
       "description": "UFC Fight Night: Du Plessis vs Usman en el Paycom Arena de Oklahoma City. Cartelera estelar con Cannonier vs Duncan y Hooper vs Ramirez, en la madrugada del sábado al domingo (hora española).",
       "broadcasters": [
-        { "country": "🇪🇸 España", "channels": "DAZN" },
-        { "country": "🇺🇸 Estados Unidos", "channels": "Paramount+" },
-        { "country": "🌎 Latinoamérica", "channels": "Disney+ / ESPN" },
-        { "country": "🌍 Internacional", "channels": "UFC Fight Pass" }
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Paramount+",
+          "url": "https://www.paramountplus.com/"
+        },
+        {
+          "country": "🌎 Latinoamérica",
+          "channels": "Disney+ / ESPN",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UFC Fight Pass",
+          "url": "https://ufcfightpass.com/"
+        }
       ]
     },
     {
@@ -116,8 +264,16 @@
       "status": "scheduled",
       "description": "Final del EFG Swiss Open de Gstaad, ATP 250 sobre tierra batida, con Ruud, Bublik, Tsitsipas y Wawrinka en el cuadro.",
       "broadcasters": [
-        { "country": "🇪🇸 España", "channels": "Movistar Plus+ (Vamos)" },
-        { "country": "🌍 Internacional", "channels": "Tennis Channel y TennisTV" }
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Vamos)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Tennis Channel y TennisTV",
+          "url": "https://www.tennischannel.com/"
+        }
       ]
     },
     {
@@ -130,8 +286,16 @@
       "status": "scheduled",
       "description": "Final del Nordea Open de Båstad, ATP 250 sobre tierra batida, con Rublev, Darderi, Baez y Dimitrov en el cuadro.",
       "broadcasters": [
-        { "country": "🇪🇸 España", "channels": "Movistar Plus+ (Vamos)" },
-        { "country": "🌍 Internacional", "channels": "Tennis Channel y TennisTV" }
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Vamos)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Tennis Channel y TennisTV",
+          "url": "https://www.tennischannel.com/"
+        }
       ]
     }
   ]

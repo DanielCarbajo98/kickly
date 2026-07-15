@@ -103,7 +103,10 @@
     return '<section class="section"><h2>Dónde ver ' + esc(title(ev)) + ' por país</h2>' +
       '<table class="bcast"><tbody>' +
       bs.map(function (b) {
-        return "<tr><th>" + esc(b.country) + "</th><td>" + esc(b.channels) + "</td></tr>";
+        var ch = b.url
+          ? '<a href="' + esc(b.url) + '" target="_blank" rel="noopener">' + esc(b.channels) + "</a>"
+          : esc(b.channels);
+        return "<tr><th>" + esc(b.country) + "</th><td>" + ch + "</td></tr>";
       }).join("") +
       "</tbody></table></section>";
   }
