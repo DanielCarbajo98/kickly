@@ -2,6 +2,18 @@
   "_ayuda": "Añade aquí tus eventos. 'sport' debe ser un slug de config.js (futbol, baloncesto, tenis, ufc). 'status': scheduled | live | finished. En 'embed' pon la URL del iframe de tu emisión (con derechos) o en 'hls' una URL .m3u8. Vacíos = cuenta atrás.",
   "events": [
     {
+      "id": "espana-vs-francia-mundial-2026-semifinal",
+      "sport": "futbol",
+      "competitionName": "Mundial 2026 · Semifinal",
+      "home": "España",
+      "away": "Francia",
+      "date": "2026-07-14T21:00:00+02:00",
+      "status": "finished",
+      "embed": "",
+      "hls": "",
+      "description": "España venció 2-0 a Francia con goles de Oyarzabal y Porro y jugará la final del Mundial 2026 el domingo 19 de julio."
+    },
+    {
       "id": "inglaterra-vs-argentina-mundial-2026",
       "sport": "futbol",
       "competitionName": "Mundial 2026 · Semifinal",
@@ -11,43 +23,67 @@
       "status": "scheduled",
       "embed": "",
       "hls": "",
-      "description": "Semifinal de la Copa del Mundo 2026: Inglaterra y Argentina se juegan el pase a la final. Sigue el partido en directo a las 21:00 (hora española)."
+      "description": "Semifinal de la Copa del Mundo 2026: Inglaterra y Argentina se juegan el pase a la final contra España. Hoy a las 21:00 (hora española)."
     },
     {
-      "id": "aces-vs-liberty-wnba-2026-07-16",
+      "id": "final-mundial-2026-espana",
+      "sport": "futbol",
+      "competitionName": "Mundial 2026 · Final",
+      "home": "España",
+      "away": "Inglaterra o Argentina",
+      "date": "2026-07-19T21:00:00+02:00",
+      "status": "scheduled",
+      "embed": "",
+      "hls": "",
+      "description": "La gran final de la Copa del Mundo 2026 en el MetLife Stadium de Nueva York: España contra el ganador del Inglaterra-Argentina. Domingo 19 de julio a las 21:00 (hora española)."
+    },
+    {
+      "id": "fever-vs-valkyries-wnba-2026-07-15",
       "sport": "baloncesto",
       "competitionName": "WNBA",
-      "home": "Las Vegas Aces",
-      "away": "New York Liberty",
+      "home": "Indiana Fever",
+      "away": "Golden State Valkyries",
       "date": "2026-07-16T02:00:00+02:00",
       "status": "scheduled",
       "embed": "",
       "hls": "",
-      "description": "Duelo de la WNBA entre Las Vegas Aces y New York Liberty en directo."
+      "description": "La WNBA en directo: Indiana Fever recibe a Golden State Valkyries en el Gainbridge Fieldhouse."
     },
     {
-      "id": "atp-bastad-final-2026-07-19",
+      "id": "ufc-fight-night-du-plessis-vs-usman",
+      "sport": "ufc",
+      "competitionName": "UFC Fight Night · Oklahoma City",
+      "home": "Dricus Du Plessis",
+      "away": "Kamaru Usman",
+      "date": "2026-07-19T02:00:00+02:00",
+      "status": "scheduled",
+      "embed": "",
+      "hls": "",
+      "description": "UFC Fight Night: Du Plessis vs Usman en el Paycom Arena de Oklahoma City. Cartelera estelar con Cannonier vs Duncan y Hooper vs Ramirez, en la madrugada del sábado al domingo (hora española)."
+    },
+    {
+      "id": "final-atp-250-gstaad-2026",
+      "sport": "tenis",
+      "competitionName": "ATP 250 Gstaad · Final",
+      "home": "Final ATP 250 Gstaad",
+      "away": "",
+      "date": "2026-07-19T11:30:00+02:00",
+      "status": "scheduled",
+      "embed": "",
+      "hls": "",
+      "description": "Final del EFG Swiss Open de Gstaad, ATP 250 sobre tierra batida, con Ruud, Bublik, Tsitsipas y Wawrinka en el cuadro."
+    },
+    {
+      "id": "final-atp-250-bastad-2026",
       "sport": "tenis",
       "competitionName": "ATP 250 Båstad · Final",
-      "home": "Final ATP Båstad",
+      "home": "Final ATP 250 Båstad",
       "away": "",
       "date": "2026-07-19T15:00:00+02:00",
       "status": "scheduled",
       "embed": "",
       "hls": "",
-      "description": "Final del ATP 250 de Båstad en directo, tenis sobre tierra batida."
-    },
-    {
-      "id": "ufc-fight-night-2026-07-18",
-      "sport": "ufc",
-      "competitionName": "UFC Fight Night",
-      "home": "UFC Fight Night · Cartelera estelar",
-      "away": "",
-      "date": "2026-07-19T03:00:00+02:00",
-      "status": "scheduled",
-      "embed": "",
-      "hls": "",
-      "description": "Cartelera estelar del UFC Fight Night en directo, con los mejores combates de MMA."
+      "description": "Final del Nordea Open de Båstad, ATP 250 sobre tierra batida, con Rublev, Darderi, Baez y Dimitrov en el cuadro."
     }
   ]
 }
