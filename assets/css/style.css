@@ -270,3 +270,12 @@ main{flex:1;width:100%}
 .sim.links-on .play-btn,.sim.links-on .sim-count,.sim.links-on .sim-sub{display:none}
 .sim-links-h{font-size:13.5px;font-weight:600;color:#fff}
 .sim-links .src-btn{width:auto}
+
+
+/* ---------- Tabla dónde ver por país ---------- */
+.bcast{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:14px}
+.bcast tr{border-bottom:1px solid var(--line)}
+.bcast tr:last-child{border-bottom:none}
+.bcast th{text-align:left;font-weight:600;color:var(--text);padding:11px 14px;white-space:nowrap;width:1%;vertical-align:top;border-right:1px solid var(--line)}
+.bcast td{padding:11px 14px;color:var(--dim)}
+@media (max-width:560px){.bcast th{white-space:normal}}
