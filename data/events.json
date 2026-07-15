@@ -297,6 +297,300 @@
           "url": "https://www.tennischannel.com/"
         }
       ]
+    },
+    {
+      "id": "francia-vs-perdedor-tercer-puesto-mundial-2026",
+      "sport": "futbol",
+      "competitionName": "Mundial 2026 · Tercer puesto",
+      "home": "Francia",
+      "away": "Inglaterra o Argentina",
+      "date": "2026-07-18T23:00:00+02:00",
+      "status": "scheduled",
+      "description": "Partido por el tercer y cuarto puesto del Mundial 2026 en el Hard Rock Stadium de Miami: Francia contra el perdedor del Inglaterra-Argentina. Sábado 18 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1, Teledeporte, RTVE Play) y DAZN",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇦🇷 Argentina",
+          "channels": "Telefe, TV Pública, TyC Sports y DSports (DGO)",
+          "url": "https://www.tycsports.com/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "BBC (iPlayer) e ITV (ITVX)",
+          "url": "https://www.bbc.co.uk/iplayer"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "FOX y FS1 (inglés), Telemundo y Universo (español), Peacock",
+          "url": "https://www.foxsports.com/soccer/fifa-world-cup"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Televisa, TUDN, TV Azteca y ViX Premium",
+          "url": "https://vix.com/"
+        },
+        {
+          "country": "🇧🇷 Brasil",
+          "channels": "Globo y CazéTV (YouTube, gratis)",
+          "url": "https://globoplay.globo.com/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "TF1 y M6",
+          "url": "https://www.tf1.fr/"
+        },
+        {
+          "country": "🇩🇪 Alemania",
+          "channels": "ARD, ZDF y MagentaTV",
+          "url": "https://www.ard.de/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "RAI (RaiPlay) y Sky Italia",
+          "url": "https://www.raiplay.it/"
+        },
+        {
+          "country": "🇨🇦 Canadá",
+          "channels": "TSN, RDS y CTV (Bell Media)",
+          "url": "https://www.tsn.ca/"
+        },
+        {
+          "country": "🇨🇴 Colombia",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🇨🇱 Chile",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🇺🇾 Uruguay",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🇪🇨 Ecuador",
+          "channels": "DSports (DGO) y ESPN / Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Resto del mundo",
+          "channels": "Consulta el emisor oficial de la FIFA para tu país en fifa.com",
+          "url": "https://www.fifa.com/"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-11",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 11",
+      "home": "Tour de Francia · Etapa 11: Vichy – Nevers",
+      "away": "",
+      "date": "2026-07-15T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 11 del Tour de Francia 2026, 161,3 km entre Vichy y Nevers. Etapa llana favorable a los velocistas. Miércoles 15 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-12",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 12",
+      "home": "Tour de Francia · Etapa 12: Nevers – Chalon-sur-Saône",
+      "away": "",
+      "date": "2026-07-16T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 12 del Tour de Francia 2026, 179,1 km entre Nevers Magny-Cours y Chalon-sur-Saône. Etapa llana. Jueves 16 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-13",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 13",
+      "home": "Tour de Francia · Etapa 13: Dole – Belfort",
+      "away": "",
+      "date": "2026-07-17T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 13 del Tour de Francia 2026, 205,8 km entre Dole y Belfort. La etapa más larga de esta edición. Viernes 17 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-14",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 14",
+      "home": "Tour de Francia · Etapa 14: Mulhouse – Le Markstein",
+      "away": "",
+      "date": "2026-07-18T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 14 del Tour de Francia 2026, 155,3 km entre Mulhouse y Le Markstein Fellering, con final en alto de montaña. Sábado 18 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-15",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 15",
+      "home": "Tour de Francia · Etapa 15: Champagnole – Plateau de Solaison",
+      "away": "",
+      "date": "2026-07-19T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 15 del Tour de Francia 2026, 183,9 km entre Champagnole y el Plateau de Solaison, final en alto de montaña. Domingo 19 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "final-atp-250-umag-2026",
+      "sport": "tenis",
+      "competitionName": "ATP 250 Umag · Final",
+      "home": "Final ATP 250 Umag",
+      "away": "",
+      "date": "2026-07-19T16:00:00+02:00",
+      "status": "scheduled",
+      "description": "Final del Croatia Open de Umag, ATP 250 sobre tierra batida. Domingo 19 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Vamos)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Tennis Channel y TennisTV",
+          "url": "https://www.tennischannel.com/"
+        }
+      ]
     }
   ]
 }
