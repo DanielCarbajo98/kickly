@@ -71,6 +71,19 @@
     document.head.appendChild(s);
   }
 
+  function buildKeywords(ev) {
+    var kws = [];
+    var pairs = ev.away
+      ? [ev.home + " " + ev.away, ev.away + " " + ev.home, ev.home + " vs " + ev.away]
+      : [ev.home];
+    pairs.forEach(function (p) {
+      kws.push("ver " + p + " gratis", "ver " + p + " online", p + " en directo",
+               "ver " + p + " online gratis", p + " streaming", p + " en vivo");
+    });
+    kws.push(ev.competitionName + " en directo", "ver " + sportName(ev).toLowerCase() + " online gratis");
+    return kws;
+  }
+
   function eventLd(ev) {
     var url = CFG.siteUrl + "/evento.html?e=" + encodeURIComponent(ev.id);
     var ld = {
@@ -163,13 +176,17 @@
       return;
     }
 
-    var t = title(ev) + " en directo — " + ev.competitionName + " | " + CFG.siteName;
+    var t = "Ver " + title(ev) + " Online Gratis — " + ev.competitionName + " en directo | " + CFG.siteName;
     document.title = t;
-    setMeta("description", ev.description || (title(ev) + " en directo online. " + sportName(ev) + " · " + ev.competitionName + ", " + longDate(ev.date) + "."));
+    setMeta("description",
+      "Ver " + title(ev) + " gratis y online: " + sportName(ev) + " · " + ev.competitionName + ", " + longDate(ev.date) + " h. " +
+      (ev.description ? ev.description + " " : "") + "Emisión en directo en Kickly.");
+    setMeta("keywords", buildKeywords(ev).join(", "));
     var canonical = CFG.siteUrl + "/evento.html?e=" + encodeURIComponent(ev.id);
     setCanonical(canonical);
     setMeta("og:title", t, true);
     setMeta("og:url", canonical, true);
+    setMeta("og:type", "video.other", true);
 
     var player;
     if (ev.embed) {
@@ -188,7 +205,7 @@
       '<nav class="crumbs" aria-label="Ruta"><a href="' + ROOT + '/">Inicio</a><span class="sep">/</span>' +
       '<a href="' + ROOT + "/deportes/" + esc(ev.sport) + '.html">' + esc(sportName(ev)) + '</a><span class="sep">/</span><span>' + esc(title(ev)) + "</span></nav>" +
       '<div class="player">' + player + "</div>" +
-      '<header class="ev-head"><h1>' + esc(title(ev)) + " en directo</h1>" +
+      '<header class="ev-head"><h1>Ver ' + esc(title(ev)) + " en directo online gratis</h1>" +
       '<div class="meta"><span>' + esc(sportName(ev)) + " · " + esc(ev.competitionName) + '</span><time datetime="' + esc(ev.date) + '">' + esc(longDate(ev.date)) + " h</time>" + pill(ev) + "</div></header>" +
       (ev.description ? '<p class="ev-desc">' + esc(ev.description) + "</p>" : "") +
       '<div class="ad" id="ad-under-player"></div>' +
@@ -205,6 +222,16 @@
     var ld = eventLd(ev);
     ld["@context"] = "https://schema.org";
     injectJsonLd(ld);
+    injectJsonLd({
+      "@context": "https://schema.org",
+      "@type": "BroadcastEvent",
+      "name": "Ver " + title(ev) + " online gratis",
+      "isLiveBroadcast": true,
+      "videoFormat": "HD",
+      "inLanguage": "es",
+      "startDate": ev.date,
+      "broadcastOfEvent": eventLd(ev)
+    });
     injectJsonLd({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
