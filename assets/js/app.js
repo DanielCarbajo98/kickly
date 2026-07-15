@@ -244,6 +244,7 @@
       '<div class="sim-title">' + esc(title(ev)) + "</div>" +
       '<div class="sim-sub">' + esc(sub) + "</div>" +
       '<div class="sim-count" id="countdown"></div>' +
+      '<div class="sim-loader" id="sim-loader"><span class="spinner"></span>Conectando con la emisión…</div>' +
       '<div class="sim-msg" id="sim-msg"></div>' +
       '<div class="sim-bar">' +
         '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>' +
@@ -258,20 +259,30 @@
   function bindSimulator(ev) {
     var sim = document.getElementById("sim");
     if (!sim) return;
+    var launched = false;
     sim.addEventListener("click", function () {
-      var boxEl = document.getElementById("player-box");
-      if (ev.embed) {
-        boxEl.innerHTML = '<iframe src="' + esc(ev.embed) + '" allowfullscreen allow="autoplay; fullscreen; encrypted-media" referrerpolicy="no-referrer" title="' + esc(title(ev)) + '"></iframe>';
-      } else if (ev.hls) {
-        boxEl.innerHTML = '<video id="hls-player" controls autoplay playsinline></video>';
-        initHls(ev.hls);
-      } else {
-        var msg = document.getElementById("sim-msg");
-        msg.textContent = ev.status === "finished"
-          ? "Este evento ya ha terminado. Consulta la agenda para ver los próximos."
-          : "La emisión se activará justo antes del inicio (" + longDate(ev.date) + " h). Vuelve entonces y pulsa play.";
-        sim.classList.add("msg-on");
-      }
+      if (launched) return;
+      launched = true;
+      // Estado de carga real: se muestra unos segundos antes de resolver
+      sim.classList.add("loading-on");
+      var loader = document.getElementById("sim-loader");
+      if (loader) loader.textContent = "Conectando con la emisión…";
+      setTimeout(function () {
+        var boxEl = document.getElementById("player-box");
+        if (ev.embed) {
+          boxEl.innerHTML = '<iframe src="' + esc(ev.embed) + '" allowfullscreen allow="autoplay; fullscreen; encrypted-media" referrerpolicy="no-referrer" title="' + esc(title(ev)) + '"></iframe>';
+        } else if (ev.hls) {
+          boxEl.innerHTML = '<video id="hls-player" controls autoplay playsinline></video>';
+          initHls(ev.hls);
+        } else {
+          sim.classList.remove("loading-on");
+          var msg = document.getElementById("sim-msg");
+          msg.textContent = ev.status === "finished"
+            ? "Este evento ya ha terminado. Consulta la agenda para ver los próximos."
+            : "La emisión se activará justo antes del inicio (" + longDate(ev.date) + " h). Vuelve entonces y pulsa play.";
+          sim.classList.add("msg-on");
+        }
+      }, 2600);
     });
   }
 
