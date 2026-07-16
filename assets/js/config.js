@@ -11,7 +11,8 @@ window.KICKLY = {
     "baloncesto":  { name: "Baloncesto" },
     "tenis":       { name: "Tenis" },
     "ufc":         { name: "UFC · MMA" },
-    "ciclismo":    { name: "Ciclismo" }
+    "ciclismo":    { name: "Ciclismo" },
+    "motor":       { name: "Fórmula 1" }
   },
 
   /**

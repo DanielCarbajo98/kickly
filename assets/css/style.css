@@ -217,6 +217,17 @@ main{flex:1;width:100%}
   linear-gradient(180deg,#7fb4e8 0%,#a9cdec 22%,#3f7a44 34%,#356b3a 44%,transparent 44%),
   linear-gradient(90deg,transparent 47%,rgba(255,255,255,.55) 47.5% 48%,transparent 48.5%,transparent 52%,rgba(255,255,255,.55) 52% 52.5%,transparent 53%),
   repeating-linear-gradient(90deg,#3a3d45 0 6%,#33363d 6% 12%)}
+.sim-scene.motor{background:
+  radial-gradient(circle at 30% 12%,rgba(255,70,85,.5) 0 1.6%,transparent 5%),
+  radial-gradient(circle at 42% 12%,rgba(255,70,85,.5) 0 1.6%,transparent 5%),
+  radial-gradient(circle at 54% 12%,rgba(255,70,85,.5) 0 1.6%,transparent 5%),
+  radial-gradient(circle at 66% 12%,rgba(255,70,85,.5) 0 1.6%,transparent 5%),
+  radial-gradient(circle at 14% 22%,rgba(255,209,84,.4) 0 .7%,transparent 1.4%),
+  radial-gradient(circle at 86% 22%,rgba(84,140,233,.4) 0 .7%,transparent 1.4%),
+  linear-gradient(180deg,#171a22 0%,#1f2430 30%,#2a2f3b 40%,transparent 40%),
+  repeating-linear-gradient(90deg,#d23b47 0 5%,#f2f2f2 5% 10%) 0 40%/100% 6px no-repeat,
+  linear-gradient(90deg,transparent 48%,rgba(255,255,255,.5) 48.5% 49.5%,transparent 50%,transparent 50.5%,rgba(255,255,255,.5) 51% 52%,transparent 52.5%),
+  linear-gradient(180deg,#3a3d44 46%,#303239 100%)}
 .sim-title{font-size:clamp(18px,2.8vw,26px);font-weight:800;letter-spacing:-.02em;position:relative;text-shadow:0 2px 18px rgba(0,0,0,.7)}
 .sim-sub{color:#cfd4dd;font-size:13.5px;position:relative;text-shadow:0 1px 12px rgba(0,0,0,.7)}
 .sim-count{font-size:13px;font-weight:600;color:#fff;background:rgba(10,12,16,.55);border:1px solid rgba(255,70,85,.45);padding:6px 14px;border-radius:20px;font-variant-numeric:tabular-nums;position:relative;backdrop-filter:blur(4px)}
