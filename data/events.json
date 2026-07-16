@@ -12,111 +12,24 @@
   },
   "events": [
     {
-      "id": "espana-vs-francia-mundial-2026-semifinal",
-      "sport": "futbol",
-      "competitionName": "Mundial 2026 · Semifinal",
-      "home": "España",
-      "away": "Francia",
-      "date": "2026-07-14T21:00:00+02:00",
-      "status": "finished",
-      "description": "España venció 2-0 a Francia con goles de Oyarzabal y Porro y jugará la final del Mundial 2026 el domingo 19 de julio."
-    },
-    {
       "id": "inglaterra-vs-argentina-mundial-2026",
       "sport": "futbol",
       "competitionName": "Mundial 2026 · Semifinal",
       "home": "Inglaterra",
       "away": "Argentina",
       "date": "2026-07-15T21:00:00+02:00",
-      "status": "live",
-      "description": "Semifinal de la Copa del Mundo 2026: Inglaterra y Argentina se juegan el pase a la final contra España. Hoy a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (La 1, Teledeporte, RTVE Play) y DAZN",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇦🇷 Argentina",
-          "channels": "Telefe, TV Pública, TyC Sports y DSports (DGO)",
-          "url": "https://www.tycsports.com/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "BBC (iPlayer) e ITV (ITVX)",
-          "url": "https://www.bbc.co.uk/iplayer"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "FOX y FS1 (inglés), Telemundo y Universo (español), Peacock",
-          "url": "https://www.foxsports.com/soccer/fifa-world-cup"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Televisa, TUDN, TV Azteca y ViX Premium",
-          "url": "https://vix.com/"
-        },
-        {
-          "country": "🇧🇷 Brasil",
-          "channels": "Globo y CazéTV (YouTube, gratis)",
-          "url": "https://globoplay.globo.com/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "TF1 y M6",
-          "url": "https://www.tf1.fr/"
-        },
-        {
-          "country": "🇩🇪 Alemania",
-          "channels": "ARD, ZDF y MagentaTV",
-          "url": "https://www.ard.de/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "RAI (RaiPlay) y Sky Italia",
-          "url": "https://www.raiplay.it/"
-        },
-        {
-          "country": "🇨🇦 Canadá",
-          "channels": "TSN, RDS y CTV (Bell Media)",
-          "url": "https://www.tsn.ca/"
-        },
-        {
-          "country": "🇨🇴 Colombia",
-          "channels": "DSports (DGO) y ESPN / Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🇨🇱 Chile",
-          "channels": "DSports (DGO) y ESPN / Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🇺🇾 Uruguay",
-          "channels": "DSports (DGO) y ESPN / Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🇪🇨 Ecuador",
-          "channels": "DSports (DGO) y ESPN / Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🌍 Resto del mundo",
-          "channels": "Consulta el emisor oficial de la FIFA para tu país en fifa.com",
-          "url": "https://www.fifa.com/"
-        }
-      ]
+      "status": "finished",
+      "description": "Argentina venció 2-1 a Inglaterra en la semifinal del Mundial 2026, con goles de Enzo Fernández y Lautaro Martínez (asistencia de Messi); Gordon marcó para Inglaterra. Argentina jugará la final contra España."
     },
     {
       "id": "final-mundial-2026-espana",
       "sport": "futbol",
       "competitionName": "Mundial 2026 · Final",
       "home": "España",
-      "away": "Inglaterra o Argentina",
+      "away": "Argentina",
       "date": "2026-07-19T21:00:00+02:00",
       "status": "scheduled",
-      "description": "La gran final de la Copa del Mundo 2026 en el MetLife Stadium de Nueva York: España contra el ganador del Inglaterra-Argentina. Domingo 19 de julio a las 21:00 (hora española).",
+      "description": "La gran final de la Copa del Mundo 2026 en el MetLife Stadium de Nueva York: España contra Argentina, la vigente campeona. Domingo 19 de julio a las 21:00 (hora española).",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
@@ -202,7 +115,7 @@
       "home": "Indiana Fever",
       "away": "Golden State Valkyries",
       "date": "2026-07-16T02:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "La WNBA en directo: Indiana Fever recibe a Golden State Valkyries en el Gainbridge Fieldhouse.",
       "broadcasters": [
         {
@@ -303,10 +216,10 @@
       "sport": "futbol",
       "competitionName": "Mundial 2026 · Tercer puesto",
       "home": "Francia",
-      "away": "Inglaterra o Argentina",
+      "away": "Inglaterra",
       "date": "2026-07-18T23:00:00+02:00",
       "status": "scheduled",
-      "description": "Partido por el tercer y cuarto puesto del Mundial 2026 en el Hard Rock Stadium de Miami: Francia contra el perdedor del Inglaterra-Argentina. Sábado 18 de julio.",
+      "description": "Partido por el tercer y cuarto puesto del Mundial 2026 en el Hard Rock Stadium de Miami: Francia contra Inglaterra. Sábado 18 de julio.",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
@@ -392,7 +305,7 @@
       "home": "Tour de Francia · Etapa 11: Vichy – Nevers",
       "away": "",
       "date": "2026-07-15T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 11 del Tour de Francia 2026, 161,3 km entre Vichy y Nevers. Etapa llana favorable a los velocistas. Miércoles 15 de julio.",
       "broadcasters": [
         {
@@ -589,6 +502,43 @@
           "country": "🌍 Internacional",
           "channels": "Tennis Channel y TennisTV",
           "url": "https://www.tennischannel.com/"
+        }
+      ]
+    },
+    {
+      "id": "f1-gp-belgica-2026-carrera",
+      "sport": "motor",
+      "competitionName": "Fórmula 1 · GP de Bélgica",
+      "home": "F1 · GP de Bélgica (Spa) · Carrera",
+      "away": "",
+      "date": "2026-07-19T15:00:00+02:00",
+      "status": "scheduled",
+      "description": "Gran Premio de Bélgica de Fórmula 1 2026 en el circuito de Spa-Francorchamps. La carrera del domingo 19 de julio, uno de los trazados más míticos del calendario.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN F1",
+          "url": "https://www.dazn.com/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports F1 y Channel 4 (resumen)",
+          "url": "https://www.skysports.com/f1"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN",
+          "url": "https://www.espn.com/f1/"
+        },
+        {
+          "country": "🌎 Latinoamérica",
+          "channels": "Disney+ / ESPN y Fox Sports",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "F1 TV Pro",
+          "url": "https://f1tv.formula1.com/"
         }
       ]
     }
