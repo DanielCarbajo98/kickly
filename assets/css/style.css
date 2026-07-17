@@ -228,6 +228,13 @@ main{flex:1;width:100%}
   repeating-linear-gradient(90deg,#d23b47 0 5%,#f2f2f2 5% 10%) 0 40%/100% 6px no-repeat,
   linear-gradient(90deg,transparent 48%,rgba(255,255,255,.5) 48.5% 49.5%,transparent 50%,transparent 50.5%,rgba(255,255,255,.5) 51% 52%,transparent 52.5%),
   linear-gradient(180deg,#3a3d44 46%,#303239 100%)}
+.sim-scene.golf{background:
+  radial-gradient(circle at 20% 12%,rgba(255,255,230,.4) 0 3%,transparent 8%),
+  radial-gradient(circle at 72% 30%,rgba(255,255,255,.9) 0 .6%,transparent 1%),
+  linear-gradient(180deg,#8fd2f2 0%,#bfe3f5 20%,#4f9a52 30%,transparent 30%),
+  linear-gradient(90deg,transparent 68%,#c9a24a 68.5% 69%,transparent 69.5%),
+  radial-gradient(ellipse at 72% 62%,#7cc36a 0 16%,#5aa84f 17% 30%,transparent 31%),
+  repeating-linear-gradient(96deg,#3f8f45 0 7%,#3a8540 7% 14%)}
 .sim-title{font-size:clamp(18px,2.8vw,26px);font-weight:800;letter-spacing:-.02em;position:relative;text-shadow:0 2px 18px rgba(0,0,0,.7)}
 .sim-sub{color:#cfd4dd;font-size:13.5px;position:relative;text-shadow:0 1px 12px rgba(0,0,0,.7)}
 .sim-count{font-size:13px;font-weight:600;color:#fff;background:rgba(10,12,16,.55);border:1px solid rgba(255,70,85,.45);padding:6px 14px;border-radius:20px;font-variant-numeric:tabular-nums;position:relative;backdrop-filter:blur(4px)}

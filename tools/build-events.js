@@ -12,8 +12,8 @@ const path = require("path");
 
 const SITE = "https://kickly.app";
 const ROOT = path.join(__dirname, "..");
-const SPORTS = { futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC · MMA", ciclismo: "Ciclismo", motor: "Fórmula 1" };
-const SPORT_ORDER = ["futbol", "baloncesto", "tenis", "ufc", "ciclismo", "motor"];
+const SPORTS = { futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC · MMA", ciclismo: "Ciclismo", motor: "Fórmula 1", golf: "Golf" };
+const SPORT_ORDER = ["futbol", "baloncesto", "tenis", "ufc", "ciclismo", "motor", "golf"];
 
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "data/events.json"), "utf8"));
 const events = data.events || [];
@@ -32,7 +32,7 @@ const LANGS = [
 
 const TR = {
   es: {
-    nav: { agenda: "Agenda", futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC", ciclismo: "Ciclismo", motor: "Fórmula 1" },
+    nav: { agenda: "Agenda", futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC", ciclismo: "Ciclismo", motor: "Fórmula 1", golf: "Golf" },
     live: "DIRECTO", loading: "Cargando agenda…",
     homeTitle: "Ver Partidos Gratis Online — Fútbol, Baloncesto, Tenis y UFC en Directo | Kickly",
     homeDesc: "Ver partidos gratis online y en directo: fútbol, baloncesto, tenis, UFC y ciclismo de hoy. Agenda con horarios y dónde ver cada partido.",
@@ -53,7 +53,7 @@ const TR = {
     sportIntro: n => `Agenda de ${n.toLowerCase()} en directo: horarios en tu zona horaria y los enlaces y canales oficiales para ver cada evento.`
   },
   en: {
-    nav: { agenda: "Schedule", futbol: "Football", baloncesto: "Basketball", tenis: "Tennis", ufc: "UFC", ciclismo: "Cycling", motor: "Formula 1" },
+    nav: { agenda: "Schedule", futbol: "Football", baloncesto: "Basketball", tenis: "Tennis", ufc: "UFC", ciclismo: "Cycling", motor: "Formula 1", golf: "Golf" },
     live: "LIVE", loading: "Loading schedule…",
     homeTitle: "Watch Sports Free Online — Football, Basketball, Tennis & UFC Live | Kickly",
     homeDesc: "Watch sports free online and live: today's football, basketball, tennis, UFC and cycling. Schedule with kick-off times and where to watch each event.",
@@ -74,7 +74,7 @@ const TR = {
     sportIntro: n => `Live ${n.toLowerCase()} schedule: times in your timezone plus the links and official channels to watch every event.`
   },
   pt: {
-    nav: { agenda: "Agenda", futbol: "Futebol", baloncesto: "Basquete", tenis: "Tênis", ufc: "UFC", ciclismo: "Ciclismo", motor: "Fórmula 1" },
+    nav: { agenda: "Agenda", futbol: "Futebol", baloncesto: "Basquete", tenis: "Tênis", ufc: "UFC", ciclismo: "Ciclismo", motor: "Fórmula 1", golf: "Golf" },
     live: "AO VIVO", loading: "Carregando agenda…",
     homeTitle: "Assistir Jogos Online Grátis — Futebol, Basquete, Tênis e UFC Ao Vivo | Kickly",
     homeDesc: "Assistir jogos online grátis e ao vivo: futebol, basquete, tênis, UFC e ciclismo de hoje. Agenda com horários e onde assistir cada jogo.",
@@ -109,7 +109,8 @@ const SVGICON = {
   tenis: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M4.5 6a11 11 0 010 12M19.5 6a11 11 0 000 12"/></svg>',
   ufc: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8.5 3h7l5 5v8l-5 5h-7l-5-5V8z"/></svg>',
   ciclismo: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l4-7h5l-3 7M10 10l-1.5-3H6.5M14.5 7H17"/></svg>',
-  motor: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11M5 11h14v4a1 1 0 01-1 1h-1a1 1 0 01-1-1M5 11v4a1 1 0 001 1h1a1 1 0 001-1"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg>'
+  motor: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11M5 11h14v4a1 1 0 01-1 1h-1a1 1 0 01-1-1M5 11v4a1 1 0 001 1h1a1 1 0 001-1"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg>',
+  golf: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3v13"/><path d="M12 4l6 2.2-6 2.2"/><circle cx="12" cy="19" r="2.5"/></svg>'
 };
 
 // Enlaces absolutos desde la raíz del sitio: p.ej. base("en","/ver/x.html") -> "/en/ver/x.html"
@@ -146,6 +147,7 @@ function header(lang, current) {
       ${link("ufc")}
       ${link("ciclismo")}
       ${link("motor")}
+      ${link("golf")}
     </nav>
     ${langSwitcher(lang, headerSwitchPath(lang, current))}
     <div class="hd-live" id="live-indicator"><i></i><span>${t.live}</span></div>
@@ -167,7 +169,7 @@ function footer(lang) {
       </div>
       <div>
         <h3>${t.footSports}</h3>
-        <ul>${sp("futbol")}${sp("baloncesto")}${sp("tenis")}${sp("ufc")}${sp("ciclismo")}${sp("motor")}</ul>
+        <ul>${sp("futbol")}${sp("baloncesto")}${sp("tenis")}${sp("ufc")}${sp("ciclismo")}${sp("motor")}${sp("golf")}</ul>
       </div>
       <div>
         <h3>${lang === "es" ? "Por país" : t.footKickly}</h3>
@@ -319,7 +321,7 @@ ${footer(lang)}
 /* ---------- Homepage y páginas de deporte (solo en/pt; es es a mano) ---------- */
 function filterChips(lang, sport) {
   const t = TR[lang];
-  const emoji = { futbol: "⚽", baloncesto: "🏀", tenis: "🎾", ufc: "🥊", ciclismo: "🚴", motor: "🏎️" };
+  const emoji = { futbol: "⚽", baloncesto: "🏀", tenis: "🎾", ufc: "🥊", ciclismo: "🚴", motor: "🏎️", golf: "⛳" };
   const chip = (s, label) => `<button class="filter${sport === s ? " on" : ""}" data-sport="${s}" role="tab">${s ? emoji[s] + " " : ""}${label}</button>`;
   return `<div class="filters" id="filters" role="tablist">${chip("", t.all)}${SPORT_ORDER.map(s => chip(s, t.nav[s])).join("")}</div>`;
 }

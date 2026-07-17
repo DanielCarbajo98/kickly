@@ -342,7 +342,7 @@
       "home": "Tour de Francia · Etapa 12: Nevers – Chalon-sur-Saône",
       "away": "",
       "date": "2026-07-16T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 12 del Tour de Francia 2026, 179,1 km entre Nevers Magny-Cours y Chalon-sur-Saône. Etapa llana. Jueves 16 de julio.",
       "broadcasters": [
         {
@@ -539,6 +539,38 @@
           "country": "🌍 Internacional",
           "channels": "F1 TV Pro",
           "url": "https://f1tv.formula1.com/"
+        }
+      ]
+    },
+    {
+      "id": "the-open-2026-jornada-final",
+      "sport": "golf",
+      "competitionName": "The Open Championship 2026",
+      "home": "The Open · Royal Birkdale · Jornada final",
+      "away": "",
+      "date": "2026-07-19T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Jornada final del 154º The Open Championship de golf en Royal Birkdale (Reino Unido). El último major del año se decide el domingo 19 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Golf)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports Golf y BBC (resumen)",
+          "url": "https://www.skysports.com/golf"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC, USA Network y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Sky Sports Golf y discovery+",
+          "url": "https://www.skysports.com/golf"
         }
       ]
     }
