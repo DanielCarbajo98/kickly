@@ -12,16 +12,6 @@
   },
   "events": [
     {
-      "id": "inglaterra-vs-argentina-mundial-2026",
-      "sport": "futbol",
-      "competitionName": "Mundial 2026 · Semifinal",
-      "home": "Inglaterra",
-      "away": "Argentina",
-      "date": "2026-07-15T21:00:00+02:00",
-      "status": "finished",
-      "description": "Argentina venció 2-1 a Inglaterra en la semifinal del Mundial 2026, con goles de Enzo Fernández y Lautaro Martínez (asistencia de Messi); Gordon marcó para Inglaterra. Argentina jugará la final contra España."
-    },
-    {
       "id": "final-mundial-2026-espana",
       "sport": "futbol",
       "competitionName": "Mundial 2026 · Final",
@@ -299,43 +289,6 @@
       ]
     },
     {
-      "id": "tour-francia-2026-etapa-11",
-      "sport": "ciclismo",
-      "competitionName": "Tour de Francia 2026 · Etapa 11",
-      "home": "Tour de Francia · Etapa 11: Vichy – Nevers",
-      "away": "",
-      "date": "2026-07-15T13:00:00+02:00",
-      "status": "finished",
-      "description": "Etapa 11 del Tour de Francia 2026, 161,3 km entre Vichy y Nevers. Etapa llana favorable a los velocistas. Miércoles 15 de julio.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "France Télévisions (France 2, France 3) y Eurosport",
-          "url": "https://www.france.tv/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC Sports y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
       "id": "tour-francia-2026-etapa-12",
       "sport": "ciclismo",
       "competitionName": "Tour de Francia 2026 · Etapa 12",
@@ -379,7 +332,7 @@
       "home": "Tour de Francia · Etapa 13: Dole – Belfort",
       "away": "",
       "date": "2026-07-17T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 13 del Tour de Francia 2026, 205,8 km entre Dole y Belfort. La etapa más larga de esta edición. Viernes 17 de julio.",
       "broadcasters": [
         {
@@ -571,6 +524,43 @@
           "country": "🌍 Internacional",
           "channels": "Sky Sports Golf y discovery+",
           "url": "https://www.skysports.com/golf"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-16",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 16",
+      "home": "Tour de Francia · Etapa 16: Evian – Thonon (CRI)",
+      "away": "",
+      "date": "2026-07-21T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 16 del Tour de Francia 2026: contrarreloj individual de 26 km entre Evian-les-Bains y Thonon-les-Bains, a orillas del lago Lemán. Martes 21 de julio, tras el día de descanso.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
         }
       ]
     }
