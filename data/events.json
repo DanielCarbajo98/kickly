@@ -99,40 +99,13 @@
       ]
     },
     {
-      "id": "fever-vs-valkyries-wnba-2026-07-15",
-      "sport": "baloncesto",
-      "competitionName": "WNBA",
-      "home": "Indiana Fever",
-      "away": "Golden State Valkyries",
-      "date": "2026-07-16T02:00:00+02:00",
-      "status": "finished",
-      "description": "La WNBA en directo: Indiana Fever recibe a Golden State Valkyries en el Gainbridge Fieldhouse.",
-      "broadcasters": [
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN, ABC, CBS, ION y WNBA League Pass",
-          "url": "https://www.wnba.com/"
-        },
-        {
-          "country": "🇪🇸 España",
-          "channels": "WNBA League Pass",
-          "url": "https://www.wnba.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "WNBA League Pass (stream global)",
-          "url": "https://www.wnba.com/"
-        }
-      ]
-    },
-    {
       "id": "ufc-fight-night-du-plessis-vs-usman",
       "sport": "ufc",
       "competitionName": "UFC Fight Night · Oklahoma City",
       "home": "Dricus Du Plessis",
       "away": "Kamaru Usman",
       "date": "2026-07-19T02:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "UFC Fight Night: Du Plessis vs Usman en el Paycom Arena de Oklahoma City. Cartelera estelar con Cannonier vs Duncan y Hooper vs Ramirez, en la madrugada del sábado al domingo (hora española).",
       "broadcasters": [
         {
@@ -208,8 +181,8 @@
       "home": "Francia",
       "away": "Inglaterra",
       "date": "2026-07-18T23:00:00+02:00",
-      "status": "scheduled",
-      "description": "Partido por el tercer y cuarto puesto del Mundial 2026 en el Hard Rock Stadium de Miami: Francia contra Inglaterra. Sábado 18 de julio.",
+      "status": "finished",
+      "description": "Partido por el tercer y cuarto puesto del Mundial 2026 entre Francia e Inglaterra, disputado el 18 de julio en el Hard Rock Stadium de Miami.",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
@@ -289,43 +262,6 @@
       ]
     },
     {
-      "id": "tour-francia-2026-etapa-12",
-      "sport": "ciclismo",
-      "competitionName": "Tour de Francia 2026 · Etapa 12",
-      "home": "Tour de Francia · Etapa 12: Nevers – Chalon-sur-Saône",
-      "away": "",
-      "date": "2026-07-16T13:00:00+02:00",
-      "status": "finished",
-      "description": "Etapa 12 del Tour de Francia 2026, 179,1 km entre Nevers Magny-Cours y Chalon-sur-Saône. Etapa llana. Jueves 16 de julio.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "France Télévisions (France 2, France 3) y Eurosport",
-          "url": "https://www.france.tv/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC Sports y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
       "id": "tour-francia-2026-etapa-13",
       "sport": "ciclismo",
       "competitionName": "Tour de Francia 2026 · Etapa 13",
@@ -369,7 +305,7 @@
       "home": "Tour de Francia · Etapa 14: Mulhouse – Le Markstein",
       "away": "",
       "date": "2026-07-18T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 14 del Tour de Francia 2026, 155,3 km entre Mulhouse y Le Markstein Fellering, con final en alto de montaña. Sábado 18 de julio.",
       "broadcasters": [
         {
