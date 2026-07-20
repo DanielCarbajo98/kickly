@@ -18,8 +18,8 @@
       "home": "España",
       "away": "Argentina",
       "date": "2026-07-19T21:00:00+02:00",
-      "status": "scheduled",
-      "description": "La gran final de la Copa del Mundo 2026 en el MetLife Stadium de Nueva York: España contra Argentina, la vigente campeona. Domingo 19 de julio a las 21:00 (hora española).",
+      "status": "finished",
+      "description": "España se proclamó campeona del mundo al vencer 1-0 a Argentina en la final del Mundial 2026 en el MetLife Stadium, con gol de Ferrán Torres en la prórroga. Rodri fue elegido mejor jugador del torneo. Segundo título mundial de España, 16 años después de 2010.",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
@@ -137,7 +137,7 @@
       "home": "Final ATP 250 Gstaad",
       "away": "",
       "date": "2026-07-19T11:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Final del EFG Swiss Open de Gstaad, ATP 250 sobre tierra batida, con Ruud, Bublik, Tsitsipas y Wawrinka en el cuadro.",
       "broadcasters": [
         {
@@ -159,7 +159,7 @@
       "home": "Final ATP 250 Båstad",
       "away": "",
       "date": "2026-07-19T15:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Final del Nordea Open de Båstad, ATP 250 sobre tierra batida, con Rublev, Darderi, Baez y Dimitrov en el cuadro.",
       "broadcasters": [
         {
@@ -262,43 +262,6 @@
       ]
     },
     {
-      "id": "tour-francia-2026-etapa-13",
-      "sport": "ciclismo",
-      "competitionName": "Tour de Francia 2026 · Etapa 13",
-      "home": "Tour de Francia · Etapa 13: Dole – Belfort",
-      "away": "",
-      "date": "2026-07-17T13:00:00+02:00",
-      "status": "finished",
-      "description": "Etapa 13 del Tour de Francia 2026, 205,8 km entre Dole y Belfort. La etapa más larga de esta edición. Viernes 17 de julio.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "France Télévisions (France 2, France 3) y Eurosport",
-          "url": "https://www.france.tv/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC Sports y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
       "id": "tour-francia-2026-etapa-14",
       "sport": "ciclismo",
       "competitionName": "Tour de Francia 2026 · Etapa 14",
@@ -342,7 +305,7 @@
       "home": "Tour de Francia · Etapa 15: Champagnole – Plateau de Solaison",
       "away": "",
       "date": "2026-07-19T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 15 del Tour de Francia 2026, 183,9 km entre Champagnole y el Plateau de Solaison, final en alto de montaña. Domingo 19 de julio.",
       "broadcasters": [
         {
@@ -379,7 +342,7 @@
       "home": "Final ATP 250 Umag",
       "away": "",
       "date": "2026-07-19T16:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Final del Croatia Open de Umag, ATP 250 sobre tierra batida. Domingo 19 de julio.",
       "broadcasters": [
         {
@@ -401,7 +364,7 @@
       "home": "F1 · GP de Bélgica (Spa) · Carrera",
       "away": "",
       "date": "2026-07-19T15:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Gran Premio de Bélgica de Fórmula 1 2026 en el circuito de Spa-Francorchamps. La carrera del domingo 19 de julio, uno de los trazados más míticos del calendario.",
       "broadcasters": [
         {
@@ -438,7 +401,7 @@
       "home": "The Open · Royal Birkdale · Jornada final",
       "away": "",
       "date": "2026-07-19T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Jornada final del 154º The Open Championship de golf en Royal Birkdale (Reino Unido). El último major del año se decide el domingo 19 de julio.",
       "broadcasters": [
         {
@@ -472,6 +435,80 @@
       "date": "2026-07-21T13:00:00+02:00",
       "status": "scheduled",
       "description": "Etapa 16 del Tour de Francia 2026: contrarreloj individual de 26 km entre Evian-les-Bains y Thonon-les-Bains, a orillas del lago Lemán. Martes 21 de julio, tras el día de descanso.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-17",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 17",
+      "home": "Tour de Francia · Etapa 17: Chambéry – Voiron",
+      "away": "",
+      "date": "2026-07-22T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 17 del Tour de Francia 2026, 174 km entre Chambéry y Voiron. Jornada de transición antes de los Alpes. Miércoles 22 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-18",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 18",
+      "home": "Tour de Francia · Etapa 18: Voiron – Orcières-Merlette",
+      "away": "",
+      "date": "2026-07-23T12:30:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 18 del Tour de Francia 2026, 185,2 km entre Voiron y Orcières-Merlette, primera gran etapa alpina con final en alto. Jueves 23 de julio.",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
