@@ -12,304 +12,13 @@
   },
   "events": [
     {
-      "id": "final-mundial-2026-espana",
-      "sport": "futbol",
-      "competitionName": "Mundial 2026 · Final",
-      "home": "España",
-      "away": "Argentina",
-      "date": "2026-07-19T21:00:00+02:00",
-      "status": "finished",
-      "description": "España se proclamó campeona del mundo al vencer 1-0 a Argentina en la final del Mundial 2026 en el MetLife Stadium, con gol de Ferrán Torres en la prórroga. Rodri fue elegido mejor jugador del torneo. Segundo título mundial de España, 16 años después de 2010.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (La 1, Teledeporte, RTVE Play) y DAZN",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇦🇷 Argentina",
-          "channels": "Telefe, TV Pública, TyC Sports y DSports (DGO)",
-          "url": "https://www.tycsports.com/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "BBC (iPlayer) e ITV (ITVX)",
-          "url": "https://www.bbc.co.uk/iplayer"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "FOX y FS1 (inglés), Telemundo y Universo (español), Peacock",
-          "url": "https://www.foxsports.com/soccer/fifa-world-cup"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Televisa, TUDN, TV Azteca y ViX Premium",
-          "url": "https://vix.com/"
-        },
-        {
-          "country": "🇧🇷 Brasil",
-          "channels": "Globo y CazéTV (YouTube, gratis)",
-          "url": "https://globoplay.globo.com/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "TF1 y M6",
-          "url": "https://www.tf1.fr/"
-        },
-        {
-          "country": "🇩🇪 Alemania",
-          "channels": "ARD, ZDF y MagentaTV",
-          "url": "https://www.ard.de/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "RAI (RaiPlay) y Sky Italia",
-          "url": "https://www.raiplay.it/"
-        },
-        {
-          "country": "🇨🇦 Canadá",
-          "channels": "TSN, RDS y CTV (Bell Media)",
-          "url": "https://www.tsn.ca/"
-        },
-        {
-          "country": "🇨🇴 Colombia",
-          "channels": "DSports (DGO) y ESPN / Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🇨🇱 Chile",
-          "channels": "DSports (DGO) y ESPN / Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🇺🇾 Uruguay",
-          "channels": "DSports (DGO) y ESPN / Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🇪🇨 Ecuador",
-          "channels": "DSports (DGO) y ESPN / Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🌍 Resto del mundo",
-          "channels": "Consulta el emisor oficial de la FIFA para tu país en fifa.com",
-          "url": "https://www.fifa.com/"
-        }
-      ]
-    },
-    {
-      "id": "ufc-fight-night-du-plessis-vs-usman",
-      "sport": "ufc",
-      "competitionName": "UFC Fight Night · Oklahoma City",
-      "home": "Dricus Du Plessis",
-      "away": "Kamaru Usman",
-      "date": "2026-07-19T02:00:00+02:00",
-      "status": "finished",
-      "description": "UFC Fight Night: Du Plessis vs Usman en el Paycom Arena de Oklahoma City. Cartelera estelar con Cannonier vs Duncan y Hooper vs Ramirez, en la madrugada del sábado al domingo (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Paramount+",
-          "url": "https://www.paramountplus.com/"
-        },
-        {
-          "country": "🌎 Latinoamérica",
-          "channels": "Disney+ / ESPN",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "UFC Fight Pass",
-          "url": "https://ufcfightpass.com/"
-        }
-      ]
-    },
-    {
-      "id": "final-atp-250-gstaad-2026",
-      "sport": "tenis",
-      "competitionName": "ATP 250 Gstaad · Final",
-      "home": "Final ATP 250 Gstaad",
-      "away": "",
-      "date": "2026-07-19T11:30:00+02:00",
-      "status": "finished",
-      "description": "Final del EFG Swiss Open de Gstaad, ATP 250 sobre tierra batida, con Ruud, Bublik, Tsitsipas y Wawrinka en el cuadro.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ (Vamos)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Tennis Channel y TennisTV",
-          "url": "https://www.tennischannel.com/"
-        }
-      ]
-    },
-    {
-      "id": "final-atp-250-bastad-2026",
-      "sport": "tenis",
-      "competitionName": "ATP 250 Båstad · Final",
-      "home": "Final ATP 250 Båstad",
-      "away": "",
-      "date": "2026-07-19T15:00:00+02:00",
-      "status": "finished",
-      "description": "Final del Nordea Open de Båstad, ATP 250 sobre tierra batida, con Rublev, Darderi, Baez y Dimitrov en el cuadro.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ (Vamos)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Tennis Channel y TennisTV",
-          "url": "https://www.tennischannel.com/"
-        }
-      ]
-    },
-    {
-      "id": "tour-francia-2026-etapa-15",
-      "sport": "ciclismo",
-      "competitionName": "Tour de Francia 2026 · Etapa 15",
-      "home": "Tour de Francia · Etapa 15: Champagnole – Plateau de Solaison",
-      "away": "",
-      "date": "2026-07-19T13:00:00+02:00",
-      "status": "finished",
-      "description": "Etapa 15 del Tour de Francia 2026, 183,9 km entre Champagnole y el Plateau de Solaison, final en alto de montaña. Domingo 19 de julio.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "France Télévisions (France 2, France 3) y Eurosport",
-          "url": "https://www.france.tv/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC Sports y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
-      "id": "final-atp-250-umag-2026",
-      "sport": "tenis",
-      "competitionName": "ATP 250 Umag · Final",
-      "home": "Final ATP 250 Umag",
-      "away": "",
-      "date": "2026-07-19T16:00:00+02:00",
-      "status": "finished",
-      "description": "Final del Croatia Open de Umag, ATP 250 sobre tierra batida. Domingo 19 de julio.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ (Vamos)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Tennis Channel y TennisTV",
-          "url": "https://www.tennischannel.com/"
-        }
-      ]
-    },
-    {
-      "id": "f1-gp-belgica-2026-carrera",
-      "sport": "motor",
-      "competitionName": "Fórmula 1 · GP de Bélgica",
-      "home": "F1 · GP de Bélgica (Spa) · Carrera",
-      "away": "",
-      "date": "2026-07-19T15:00:00+02:00",
-      "status": "finished",
-      "description": "Gran Premio de Bélgica de Fórmula 1 2026 en el circuito de Spa-Francorchamps. La carrera del domingo 19 de julio, uno de los trazados más míticos del calendario.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN F1",
-          "url": "https://www.dazn.com/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports F1 y Channel 4 (resumen)",
-          "url": "https://www.skysports.com/f1"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN",
-          "url": "https://www.espn.com/f1/"
-        },
-        {
-          "country": "🌎 Latinoamérica",
-          "channels": "Disney+ / ESPN y Fox Sports",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "F1 TV Pro",
-          "url": "https://f1tv.formula1.com/"
-        }
-      ]
-    },
-    {
-      "id": "the-open-2026-jornada-final",
-      "sport": "golf",
-      "competitionName": "The Open Championship 2026",
-      "home": "The Open · Royal Birkdale · Jornada final",
-      "away": "",
-      "date": "2026-07-19T13:00:00+02:00",
-      "status": "finished",
-      "description": "Jornada final del 154º The Open Championship de golf en Royal Birkdale (Reino Unido). El último major del año se decide el domingo 19 de julio.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ (Golf)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports Golf y BBC (resumen)",
-          "url": "https://www.skysports.com/golf"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC, USA Network y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Sky Sports Golf y discovery+",
-          "url": "https://www.skysports.com/golf"
-        }
-      ]
-    },
-    {
       "id": "tour-francia-2026-etapa-16",
       "sport": "ciclismo",
       "competitionName": "Tour de Francia 2026 · Etapa 16",
       "home": "Tour de Francia · Etapa 16: Evian – Thonon (CRI)",
       "away": "",
       "date": "2026-07-21T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 16 del Tour de Francia 2026: contrarreloj individual de 26 km entre Evian-les-Bains y Thonon-les-Bains, a orillas del lago Lemán. Martes 21 de julio, tras el día de descanso.",
       "broadcasters": [
         {
@@ -447,6 +156,124 @@
           "country": "🌍 Internacional",
           "channels": "Eurosport / Max y GCN",
           "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-20",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 20",
+      "home": "Tour de Francia · Etapa 20: Bourg d'Oisans – Alpe d'Huez",
+      "away": "",
+      "date": "2026-07-25T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 20 del Tour de Francia 2026, 170,9 km de Le Bourg-d'Oisans a Alpe d'Huez, con Croix de Fer, Galibier y Col de Sarenne antes de la subida final. Sábado 25 de julio, última gran etapa de montaña.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "tour-francia-2026-etapa-21",
+      "sport": "ciclismo",
+      "competitionName": "Tour de Francia 2026 · Etapa 21 (final)",
+      "home": "Tour de Francia · Etapa 21: Thoiry – París Campos Elíseos",
+      "away": "",
+      "date": "2026-07-26T16:30:00+02:00",
+      "status": "scheduled",
+      "description": "Etapa 21 y final del Tour de Francia 2026: 133 km de Thoiry a los Campos Elíseos de París, con las tres subidas a Montmartre. Domingo 26 de julio, llegada final en París.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "France Télévisions (France 2, France 3) y Eurosport",
+          "url": "https://www.france.tv/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC Sports y Peacock",
+          "url": "https://www.peacocktv.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "final-atp-250-kitzbuhel-2026",
+      "sport": "tenis",
+      "competitionName": "ATP 250 Kitzbühel · Final",
+      "home": "Final ATP 250 Kitzbühel",
+      "away": "",
+      "date": "2026-07-26T14:00:00+02:00",
+      "status": "scheduled",
+      "description": "Final del Generali Open de Kitzbühel, ATP 250 sobre tierra batida en los Alpes austriacos. Domingo 26 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Vamos)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Tennis Channel y TennisTV / WTA TV",
+          "url": "https://www.tennischannel.com/"
+        }
+      ]
+    },
+    {
+      "id": "final-wta-hamburgo-2026",
+      "sport": "tenis",
+      "competitionName": "WTA 250 Hamburgo · Final",
+      "home": "Final WTA 250 Hamburgo",
+      "away": "",
+      "date": "2026-07-26T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Final del Hamburg Open femenino, torneo WTA sobre tierra batida en Alemania. Domingo 26 de julio.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Vamos)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Tennis Channel y TennisTV / WTA TV",
+          "url": "https://www.tennischannel.com/"
         }
       ]
     }
