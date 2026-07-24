@@ -12,43 +12,6 @@
   },
   "events": [
     {
-      "id": "tour-francia-2026-etapa-16",
-      "sport": "ciclismo",
-      "competitionName": "Tour de Francia 2026 · Etapa 16",
-      "home": "Tour de Francia · Etapa 16: Evian – Thonon (CRI)",
-      "away": "",
-      "date": "2026-07-21T13:00:00+02:00",
-      "status": "finished",
-      "description": "Etapa 16 del Tour de Francia 2026: contrarreloj individual de 26 km entre Evian-les-Bains y Thonon-les-Bains, a orillas del lago Lemán. Martes 21 de julio, tras el día de descanso.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "France Télévisions (France 2, France 3) y Eurosport",
-          "url": "https://www.france.tv/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC Sports y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
       "id": "tour-francia-2026-etapa-17",
       "sport": "ciclismo",
       "competitionName": "Tour de Francia 2026 · Etapa 17",
@@ -92,7 +55,7 @@
       "home": "Tour de Francia · Etapa 18: Voiron – Orcières-Merlette",
       "away": "",
       "date": "2026-07-23T12:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 18 del Tour de Francia 2026, 185,2 km entre Voiron y Orcières-Merlette, primera gran etapa alpina con final en alto. Jueves 23 de julio.",
       "broadcasters": [
         {
