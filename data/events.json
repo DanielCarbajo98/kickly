@@ -12,43 +12,6 @@
   },
   "events": [
     {
-      "id": "tour-francia-2026-etapa-17",
-      "sport": "ciclismo",
-      "competitionName": "Tour de Francia 2026 · Etapa 17",
-      "home": "Tour de Francia · Etapa 17: Chambéry – Voiron",
-      "away": "",
-      "date": "2026-07-22T13:00:00+02:00",
-      "status": "finished",
-      "description": "Etapa 17 del Tour de Francia 2026, 174 km entre Chambéry y Voiron. Jornada de transición antes de los Alpes. Miércoles 22 de julio.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "France Télévisions (France 2, France 3) y Eurosport",
-          "url": "https://www.france.tv/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC Sports y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
       "id": "tour-francia-2026-etapa-18",
       "sport": "ciclismo",
       "competitionName": "Tour de Francia 2026 · Etapa 18",
@@ -92,7 +55,7 @@
       "home": "Tour de Francia · Etapa 19: Gap – Alpe d'Huez",
       "away": "",
       "date": "2026-07-24T14:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 19 del Tour de Francia 2026, 128 km entre Gap y el mítico Alpe d'Huez, con final en las 21 curvas legendarias (13,8 km al 8,1%). Viernes 24 de julio, gran etapa reina alpina.",
       "broadcasters": [
         {
