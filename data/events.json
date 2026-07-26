@@ -12,43 +12,6 @@
   },
   "events": [
     {
-      "id": "tour-francia-2026-etapa-18",
-      "sport": "ciclismo",
-      "competitionName": "Tour de Francia 2026 · Etapa 18",
-      "home": "Tour de Francia · Etapa 18: Voiron – Orcières-Merlette",
-      "away": "",
-      "date": "2026-07-23T12:30:00+02:00",
-      "status": "finished",
-      "description": "Etapa 18 del Tour de Francia 2026, 185,2 km entre Voiron y Orcières-Merlette, primera gran etapa alpina con final en alto. Jueves 23 de julio.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "France Télévisions (France 2, France 3) y Eurosport",
-          "url": "https://www.france.tv/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC Sports y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
       "id": "tour-francia-2026-etapa-19",
       "sport": "ciclismo",
       "competitionName": "Tour de Francia 2026 · Etapa 19",
@@ -92,7 +55,7 @@
       "home": "Tour de Francia · Etapa 20: Bourg d'Oisans – Alpe d'Huez",
       "away": "",
       "date": "2026-07-25T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 20 del Tour de Francia 2026, 170,9 km de Le Bourg-d'Oisans a Alpe d'Huez, con Croix de Fer, Galibier y Col de Sarenne antes de la subida final. Sábado 25 de julio, última gran etapa de montaña.",
       "broadcasters": [
         {
@@ -200,6 +163,92 @@
           "country": "🌍 Internacional",
           "channels": "Tennis Channel y TennisTV / WTA TV",
           "url": "https://www.tennischannel.com/"
+        }
+      ]
+    },
+    {
+      "id": "barcelona-birmingham-city-2026",
+      "sport": "futbol",
+      "competitionName": "Amistoso de pretemporada 2026/27",
+      "home": "Birmingham City",
+      "away": "FC Barcelona",
+      "date": "2026-07-31T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Birmingham City – FC Barcelona online gratis: primer amistoso de pretemporada del Barça 2026/27, en el St. Andrew's @ Knighthead Park. Viernes 31 de julio a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Barça One (plataforma oficial del FC Barcelona)",
+          "url": "https://www.fcbarcelona.es/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "Blues TV (Birmingham City) y Barça One",
+          "url": "https://www.bcfc.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Barça One",
+          "url": "https://www.fcbarcelona.com/"
+        }
+      ]
+    },
+    {
+      "id": "real-madrid-fiorentina-2026",
+      "sport": "futbol",
+      "competitionName": "Amistoso de pretemporada 2026/27",
+      "home": "Real Madrid",
+      "away": "Fiorentina",
+      "date": "2026-08-01T18:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Real Madrid – Fiorentina online gratis: amistoso de pretemporada en el Wörthersee Stadion de Klagenfurt (Austria). Sábado 1 de agosto a las 18:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Real Madrid TV (en abierto) y RM Play",
+          "url": "https://www.realmadrid.com/es-ES/television"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN Italia",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Fubo y Real Madrid TV",
+          "url": "https://www.fubo.tv/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Real Madrid TV",
+          "url": "https://www.realmadrid.com/"
+        }
+      ]
+    },
+    {
+      "id": "clasica-san-sebastian-2026",
+      "sport": "ciclismo",
+      "competitionName": "Clásica San Sebastián 2026",
+      "home": "Clásica San Sebastián · Donostia Klasikoa",
+      "away": "",
+      "date": "2026-08-01T11:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Clásica San Sebastián 2026 online gratis: 45ª edición de la Donostia Klasikoa, 221,1 km con siete puertos puntuables y salida y meta en el Boulevard de Donostia. Sábado 1 de agosto, gran cita WorldTour tras el Tour de Francia.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, RTVE Play) y Eurosport / Max",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "Eurosport",
+          "url": "https://www.eurosport.fr/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport / Max y GCN",
+          "url": "https://www.max.com/"
         }
       ]
     }
