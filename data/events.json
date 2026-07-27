@@ -12,43 +12,6 @@
   },
   "events": [
     {
-      "id": "tour-francia-2026-etapa-19",
-      "sport": "ciclismo",
-      "competitionName": "Tour de Francia 2026 · Etapa 19",
-      "home": "Tour de Francia · Etapa 19: Gap – Alpe d'Huez",
-      "away": "",
-      "date": "2026-07-24T14:00:00+02:00",
-      "status": "finished",
-      "description": "Etapa 19 del Tour de Francia 2026, 128 km entre Gap y el mítico Alpe d'Huez, con final en las 21 curvas legendarias (13,8 km al 8,1%). Viernes 24 de julio, gran etapa reina alpina.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "France Télévisions (France 2, France 3) y Eurosport",
-          "url": "https://www.france.tv/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC Sports y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
       "id": "tour-francia-2026-etapa-20",
       "sport": "ciclismo",
       "competitionName": "Tour de Francia 2026 · Etapa 20",
@@ -92,7 +55,7 @@
       "home": "Tour de Francia · Etapa 21: Thoiry – París Campos Elíseos",
       "away": "",
       "date": "2026-07-26T16:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Etapa 21 y final del Tour de Francia 2026: 133 km de Thoiry a los Campos Elíseos de París, con las tres subidas a Montmartre. Domingo 26 de julio, llegada final en París.",
       "broadcasters": [
         {
@@ -129,7 +92,7 @@
       "home": "Final ATP 250 Kitzbühel",
       "away": "",
       "date": "2026-07-26T14:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Final del Generali Open de Kitzbühel, ATP 250 sobre tierra batida en los Alpes austriacos. Domingo 26 de julio.",
       "broadcasters": [
         {
@@ -151,7 +114,7 @@
       "home": "Final WTA 250 Hamburgo",
       "away": "",
       "date": "2026-07-26T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Final del Hamburg Open femenino, torneo WTA sobre tierra batida en Alemania. Domingo 26 de julio.",
       "broadcasters": [
         {
@@ -249,6 +212,33 @@
           "country": "🌍 Internacional",
           "channels": "Eurosport / Max y GCN",
           "url": "https://www.max.com/"
+        }
+      ]
+    },
+    {
+      "id": "ufc-belgrade-medic-rodriguez-2026",
+      "sport": "ufc",
+      "competitionName": "UFC Fight Night · Belgrado",
+      "home": "Uroš Medić",
+      "away": "Daniel Rodríguez",
+      "date": "2026-08-01T19:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver UFC Belgrado online gratis: UFC Fight Night Medić vs Rodríguez, combate estelar del peso wélter en la Belgrade Arena (Serbia). Sábado 1 de agosto, cartelar principal a las 19:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Paramount+",
+          "url": "https://www.paramountplus.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UFC Fight Pass",
+          "url": "https://ufcfightpass.com/"
         }
       ]
     }
