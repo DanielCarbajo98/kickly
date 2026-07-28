@@ -12,43 +12,6 @@
   },
   "events": [
     {
-      "id": "tour-francia-2026-etapa-20",
-      "sport": "ciclismo",
-      "competitionName": "Tour de Francia 2026 · Etapa 20",
-      "home": "Tour de Francia · Etapa 20: Bourg d'Oisans – Alpe d'Huez",
-      "away": "",
-      "date": "2026-07-25T13:00:00+02:00",
-      "status": "finished",
-      "description": "Etapa 20 del Tour de Francia 2026, 170,9 km de Le Bourg-d'Oisans a Alpe d'Huez, con Croix de Fer, Galibier y Col de Sarenne antes de la subida final. Sábado 25 de julio, última gran etapa de montaña.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, La 1, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "France Télévisions (France 2, France 3) y Eurosport",
-          "url": "https://www.france.tv/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC Sports y Peacock",
-          "url": "https://www.peacocktv.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
       "id": "tour-francia-2026-etapa-21",
       "sport": "ciclismo",
       "competitionName": "Tour de Francia 2026 · Etapa 21 (final)",
