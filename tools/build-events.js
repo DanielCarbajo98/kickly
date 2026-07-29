@@ -99,6 +99,73 @@ const localName = { es: "Español", en: "English", pt: "Português" };
 
 const longDateFor = (iso, locale) => new Intl.DateTimeFormat(locale, { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Madrid" }).format(new Date(iso));
 
+/* ---------- Agenda estática (SSR) para indexación ----------
+   Genera el mismo marcado de tarjetas que assets/js/app.js, pero en el HTML
+   servido, para que los buscadores vean los eventos sin ejecutar JavaScript.
+   app.js vuelve a renderizar #agenda en el navegador (zona horaria del usuario,
+   filtros y "en directo"), así que esto es mejora progresiva. */
+const MADRID = "Europe/Madrid";
+const AG_LOCALE = { es: "es-ES", en: "en-GB", pt: "pt-BR" };
+const AGL = {
+  es: { liveNow: "En directo ahora", finished: "Finalizados", today: "Hoy", tomorrow: "Mañana", live: "DIRECTO", ended: "Finalizado", soon: "Pronto", empty: "No hay eventos programados por ahora. Vuelve pronto para ver la agenda." },
+  en: { liveNow: "Live now", finished: "Finished", today: "Today", tomorrow: "Tomorrow", live: "LIVE", ended: "Ended", soon: "Soon", empty: "No scheduled events right now. Check back soon for the full schedule." },
+  pt: { liveNow: "Ao vivo agora", finished: "Encerrados", today: "Hoje", tomorrow: "Amanhã", live: "AO VIVO", ended: "Encerrado", soon: "Em breve", empty: "Nenhum evento agendado no momento. Volte em breve para ver a agenda." }
+};
+const agFmt = (iso, lang, opts) => new Intl.DateTimeFormat(AG_LOCALE[lang], Object.assign({ timeZone: MADRID }, opts)).format(new Date(iso));
+const agTime = (iso, lang) => agFmt(iso, lang, { hour: "2-digit", minute: "2-digit" });
+const agDayKey = iso => new Intl.DateTimeFormat("en-CA", { timeZone: MADRID, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
+function agDayLabel(iso, lang) {
+  const now = Date.now();
+  const k = agDayKey(iso), today = agDayKey(new Date(now)), tom = agDayKey(new Date(now + 864e5));
+  const name = agFmt(iso, lang, { weekday: "long", day: "numeric", month: "long" });
+  if (k === today) return AGL[lang].today + " · " + name;
+  if (k === tom) return AGL[lang].tomorrow + " · " + name;
+  return name;
+}
+const sceneOf = ev => (SPORTS[ev.sport] ? ev.sport : "futbol");
+function agPill(ev, lang) {
+  if (ev.status === "live") return '<span class="pill pill-live">' + AGL[lang].live + "</span>";
+  if (ev.status === "finished") return '<span class="pill pill-end">' + AGL[lang].ended + "</span>";
+  const diff = new Date(ev.date).getTime() - Date.now();
+  if (diff > 0 && diff < 36e5) return '<span class="pill pill-soon">' + AGL[lang].soon + "</span>";
+  return "";
+}
+const agEvUrl = (ev, lang) => (lang === "es" ? "" : "/" + lang) + "/ver/" + encodeURIComponent(ev.id) + ".html";
+function agCard(ev, lang, showDay) {
+  const spName = TR[lang].nav[ev.sport] || ev.sport;
+  const when = ev.status === "live" ? AGL[lang].live
+    : (showDay ? esc(agFmt(ev.date, lang, { day: "numeric", month: "short" })) + " · " : "") + esc(agTime(ev.date, lang));
+  return '<a class="card' + (ev.status === "live" ? " is-live" : "") + '" href="' + agEvUrl(ev, lang) + '">' +
+    '<div class="card-thumb"><div class="sim-scene ' + sceneOf(ev) + '"></div>' +
+      '<span class="card-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>' +
+      '<span class="card-pillwrap">' + agPill(ev, lang) + "</span>" +
+    "</div>" +
+    '<div class="card-body"><div class="card-comp">' + esc(spName) + " · " + esc(ev.competitionName) + "</div>" +
+      '<div class="card-teams">' + esc(ev.home) + (ev.away ? ' <span class="vs">vs</span> ' + esc(ev.away) : "") + "</div>" +
+      '<div class="card-time">' + when + "</div></div></a>";
+}
+const agGrid = (list, lang, showDay) => '<div class="cards">' + list.map(e => agCard(e, lang, showDay)).join("") + "</div>";
+function staticAgenda(allEvents, lang, sportFilter) {
+  let events = allEvents.slice();
+  if (sportFilter) events = events.filter(e => e.sport === sportFilter);
+  events.sort((a, b) => new Date(a.date) - new Date(b.date));
+  const live = events.filter(e => e.status === "live");
+  const upcoming = events.filter(e => e.status === "scheduled");
+  const finished = events.filter(e => e.status === "finished");
+  let html = "";
+  if (live.length) html += '<div class="group"><div class="group-head is-live"><i></i>' + esc(AGL[lang].liveNow) + "</div>" + agGrid(live, lang) + "</div>";
+  if (upcoming.length) {
+    const byDay = {};
+    upcoming.forEach(e => { const k = agDayKey(e.date); (byDay[k] = byDay[k] || []).push(e); });
+    Object.keys(byDay).sort().forEach(k => {
+      html += '<div class="group"><div class="group-head"><i></i>' + esc(agDayLabel(byDay[k][0].date, lang)) + "</div>" + agGrid(byDay[k], lang) + "</div>";
+    });
+  }
+  if (finished.length) html += '<div class="group"><div class="group-head"><i></i>' + esc(AGL[lang].finished) + "</div>" + agGrid(finished, lang, true) + "</div>";
+  if (!html) html = '<div class="group"><div class="empty">' + esc(AGL[lang].empty) + "</div></div>";
+  return html;
+}
+
 const MARK = `<svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 36a20 20 0 0 1 28 0" stroke="#ff4655" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M8 26a34 34 0 0 1 48 0" stroke="#ff4655" stroke-width="7" fill="none" stroke-linecap="round" opacity=".5"/><circle cx="32" cy="47" r="8" fill="#ff4655"/></svg>`;
 const FAVICON = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316181d'/%3E%3Cpath d='M18 36a20 20 0 0 1 28 0' stroke='%23ff4655' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M8 26a34 34 0 0 1 48 0' stroke='%23ff4655' stroke-width='7' fill='none' stroke-linecap='round' opacity='.5'/%3E%3Ccircle cx='32' cy='47' r='8' fill='%23ff4655'/%3E%3C/svg%3E`;
 const MULTITAG = `<script src="https://quge5.com/88/tag.min.js" data-zone="259826" async data-cfasync="false"></script>`;
@@ -339,7 +406,7 @@ ${header(lang, "agenda")}
         <input type="search" id="q" placeholder="${esc(t.searchPh)}" aria-label="search"></div>
       ${filterChips(lang, "")}
     </div>
-    <div id="agenda"><div class="group"><div class="empty">${esc(t.loading)}</div></div></div>
+    <div id="agenda">${staticAgenda(events, lang, "")}</div>
   </div>
 </main>
 ${footer(lang)}
@@ -358,7 +425,7 @@ ${header(lang, sport)}
   <div class="wrap">
     <div class="page-head"><h1>${esc(t.sportH1(n))}</h1><p>${esc(t.sportIntro(n))}</p></div>
     <div class="ad" id="ad-top"></div>
-    <div id="agenda"><div class="group"><div class="empty">${esc(t.loading)}</div></div></div>
+    <div id="agenda">${staticAgenda(events, lang, sport)}</div>
   </div>
 </main>
 ${footer(lang)}
@@ -452,7 +519,7 @@ ${header("es")}
     <section class="section"><h2>Dónde ver cada deporte en ${esc(c.name)}</h2>
       <table class="bcast"><tbody>${rows}</tbody></table></section>
     <section class="section"><h2>Agenda de hoy</h2>
-      <div id="agenda"><div class="group"><div class="empty">Cargando agenda…</div></div></div></section>
+      <div id="agenda">${staticAgenda(events, "es", "")}</div></section>
     <section class="section prose"><h2>Ver deporte online en ${esc(c.name)}</h2>
       <p>En Kickly encuentras la agenda completa del deporte en directo para ${esc(c.name)}: <strong>fútbol, baloncesto, tenis, UFC y ciclismo</strong>, con el horario de cada evento adaptado a tu zona horaria y los enlaces y canales oficiales para verlo. Consulta también la <a href="/">agenda completa</a> de todos los países.</p></section>
   </div>
@@ -491,6 +558,22 @@ console.log(`Generadas ${count} páginas de evento (${events.length} × ${LANGS.
 // Páginas por país
 for (const c of COUNTRIES) write(`pais/${c.slug}.html`, countryPage(c));
 console.log(`Generadas ${COUNTRIES.length} páginas por país`);
+
+// SSR de la agenda en las páginas ES mantenidas a mano (portada + deportes).
+// Sustituye el contenido entre <!--AGENDA--> y <!--/AGENDA--> por la agenda estática.
+const AG_RE = /<!--AGENDA-->[\s\S]*?<!--\/AGENDA-->/;
+let ssrCount = 0;
+const esAgendaTargets = [["index.html", ""], ...SPORT_ORDER.map(s => [`deportes/${s}.html`, s])];
+for (const [rel, sport] of esAgendaTargets) {
+  const full = path.join(ROOT, rel);
+  if (!fs.existsSync(full)) continue;
+  let html = fs.readFileSync(full, "utf8");
+  if (!AG_RE.test(html)) { console.warn(`  ⚠ ${rel}: faltan marcadores <!--AGENDA-->, se omite el SSR`); continue; }
+  html = html.replace(AG_RE, "<!--AGENDA-->" + staticAgenda(events, "es", sport) + "<!--/AGENDA-->");
+  fs.writeFileSync(full, html);
+  ssrCount++;
+}
+console.log(`Agenda estática (SSR) inyectada en ${ssrCount} páginas ES mantenidas a mano`);
 
 /* ---------- Sitemap con hreflang ---------- */
 const today = new Date().toISOString().slice(0, 10);
