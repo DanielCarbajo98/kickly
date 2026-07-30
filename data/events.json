@@ -123,6 +123,28 @@
           "url": "https://ufcfightpass.com/"
         }
       ]
+    },
+    {
+      "id": "stoke-city-valencia-2026",
+      "sport": "futbol",
+      "competitionName": "Amistoso de pretemporada 2026/27",
+      "home": "Stoke City",
+      "away": "Valencia CF",
+      "date": "2026-08-01T19:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Stoke City – Valencia CF online gratis: amistoso de pretemporada 2026/27 en el Bet365 Stadium de Stoke-on-Trent. Sábado 1 de agosto a las 19:30 (hora española), en directo y en abierto por À Punt.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "À Punt (autonómica valenciana, en abierto)",
+          "url": "https://www.apuntmedia.es/"
+        },
+        {
+          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
+          "channels": "Stoke City+ (streaming oficial del club)",
+          "url": "https://www.stokecityfc.com/"
+        }
+      ]
     }
   ]
 }
