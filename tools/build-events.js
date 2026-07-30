@@ -167,7 +167,10 @@ function staticAgenda(allEvents, lang, sportFilter) {
 }
 
 const MARK = `<svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 36a20 20 0 0 1 28 0" stroke="#ff4655" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M8 26a34 34 0 0 1 48 0" stroke="#ff4655" stroke-width="7" fill="none" stroke-linecap="round" opacity=".5"/><circle cx="32" cy="47" r="8" fill="#ff4655"/></svg>`;
-const FAVICON = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316181d'/%3E%3Cpath d='M18 36a20 20 0 0 1 28 0' stroke='%23ff4655' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M8 26a34 34 0 0 1 48 0' stroke='%23ff4655' stroke-width='7' fill='none' stroke-linecap='round' opacity='.5'/%3E%3Ccircle cx='32' cy='47' r='8' fill='%23ff4655'/%3E%3C/svg%3E`;
+const FAVICON = `<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">`;
 const MULTITAG = `<script src="https://quge5.com/88/tag.min.js" data-zone="259826" async data-cfasync="false"></script>`;
 const SVGICON = {
   agenda: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
@@ -271,7 +274,7 @@ ${hreflangs(canonPath)}
 <meta property="og:locale" content="${lang === "es" ? "es_ES" : lang === "pt" ? "pt_BR" : "en_GB"}">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0b0c0f">
-<link rel="icon" href="${FAVICON}">
+${FAVICON}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -501,7 +504,7 @@ ${MULTITAG}
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0b0c0f">
-<link rel="icon" href="${FAVICON}">
+${FAVICON}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
