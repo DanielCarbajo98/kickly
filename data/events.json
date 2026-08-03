@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "barcelona-birmingham-city-2026",
-      "sport": "futbol",
-      "competitionName": "Amistoso de pretemporada 2026/27",
-      "home": "Birmingham City",
-      "away": "FC Barcelona",
-      "date": "2026-07-31T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Birmingham City – FC Barcelona online gratis: primer amistoso de pretemporada del Barça 2026/27, en el St. Andrew's @ Knighthead Park. Viernes 31 de julio a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Barça One (plataforma oficial del FC Barcelona)",
-          "url": "https://www.fcbarcelona.es/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "Blues TV (Birmingham City) y Barça One",
-          "url": "https://www.bcfc.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Barça One",
-          "url": "https://www.fcbarcelona.com/"
-        }
-      ]
-    },
-    {
       "id": "real-madrid-fiorentina-2026",
       "sport": "futbol",
       "competitionName": "Amistoso de pretemporada 2026/27",
