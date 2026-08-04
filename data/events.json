@@ -12,114 +12,6 @@
   },
   "events": [
     {
-      "id": "real-madrid-fiorentina-2026",
-      "sport": "futbol",
-      "competitionName": "Amistoso de pretemporada 2026/27",
-      "home": "Real Madrid",
-      "away": "Fiorentina",
-      "date": "2026-08-01T18:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Real Madrid – Fiorentina online gratis: amistoso de pretemporada en el Wörthersee Stadion de Klagenfurt (Austria). Sábado 1 de agosto a las 18:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Real Madrid TV (en abierto) y RM Play",
-          "url": "https://www.realmadrid.com/es-ES/television"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN Italia",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Fubo y Real Madrid TV",
-          "url": "https://www.fubo.tv/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Real Madrid TV",
-          "url": "https://www.realmadrid.com/"
-        }
-      ]
-    },
-    {
-      "id": "clasica-san-sebastian-2026",
-      "sport": "ciclismo",
-      "competitionName": "Clásica San Sebastián 2026",
-      "home": "Clásica San Sebastián · Donostia Klasikoa",
-      "away": "",
-      "date": "2026-08-01T11:30:00+02:00",
-      "status": "finished",
-      "description": "Ver la Clásica San Sebastián 2026 online gratis: 45ª edición de la Donostia Klasikoa, 221,1 km con siete puertos puntuables y salida y meta en el Boulevard de Donostia. Sábado 1 de agosto, gran cita WorldTour tras el Tour de Francia.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, RTVE Play) y Eurosport / Max",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "Eurosport",
-          "url": "https://www.eurosport.fr/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport / Max y GCN",
-          "url": "https://www.max.com/"
-        }
-      ]
-    },
-    {
-      "id": "ufc-belgrade-medic-rodriguez-2026",
-      "sport": "ufc",
-      "competitionName": "UFC Fight Night · Belgrado",
-      "home": "Uroš Medić",
-      "away": "Daniel Rodríguez",
-      "date": "2026-08-01T19:00:00+02:00",
-      "status": "finished",
-      "description": "Ver UFC Belgrado online gratis: UFC Fight Night Medić vs Rodríguez, combate estelar del peso wélter en la Belgrade Arena (Serbia). Sábado 1 de agosto, cartelar principal a las 19:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Paramount+",
-          "url": "https://www.paramountplus.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "UFC Fight Pass",
-          "url": "https://ufcfightpass.com/"
-        }
-      ]
-    },
-    {
-      "id": "stoke-city-valencia-2026",
-      "sport": "futbol",
-      "competitionName": "Amistoso de pretemporada 2026/27",
-      "home": "Stoke City",
-      "away": "Valencia CF",
-      "date": "2026-08-01T19:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Stoke City – Valencia CF online gratis: amistoso de pretemporada 2026/27 en el Bet365 Stadium de Stoke-on-Trent. Sábado 1 de agosto a las 19:30 (hora española), en directo y en abierto por À Punt.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "À Punt (autonómica valenciana, en abierto)",
-          "url": "https://www.apuntmedia.es/"
-        },
-        {
-          "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Reino Unido",
-          "channels": "Stoke City+ (streaming oficial del club)",
-          "url": "https://www.stokecityfc.com/"
-        }
-      ]
-    },
-    {
       "id": "inter-miami-atletico-san-luis-2026",
       "sport": "futbol",
       "competitionName": "Leagues Cup 2026 · Fase 1",
@@ -239,6 +131,70 @@
           "country": "🌍 Internacional",
           "channels": "DAZN",
           "url": "https://www.dazn.com/"
+        }
+      ]
+    },
+    {
+      "id": "real-salt-lake-tigres-2026",
+      "sport": "futbol",
+      "competitionName": "Leagues Cup 2026 · Fase 1",
+      "home": "Real Salt Lake",
+      "away": "Tigres UANL",
+      "date": "2026-08-05T04:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Real Salt Lake – Tigres UANL online gratis: jornada 1 de la Leagues Cup 2026 en el America First Field (Utah). Martes 4 de agosto a las 22:00 ET; en España, madrugada del miércoles 5 de agosto (04:00).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Apple TV (Leagues Cup, gratis en la app)",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Apple TV, TUDN e Imagen Televisión",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Apple TV",
+          "url": "https://tv.apple.com/"
+        }
+      ]
+    },
+    {
+      "id": "club-america-san-diego-2026",
+      "sport": "futbol",
+      "competitionName": "Leagues Cup 2026 · Fase 1",
+      "home": "Club América",
+      "away": "San Diego FC",
+      "date": "2026-08-07T04:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Club América – San Diego FC online gratis: jornada 1 de la Leagues Cup 2026 en el Estadio Azteca (Banorte) de Ciudad de México. Jueves 6 de agosto a las 22:00 ET; en España, madrugada del viernes 7 de agosto (04:00).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Apple TV (Leagues Cup, gratis en la app)",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Apple TV, TUDN e Imagen Televisión",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Apple TV",
+          "url": "https://tv.apple.com/"
         }
       ]
     }
