@@ -50,7 +50,7 @@
       "home": "Charlotte FC",
       "away": "Pumas UNAM",
       "date": "2026-08-05T00:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Charlotte FC – Pumas UNAM online gratis: jornada 1 de la Leagues Cup 2026 en el Bank of America Stadium. Lunes 4 de agosto a las 18:00 ET; en España, medianoche del martes 5 de agosto (00:00).",
       "broadcasters": [
         {
@@ -82,7 +82,7 @@
       "home": "Philadelphia Union",
       "away": "Cruz Azul",
       "date": "2026-08-05T03:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Philadelphia Union – Cruz Azul online gratis: jornada 1 de la Leagues Cup 2026 en el Subaru Park. Lunes 4 de agosto a las 21:00 ET; en España, madrugada del martes 5 de agosto (03:00).",
       "broadcasters": [
         {
@@ -141,7 +141,7 @@
       "home": "Real Salt Lake",
       "away": "Tigres UANL",
       "date": "2026-08-05T04:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Real Salt Lake – Tigres UANL online gratis: jornada 1 de la Leagues Cup 2026 en el America First Field (Utah). Martes 4 de agosto a las 22:00 ET; en España, madrugada del miércoles 5 de agosto (04:00).",
       "broadcasters": [
         {
@@ -175,6 +175,65 @@
       "date": "2026-08-07T04:00:00+02:00",
       "status": "scheduled",
       "description": "Ver Club América – San Diego FC online gratis: jornada 1 de la Leagues Cup 2026 en el Estadio Azteca (Banorte) de Ciudad de México. Jueves 6 de agosto a las 22:00 ET; en España, madrugada del viernes 7 de agosto (04:00).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Apple TV (Leagues Cup, gratis en la app)",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Apple TV, TUDN e Imagen Televisión",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Apple TV",
+          "url": "https://tv.apple.com/"
+        }
+      ]
+    },
+    {
+      "id": "ferencvaros-real-madrid-2026",
+      "sport": "futbol",
+      "competitionName": "Amistoso de pretemporada 2026/27",
+      "home": "Ferencváros",
+      "away": "Real Madrid",
+      "date": "2026-08-08T19:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Ferencváros – Real Madrid online gratis: amistoso de pretemporada en el Groupama Arena de Budapest (Hungría). Viernes 8 de agosto a las 19:00 (hora española), en directo y en abierto por Real Madrid TV.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Real Madrid TV (en abierto) y RM Play",
+          "url": "https://www.realmadrid.com/es-ES/television"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Fubo y Real Madrid TV",
+          "url": "https://www.fubo.tv/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Real Madrid TV",
+          "url": "https://www.realmadrid.com/"
+        }
+      ]
+    },
+    {
+      "id": "inter-miami-monterrey-2026",
+      "sport": "futbol",
+      "competitionName": "Leagues Cup 2026 · Fase 1",
+      "home": "Inter Miami",
+      "away": "Monterrey",
+      "date": "2026-08-09T02:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Inter Miami – Monterrey online gratis: Messi y las Garzas ante Rayados en la jornada 1 de la Leagues Cup 2026, en el Nu Stadium de Miami. Sábado 8 de agosto a las 20:00 ET; en España, madrugada del domingo 9 de agosto (02:00).",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
