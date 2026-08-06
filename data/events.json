@@ -18,7 +18,7 @@
       "home": "Inter Miami",
       "away": "Atlético de San Luis",
       "date": "2026-08-06T01:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Inter Miami – Atlético de San Luis online gratis: debut de Messi y las Garzas en la Leagues Cup 2026, jornada 1 en el Nu Stadium de Miami. Madrugada del jueves 6 de agosto a la 01:30 (hora española); miércoles 5 de agosto a las 19:30 ET en EE.UU.",
       "broadcasters": [
         {
@@ -114,7 +114,7 @@
       "home": "AC Milan",
       "away": "Inter de Milán",
       "date": "2026-08-05T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Milan – Inter online gratis: el derbi de Milán en pretemporada, disputado en el Optus Stadium de Perth (Australia) dentro de la gira italiana. Miércoles 5 de agosto a las 13:00 (hora española).",
       "broadcasters": [
         {
@@ -254,6 +254,55 @@
           "country": "🌍 Internacional",
           "channels": "Apple TV",
           "url": "https://tv.apple.com/"
+        }
+      ]
+    },
+    {
+      "id": "juventus-inter-derby-italia-2026",
+      "sport": "futbol",
+      "competitionName": "Amistoso de pretemporada 2026/27",
+      "home": "Juventus",
+      "away": "Inter de Milán",
+      "date": "2026-08-08T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Juventus – Inter online gratis: el Derby d'Italia en pretemporada, disputado en el Optus Stadium de Perth (Australia) dentro de la gira italiana. Sábado 8 de agosto a las 13:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y app oficial del Inter (inter.it)",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/"
+        }
+      ]
+    },
+    {
+      "id": "barcelona-nottingham-forest-2026",
+      "sport": "futbol",
+      "competitionName": "Friuli Venezia Giulia Cup 2026",
+      "home": "FC Barcelona",
+      "away": "Nottingham Forest",
+      "date": "2026-08-08T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver FC Barcelona – Nottingham Forest online gratis: torneo triangular Friuli Venezia Giulia Cup en el Bluenergy Stadium de Udine (Italia). Sábado 8 de agosto a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Barça One (plataforma oficial del FC Barcelona)",
+          "url": "https://www.fcbarcelona.es/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Barça One",
+          "url": "https://www.fcbarcelona.com/"
         }
       ]
     }
