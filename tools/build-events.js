@@ -12,7 +12,7 @@ const path = require("path");
 
 const SITE = "https://kickly.app";
 const ROOT = path.join(__dirname, "..");
-const SPORTS = { futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC · MMA", ciclismo: "Ciclismo", motor: "Fórmula 1", golf: "Golf" };
+const SPORTS = { futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC · MMA", ciclismo: "Ciclismo", motor: "Motor", golf: "Golf" };
 const SPORT_ORDER = ["futbol", "baloncesto", "tenis", "ufc", "ciclismo", "motor", "golf"];
 
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "data/events.json"), "utf8"));
@@ -32,7 +32,7 @@ const LANGS = [
 
 const TR = {
   es: {
-    nav: { agenda: "Agenda", futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC", ciclismo: "Ciclismo", motor: "Fórmula 1", golf: "Golf" },
+    nav: { agenda: "Agenda", futbol: "Fútbol", baloncesto: "Baloncesto", tenis: "Tenis", ufc: "UFC", ciclismo: "Ciclismo", motor: "Motor", golf: "Golf" },
     live: "DIRECTO", loading: "Cargando agenda…",
     homeTitle: "Ver Partidos Gratis Online — Fútbol, Baloncesto, Tenis y UFC en Directo | Kickly",
     homeDesc: "Ver partidos gratis online y en directo: fútbol, baloncesto, tenis, UFC y ciclismo de hoy. Agenda con horarios y dónde ver cada partido.",
@@ -53,7 +53,7 @@ const TR = {
     sportIntro: n => `Agenda de ${n.toLowerCase()} en directo: horarios en tu zona horaria y los enlaces y canales oficiales para ver cada evento.`
   },
   en: {
-    nav: { agenda: "Schedule", futbol: "Football", baloncesto: "Basketball", tenis: "Tennis", ufc: "UFC", ciclismo: "Cycling", motor: "Formula 1", golf: "Golf" },
+    nav: { agenda: "Schedule", futbol: "Football", baloncesto: "Basketball", tenis: "Tennis", ufc: "UFC", ciclismo: "Cycling", motor: "Motor", golf: "Golf" },
     live: "LIVE", loading: "Loading schedule…",
     homeTitle: "Watch Sports Free Online — Football, Basketball, Tennis & UFC Live | Kickly",
     homeDesc: "Watch sports free online and live: today's football, basketball, tennis, UFC and cycling. Schedule with kick-off times and where to watch each event.",
@@ -74,7 +74,7 @@ const TR = {
     sportIntro: n => `Live ${n.toLowerCase()} schedule: times in your timezone plus the links and official channels to watch every event.`
   },
   pt: {
-    nav: { agenda: "Agenda", futbol: "Futebol", baloncesto: "Basquete", tenis: "Tênis", ufc: "UFC", ciclismo: "Ciclismo", motor: "Fórmula 1", golf: "Golf" },
+    nav: { agenda: "Agenda", futbol: "Futebol", baloncesto: "Basquete", tenis: "Tênis", ufc: "UFC", ciclismo: "Ciclismo", motor: "Motor", golf: "Golf" },
     live: "AO VIVO", loading: "Carregando agenda…",
     homeTitle: "Assistir Jogos Online Grátis — Futebol, Basquete, Tênis e UFC Ao Vivo | Kickly",
     homeDesc: "Assistir jogos online grátis e ao vivo: futebol, basquete, tênis, UFC e ciclismo de hoje. Agenda com horários e onde assistir cada jogo.",
