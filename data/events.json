@@ -173,7 +173,7 @@
       "home": "Club América",
       "away": "San Diego FC",
       "date": "2026-08-07T04:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Club América – San Diego FC online gratis: jornada 1 de la Leagues Cup 2026 en el Estadio Azteca (Banorte) de Ciudad de México. Jueves 6 de agosto a las 22:00 ET; en España, madrugada del viernes 7 de agosto (04:00).",
       "broadcasters": [
         {
@@ -303,6 +303,60 @@
           "country": "🌍 Internacional",
           "channels": "Barça One",
           "url": "https://www.fcbarcelona.com/"
+        }
+      ]
+    },
+    {
+      "id": "motogp-gran-bretana-2026-sprint",
+      "sport": "motor",
+      "competitionName": "MotoGP 2026 · GP de Gran Bretaña",
+      "home": "MotoGP · GP de Gran Bretaña (sprint)",
+      "away": "",
+      "date": "2026-08-08T17:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver MotoGP GP de Gran Bretaña al sprint online gratis: carrera al sprint del Gran Premio de Gran Bretaña en el circuito de Silverstone, Mundial de MotoGP 2026. Sábado 8 de agosto a las 17:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN (DAZN 2)",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "TNT Sports",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "MotoGP VideoPass (motogp.com)",
+          "url": "https://www.motogp.com/"
+        }
+      ]
+    },
+    {
+      "id": "motogp-gran-bretana-2026-carrera",
+      "sport": "motor",
+      "competitionName": "MotoGP 2026 · GP de Gran Bretaña",
+      "home": "MotoGP · GP de Gran Bretaña (carrera)",
+      "away": "",
+      "date": "2026-08-09T14:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver MotoGP GP de Gran Bretaña online gratis: la carrera del Gran Premio de Gran Bretaña en Silverstone, duodécima cita del Mundial de MotoGP 2026 tras el parón veraniego. Domingo 9 de agosto a las 14:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN (DAZN 2)",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "TNT Sports",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "MotoGP VideoPass (motogp.com)",
+          "url": "https://www.motogp.com/"
         }
       ]
     }
