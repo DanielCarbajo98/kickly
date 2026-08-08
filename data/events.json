@@ -44,129 +44,6 @@
       ]
     },
     {
-      "id": "charlotte-fc-pumas-2026",
-      "sport": "futbol",
-      "competitionName": "Leagues Cup 2026 · Fase 1",
-      "home": "Charlotte FC",
-      "away": "Pumas UNAM",
-      "date": "2026-08-05T00:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Charlotte FC – Pumas UNAM online gratis: jornada 1 de la Leagues Cup 2026 en el Bank of America Stadium. Lunes 4 de agosto a las 18:00 ET; en España, medianoche del martes 5 de agosto (00:00).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Apple TV (Leagues Cup, gratis en la app)",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Apple TV, TUDN e Imagen Televisión",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Apple TV",
-          "url": "https://tv.apple.com/"
-        }
-      ]
-    },
-    {
-      "id": "philadelphia-union-cruz-azul-2026",
-      "sport": "futbol",
-      "competitionName": "Leagues Cup 2026 · Fase 1",
-      "home": "Philadelphia Union",
-      "away": "Cruz Azul",
-      "date": "2026-08-05T03:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Philadelphia Union – Cruz Azul online gratis: jornada 1 de la Leagues Cup 2026 en el Subaru Park. Lunes 4 de agosto a las 21:00 ET; en España, madrugada del martes 5 de agosto (03:00).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Apple TV (Leagues Cup, gratis en la app)",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Apple TV, TUDN e Imagen Televisión",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Apple TV",
-          "url": "https://tv.apple.com/"
-        }
-      ]
-    },
-    {
-      "id": "milan-inter-derby-2026",
-      "sport": "futbol",
-      "competitionName": "Amistoso de pretemporada 2026/27",
-      "home": "AC Milan",
-      "away": "Inter de Milán",
-      "date": "2026-08-05T13:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Milan – Inter online gratis: el derbi de Milán en pretemporada, disputado en el Optus Stadium de Perth (Australia) dentro de la gira italiana. Miércoles 5 de agosto a las 13:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/"
-        }
-      ]
-    },
-    {
-      "id": "real-salt-lake-tigres-2026",
-      "sport": "futbol",
-      "competitionName": "Leagues Cup 2026 · Fase 1",
-      "home": "Real Salt Lake",
-      "away": "Tigres UANL",
-      "date": "2026-08-05T04:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Real Salt Lake – Tigres UANL online gratis: jornada 1 de la Leagues Cup 2026 en el America First Field (Utah). Martes 4 de agosto a las 22:00 ET; en España, madrugada del miércoles 5 de agosto (04:00).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Apple TV (Leagues Cup, gratis en la app)",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Apple TV, TUDN e Imagen Televisión",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Apple TV",
-          "url": "https://tv.apple.com/"
-        }
-      ]
-    },
-    {
       "id": "club-america-san-diego-2026",
       "sport": "futbol",
       "competitionName": "Leagues Cup 2026 · Fase 1",
@@ -357,6 +234,33 @@
           "country": "🌍 Internacional",
           "channels": "MotoGP VideoPass (motogp.com)",
           "url": "https://www.motogp.com/"
+        }
+      ]
+    },
+    {
+      "id": "supercopa-europa-psg-aston-villa-2026",
+      "sport": "futbol",
+      "competitionName": "Supercopa de Europa UEFA 2026",
+      "home": "Paris Saint-Germain",
+      "away": "Aston Villa",
+      "date": "2026-08-12T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver PSG – Aston Villa online gratis: final de la Supercopa de Europa 2026 en el Stadion Salzburg (Austria), entre el campeón de la Champions y el ganador de la Europa League. Miércoles 12 de agosto a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "TNT Sports y discovery+",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Paramount+",
+          "url": "https://www.paramountplus.com/"
         }
       ]
     }
