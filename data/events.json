@@ -12,38 +12,6 @@
   },
   "events": [
     {
-      "id": "club-america-san-diego-2026",
-      "sport": "futbol",
-      "competitionName": "Leagues Cup 2026 · Fase 1",
-      "home": "Club América",
-      "away": "San Diego FC",
-      "date": "2026-08-07T04:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Club América – San Diego FC online gratis: jornada 1 de la Leagues Cup 2026 en el Estadio Azteca (Banorte) de Ciudad de México. Jueves 6 de agosto a las 22:00 ET; en España, madrugada del viernes 7 de agosto (04:00).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Apple TV (Leagues Cup, gratis en la app)",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Apple TV, TUDN e Imagen Televisión",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Apple TV",
-          "url": "https://tv.apple.com/"
-        }
-      ]
-    },
-    {
       "id": "ferencvaros-real-madrid-2026",
       "sport": "futbol",
       "competitionName": "Amistoso de pretemporada 2026/27",
@@ -185,7 +153,7 @@
       "home": "MotoGP · GP de Gran Bretaña (carrera)",
       "away": "",
       "date": "2026-08-09T14:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver MotoGP GP de Gran Bretaña online gratis: la carrera del Gran Premio de Gran Bretaña en Silverstone, duodécima cita del Mundial de MotoGP 2026 tras el parón veraniego. Domingo 9 de agosto a las 14:00 (hora española).",
       "broadcasters": [
         {
@@ -325,6 +293,33 @@
           "country": "🌍 Internacional",
           "channels": "Apple TV",
           "url": "https://tv.apple.com/"
+        }
+      ]
+    },
+    {
+      "id": "alaves-getafe-laliga-j1-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
+      "home": "Deportivo Alavés",
+      "away": "Getafe CF",
+      "date": "2026-08-15T19:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Alavés – Getafe online gratis: partido inaugural de LaLiga EA Sports 2026/27 en Mendizorroza. Sábado 15 de agosto a las 19:00 (hora española), primer encuentro de la nueva temporada.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
         }
       ]
     }
