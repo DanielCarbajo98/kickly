@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "ferencvaros-real-madrid-2026",
-      "sport": "futbol",
-      "competitionName": "Amistoso de pretemporada 2026/27",
-      "home": "Ferencváros",
-      "away": "Real Madrid",
-      "date": "2026-08-08T19:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Ferencváros – Real Madrid online gratis: amistoso de pretemporada en el Groupama Arena de Budapest (Hungría). Viernes 8 de agosto a las 19:00 (hora española), en directo y en abierto por Real Madrid TV.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Real Madrid TV (en abierto) y RM Play",
-          "url": "https://www.realmadrid.com/es-ES/television"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Fubo y Real Madrid TV",
-          "url": "https://www.fubo.tv/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Real Madrid TV",
-          "url": "https://www.realmadrid.com/"
-        }
-      ]
-    },
-    {
       "id": "inter-miami-monterrey-2026",
       "sport": "futbol",
       "competitionName": "Leagues Cup 2026 · Fase 1",
@@ -67,82 +40,6 @@
           "country": "🌍 Internacional",
           "channels": "Apple TV",
           "url": "https://tv.apple.com/"
-        }
-      ]
-    },
-    {
-      "id": "juventus-inter-derby-italia-2026",
-      "sport": "futbol",
-      "competitionName": "Amistoso de pretemporada 2026/27",
-      "home": "Juventus",
-      "away": "Inter de Milán",
-      "date": "2026-08-08T13:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Juventus – Inter online gratis: el Derby d'Italia en pretemporada, disputado en el Optus Stadium de Perth (Australia) dentro de la gira italiana. Sábado 8 de agosto a las 13:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y app oficial del Inter (inter.it)",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/"
-        }
-      ]
-    },
-    {
-      "id": "barcelona-nottingham-forest-2026",
-      "sport": "futbol",
-      "competitionName": "Friuli Venezia Giulia Cup 2026",
-      "home": "FC Barcelona",
-      "away": "Nottingham Forest",
-      "date": "2026-08-08T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver FC Barcelona – Nottingham Forest online gratis: torneo triangular Friuli Venezia Giulia Cup en el Bluenergy Stadium de Udine (Italia). Sábado 8 de agosto a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Barça One (plataforma oficial del FC Barcelona)",
-          "url": "https://www.fcbarcelona.es/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Barça One",
-          "url": "https://www.fcbarcelona.com/"
-        }
-      ]
-    },
-    {
-      "id": "motogp-gran-bretana-2026-sprint",
-      "sport": "motor",
-      "competitionName": "MotoGP 2026 · GP de Gran Bretaña",
-      "home": "MotoGP · GP de Gran Bretaña (sprint)",
-      "away": "",
-      "date": "2026-08-08T17:00:00+02:00",
-      "status": "finished",
-      "description": "Ver MotoGP GP de Gran Bretaña al sprint online gratis: carrera al sprint del Gran Premio de Gran Bretaña en el circuito de Silverstone, Mundial de MotoGP 2026. Sábado 8 de agosto a las 17:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN (DAZN 2)",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "TNT Sports",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "MotoGP VideoPass (motogp.com)",
-          "url": "https://www.motogp.com/"
         }
       ]
     },
