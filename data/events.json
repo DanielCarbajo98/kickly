@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "supercopa-europa-psg-aston-villa-2026",
-      "sport": "futbol",
-      "competitionName": "Supercopa de Europa UEFA 2026",
-      "home": "Paris Saint-Germain",
-      "away": "Aston Villa",
-      "date": "2026-08-12T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver PSG – Aston Villa online gratis: final de la Supercopa de Europa 2026 en el Stadion Salzburg (Austria), entre el campeón de la Champions y el ganador de la Europa League. Miércoles 12 de agosto a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "TNT Sports y discovery+",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Paramount+",
-          "url": "https://www.paramountplus.com/"
-        }
-      ]
-    },
-    {
       "id": "inter-miami-leon-2026",
       "sport": "futbol",
       "competitionName": "Leagues Cup 2026 · Fase 1",
@@ -315,6 +288,33 @@
           "country": "🌍 Internacional",
           "channels": "beIN Sports",
           "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "atletico-madrid-malaga-laliga-j1-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
+      "home": "Atlético de Madrid",
+      "away": "Málaga CF",
+      "date": "2026-08-19T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Atlético de Madrid – Málaga online gratis: debut de ambos en LaLiga EA Sports 2026/27 (jornada 1 aplazada) en el Riyadh Air Metropolitano. Miércoles 19 de agosto a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
         }
       ]
     }
