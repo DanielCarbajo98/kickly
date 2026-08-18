@@ -12,60 +12,6 @@
   },
   "events": [
     {
-      "id": "alaves-getafe-laliga-j1-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
-      "home": "Deportivo Alavés",
-      "away": "Getafe CF",
-      "date": "2026-08-15T19:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Alavés – Getafe online gratis: partido inaugural de LaLiga EA Sports 2026/27 en Mendizorroza. Sábado 15 de agosto a las 19:00 (hora española), primer encuentro de la nueva temporada.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "sevilla-rayo-vallecano-laliga-j1-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
-      "home": "Sevilla FC",
-      "away": "Rayo Vallecano",
-      "date": "2026-08-15T21:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Sevilla – Rayo Vallecano online gratis: jornada 1 de LaLiga EA Sports 2026/27 en el Sánchez-Pizjuán. Sábado 15 de agosto a las 21:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "racing-villarreal-laliga-j1-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
@@ -153,7 +99,7 @@
       "home": "Deportivo de La Coruña",
       "away": "Elche CF",
       "date": "2026-08-17T21:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Deportivo – Elche online gratis: partido que cierra la jornada 1 de LaLiga EA Sports 2026/27 en Riazor, con el Dépor de vuelta en Primera. Lunes 17 de agosto a las 21:00 (hora española).",
       "broadcasters": [
         {
@@ -366,6 +312,114 @@
           "country": "🇫🇷 Francia",
           "channels": "Ligue1+ y beIN Sports",
           "url": "https://www.ligue1.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "inter-monza-serie-a-j1-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 1",
+      "home": "Inter de Milán",
+      "away": "AC Monza",
+      "date": "2026-08-22T18:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Inter – Monza online gratis: debut de la Serie A 2026/27 en San Siro, con el Inter recibiendo al recién ascendido Monza. Sábado 22 de agosto a las 18:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "genoa-napoli-serie-a-j1-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 1",
+      "home": "Genoa",
+      "away": "Napoli",
+      "date": "2026-08-22T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Genoa – Napoli online gratis: jornada 1 de la Serie A 2026/27 en el estadio Luigi Ferraris (Marassi). Sábado 22 de agosto a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "frosinone-juventus-serie-a-j1-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 1",
+      "home": "Frosinone",
+      "away": "Juventus",
+      "date": "2026-08-23T18:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Frosinone – Juventus online gratis: jornada 1 de la Serie A 2026/27, estreno liguero de la Juve. Domingo 23 de agosto a las 18:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "torino-milan-serie-a-j1-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 1",
+      "home": "Torino",
+      "away": "AC Milan",
+      "date": "2026-08-23T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Torino – Milan online gratis: jornada 1 de la Serie A 2026/27 en el Estadio Olímpico Grande Torino. Domingo 23 de agosto a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
         },
         {
           "country": "🌍 Internacional",
