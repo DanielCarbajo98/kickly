@@ -12,87 +12,6 @@
   },
   "events": [
     {
-      "id": "racing-villarreal-laliga-j1-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
-      "home": "Racing de Santander",
-      "away": "Villarreal CF",
-      "date": "2026-08-16T17:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Racing de Santander – Villarreal online gratis: jornada 1 de LaLiga EA Sports 2026/27 en los Campos de Sport de El Sardinero. Domingo 16 de agosto a las 17:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "espanyol-levante-laliga-j1-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
-      "home": "RCD Espanyol",
-      "away": "Levante UD",
-      "date": "2026-08-16T19:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Espanyol – Levante online gratis: jornada 1 de LaLiga EA Sports 2026/27 en el RCDE Stadium. Domingo 16 de agosto a las 19:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "celta-osasuna-laliga-j1-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
-      "home": "RC Celta",
-      "away": "CA Osasuna",
-      "date": "2026-08-16T21:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Celta – Osasuna online gratis: jornada 1 de LaLiga EA Sports 2026/27 en Balaídos. Domingo 16 de agosto a las 21:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "deportivo-elche-laliga-j1-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
@@ -116,28 +35,6 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "ESPN+ y ESPN Deportes",
           "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "psg-lens-trophee-champions-2026",
-      "sport": "futbol",
-      "competitionName": "Trophée des Champions 2026",
-      "home": "Paris Saint-Germain",
-      "away": "RC Lens",
-      "date": "2026-08-16T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver PSG – RC Lens online gratis: Trophée des Champions 2026, la Supercopa de Francia entre el campeón de la Ligue 1 y el ganador de la Copa de Francia, en el Stade Bollaert-Delelis. Domingo 16 de agosto a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/fr-FR/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
         }
       ]
     },
@@ -425,6 +322,114 @@
           "country": "🌍 Internacional",
           "channels": "beIN Sports",
           "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "espanyol-real-madrid-laliga-j2-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 2",
+      "home": "RCD Espanyol",
+      "away": "Real Madrid",
+      "date": "2026-08-22T21:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Espanyol – Real Madrid online gratis: debut liguero del Real Madrid en LaLiga EA Sports 2026/27 (jornada 2) en el RCDE Stadium. Sábado 22 de agosto a las 21:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "atletico-madrid-villarreal-laliga-j2-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 2",
+      "home": "Atlético de Madrid",
+      "away": "Villarreal CF",
+      "date": "2026-08-23T17:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Atlético de Madrid – Villarreal online gratis: jornada 2 de LaLiga EA Sports 2026/27 en el Riyadh Air Metropolitano. Domingo 23 de agosto a las 17:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "elche-barcelona-laliga-j2-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 2",
+      "home": "Elche CF",
+      "away": "FC Barcelona",
+      "date": "2026-08-23T21:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Elche – Barcelona online gratis: debut liguero del FC Barcelona en LaLiga EA Sports 2026/27 (jornada 2) en el Martínez Valero. Domingo 23 de agosto a las 21:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "ufc-sacramento-hernandez-rodrigues-2026",
+      "sport": "ufc",
+      "competitionName": "UFC Fight Night · Sacramento",
+      "home": "Anthony Hernández",
+      "away": "Gregory Rodrigues",
+      "date": "2026-08-23T02:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver UFC Sacramento online gratis: UFC Fight Night Hernández vs Rodrigues, combate estelar del peso medio en el Golden 1 Center. Sábado 22 de agosto a las 20:00 ET; en España, madrugada del domingo 23 de agosto (02:00), cartel principal.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Paramount+",
+          "url": "https://www.paramountplus.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UFC Fight Pass",
+          "url": "https://ufcfightpass.com/"
         }
       ]
     }
