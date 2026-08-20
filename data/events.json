@@ -12,40 +12,13 @@
   },
   "events": [
     {
-      "id": "deportivo-elche-laliga-j1-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
-      "home": "Deportivo de La Coruña",
-      "away": "Elche CF",
-      "date": "2026-08-17T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Deportivo – Elche online gratis: partido que cierra la jornada 1 de LaLiga EA Sports 2026/27 en Riazor, con el Dépor de vuelta en Primera. Lunes 17 de agosto a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "atletico-madrid-malaga-laliga-j1-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
       "home": "Atlético de Madrid",
       "away": "Málaga CF",
       "date": "2026-08-19T21:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Atlético de Madrid – Málaga online gratis: debut de ambos en LaLiga EA Sports 2026/27 (jornada 1 aplazada) en el Riyadh Air Metropolitano. Miércoles 19 de agosto a las 21:00 (hora española).",
       "broadcasters": [
         {
@@ -430,6 +403,87 @@
           "country": "🌍 Internacional",
           "channels": "UFC Fight Pass",
           "url": "https://ufcfightpass.com/"
+        }
+      ]
+    },
+    {
+      "id": "fulham-chelsea-premier-j1-2026",
+      "sport": "futbol",
+      "competitionName": "Premier League 2026/27 · Jornada 1",
+      "home": "Fulham",
+      "away": "Chelsea",
+      "date": "2026-08-24T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Fulham – Chelsea online gratis: cierre de la jornada 1 de la Premier League 2026/27 en Craven Cottage. Lunes 24 de agosto a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN y Movistar Plus+",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports y TNT Sports",
+          "url": "https://www.skysports.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC y Peacock",
+          "url": "https://www.peacocktv.com/"
+        }
+      ]
+    },
+    {
+      "id": "real-madrid-real-sociedad-laliga-j1-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
+      "home": "Real Madrid",
+      "away": "Real Sociedad",
+      "date": "2026-08-26T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Real Madrid – Real Sociedad online gratis: debut liguero del Real Madrid en el Santiago Bernabéu (jornada 1 aplazada de LaLiga EA Sports 2026/27). Miércoles 26 de agosto a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "barcelona-athletic-laliga-j1-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
+      "home": "FC Barcelona",
+      "away": "Athletic Club",
+      "date": "2026-08-27T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver FC Barcelona – Athletic Club online gratis: debut liguero del Barça (jornada 1 aplazada de LaLiga EA Sports 2026/27). Jueves 27 de agosto a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
         }
       ]
     }
