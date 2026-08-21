@@ -486,6 +486,33 @@
           "url": "https://www.espn.com/espnplus/"
         }
       ]
+    },
+    {
+      "id": "valencia-betis-laliga-j1-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
+      "home": "Valencia CF",
+      "away": "Real Betis",
+      "date": "2026-08-25T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Valencia – Betis online gratis: jornada 1 aplazada de LaLiga EA Sports 2026/27 en Mestalla. Martes 25 de agosto a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
     }
   ]
 }
