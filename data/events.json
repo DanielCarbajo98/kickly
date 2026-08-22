@@ -12,40 +12,13 @@
   },
   "events": [
     {
-      "id": "atletico-madrid-malaga-laliga-j1-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
-      "home": "Atlético de Madrid",
-      "away": "Málaga CF",
-      "date": "2026-08-19T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Atlético de Madrid – Málaga online gratis: debut de ambos en LaLiga EA Sports 2026/27 (jornada 1 aplazada) en el Riyadh Air Metropolitano. Miércoles 19 de agosto a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "arsenal-coventry-premier-j1-2026",
       "sport": "futbol",
       "competitionName": "Premier League 2026/27 · Jornada 1",
       "home": "Arsenal",
       "away": "Coventry City",
       "date": "2026-08-21T21:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Arsenal – Coventry City online gratis: estreno de la Premier League 2026/27 en el Emirates Stadium, con el Arsenal defendiendo título. Viernes 21 de agosto a las 21:00 (hora española).",
       "broadcasters": [
         {
@@ -153,7 +126,7 @@
       "home": "Olympique de Marsella",
       "away": "RC Estrasburgo",
       "date": "2026-08-21T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Olympique de Marsella – Estrasburgo online gratis: partido inaugural de la Ligue 1 2026/27 en el Vélodrome. Viernes 21 de agosto a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -511,6 +484,134 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "ESPN+ y ESPN Deportes",
           "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "chicago-fire-monterrey-leaguescup-qf-2026",
+      "sport": "futbol",
+      "competitionName": "Leagues Cup 2026 · Cuartos de final",
+      "home": "Chicago Fire",
+      "away": "Monterrey",
+      "date": "2026-08-26T02:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Chicago Fire – Monterrey online gratis: cuartos de final de la Leagues Cup 2026. Martes 25 de agosto a las 20:30 ET; en España, madrugada del miércoles 26 de agosto (02:30).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Apple TV (Leagues Cup, gratis en la app)",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Apple TV, TUDN e Imagen Televisión",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Apple TV",
+          "url": "https://tv.apple.com/"
+        }
+      ]
+    },
+    {
+      "id": "leon-real-salt-lake-leaguescup-qf-2026",
+      "sport": "futbol",
+      "competitionName": "Leagues Cup 2026 · Cuartos de final",
+      "home": "Club León",
+      "away": "Real Salt Lake",
+      "date": "2026-08-26T04:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Club León – Real Salt Lake online gratis: cuartos de final de la Leagues Cup 2026. Martes 25 de agosto a las 22:30 ET; en España, madrugada del miércoles 26 de agosto (04:30).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Apple TV (Leagues Cup, gratis en la app)",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Apple TV, TUDN e Imagen Televisión",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Apple TV",
+          "url": "https://tv.apple.com/"
+        }
+      ]
+    },
+    {
+      "id": "austin-toluca-leaguescup-qf-2026",
+      "sport": "futbol",
+      "competitionName": "Leagues Cup 2026 · Cuartos de final",
+      "home": "Austin FC",
+      "away": "Toluca",
+      "date": "2026-08-27T02:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Austin FC – Toluca online gratis: cuartos de final de la Leagues Cup 2026. Miércoles 26 de agosto a las 20:30 ET; en España, madrugada del jueves 27 de agosto (02:30).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Apple TV (Leagues Cup, gratis en la app)",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Apple TV, TUDN e Imagen Televisión",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Apple TV",
+          "url": "https://tv.apple.com/"
+        }
+      ]
+    },
+    {
+      "id": "america-columbus-crew-leaguescup-qf-2026",
+      "sport": "futbol",
+      "competitionName": "Leagues Cup 2026 · Cuartos de final",
+      "home": "Club América",
+      "away": "Columbus Crew",
+      "date": "2026-08-27T04:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Club América – Columbus Crew online gratis: cuartos de final de la Leagues Cup 2026. Miércoles 26 de agosto a las 22:45 ET; en España, madrugada del jueves 27 de agosto (04:45).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Apple TV (Leagues Cup, gratis en la app)",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Apple TV, TUDN e Imagen Televisión",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
+          "url": "https://tv.apple.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Apple TV",
+          "url": "https://tv.apple.com/"
         }
       ]
     }
