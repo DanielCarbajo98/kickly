@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "arsenal-coventry-premier-j1-2026",
-      "sport": "futbol",
-      "competitionName": "Premier League 2026/27 · Jornada 1",
-      "home": "Arsenal",
-      "away": "Coventry City",
-      "date": "2026-08-21T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Arsenal – Coventry City online gratis: estreno de la Premier League 2026/27 en el Emirates Stadium, con el Arsenal defendiendo título. Viernes 21 de agosto a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN y Movistar Plus+",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports y TNT Sports",
-          "url": "https://www.skysports.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC y Peacock",
-          "url": "https://www.peacocktv.com/"
-        }
-      ]
-    },
-    {
       "id": "hull-manchester-united-premier-j1-2026",
       "sport": "futbol",
       "competitionName": "Premier League 2026/27 · Jornada 1",
@@ -72,7 +45,7 @@
       "home": "Manchester City",
       "away": "Bournemouth",
       "date": "2026-08-23T15:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Manchester City – Bournemouth online gratis: jornada 1 de la Premier League 2026/27 en el Etihad Stadium. Domingo 23 de agosto a las 15:00 (hora española).",
       "broadcasters": [
         {
@@ -99,7 +72,7 @@
       "home": "Newcastle United",
       "away": "Liverpool",
       "date": "2026-08-23T17:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Newcastle – Liverpool online gratis: gran duelo de la jornada 1 de la Premier League 2026/27 en St James' Park. Domingo 23 de agosto a las 17:30 (hora española).",
       "broadcasters": [
         {
@@ -120,35 +93,13 @@
       ]
     },
     {
-      "id": "marsella-estrasburgo-ligue1-j1-2026",
-      "sport": "futbol",
-      "competitionName": "Ligue 1 2026/27 · Jornada 1",
-      "home": "Olympique de Marsella",
-      "away": "RC Estrasburgo",
-      "date": "2026-08-21T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Olympique de Marsella – Estrasburgo online gratis: partido inaugural de la Ligue 1 2026/27 en el Vélodrome. Viernes 21 de agosto a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "Ligue1+ y beIN Sports",
-          "url": "https://www.ligue1.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
       "id": "psg-rennes-ligue1-j1-2026",
       "sport": "futbol",
       "competitionName": "Ligue 1 2026/27 · Jornada 1",
       "home": "Paris Saint-Germain",
       "away": "Stade Rennais",
       "date": "2026-08-23T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver PSG – Rennes online gratis: jornada 1 de la Ligue 1 2026/27 en el Parque de los Príncipes, con el PSG defendiendo título. Domingo 23 de agosto a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -224,7 +175,7 @@
       "home": "Frosinone",
       "away": "Juventus",
       "date": "2026-08-23T18:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Frosinone – Juventus online gratis: jornada 1 de la Serie A 2026/27, estreno liguero de la Juve. Domingo 23 de agosto a las 18:30 (hora española).",
       "broadcasters": [
         {
@@ -251,7 +202,7 @@
       "home": "Torino",
       "away": "AC Milan",
       "date": "2026-08-23T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Torino – Milan online gratis: jornada 1 de la Serie A 2026/27 en el Estadio Olímpico Grande Torino. Domingo 23 de agosto a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -305,7 +256,7 @@
       "home": "Atlético de Madrid",
       "away": "Villarreal CF",
       "date": "2026-08-23T17:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Atlético de Madrid – Villarreal online gratis: jornada 2 de LaLiga EA Sports 2026/27 en el Riyadh Air Metropolitano. Domingo 23 de agosto a las 17:00 (hora española).",
       "broadcasters": [
         {
@@ -332,7 +283,7 @@
       "home": "Elche CF",
       "away": "FC Barcelona",
       "date": "2026-08-23T21:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Elche – Barcelona online gratis: debut liguero del FC Barcelona en LaLiga EA Sports 2026/27 (jornada 2) en el Martínez Valero. Domingo 23 de agosto a las 21:30 (hora española).",
       "broadcasters": [
         {
@@ -639,6 +590,60 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "ESPN+",
           "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "bologna-lazio-serie-a-j1-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 1",
+      "home": "Bologna",
+      "away": "Lazio",
+      "date": "2026-08-24T18:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Bologna – Lazio online gratis: jornada 1 de la Serie A 2026/27 en el Renato Dall'Ara. Lunes 24 de agosto a las 18:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "roma-fiorentina-serie-a-j1-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 1",
+      "home": "AS Roma",
+      "away": "Fiorentina",
+      "date": "2026-08-24T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Roma – Fiorentina online gratis: partido que cierra la jornada 1 de la Serie A 2026/27 en el Estadio Olímpico. Lunes 24 de agosto a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
         }
       ]
     }
