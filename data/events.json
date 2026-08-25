@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "hull-manchester-united-premier-j1-2026",
-      "sport": "futbol",
-      "competitionName": "Premier League 2026/27 · Jornada 1",
-      "home": "Hull City",
-      "away": "Manchester United",
-      "date": "2026-08-22T13:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Hull City – Manchester United online gratis: jornada 1 de la Premier League 2026/27. Sábado 22 de agosto a las 13:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN y Movistar Plus+",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports y TNT Sports",
-          "url": "https://www.skysports.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC y Peacock",
-          "url": "https://www.peacocktv.com/"
-        }
-      ]
-    },
-    {
       "id": "manchester-city-bournemouth-premier-j1-2026",
       "sport": "futbol",
       "competitionName": "Premier League 2026/27 · Jornada 1",
@@ -115,60 +88,6 @@
       ]
     },
     {
-      "id": "inter-monza-serie-a-j1-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 1",
-      "home": "Inter de Milán",
-      "away": "AC Monza",
-      "date": "2026-08-22T18:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Inter – Monza online gratis: debut de la Serie A 2026/27 en San Siro, con el Inter recibiendo al recién ascendido Monza. Sábado 22 de agosto a las 18:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "genoa-napoli-serie-a-j1-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 1",
-      "home": "Genoa",
-      "away": "Napoli",
-      "date": "2026-08-22T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Genoa – Napoli online gratis: jornada 1 de la Serie A 2026/27 en el estadio Luigi Ferraris (Marassi). Sábado 22 de agosto a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
       "id": "frosinone-juventus-serie-a-j1-2026",
       "sport": "futbol",
       "competitionName": "Serie A 2026/27 · Jornada 1",
@@ -219,33 +138,6 @@
           "country": "🌍 Internacional",
           "channels": "beIN Sports",
           "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "espanyol-real-madrid-laliga-j2-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 2",
-      "home": "RCD Espanyol",
-      "away": "Real Madrid",
-      "date": "2026-08-22T21:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Espanyol – Real Madrid online gratis: debut liguero del Real Madrid en LaLiga EA Sports 2026/27 (jornada 2) en el RCDE Stadium. Sábado 22 de agosto a las 21:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
         }
       ]
     },
@@ -337,7 +229,7 @@
       "home": "Fulham",
       "away": "Chelsea",
       "date": "2026-08-24T21:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Fulham – Chelsea online gratis: cierre de la jornada 1 de la Premier League 2026/27 en Craven Cottage. Lunes 24 de agosto a las 21:00 (hora española).",
       "broadcasters": [
         {
@@ -600,7 +492,7 @@
       "home": "Bologna",
       "away": "Lazio",
       "date": "2026-08-24T18:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Bologna – Lazio online gratis: jornada 1 de la Serie A 2026/27 en el Renato Dall'Ara. Lunes 24 de agosto a las 18:30 (hora española).",
       "broadcasters": [
         {
@@ -627,7 +519,7 @@
       "home": "AS Roma",
       "away": "Fiorentina",
       "date": "2026-08-24T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Roma – Fiorentina online gratis: partido que cierra la jornada 1 de la Serie A 2026/27 en el Estadio Olímpico. Lunes 24 de agosto a las 20:45 (hora española).",
       "broadcasters": [
         {
