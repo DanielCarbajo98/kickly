@@ -12,40 +12,13 @@
   },
   "events": [
     {
-      "id": "fulham-chelsea-premier-j1-2026",
-      "sport": "futbol",
-      "competitionName": "Premier League 2026/27 · Jornada 1",
-      "home": "Fulham",
-      "away": "Chelsea",
-      "date": "2026-08-24T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Fulham – Chelsea online gratis: cierre de la jornada 1 de la Premier League 2026/27 en Craven Cottage. Lunes 24 de agosto a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN y Movistar Plus+",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports y TNT Sports",
-          "url": "https://www.skysports.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC y Peacock",
-          "url": "https://www.peacocktv.com/"
-        }
-      ]
-    },
-    {
       "id": "real-madrid-real-sociedad-laliga-j1-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
       "home": "Real Madrid",
       "away": "Real Sociedad",
       "date": "2026-08-26T21:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Real Madrid – Real Sociedad online gratis: debut liguero del Real Madrid en el Santiago Bernabéu (jornada 1 aplazada de LaLiga EA Sports 2026/27). Miércoles 26 de agosto a las 21:00 (hora española).",
       "broadcasters": [
         {
@@ -190,7 +163,7 @@
       "home": "Austin FC",
       "away": "Toluca",
       "date": "2026-08-27T02:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Austin FC – Toluca online gratis: cuartos de final de la Leagues Cup 2026. Miércoles 26 de agosto a las 20:30 ET; en España, madrugada del jueves 27 de agosto (02:30).",
       "broadcasters": [
         {
@@ -222,7 +195,7 @@
       "home": "Club América",
       "away": "Columbus Crew",
       "date": "2026-08-27T04:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Club América – Columbus Crew online gratis: cuartos de final de la Leagues Cup 2026. Miércoles 26 de agosto a las 22:45 ET; en España, madrugada del jueves 27 de agosto (04:45).",
       "broadcasters": [
         {
@@ -275,60 +248,6 @@
       ]
     },
     {
-      "id": "bologna-lazio-serie-a-j1-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 1",
-      "home": "Bologna",
-      "away": "Lazio",
-      "date": "2026-08-24T18:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Bologna – Lazio online gratis: jornada 1 de la Serie A 2026/27 en el Renato Dall'Ara. Lunes 24 de agosto a las 18:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "roma-fiorentina-serie-a-j1-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 1",
-      "home": "AS Roma",
-      "away": "Fiorentina",
-      "date": "2026-08-24T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Roma – Fiorentina online gratis: partido que cierra la jornada 1 de la Serie A 2026/27 en el Estadio Olímpico. Lunes 24 de agosto a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
       "id": "real-madrid-malaga-laliga-j3-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 3",
@@ -337,6 +256,60 @@
       "date": "2026-08-30T17:00:00+02:00",
       "status": "scheduled",
       "description": "Ver Real Madrid – Málaga online gratis: jornada 3 de LaLiga EA Sports 2026/27 en el Santiago Bernabéu. Domingo 30 de agosto a las 17:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "atletico-madrid-sevilla-laliga-j2-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 2",
+      "home": "Atlético de Madrid",
+      "away": "Sevilla FC",
+      "date": "2026-08-29T21:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Atlético de Madrid – Sevilla online gratis: jornada 2 de LaLiga EA Sports 2026/27 en el Riyadh Air Metropolitano. Sábado 29 de agosto a las 21:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "barcelona-rayo-vallecano-laliga-j3-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 3",
+      "home": "FC Barcelona",
+      "away": "Rayo Vallecano",
+      "date": "2026-08-31T21:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver FC Barcelona – Rayo Vallecano online gratis: jornada 3 de LaLiga EA Sports 2026/27 en el Spotify Camp Nou. Lunes 31 de agosto a las 21:30 (hora española).",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
