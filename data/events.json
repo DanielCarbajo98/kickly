@@ -45,35 +45,8 @@
       "home": "FC Barcelona",
       "away": "Athletic Club",
       "date": "2026-08-27T21:00:00+02:00",
-      "status": "scheduled",
-      "description": "Ver FC Barcelona – Athletic Club online gratis: debut liguero del Barça (jornada 1 aplazada de LaLiga EA Sports 2026/27). Jueves 27 de agosto a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "valencia-betis-laliga-j1-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
-      "home": "Valencia CF",
-      "away": "Real Betis",
-      "date": "2026-08-25T21:00:00+02:00",
       "status": "finished",
-      "description": "Ver Valencia – Betis online gratis: jornada 1 aplazada de LaLiga EA Sports 2026/27 en Mestalla. Martes 25 de agosto a las 21:00 (hora española).",
+      "description": "Ver FC Barcelona – Athletic Club online gratis: debut liguero del Barça (jornada 1 aplazada de LaLiga EA Sports 2026/27). Jueves 27 de agosto a las 21:00 (hora española).",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
@@ -325,6 +298,244 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "ESPN+ y ESPN Deportes",
           "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "liverpool-nottingham-premier-j2-2026",
+      "sport": "futbol",
+      "competitionName": "Premier League 2026/27 · Jornada 2",
+      "home": "Liverpool",
+      "away": "Nottingham Forest",
+      "date": "2026-08-29T13:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Liverpool – Nottingham Forest online gratis: jornada 2 de la Premier League 2026/27 en Anfield. Sábado 29 de agosto a las 13:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN y Movistar Plus+",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports y TNT Sports",
+          "url": "https://www.skysports.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC y Peacock",
+          "url": "https://www.peacocktv.com/"
+        }
+      ]
+    },
+    {
+      "id": "chelsea-brighton-premier-j2-2026",
+      "sport": "futbol",
+      "competitionName": "Premier League 2026/27 · Jornada 2",
+      "home": "Chelsea",
+      "away": "Brighton",
+      "date": "2026-08-30T15:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Chelsea – Brighton online gratis: jornada 2 de la Premier League 2026/27 en Stamford Bridge. Domingo 30 de agosto a las 15:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN y Movistar Plus+",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports y TNT Sports",
+          "url": "https://www.skysports.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC y Peacock",
+          "url": "https://www.peacocktv.com/"
+        }
+      ]
+    },
+    {
+      "id": "manchester-united-ipswich-premier-j2-2026",
+      "sport": "futbol",
+      "competitionName": "Premier League 2026/27 · Jornada 2",
+      "home": "Manchester United",
+      "away": "Ipswich Town",
+      "date": "2026-08-30T17:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Manchester United – Ipswich online gratis: jornada 2 de la Premier League 2026/27 en Old Trafford. Domingo 30 de agosto a las 17:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN y Movistar Plus+",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports y TNT Sports",
+          "url": "https://www.skysports.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC y Peacock",
+          "url": "https://www.peacocktv.com/"
+        }
+      ]
+    },
+    {
+      "id": "aston-villa-arsenal-premier-j2-2026",
+      "sport": "futbol",
+      "competitionName": "Premier League 2026/27 · Jornada 2",
+      "home": "Aston Villa",
+      "away": "Arsenal",
+      "date": "2026-08-31T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Aston Villa – Arsenal online gratis: jornada 2 de la Premier League 2026/27 en Villa Park. Lunes 31 de agosto a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN y Movistar Plus+",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports y TNT Sports",
+          "url": "https://www.skysports.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC y Peacock",
+          "url": "https://www.peacocktv.com/"
+        }
+      ]
+    },
+    {
+      "id": "milan-venezia-serie-a-j2-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 2",
+      "home": "AC Milan",
+      "away": "Venezia",
+      "date": "2026-08-28T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Milan – Venezia online gratis: jornada 2 de la Serie A 2026/27 en San Siro. Viernes 28 de agosto a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "juventus-parma-serie-a-j2-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 2",
+      "home": "Juventus",
+      "away": "Parma",
+      "date": "2026-08-29T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Juventus – Parma online gratis: jornada 2 de la Serie A 2026/27 en el Allianz Stadium. Sábado 29 de agosto a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "napoli-como-serie-a-j2-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 2",
+      "home": "Napoli",
+      "away": "Como",
+      "date": "2026-08-30T18:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Napoli – Como online gratis: jornada 2 de la Serie A 2026/27 en el Diego Armando Maradona. Domingo 30 de agosto a las 18:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "cagliari-inter-serie-a-j2-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 2",
+      "home": "Cagliari",
+      "away": "Inter de Milán",
+      "date": "2026-08-30T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Cagliari – Inter online gratis: jornada 2 de la Serie A 2026/27 en la Unipol Domus. Domingo 30 de agosto a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "lille-psg-ligue1-j2-2026",
+      "sport": "futbol",
+      "competitionName": "Ligue 1 2026/27 · Jornada 2",
+      "home": "Lille",
+      "away": "Paris Saint-Germain",
+      "date": "2026-08-28T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Lille – PSG online gratis: jornada 2 de la Ligue 1 2026/27 en el Stade Pierre-Mauroy. Viernes 28 de agosto a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "Ligue1+ y beIN Sports",
+          "url": "https://www.ligue1.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
         }
       ]
     }
