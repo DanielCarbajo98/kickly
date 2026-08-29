@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "real-madrid-real-sociedad-laliga-j1-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
-      "home": "Real Madrid",
-      "away": "Real Sociedad",
-      "date": "2026-08-26T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Real Madrid – Real Sociedad online gratis: debut liguero del Real Madrid en el Santiago Bernabéu (jornada 1 aplazada de LaLiga EA Sports 2026/27). Miércoles 26 de agosto a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "barcelona-athletic-laliga-j1-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 1",
@@ -62,70 +35,6 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "ESPN+ y ESPN Deportes",
           "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "chicago-fire-monterrey-leaguescup-qf-2026",
-      "sport": "futbol",
-      "competitionName": "Leagues Cup 2026 · Cuartos de final",
-      "home": "Chicago Fire",
-      "away": "Monterrey",
-      "date": "2026-08-26T02:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Chicago Fire – Monterrey online gratis: cuartos de final de la Leagues Cup 2026. Martes 25 de agosto a las 20:30 ET; en España, madrugada del miércoles 26 de agosto (02:30).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Apple TV (Leagues Cup, gratis en la app)",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Apple TV, TUDN e Imagen Televisión",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Apple TV",
-          "url": "https://tv.apple.com/"
-        }
-      ]
-    },
-    {
-      "id": "leon-real-salt-lake-leaguescup-qf-2026",
-      "sport": "futbol",
-      "competitionName": "Leagues Cup 2026 · Cuartos de final",
-      "home": "Club León",
-      "away": "Real Salt Lake",
-      "date": "2026-08-26T04:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Club León – Real Salt Lake online gratis: cuartos de final de la Leagues Cup 2026. Martes 25 de agosto a las 22:30 ET; en España, madrugada del miércoles 26 de agosto (04:30).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Apple TV (Leagues Cup, gratis en la app)",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Apple TV, TUDN e Imagen Televisión",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Apple TV, TUDN/Univisión y FOX Sports",
-          "url": "https://tv.apple.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Apple TV",
-          "url": "https://tv.apple.com/"
         }
       ]
     },
@@ -200,7 +109,7 @@
       "home": "Bayern de Múnich",
       "away": "VfB Stuttgart",
       "date": "2026-08-28T20:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Bayern de Múnich – Stuttgart online gratis: partido inaugural de la Bundesliga 2026/27 en el Allianz Arena, con el Bayern defendiendo título. Viernes 28 de agosto a las 20:30 (hora española).",
       "broadcasters": [
         {
@@ -416,7 +325,7 @@
       "home": "AC Milan",
       "away": "Venezia",
       "date": "2026-08-28T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Milan – Venezia online gratis: jornada 2 de la Serie A 2026/27 en San Siro. Viernes 28 de agosto a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -524,7 +433,7 @@
       "home": "Lille",
       "away": "Paris Saint-Germain",
       "date": "2026-08-28T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Lille – PSG online gratis: jornada 2 de la Ligue 1 2026/27 en el Stade Pierre-Mauroy. Viernes 28 de agosto a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -536,6 +445,179 @@
           "country": "🌍 Internacional",
           "channels": "beIN Sports",
           "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-8",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 8",
+      "home": "Puçol – Xeraco",
+      "date": "2026-08-29T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 8ª etapa Puçol – Xeraco (168 km), jornada llana para velocistas. Sábado 29 de agosto, salida en torno a las 13:00 y llegada prevista por la tarde (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-9",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 9",
+      "home": "Villajoyosa – Alto de Aitana",
+      "date": "2026-08-30T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 9ª etapa Villajoyosa – Alto de Aitana (187 km), gran final en alto de alta montaña antes del descanso. Domingo 30 de agosto, salida sobre las 13:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-10",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 10",
+      "home": "Alcaraz – Elche",
+      "date": "2026-09-01T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 10ª etapa Alcaraz – Elche (184 km) tras la jornada de descanso. Martes 1 de septiembre, salida en torno a las 13:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-11",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 11",
+      "home": "Cartagena – Lorca",
+      "date": "2026-09-02T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 11ª etapa Cartagena – Lorca (156 km). Miércoles 2 de septiembre, salida sobre las 13:00 y llegada prevista por la tarde (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "motogp-aragon-2026",
+      "sport": "motor",
+      "competitionName": "MotoGP 2026 · Gran Premio de Aragón",
+      "home": "Gran Premio de Aragón (MotorLand)",
+      "date": "2026-08-30T14:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver MotoGP Gran Premio de Aragón 2026 online gratis: carrera del Mundial de MotoGP en MotorLand Aragón (Alcañiz). Domingo 30 de agosto a las 14:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN (MotoGP) y Aragón TV / Aragón Play (en abierto)",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "TNT Sports",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "MotoGP VideoPass",
+          "url": "https://www.motogp.com/"
+        }
+      ]
+    },
+    {
+      "id": "us-open-2026-primera-ronda",
+      "sport": "tenis",
+      "competitionName": "US Open 2026 · Cuadro principal (primera ronda)",
+      "home": "US Open 2026",
+      "date": "2026-08-30T17:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver el US Open 2026 online gratis: arranca el cuadro principal del último Grand Slam de la temporada en Nueva York, con Carlos Alcaraz y las grandes estrellas del tenis. Sesiones desde las 17:00 (hora española) del domingo 30 de agosto; sesión nocturna a partir de la 01:00.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Movistar Deportes)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN y ESPN+",
+          "url": "https://www.espn.com/espnplus/"
+        },
+        {
+          "country": "🌎 Latinoamérica",
+          "channels": "ESPN y Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "ufc-shanghai-nurmagomedov-song-2026",
+      "sport": "ufc",
+      "competitionName": "UFC Fight Night · Shanghái",
+      "home": "Umar Nurmagomedov",
+      "away": "Song Yadong",
+      "date": "2026-08-29T12:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver UFC Shanghái: Nurmagomedov vs Song online gratis: combate estelar de peso gallo en el Oriental Sports Center de Shanghái. Sábado 29 de agosto, cartelera estelar sobre las 12:00 y preliminares desde primera hora de la mañana (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "HBO Max",
+          "url": "https://www.max.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Paramount+",
+          "url": "https://www.paramountplus.com/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "TNT Sports",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UFC Fight Pass",
+          "url": "https://ufcfightpass.com/"
         }
       ]
     }
