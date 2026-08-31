@@ -46,16 +46,51 @@
     <header class="sec-head center rv">
       <p class="eyebrow" style="justify-content:center">Precios</p>
       <h1 style="font-size:clamp(2.4rem,5.4vw,4.2rem)">Sin cuotas trampa.<br><span class="grad italic serif">Sin rescate.</span></h1>
-      <p class="lede">Pagas una vez y la web es tuya, código incluido. Si un día quieres irte, te vas con ella. Nos parece lo mínimo.</p>
+      <p class="lede">Dos formas de contratar que no son lo mismo: <b>comprar</b> la web (pago único, es tuya) o <b>suscribirte</b> (cuota mensual, servicio continuo). Aquí tienes lo que cuesta cada una con el tiempo, sin letra pequeña.</p>
     </header>
 
-    <div class="center"><div class="conmutador" id="conmutador" role="group" aria-label="Forma de pago">
+    <div class="center"><div class="conmutador" id="conmutador" role="group" aria-label="Forma de contratar">
       <span class="corredera" id="corredera"></span>
-      <button type="button" aria-pressed="true" data-modo="unico">Pago único</button>
-      <button type="button" aria-pressed="false" data-modo="mensual">Cuota mensual</button>
+      <button type="button" aria-pressed="true" data-modo="compra">Comprar la web</button>
+      <button type="button" aria-pressed="false" data-modo="suscripcion">Suscripción mensual</button>
     </div></div>
+    <p class="modo-explica" id="modo-explica"></p>
     <div class="planes" id="planes"></div>
-    <p class="center small muted" style="margin-top:26px">Precios sin IVA. Facturamos desde España. Pago único = la web es tuya; cuota mensual = incluye mantenimiento, hosting y cambios ilimitados, y puedes cancelar cuando quieras.</p>
+    <p class="center small muted" style="margin-top:26px">Precios sin IVA. Facturamos desde España con factura válida para deducir.</p>
+  </div>
+</section>
+
+<section class="sec" id="coste">
+  <div class="wrap">
+    <header class="sec-head rv">
+      <p class="eyebrow">La diferencia, en euros</p>
+      <h2>Comprar o suscribirse:<br>cuánto cuesta cada una.</h2>
+      <p class="lede">Tomamos el plan Pro, que es el que elige casi todo el mundo. Los importes son acumulados: lo que llevas gastado en total al final de cada año.</p>
+    </header>
+    <div class="tabla-envoltura rv">
+      <table class="tabla">
+        <thead><tr>
+          <th scope="col"></th>
+          <th scope="col" class="destacada">Comprar · 149 €</th>
+          <th scope="col">Suscripción · 15 €/mes</th>
+        </tr></thead>
+        <tbody>
+          <tr><th scope="row">Lo que pagas al empezar</th><td class="destacada">149 €<br><span class="small muted">o 3 × 50 € con SeQura</span></td><td>0 €</td></tr>
+          <tr><th scope="row">Total al acabar el año 1</th><td class="destacada">149 €</td><td>180 €</td></tr>
+          <tr><th scope="row">Total al acabar el año 2</th><td class="destacada">178 €</td><td>360 €</td></tr>
+          <tr><th scope="row">Total al acabar el año 3</th><td class="destacada">207 €</td><td>540 €</td></tr>
+          <tr><th scope="row">Qué pagas cada año después del primero</th><td class="destacada">29 € de mantenimiento, y es opcional</td><td>180 €, mientras sigas suscrito</td></tr>
+          <tr><th scope="row">Cambios pasado el primer mes</th><td class="destacada">Por bonos, cuando los necesites</td><td><span class="si">Ilimitados, incluidos</span></td></tr>
+          <tr><th scope="row">Alojamiento, dominio y certificado</th><td class="destacada">Año 1 incluido; luego, en el mantenimiento</td><td><span class="si">Siempre incluidos</span></td></tr>
+          <tr><th scope="row">El código fuente</th><td class="destacada"><span class="si">Tuyo</span></td><td><span class="si">Tuyo</span></td></tr>
+          <tr><th scope="row">Si dejas de pagar</th><td class="destacada">La web sigue online mientras dure el año pagado; después te la llevas</td><td>Dejamos de alojarla, pero conservas el código</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cuadro-nota rv">
+      <p><b>En resumen:</b> comprar sale más barato a partir del décimo mes y es lo que recomendamos si tu web va a cambiar poco. La suscripción compensa si prevés tocarla a menudo y prefieres no adelantar dinero: por 15 € al mes te la mantenemos nosotros y no tienes que pensar en ella.</p>
+      <p style="margin:0"><b>¿No quieres adelantar los 149 €?</b> Puedes comprarla igual y fraccionar el pago en 3 mensualidades de unos 50 € con SeQura, sin intereses para ti. Sigues siendo dueño de la web desde el primer día.</p>
+    </div>
   </div>
 </section>
 
@@ -106,8 +141,9 @@
       <h2>Preguntas sobre el precio</h2>
     </header>
     <div class="faq rv">
-      <details open><summary>¿El pago único es realmente único?</summary><div class="faq-cuerpo"><p>Sí. Pagas una vez y la web es tuya, con su código. El primer año de hosting y subdominio va incluido; a partir del segundo son 29 € al año si quieres que sigamos hospedándola nosotros. Y si prefieres llevártela a otro sitio, te damos el archivo y no pagas nada más nunca.</p></div></details>
-      <details><summary>¿Qué diferencia hay con la cuota mensual?</summary><div class="faq-cuerpo"><p>La cuota mensual reparte el coste e incluye mantenimiento, hosting y cambios ilimitados mientras estés suscrito. Sale a cuenta si prevés tocar la web a menudo. Si dejas de pagar, la web deja de estar hospedada por nosotros, pero el código sigue siendo tuyo y puedes subirlo donde quieras.</p></div></details>
+      <details open><summary>Entonces, ¿comprar o suscribirme?</summary><div class="faq-cuerpo"><p><b>Compra</b> si tu web va a cambiar poco: es lo normal en un negocio local, y a partir del décimo mes ya te sale más barato. <b>Suscríbete</b> si prevés tocarla a menudo, si prefieres no adelantar dinero o si simplemente no quieres volver a pensar en ella: por la cuota nos encargamos nosotros de todo.</p><p>Y si dudas, empieza comprando. Cambiarte después a suscripción es un correo; al revés también.</p></div></details>
+      <details><summary>¿El pago único es realmente único?</summary><div class="faq-cuerpo"><p>Sí. Pagas una vez y la web es tuya, con su código. Incluye el primer año de alojamiento, certificado y dominio. A partir del segundo año son 29 € al año de mantenimiento <b>y es opcional</b>: si no lo contratas, te damos los archivos y la alojas donde quieras sin pagarnos nada más nunca.</p></div></details>
+      <details><summary>¿Puedo pagar la web a plazos?</summary><div class="faq-cuerpo"><p>Sí. En pedidos desde 100 € puedes fraccionar el pago en 3 mensualidades con SeQura, sin intereses para ti. La web se publica igual desde el primer día y eres su dueño desde el minuto uno: fraccionar el pago no cambia nada de lo que recibes.</p></div></details>
       <details><summary>¿Hay permanencia?</summary><div class="faq-cuerpo"><p>Ninguna, en ningún plan. La cuota mensual se cancela desde tu email en un minuto y sin explicaciones.</p></div></details>
       <details><summary>¿Y la garantía de 14 días?</summary><div class="faq-cuerpo"><p>Si en las dos primeras semanas desde la publicación no estás contento, nos escribes y te devolvemos el importe íntegro. Sin formularios ni preguntas incómodas. La web te la quedas igualmente: no vamos a borrarte el negocio de internet por una devolución.</p></div></details>
       <details><summary>¿El dominio queda a mi nombre?</summary><div class="faq-cuerpo"><p>Siempre. Lo registramos con tus datos como titular. Es tuyo aunque dejes de ser cliente, y podemos transferírtelo cuando lo pidas.</p></div></details>

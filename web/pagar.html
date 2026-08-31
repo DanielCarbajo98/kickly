@@ -37,13 +37,20 @@
         <p class="lede">Revisa el plan, dinos a nombre de quién va la factura y nos ponemos. Publicamos en 24 horas laborables.</p>
 
         <form id="pedido" novalidate style="margin-top:40px">
-          <h3 style="margin-bottom:16px">1 · Elige tu plan</h3>
+          <h3 style="margin-bottom:16px">1 · ¿Comprar o suscribirte?</h3>
+          <div class="opciones g2" id="modo-check" style="margin-bottom:16px"></div>
+          <p class="pista" id="modo-nota" style="margin-bottom:32px"></p>
+
+          <h3 style="margin-bottom:16px">2 · Elige tu plan</h3>
           <div class="opciones" id="planes-check" style="margin-bottom:38px"></div>
 
-          <h3 style="margin-bottom:16px">2 · ¿Añadimos algo?</h3>
+          <h3 style="margin-bottom:16px">3 · ¿Añadimos algo?</h3>
           <div class="extras-check" id="extras-check" style="margin-bottom:38px"></div>
 
-          <h3 style="margin-bottom:16px">3 · Tus datos</h3>
+          <h3 style="margin-bottom:16px">4 · Cómo quieres pagar</h3>
+          <div class="opciones" id="pago-check" style="margin-bottom:38px"></div>
+
+          <h3 style="margin-bottom:16px">5 · Tus datos</h3>
           <div class="dosc">
             <label class="campo"><span>Nombre y apellidos *</span>
               <input class="input" type="text" id="c-nombre" autocomplete="name" required></label>
@@ -87,6 +94,7 @@
              border:1px solid var(--linea);margin-bottom:20px;font-size:.9rem"></div>
         <div id="resumen-lineas"></div>
         <div class="total"><span>Total<br><span class="small">IVA no incluido</span></span><b id="resumen-total">—</b></div>
+        <p class="resumen-pie" id="resumen-pie"></p>
         <div class="garantia">
           <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.4-3.2 8.2-8 9-4.8-.8-8-4.6-8-9V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
           <span><b style="color:var(--lino)">14 días para arrepentirte.</b> Si en las dos primeras semanas no estás contento, te devolvemos el importe íntegro sin preguntas.</span>

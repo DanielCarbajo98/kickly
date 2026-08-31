@@ -1,7 +1,8 @@
 /** Portada de Vitrina: demo en vivo, precios y microinteracciones. */
 
 import { $, $$, euro, initHeader, initReveal } from './ui.js';
-import { PLANS, ADDONS, STATS } from './config.js';
+import { ADDONS, STATS } from './config.js';
+import { pintarPlanes, pintarExplicacion, montarConmutador } from './precios-ui.js';
 import { INDUSTRIES } from './data/industries.js';
 import { THEMES } from './data/themes.js';
 import { generateSite } from './generator.js';
@@ -180,53 +181,21 @@ const DEMOS = [
 (function precios() {
   const cont = $('#planes');
   const extras = $('#extras');
-  const conm = $('#conmutador');
   if (!cont) return;
-  let modo = 'unico';
+  let modo = 'compra';
 
-  function pintar() {
-    cont.innerHTML = PLANS.map((p) => {
-      const precio = modo === 'unico' ? p.price : p.priceSub;
-      const unidad = modo === 'unico'
-        ? `${p.unit} · sin cuotas obligatorias`
-        : 'al mes · mantenimiento y cambios incluidos';
-      return `<article class="plan${p.highlight ? ' destacado' : ''} rv">
-        ${p.badge ? `<span class="plan-insignia">${p.badge}</span>` : ''}
-        <h3>${p.name}</h3>
-        <p class="plan-kicker">${p.kicker}</p>
-        <div class="plan-precio"><b>${euro(precio)}</b><i>${modo === 'unico' ? '' : '/mes'}</i></div>
-        <p class="plan-unidad">${unidad}</p>
-        <a class="btn ${p.highlight ? 'btn-luz' : 'btn-fantasma'} btn-bloque" href="./crear.html?plan=${p.id}">Empezar con ${p.name}</a>
-        <ul>${p.features.map((f) => `<li${f.endsWith(':') ? ' class="grupo"' : ''}>${f}</li>`).join('')}</ul>
-      </article>`;
-    }).join('');
-    initReveal('.plan.rv');
-  }
+  const pintar = () => {
+    pintarPlanes(cont, modo);
+    pintarExplicacion($('#modo-explica'), modo);
+  };
 
   if (extras) {
     extras.innerHTML = ADDONS.map((a) => `<div class="extra rv">
       <b>${a.name}</b><span>${a.note}</span><span class="precio">${euro(a.price)}</span>
     </div>`).join('');
+    initReveal('.extra.rv');
   }
 
-  if (conm) {
-    const corredera = $('#corredera');
-    const botones = $$('button', conm);
-    const mover = () => {
-      const activo = botones.find((b) => b.getAttribute('aria-pressed') === 'true');
-      if (!activo || !corredera) return;
-      corredera.style.width = `${activo.offsetWidth}px`;
-      corredera.style.transform = `translateX(${activo.offsetLeft - 4}px)`;
-    };
-    botones.forEach((b) => b.addEventListener('click', () => {
-      botones.forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
-      modo = b.dataset.modo;
-      mover(); pintar();
-    }));
-    requestAnimationFrame(mover);
-    addEventListener('resize', mover);
-  }
-
+  montarConmutador($('#conmutador'), (m) => { modo = m; pintar(); });
   pintar();
-  initReveal('.extra.rv');
 })();

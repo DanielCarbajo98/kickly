@@ -11,9 +11,10 @@ const TOTAL = 7;
 let paso = 1;
 let brief = load();
 
-/* Un plan preseleccionado desde precios llega por la URL. */
-const planUrl = new URLSearchParams(location.search).get('plan');
-if (planUrl) brief.plan = planUrl;
+/* Plan y forma de contratar pueden venir preseleccionados desde precios. */
+const params = new URLSearchParams(location.search);
+if (params.get('plan')) brief.plan = params.get('plan');
+if (params.get('modo')) brief.modo = params.get('modo');
 
 const OBJETIVOS = [
   { id: 'reservas', icon: '📅', name: 'Que reserven', note: 'Mesa, cita o plaza. El botón de reserva manda en toda la web.' },

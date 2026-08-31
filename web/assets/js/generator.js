@@ -6,6 +6,8 @@
 
 import { getIndustry } from './data/industries.js';
 import { getTheme, getFontPair, getShape, buildPalette } from './data/themes.js';
+import { MOTIVOS, ENCUADRES, escenasDe } from './data/escenas.js';
+import { fotoDe } from './data/stock.js';
 import { writeCopy, placeholderTestimonials, seedFrom } from './copywriter.js';
 
 const esc = (s) => String(s ?? '')
@@ -79,16 +81,63 @@ export function buildModel(brief) {
 /* Piezas                                                              */
 /* ------------------------------------------------------------------ */
 
+/** Módulo siempre positivo: la semilla es un entero con signo. */
+const mod = (n, d) => ((n % d) + d) % d;
+
+const ARCOS = {
+  a: '<path d="M-40 300 Q 200 120 440 300" /><path d="M-40 350 Q 200 190 440 350" opacity=".55" />',
+  b: '<circle cx="330" cy="90" r="150" /><circle cx="330" cy="90" r="210" opacity=".5" />',
+  c: '<path d="M60 -40 Q 240 160 60 360" /><path d="M130 -40 Q 320 160 130 360" opacity=".5" />',
+};
+
+/**
+ * Compone la imagen de un hueco: fondo de la paleta, motivo del sector y
+ * geometría de apoyo. Determinista: la misma web da siempre la misma imagen.
+ */
 function placeholder(m, label, i, tall) {
-  const hues = [0, 18, -14, 30, -26, 10];
-  const rot = hues[i % hues.length];
-  return `<div class="ph${tall ? ' ph-tall' : ''}" style="--rot:${rot}deg" role="img" aria-label="${attr(label)}">
+  const motivos = escenasDe(m.ind.id);
+  const motivo = MOTIVOS[motivos[mod(m.seed + i, motivos.length)]] || MOTIVOS.chispa;
+  const enc = ENCUADRES[mod(m.seed + i * 3, ENCUADRES.length)];
+
+  const W = 400, H = tall ? 500 : 300;
+  const lado = Math.min(W, H) * (tall ? 1.12 : 1) * enc.escala * 1.15;
+  const cx = W * enc.x, cy = H * enc.y;
+  const k = lado / 100;
+  const gid = `g${mod(m.seed, 9973)}-${i}`;
+
+  return `<div class="ph${tall ? ' ph-tall' : ''}" role="img" aria-label="${attr(label)}">
+      <svg class="ph-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="${gid}f" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="var(--accent)" stop-opacity="${m.theme.dark ? '.30' : '.20'}"/>
+            <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="${gid}h" cx=".78" cy=".18" r=".7">
+            <stop offset="0" stop-color="var(--accent)" stop-opacity="${m.theme.dark ? '.34' : '.24'}"/>
+            <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="${W}" height="${H}" fill="var(--surface2)"/>
+        <rect width="${W}" height="${H}" fill="url(#${gid}f)"/>
+        <rect width="${W}" height="${H}" fill="url(#${gid}h)"/>
+        <g fill="none" stroke="var(--accent)" stroke-opacity=".18" stroke-width="1.4">${ARCOS[enc.arcos]}</g>
+        <g transform="translate(${cx.toFixed(1)} ${cy.toFixed(1)}) rotate(${enc.giro}) scale(${k.toFixed(3)}) translate(-50 -50)"
+           fill="none" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"
+           stroke-opacity="${m.theme.dark ? '.55' : '.42'}">
+          <path d="${motivo}"/>
+        </g>
+      </svg>
       <span>${esc(label)}</span>
     </div>`;
 }
 
+/**
+ * Orden de preferencia para un hueco de imagen:
+ * foto del negocio > banco de stock (si se ha rellenado) > composición generada.
+ */
 function media(m, src, label, i, tall) {
-  if (src) return `<img src="${attr(src)}" alt="${attr(label)}" loading="lazy" decoding="async">`;
+  const foto = src || (m.brief.usarStock !== false ? fotoDe(m.ind.id, mod(m.seed + i, 997)) : '');
+  if (foto) return `<img src="${attr(foto)}" alt="${attr(label)}" loading="lazy" decoding="async">`;
   return placeholder(m, label, i, tall);
 }
 
@@ -429,15 +478,17 @@ p{margin:0 0 1em}
 .hero-editorial .hero-badges{padding-bottom:clamp(40px,6vw,72px)}
 
 /* placeholders */
-.ph{position:relative;aspect-ratio:4/3;border-radius:var(--r);display:grid;place-items:center;overflow:hidden;
-  background:
-    radial-gradient(120% 100% at 15% 10%, color-mix(in srgb,var(--accent) 34%,transparent) 0%, transparent 58%),
-    radial-gradient(120% 120% at 90% 90%, color-mix(in srgb,var(--accent) 16%,transparent) 0%, transparent 55%),
-    var(--surface2);
-  border:1px solid var(--line);filter:hue-rotate(var(--rot,0deg))}
+.ph{position:relative;aspect-ratio:4/3;border-radius:var(--r);display:grid;place-items:center;
+  overflow:hidden;background:var(--surface2);border:1px solid var(--line)}
 .ph-tall{aspect-ratio:4/5}
-.ph::after{content:"";position:absolute;inset:0;background-image:linear-gradient(color-mix(in srgb,var(--text) 5%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--text) 5%,transparent) 1px,transparent 1px);background-size:34px 34px;opacity:.5}
-.ph span{position:relative;z-index:1;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:.5em 1em;border:1px solid var(--line);border-radius:var(--r-pill);background:color-mix(in srgb,var(--bg) 62%,transparent)}
+.ph-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ph::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(color-mix(in srgb,var(--text) 4%,transparent) 1px,transparent 1px),
+    linear-gradient(90deg,color-mix(in srgb,var(--text) 4%,transparent) 1px,transparent 1px);
+  background-size:38px 38px;opacity:.55}
+.ph span{position:relative;z-index:1;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text);font-weight:600;padding:.5em 1.1em;border:1px solid var(--line);border-radius:var(--r-pill);
+  background:color-mix(in srgb,var(--bg) 74%,transparent);backdrop-filter:blur(6px)}
 
 /* confianza */
 .trust{border-block:1px solid var(--line);background:var(--surface)}
@@ -474,6 +525,7 @@ p{margin:0 0 1em}
 .gal-item img,.gal-item .ph{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;border-radius:0;border:0}
 .gal-wide{grid-column:span 2}
 .gal-wide img,.gal-wide .ph{aspect-ratio:2/1}
+.gal-item .ph span{display:none}
 .gal-item figcaption{position:absolute;left:12px;bottom:12px;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:.42em .9em;border-radius:var(--r-pill);background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(8px);color:var(--text)}
 
 /* opiniones */

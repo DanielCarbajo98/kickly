@@ -111,6 +111,7 @@
 .tabla tbody th{font-weight:500;color:var(--lino)}
 .tabla td{color:var(--niebla)}
 .tabla td.destacada{color:var(--lino);font-weight:600;background:rgba(242,179,61,.055)}
+.tabla td .small{font-weight:400}
 .tabla tr:last-child th,.tabla tr:last-child td{border-bottom:0}
 .si,.no{display:inline-flex;align-items:center;gap:.45em}
 .si::before{content:"";width:16px;height:16px;flex:none;background:var(--jade);border-radius:50%;
@@ -122,12 +123,28 @@
 
 /* ---------- Precios ---------- */
 .conmutador{display:inline-flex;padding:4px;border-radius:var(--r-pill);border:1px solid var(--linea);
-  background:rgba(255,255,255,.03);margin:0 auto 44px;position:relative}
+  background:rgba(255,255,255,.03);margin:0 auto 20px;position:relative;max-width:100%}
 .conmutador button{padding:.6em 1.4em;border:0;background:none;border-radius:var(--r-pill);cursor:pointer;
   font-size:.9rem;font-weight:600;color:var(--niebla);transition:color var(--rapido);position:relative;z-index:1}
 .conmutador button[aria-pressed=true]{color:var(--obsidiana)}
 .conmutador .corredera{position:absolute;top:4px;bottom:4px;border-radius:var(--r-pill);background:var(--lino);
   transition:transform var(--medio),width var(--medio);z-index:0}
+
+/* Explicación del modo elegido: sin esto, comprar y suscribirse parecían lo mismo. */
+.modo-explica{max-width:56ch;margin:0 auto 40px;text-align:center;color:var(--niebla);
+  font-size:.94rem;line-height:1.6;min-height:4.2em}
+.modo-explica b{color:var(--lino);font-weight:600}
+
+.cuadro-nota{margin-top:20px;padding:24px 26px;border-radius:var(--r-lg);border:1px solid var(--linea);
+  background:linear-gradient(165deg,rgba(255,255,255,.04),rgba(255,255,255,.008));
+  color:var(--niebla);font-size:.95rem;line-height:1.65;display:grid;gap:1em}
+.cuadro-nota p{margin:0}
+.cuadro-nota b{color:var(--lino);font-weight:600}
+
+.plan-financia{margin:-1.2em 0 1.6em;font-size:.84rem;color:var(--ambar);font-weight:500;
+  display:flex;align-items:center;gap:.45em}
+.plan-financia::before{content:"";width:14px;height:14px;flex:none;border-radius:3px;
+  border:1.5px solid currentColor;opacity:.7}
 
 .planes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
 .plan{position:relative;display:flex;flex-direction:column;padding:36px 30px;border-radius:var(--r-lg);
@@ -200,6 +217,12 @@
   .bento{grid-template-columns:repeat(2,1fr)}
   .b-2,.b-3,.b-4,.b-6{grid-column:span 2}
   .plan.destacado{order:-1}
+}
+@media (max-width:560px){
+  .conmutador{flex-direction:column;border-radius:var(--r);width:100%}
+  .conmutador .corredera{display:none}
+  .conmutador button[aria-pressed=true]{background:var(--lino);color:var(--obsidiana)}
+  .modo-explica{min-height:0}
 }
 @media (max-width:640px){
   .bento{grid-template-columns:1fr}

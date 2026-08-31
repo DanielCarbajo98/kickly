@@ -17,6 +17,47 @@ export const BRAND = {
 };
 
 /**
+ * Las dos formas de contratar. NO son la misma cosa pagada de dos maneras:
+ * comprar es adquirir la web; suscribirse es un servicio continuo.
+ */
+export const MODOS = [
+  {
+    id: 'compra',
+    nombre: 'Comprar la web',
+    resumen: 'Pago único. La web es tuya.',
+    detalle: 'Pagas una vez e incluye el primer año de alojamiento, certificado y dominio. '
+      + 'A partir del segundo año, el mantenimiento son 29 € al año y es opcional: si no lo '
+      + 'quieres, te llevas los archivos y la alojas donde prefieras.',
+    sufijo: 'pago único',
+  },
+  {
+    id: 'suscripcion',
+    nombre: 'Suscripción',
+    resumen: 'Cuota mensual, todo incluido.',
+    detalle: 'Sin desembolso inicial. Incluye alojamiento, dominio, certificado, copias de '
+      + 'seguridad, cambios ilimitados y soporte mientras estés suscrito. Sin permanencia. '
+      + 'El código es tuyo desde el primer día; si cancelas, dejamos de alojarla nosotros.',
+    sufijo: 'al mes',
+  },
+];
+
+/** Mantenimiento del segundo año en adelante, sólo para quien compra. */
+export const RENOVACION = { precio: 29, unidad: 'al año', desde: 'a partir del segundo año' };
+
+/**
+ * Fraccionamiento del pago único.
+ * SeQura cobra una comisión al comercio y exige contrato firmado: no lo pongas
+ * en `activa: true` en producción hasta tenerlo cerrado.
+ */
+export const FINANCIACION = {
+  activa: true,
+  proveedor: 'SeQura',
+  plazos: 3,
+  minimo: 100,
+  nota: 'Fracciona el pago en 3 meses sin intereses para ti.',
+};
+
+/**
  * Planes. `price` en euros.
  * `link` = Stripe Payment Link (o cualquier checkout externo). Si está vacío,
  * el checkout cae al formulario de pedido manual, que sigue funcionando.
@@ -36,6 +77,7 @@ export const PLANS = [
       'Web de una página, hasta 6 secciones',
       'Diseño a medida generado con tus datos',
       'Subdominio incluido: tunegocio.vitrina.site',
+      'Primer año de alojamiento y certificado',
       'Botón de WhatsApp y llamada directa',
       'Optimizada para móvil y velocidad (100/100)',
       'Te entregamos el código. Sin ataduras.',
@@ -55,7 +97,7 @@ export const PLANS = [
     linkSub: '',
     features: [
       'Todo lo de Uno, y además:',
-      'Tu dominio propio (.com o .es) conectado',
+      'Tu dominio propio (.es o .com) a tu nombre',
       'Formulario de contacto y reservas por WhatsApp',
       'SEO local: ficha Google, mapa y datos estructurados',
       'Galería de fotos y sección de reseñas',

@@ -17,7 +17,7 @@ export const EMPTY = {
   // extras
   headline: '', usp: [], testimonials: [], faq: [],
   domain: '', legalName: '',
-  plan: 'pro', addons: [],
+  plan: 'pro', modo: 'compra', addons: [],
   sections: null,
   updatedAt: null,
 };
