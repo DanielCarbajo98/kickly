@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publicar mi web · Vitrina</title>
+<meta name="description" content="Elige plan, revisa tu pedido y publicamos tu web en 24 horas.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0B0B0E">
+<link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/vitrina.css">
+<link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+<div class="grano" aria-hidden="true"></div>
+
+<header class="hd stuck" id="hd">
+  <div class="wrap hd-in">
+    <a class="marca" href="./" aria-label="Vitrina — inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2B33D"/><stop offset=".55" stop-color="#DC6A4C"/><stop offset="1" stop-color="#7C6BF2"/></linearGradient></defs><rect x="6" y="6" width="52" height="52" rx="15" fill="none" stroke="#F7F3EC" stroke-width="4"/><path d="M20 18 32 46 44 18" fill="none" stroke="url(#lg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>vitrina</span>
+    </a>
+    <span style="margin-right:auto"></span>
+    <a class="btn btn-fantasma btn-sm" href="./preview.html">← Volver a mi web</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="pago">
+      <!-- Formulario -->
+      <div>
+        <h1 class="serif" style="font-size:clamp(2rem,4.4vw,3rem)">Publiquemos tu web</h1>
+        <p class="lede">Revisa el plan, dinos a nombre de quién va la factura y nos ponemos. Publicamos en 24 horas laborables.</p>
+
+        <form id="pedido" novalidate style="margin-top:40px">
+          <h3 style="margin-bottom:16px">1 · Elige tu plan</h3>
+          <div class="opciones" id="planes-check" style="margin-bottom:38px"></div>
+
+          <h3 style="margin-bottom:16px">2 · ¿Añadimos algo?</h3>
+          <div class="extras-check" id="extras-check" style="margin-bottom:38px"></div>
+
+          <h3 style="margin-bottom:16px">3 · Tus datos</h3>
+          <div class="dosc">
+            <label class="campo"><span>Nombre y apellidos *</span>
+              <input class="input" type="text" id="c-nombre" autocomplete="name" required></label>
+            <label class="campo"><span>Email *</span>
+              <input class="input" type="email" id="c-email" autocomplete="email" required></label>
+          </div>
+          <div class="dosc">
+            <label class="campo"><span>Teléfono *</span>
+              <input class="input" type="tel" id="c-tel" autocomplete="tel" required></label>
+            <label class="campo"><span>NIF / CIF</span>
+              <span class="pista">Para la factura. Puedes dárnoslo después.</span>
+              <input class="input" type="text" id="c-nif"></label>
+          </div>
+          <label class="campo"><span>Razón social o nombre fiscal</span>
+            <input class="input" type="text" id="c-fiscal" autocomplete="organization"></label>
+          <label class="campo"><span>Dominio que quieres usar</span>
+            <span class="pista">Si aún no lo tienes, lo registramos nosotros a tu nombre.</span>
+            <input class="input" type="text" id="c-dominio" placeholder="tunegocio.es"></label>
+          <label class="campo"><span>¿Algo que debamos saber?</span>
+            <textarea class="textarea" id="c-notas" rows="3" placeholder="Cambios que quieres, fotos que nos vas a mandar, prisas…"></textarea></label>
+
+          <label class="extra-check" style="margin-top:10px">
+            <input type="checkbox" id="c-rgpd" required>
+            <span class="txt"><b style="font-size:.9rem">Acepto los términos y la política de privacidad</b>
+            <span>Tratamos tus datos sólo para prestarte este servicio. <a href="./legal/privacidad.html" style="color:var(--ambar)">Leer política</a></span></span>
+          </label>
+
+          <p class="msg-error oculto" id="err-pedido">Revisa los campos marcados con asterisco.</p>
+
+          <button class="btn btn-luz btn-lg btn-bloque" type="submit" id="btn-pagar" style="margin-top:24px">
+            Confirmar y pagar
+          </button>
+          <p class="small muted center" style="margin-top:14px">Pago seguro. No guardamos datos de tu tarjeta.</p>
+        </form>
+      </div>
+
+      <!-- Resumen -->
+      <aside class="resumen">
+        <h3>Tu pedido</h3>
+        <div id="resumen-web" style="padding:14px;border-radius:10px;background:rgba(255,255,255,.03);
+             border:1px solid var(--linea);margin-bottom:20px;font-size:.9rem"></div>
+        <div id="resumen-lineas"></div>
+        <div class="total"><span>Total<br><span class="small">IVA no incluido</span></span><b id="resumen-total">—</b></div>
+        <div class="garantia">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.4-3.2 8.2-8 9-4.8-.8-8-4.6-8-9V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span><b style="color:var(--lino)">14 días para arrepentirte.</b> Si en las dos primeras semanas no estás contento, te devolvemos el importe íntegro sin preguntas.</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-base" style="margin-top:0;border-top:0">
+      <span>© <span id="anio">2026</span> Vitrina</span>
+      <span><a href="./legal/terminos.html">Términos</a> · <a href="./legal/privacidad.html">Privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="./assets/js/checkout.js"></script>
+</body>
+</html>

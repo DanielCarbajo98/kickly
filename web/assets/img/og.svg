@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0B0E"/><stop offset="1" stop-color="#17131C"/>
+    </linearGradient>
+    <linearGradient id="luz" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2B33D"/><stop offset=".55" stop-color="#DC6A4C"/><stop offset="1" stop-color="#7C6BF2"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#F2B33D" stop-opacity=".35"/><stop offset="1" stop-color="#F2B33D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="960" cy="140" r="330" fill="url(#halo)"/>
+  <rect x="80" y="86" width="72" height="72" rx="21" fill="none" stroke="#F7F3EC" stroke-width="5.5"/>
+  <path d="M99 103 L116 141 L133 103" fill="none" stroke="url(#luz)" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="172" y="146" font-family="Inter, sans-serif" font-size="46" font-weight="600" letter-spacing="-1.6" fill="#F7F3EC">vitrina</text>
+  <text x="80" y="330" font-family="Georgia, serif" font-size="86" font-weight="400" fill="#F7F3EC">Cuéntanos tu negocio.</text>
+  <text x="80" y="428" font-family="Georgia, serif" font-size="86" font-weight="400" fill="url(#luz)">Te devolvemos su web.</text>
+  <text x="80" y="520" font-family="Inter, sans-serif" font-size="30" fill="#9A9AA6">Una encuesta de 3 minutos · La ves antes de pagar · El código es tuyo</text>
+</svg>

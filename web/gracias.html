@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedido recibido · Vitrina</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B0B0E">
+<link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/vitrina.css">
+<link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+<div class="grano" aria-hidden="true"></div>
+
+<header class="hd stuck" id="hd">
+  <div class="wrap hd-in">
+    <a class="marca" href="./" aria-label="Vitrina — inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2B33D"/><stop offset=".55" stop-color="#DC6A4C"/><stop offset="1" stop-color="#7C6BF2"/></linearGradient></defs><rect x="6" y="6" width="52" height="52" rx="15" fill="none" stroke="#F7F3EC" stroke-width="4"/><path d="M20 18 32 46 44 18" fill="none" stroke="url(#lg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>vitrina</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap narrow gracias">
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="z">
+      <div class="gracias-icono"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h1 class="serif" style="font-size:clamp(2.2rem,5vw,3.4rem)">Pedido recibido</h1>
+      <p class="lede" style="margin-inline:auto">Gracias, <b id="g-nombre">.</b> Ya tenemos tu web y tus datos. Te escribimos a <b id="g-email">tu email</b> en menos de 24 horas laborables.</p>
+
+      <div class="row center" style="margin-top:28px">
+        <button class="btn btn-fantasma" type="button" id="g-descargar">⬇ Descargar mi web</button>
+        <a class="btn btn-fantasma" href="./preview.html">Volver a verla</a>
+      </div>
+
+      <div class="linea-tiempo">
+        <div class="hito hecho"><span class="hito-punto">✓</span>
+          <div><b>Hemos recibido tu pedido</b><p>Con el brief completo y la web que has aprobado.</p></div></div>
+        <div class="hito"><span class="hito-punto">2</span>
+          <div><b>Repasamos los textos a mano</b><p>Un humano revisa la redacción, corrige detalles y comprueba que todo cuadre con tu negocio.</p></div></div>
+        <div class="hito"><span class="hito-punto">3</span>
+          <div><b>Conectamos el dominio</b><p>Si es nuevo, lo registramos a tu nombre. Si ya lo tienes, te decimos qué tocar.</p></div></div>
+        <div class="hito"><span class="hito-punto">4</span>
+          <div><b>Publicamos</b><p>Con certificado seguro, sitemap y alta en Google Search Console.</p></div></div>
+      </div>
+
+      <div style="margin-top:52px;padding:24px;border-radius:18px;border:1px dashed var(--linea);text-align:left">
+        <b>Mientras tanto, te viene bien tener a mano:</b>
+        <ul class="muted" style="margin:.8em 0 0;padding-left:1.2em;line-height:1.9;font-size:.94rem">
+          <li>De 6 a 10 fotos de tu negocio, lo más luminosas posible.</li>
+          <li>Tu logotipo en PNG o SVG, si lo tienes.</li>
+          <li>El acceso a tu dominio, si ya lo tenías registrado.</li>
+          <li>Tu ficha de Google Business, para enlazar las reseñas.</li>
+        </ul>
+      </div>
+
+      <p class="small muted" style="margin-top:40px">¿Alguna duda? Escríbenos a <a href="mailto:hola@vitrina.site" style="color:var(--ambar)">hola@vitrina.site</a>.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="ft">
+  <div class="wrap"><div class="ft-base" style="margin-top:0;border-top:0">
+    <span>© <span id="anio">2026</span> Vitrina</span>
+    <span><a href="./legal/terminos.html">Términos</a> · <a href="./legal/privacidad.html">Privacidad</a></span>
+  </div></div>
+</footer>
+
+<script type="module" src="./assets/js/gracias.js"></script>
+</body>
+</html>

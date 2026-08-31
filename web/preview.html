@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tu web · Vitrina</title>
+<meta name="description" content="Previsualiza la web de tu negocio, cámbiale el estilo y publícala cuando te guste.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0B0B0E">
+<link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/vitrina.css">
+<link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+<div class="grano" aria-hidden="true"></div>
+
+<header class="hd stuck" id="hd">
+  <div class="wrap hd-in" style="max-width:none">
+    <a class="marca" href="./" aria-label="Vitrina — inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2B33D"/><stop offset=".55" stop-color="#DC6A4C"/><stop offset="1" stop-color="#7C6BF2"/></linearGradient></defs><rect x="6" y="6" width="52" height="52" rx="15" fill="none" stroke="#F7F3EC" stroke-width="4"/><path d="M20 18 32 46 44 18" fill="none" stroke="url(#lg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>vitrina</span>
+    </a>
+    <span class="pastilla" id="chip-negocio" style="margin-right:auto"></span>
+    <a class="btn btn-fantasma btn-sm" href="./crear.html">Editar respuestas</a>
+    <a class="btn btn-luz btn-sm" href="./pagar.html">Publicar mi web</a>
+  </div>
+</header>
+
+<main class="pv">
+  <!-- Panel de remezcla -->
+  <aside class="pv-panel" aria-label="Personalizar el diseño">
+    <h3>Paleta</h3>
+    <div class="opciones g2" id="pv-temas"></div>
+
+    <h3>Color de acento</h3>
+    <p class="pista" style="margin:-6px 0 12px">Si tu marca ya tiene un color, ponlo. Lo ajustamos solos si no contrasta lo suficiente.</p>
+    <div class="muestras" id="pv-acentos"></div>
+
+    <h3>Tipografía</h3>
+    <div class="opciones" id="pv-fuentes"></div>
+
+    <h3>Portada</h3>
+    <div class="opciones g2" id="pv-portadas"></div>
+
+    <h3>Esquinas</h3>
+    <div class="opciones g3" id="pv-formas"></div>
+
+    <h3>Tono de los textos</h3>
+    <div class="opciones g2" id="pv-tonos"></div>
+
+    <h3>Secciones</h3>
+    <p class="pista" style="margin:-6px 0 12px">Quita lo que no necesites. El orden se mantiene.</p>
+    <div class="stack" id="pv-secciones" style="gap:8px"></div>
+
+    <button class="btn btn-fantasma btn-bloque" type="button" id="pv-sorpresa" style="margin-top:24px">
+      🎲 Sorpréndeme con otra dirección
+    </button>
+
+    <div class="pv-cta">
+      <b>¿Te gusta cómo ha quedado?</b>
+      <p>Publicamos en 24 h con tu dominio, o descárgatela y hospédala donde quieras.</p>
+      <a class="btn btn-luz btn-bloque" href="./pagar.html">Publicar mi web</a>
+    </div>
+  </aside>
+
+  <!-- Lienzo -->
+  <div class="pv-lienzo">
+    <div class="pv-barra">
+      <div class="pv-dispositivos" role="group" aria-label="Tamaño de pantalla">
+        <button type="button" data-disp="escritorio" aria-pressed="true">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 20h8"/></svg> Escritorio</button>
+        <button type="button" data-disp="tablet" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/></svg> Tablet</button>
+        <button type="button" data-disp="movil" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg> Móvil</button>
+      </div>
+      <div class="pv-acciones">
+        <button class="btn btn-fantasma btn-sm" type="button" id="pv-descargar">⬇ Descargar HTML</button>
+        <button class="btn btn-fantasma btn-sm" type="button" id="pv-enlace">🔗 Copiar enlace</button>
+        <button class="btn btn-fantasma btn-sm" type="button" id="pv-nueva">↗ Abrir a pantalla completa</button>
+      </div>
+    </div>
+    <div class="pv-marco" id="pv-marco">
+      <iframe id="pv-iframe" title="Previsualización de tu web"></iframe>
+    </div>
+    <p class="small muted center" style="max-width:640px">
+      Esto es tu web real, no un montaje: el mismo archivo que publicaríamos.
+      Pesa <b id="pv-peso">—</b> y no carga ningún script de terceros.
+    </p>
+  </div>
+</main>
+
+<!-- Si no hay encuesta contestada -->
+<div id="pv-vacio" class="oculto">
+  <div class="wrap narrow" style="padding:120px 24px;text-align:center">
+    <h1 class="serif" style="font-size:clamp(2rem,5vw,3rem)">Aún no has contestado la encuesta</h1>
+    <p class="lede" style="margin-inline:auto">Necesitamos saber a qué te dedicas para poder diseñar algo. Son tres minutos.</p>
+    <a class="btn btn-luz btn-lg" href="./crear.html">Empezar la encuesta</a>
+  </div>
+</div>
+
+<script type="module" src="./assets/js/preview.js"></script>
+</body>
+</html>

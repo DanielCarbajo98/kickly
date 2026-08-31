@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crea tu web en 3 minutos · Vitrina</title>
+<meta name="description" content="Contesta unas preguntas sobre tu negocio y generamos tu web al instante. Gratis hasta que te guste.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kickly.app/web/crear.html">
+<meta name="theme-color" content="#0B0B0E">
+<link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/vitrina.css">
+<link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+<div class="grano" aria-hidden="true"></div>
+
+<header class="hd stuck" id="hd">
+  <div class="wrap hd-in">
+    <a class="marca" href="./" aria-label="Vitrina — inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2B33D"/><stop offset=".55" stop-color="#DC6A4C"/><stop offset="1" stop-color="#7C6BF2"/></linearGradient></defs><rect x="6" y="6" width="52" height="52" rx="15" fill="none" stroke="#F7F3EC" stroke-width="4"/><path d="M20 18 32 46 44 18" fill="none" stroke="url(#lg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>vitrina</span>
+    </a>
+    <span class="pastilla" style="margin-right:auto"><span class="punto"></span> Gratis hasta que te guste</span>
+    <button class="btn btn-fantasma btn-sm" id="empezar-cero" type="button">Empezar de cero</button>
+  </div>
+</header>
+
+<div class="progreso">
+  <div class="progreso-in">
+    <span class="progreso-txt" id="progreso-txt">Paso 1 de 7</span>
+    <div class="progreso-barra"><div class="progreso-relleno" id="progreso-relleno"></div></div>
+    <span class="guardado" id="guardado">Guardado</span>
+  </div>
+</div>
+
+<main class="encuesta">
+  <div class="wrap narrow">
+    <form id="encuesta" novalidate>
+
+      <!-- 1. Tu negocio -->
+      <section class="paso-form activo" data-paso="1">
+        <header class="paso-cabecera">
+          <span class="paso-num">Paso 1 · Tu negocio</span>
+          <h2>¿A qué te dedicas?</h2>
+          <p>Elige lo que más se parezca. Esto decide el vocabulario, las secciones y el punto de partida del diseño.</p>
+        </header>
+        <div class="bloque">
+          <div class="sectores" id="sectores"></div>
+          <p class="msg-error oculto" id="err-industry">Elige un sector para continuar.</p>
+        </div>
+      </section>
+
+      <!-- 2. Datos básicos -->
+      <section class="paso-form" data-paso="2">
+        <header class="paso-cabecera">
+          <span class="paso-num">Paso 2 · Identidad</span>
+          <h2>¿Cómo se llama y dónde está?</h2>
+          <p>Con esto montamos el titular, el SEO local y la ficha para Google.</p>
+        </header>
+        <div class="bloque">
+          <label class="campo"><span>Nombre del negocio *</span>
+            <input class="input" type="text" name="name" id="f-name" placeholder="Casa Manolo" autocomplete="organization" required>
+          </label>
+          <p class="msg-error oculto" id="err-name">Necesitamos el nombre para poder escribir tu web.</p>
+        </div>
+        <div class="bloque dosc">
+          <label class="campo"><span>Ciudad</span>
+            <input class="input" type="text" name="city" id="f-city" placeholder="Valencia" autocomplete="address-level2">
+          </label>
+          <label class="campo"><span>Años de actividad</span>
+            <input class="input" type="number" name="years" id="f-years" placeholder="12" min="0" max="200" inputmode="numeric">
+          </label>
+        </div>
+        <div class="bloque">
+          <label class="campo"><span>Descríbelo en una o dos frases</span>
+            <span class="pista">Como se lo contarías a alguien en la calle. Si lo dejas en blanco, lo escribimos nosotros.</span>
+            <textarea class="textarea" name="pitch" id="f-pitch" placeholder="Cocina de mercado, brasa lenta y una carta que cambia cada semana." maxlength="320"></textarea>
+          </label>
+        </div>
+      </section>
+
+      <!-- 3. Objetivo -->
+      <section class="paso-form" data-paso="3">
+        <header class="paso-cabecera">
+          <span class="paso-num">Paso 3 · Objetivo</span>
+          <h2>¿Qué quieres que haga la gente?</h2>
+          <p>Una web sin objetivo es un folleto. Esto ordena las secciones y decide dónde ponemos los botones.</p>
+        </header>
+        <div class="bloque">
+          <div class="opciones g2" id="objetivos"></div>
+        </div>
+      </section>
+
+      <!-- 4. Servicios -->
+      <section class="paso-form" data-paso="4">
+        <header class="paso-cabecera">
+          <span class="paso-num">Paso 4 · Lo que ofreces</span>
+          <h2>Tus servicios</h2>
+          <p>Los hemos rellenado con lo típico de tu sector. Cámbialos, bórralos o déjalos como están.</p>
+        </header>
+        <div class="bloque">
+          <div class="servicios" id="servicios"></div>
+          <button class="btn btn-fantasma btn-sm" type="button" id="add-servicio" style="margin-top:14px">+ Añadir servicio</button>
+        </div>
+      </section>
+
+      <!-- 5. Estilo -->
+      <section class="paso-form" data-paso="5">
+        <header class="paso-cabecera">
+          <span class="paso-num">Paso 5 · Estilo</span>
+          <h2>¿Cómo quieres que se vea?</h2>
+          <p>Todo esto se puede cambiar después con un clic mientras miras el resultado. No te agobies.</p>
+        </header>
+        <div class="bloque">
+          <span class="etiqueta">Tono de los textos</span>
+          <p class="pista">Cambia cómo te hablamos a ti y cómo hablará tu web a tus clientes.</p>
+          <div class="opciones g4" id="tonos"></div>
+        </div>
+        <div class="bloque">
+          <span class="etiqueta">Paleta</span>
+          <p class="pista">Todas están validadas para que el texto se lea bien. Elige por sensación.</p>
+          <div class="opciones g3" id="temas"></div>
+        </div>
+        <div class="bloque">
+          <span class="etiqueta">Tipografía</span>
+          <div class="opciones g3" id="fuentes"></div>
+        </div>
+        <div class="bloque dosc">
+          <div>
+            <span class="etiqueta">Portada</span>
+            <div class="opciones" id="portadas" style="margin-top:12px"></div>
+          </div>
+          <div>
+            <span class="etiqueta">Esquinas</span>
+            <div class="opciones" id="formas" style="margin-top:12px"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Contacto -->
+      <section class="paso-form" data-paso="6">
+        <header class="paso-cabecera">
+          <span class="paso-num">Paso 6 · Contacto</span>
+          <h2>¿Cómo te encuentran?</h2>
+          <p>El WhatsApp es, de lejos, lo que más usan los clientes de un negocio local. Si lo tienes, ponlo.</p>
+        </header>
+        <div class="bloque dosc">
+          <label class="campo"><span>WhatsApp</span>
+            <input class="input" type="tel" name="whatsapp" id="f-whatsapp" placeholder="+34 600 11 22 33" autocomplete="tel">
+          </label>
+          <label class="campo"><span>Teléfono</span>
+            <input class="input" type="tel" name="phone" id="f-phone" placeholder="+34 963 55 12 08" autocomplete="tel">
+          </label>
+        </div>
+        <div class="bloque dosc">
+          <label class="campo"><span>Email</span>
+            <input class="input" type="email" name="email" id="f-email" placeholder="hola@tunegocio.es" autocomplete="email">
+          </label>
+          <label class="campo"><span>Dirección</span>
+            <input class="input" type="text" name="address" id="f-address" placeholder="Carrer de la Pau 14" autocomplete="street-address">
+          </label>
+        </div>
+        <div class="bloque">
+          <span class="etiqueta">Horario</span>
+          <p class="pista">Déjalo vacío si no atiendes al público en un local.</p>
+          <div class="horarios" id="horarios"></div>
+          <button class="btn btn-fantasma btn-sm" type="button" id="add-horario" style="margin-top:12px">+ Añadir franja</button>
+        </div>
+      </section>
+
+      <!-- 7. Redes e imágenes -->
+      <section class="paso-form" data-paso="7">
+        <header class="paso-cabecera">
+          <span class="paso-num">Paso 7 · Redes e imágenes</span>
+          <h2>Lo último, y ya está</h2>
+          <p>Todo esto es opcional: si no tienes fotos, tu web se genera igual y queda bien. Puedes añadirlas después.</p>
+        </header>
+        <div class="bloque">
+          <span class="etiqueta">Redes sociales</span>
+          <p class="pista">Pega la dirección completa de tus perfiles.</p>
+          <div class="redes" id="redes"></div>
+        </div>
+        <div class="bloque">
+          <span class="etiqueta">Imágenes</span>
+          <p class="pista">Enlaces a imágenes ya publicadas (por ejemplo, de tu Google Drive o tu Instagram). Si no tienes, sáltalo.</p>
+          <label class="campo"><span class="pista">Logotipo</span>
+            <input class="input" type="url" name="logo" id="f-logo" placeholder="https://…/logo.png">
+          </label>
+          <label class="campo"><span class="pista">Foto principal</span>
+            <input class="input" type="url" name="heroimg" id="f-heroimg" placeholder="https://…/portada.jpg">
+          </label>
+        </div>
+        <div class="bloque">
+          <label class="campo"><span>Dominio que te gustaría</span>
+            <span class="pista">Si no tienes, te proponemos uno. Puedes cambiarlo luego.</span>
+            <input class="input" type="text" name="domain" id="f-domain" placeholder="casamanolo.es">
+          </label>
+        </div>
+      </section>
+
+    </form>
+  </div>
+</main>
+
+<nav class="nav-pasos" aria-label="Navegación de la encuesta">
+  <div class="nav-pasos-in">
+    <button class="btn btn-texto" type="button" id="atras">← Atrás</button>
+    <div class="puntos" id="puntos" role="tablist" aria-label="Pasos"></div>
+    <button class="btn btn-luz" type="button" id="siguiente">Siguiente
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="generando" id="generando" role="status" aria-live="polite">
+  <div>
+    <div class="gen-anillo" aria-hidden="true"></div>
+    <h2 class="serif" style="font-size:clamp(1.6rem,3.4vw,2.4rem)">Diseñando tu web</h2>
+    <p class="gen-tarea" id="gen-tarea">Leyendo lo que nos has contado…</p>
+  </div>
+</div>
+
+<script type="module" src="./assets/js/wizard.js"></script>
+</body>
+</html>
