@@ -60,28 +60,69 @@ nosotros) y riesgo (no paga hasta verlo).
 
 ## 4. Modelo de negocio
 
-**Pago único** (la web es tuya) o **cuota mensual** (mantenimiento incluido, sin permanencia).
+Dos formas de contratar que **no son el mismo producto**, y la web lo explica así:
 
-| Plan | Único | Mensual | Para quién |
+- **Comprar** (pago único): adquieres la web. Incluye el primer año de alojamiento,
+  certificado y dominio. A partir del segundo año, 29 €/año de mantenimiento
+  **opcional**: si no lo quieres, te llevas los archivos.
+- **Suscripción** (cuota mensual): servicio continuo. Alojamiento, dominio, cambios
+  ilimitados y soporte mientras dure. Sin permanencia.
+
+| Plan | Comprar | Suscripción | Para quién |
 |---|---|---|---|
 | Uno | 79 € | 9 €/mes | Existir en Google con lo básico |
 | **Pro** | **149 €** | **15 €/mes** | El estándar de un negocio local |
 | Studio | 349 € | 29 €/mes | Cuando la web *es* el negocio |
 
+Comprar sale más barato a partir del décimo mes. La página de precios lo enseña con
+una tabla de coste acumulado a 1, 2 y 3 años, porque era justo lo que no se entendía.
+
+El pago único se puede **fraccionar en 3 plazos con SeQura** (`FINANCIACION` en
+`config.js`). Ojo: SeQura cobra comisión al comercio y exige contrato firmado — deja
+`activa: false` hasta tenerlo cerrado. Para la cuota mensual, SeQura no es la
+herramienta: usa domiciliación SEPA (mucho más barata en cobros recurrentes).
+
 Extras: dominio 15 €/año · logotipo y kit de marca 89 € · fotografía editada 60 € ·
 redacción profesional 70 € · segundo idioma 55 €.
 
-**Unit economics orientativos (plan Pro, pago único):** ingreso 149 €, coste directo
-(hosting + dominio + pasarela) ≈ 20 €/año, coste de revisión humana ≈ 30 min. El margen
-sostiene un CAC de hasta ~50 €, lo que sitúa el canal rentable en SEO local, boca a boca
-y prospección directa a negocios sin web; **no** en puja abierta de Google Ads.
+### Economía unitaria (calculada, no estimada a ojo)
 
-**Palancas de crecimiento**, por orden de coste de adquisición:
-1. Prospección directa: generar la web de un negocio sin web y enviársela hecha. El
-   producto es el propio argumento de venta y generarla cuesta cero.
-2. SEO local de cola larga: «web para peluquerías en Valencia», una landing por sector.
-3. Recomendación de gestorías y asesorías, que ven a cientos de autónomos.
-4. Marca blanca para agencias a partir de cinco webs.
+Con una mezcla 25/60/15 % entre Uno, Pro y Studio, valorando tu hora a 30 € y contando
+45 minutos de entrega por web: **182,5 € de facturación media** y **123,5 € de margen
+de contribución** por venta (68 %).
+
+- Umbral de rentabilidad: **1,4 ventas/mes** el año 1 (con tarifa plana de autónomos);
+  **3,2 ventas/mes** el año 2, cuando la cuota sube.
+- Capital para arrancar: **672 €**, recuperado con 6 ventas.
+- Techo de una persona a jornada completa: ~52 ventas/mes vendiendo a puerta fría
+  (≈6.250 €/mes), ~157 ventas/mes con el canal de partners funcionando.
+
+### Captación: la restricción real
+
+Con 123,5 € de margen, **ningún canal de pago cuadra**. Google Ads con un CPC de 1,20 €
+—optimista para este sector— ya sale a 136 € por cliente: pierde dinero en cada venta.
+El negocio existe sólo con canales cuyo coste sea tu tiempo:
+
+| Canal | Coste por cliente | % del margen |
+|---|---|---|
+| SEO local por sector | 18 € | 15 % |
+| Referidos | 32,50 € | 26 % |
+| Gestorías y partners | 43 € | 35 % |
+| Prospección directa | 68,80 € | 56 % |
+| Google Ads (CPC 3 €) | 341 € | **276 %** |
+
+**Prospección directa** es el canal de arranque: generas la web de un negocio que no
+tiene, se la mandas hecha y le ofreces publicarla. Generar cuesta cero, así que el
+producto es su propio argumento de venta.
+
+**Gestorías** es el canal que rompe la linealidad: baja el tiempo de captación por
+venta de 2,3 horas a 16 minutos. Es lo único que hace que el negocio siga vendiendo
+cuando tú no estás delante.
+
+> El análisis completo —escenarios a 12 meses, riesgos y plan de acción— está en el
+> documento de viabilidad. Los supuestos están todos listados y son discutibles; el
+> más frágil es el de 45 minutos de entrega por web, que hay que medir de verdad
+> desde la primera venta.
 
 ## 5. Cómo funciona por dentro
 
@@ -102,14 +143,18 @@ web/
     │   ├── landing.css   Componentes de marketing
     │   └── app.css       Encuesta, previsualización, checkout, manual
     ├── img/              Logotipo, isotipo, favicon, imagen social (SVG)
+    │   └── stock/        (vacío) Aquí van las fotos de sector, si se activan
     └── js/
         ├── config.js     ★ Planes, precios, extras, endpoint de pedidos
         ├── data/
         │   ├── industries.js  ★ 26 sectores: textos, servicios, FAQ, secciones
-        │   └── themes.js      ★ 9 paletas, 5 tipografías, formas y utilidades de color
+        │   ├── themes.js      ★ 9 paletas, 5 tipografías, formas y utilidades de color
+        │   ├── escenas.js     26 motivos de línea para la imaginería generada
+        │   └── stock.js       ★ Banco de fotos por sector (vacío, listo para rellenar)
         ├── copywriter.js  Motor de redacción por sector y tono
         ├── generator.js   Motor de generación → documento HTML autocontenido
         ├── store.js       Estado del brief (localStorage) y codificación para compartir
+        ├── precios-ui.js  Bloque de precios compartido por portada y página de precios
         ├── ui.js          Utilidades comunes
         ├── landing.js · wizard.js · preview.js · checkout.js · precios.js · gracias.js
 ```
@@ -136,6 +181,20 @@ con el CSS en línea y **cero peticiones a terceros** salvo la tipografía. Pesa
 Verificado: **3.744 combinaciones** de sector × tema × portada × tono × objetivo se
 generan sin errores, y las 9 paletas cumplen AA (texto ≥ 7:1, secundario ≥ 4.5:1,
 acento ≥ 3:1).
+
+### Las imágenes de las webs generadas
+
+Un negocio recién dado de alta rara vez tiene fotos decentes. En vez de dejar huecos
+vacíos, cada imagen se **compone**: fondo derivado de la paleta del sitio, un motivo de
+línea propio del sector (26 motivos, 6 por sector para que una galería no se repita) y
+geometría de apoyo. Pesa poco, es determinista y no depende de nadie.
+
+**Sobre poner fotos de stock.** Está soportado y basta con rellenar
+`assets/js/data/stock.js`, pero léelo antes: poner la foto de otro restaurante en la
+web de un restaurante real engaña a su cliente, y enlazar al CDN de un banco de
+imágenes rompe la promesa de que la web no carga nada de terceros. Si activas fotos,
+**descárgalas y sírvelas desde `assets/img/stock/`**. El generador prefiere, por este
+orden: foto del negocio → banco de stock → composición generada.
 
 ### Privacidad por diseño
 
@@ -191,11 +250,17 @@ checkout → confirmación, verificado en navegador sin errores de consola.
 
 Pendiente antes de facturar al primer cliente:
 - [ ] Rellenar los datos del titular en las cuatro páginas legales y revisarlas con un asesor.
+- [ ] Registrar `vitrina.es` (los canonicals y el sitemap todavía apuntan a `kickly.app/web/`).
+- [ ] Comprobar «vitrina» en las bases de la OEPM y la EUIPO (clases 35 y 42) y registrar
+      la **marca mixta**, no la denominativa: es un sustantivo común y como denominativa
+      probablemente choque con la falta de carácter distintivo.
 - [ ] Conectar Stripe y quitar `DEMO_MODE`.
+- [ ] Firmar con SeQura antes de dejar `FINANCIACION.activa` en `true`.
 - [ ] Conectar el endpoint de pedidos.
+- [ ] **Acotar «cambios ilimitados» en los términos**: 30 días ilimitados y después
+      bonos. Es la fuga de margen más probable del modelo.
 - [ ] Sustituir los tres testimonios de ejemplo por reseñas reales (hoy van con su aviso).
 - [ ] Contrastar de nuevo la tabla comparativa con los precios públicos vigentes.
-- [ ] Registrar el dominio y decidir si Vitrina vive bajo `kickly.app` o por su cuenta.
 
 Ideas para la siguiente iteración, por valor esperado:
 - Segunda página (carta, catálogo o servicios) para el plan Studio.
