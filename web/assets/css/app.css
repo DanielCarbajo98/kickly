@@ -114,9 +114,12 @@
 .pv-marco iframe{width:100%;height:min(78vh,900px);border:0;display:block}
 .pv-acciones{display:flex;gap:10px;margin-left:auto;flex-wrap:wrap}
 
+/* Va pegado abajo mientras se desplaza el panel: el fondo debe ser opaco
+   o el contenido de detrás se transparenta a través del degradado. */
 .pv-cta{position:sticky;bottom:0;margin-top:34px;padding:20px;border-radius:var(--r);
-  border:1px solid rgba(242,179,61,.3);background:linear-gradient(165deg,rgba(242,179,61,.12),rgba(11,11,14,.96));
-  backdrop-filter:blur(10px)}
+  border:1px solid rgba(242,179,61,.3);
+  background:linear-gradient(165deg,rgba(242,179,61,.12),rgba(242,179,61,.02)),var(--obsidiana);
+  box-shadow:0 -14px 26px -10px var(--obsidiana)}
 .pv-cta b{display:block;font-family:var(--display);font-size:1.15rem;margin-bottom:.3em}
 .pv-cta p{font-size:.86rem;color:var(--niebla);margin:0 0 14px}
 
