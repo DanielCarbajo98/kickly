@@ -39,40 +39,13 @@
       ]
     },
     {
-      "id": "atletico-madrid-sevilla-laliga-j2-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 2",
-      "home": "Atlético de Madrid",
-      "away": "Sevilla FC",
-      "date": "2026-08-29T21:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Atlético de Madrid – Sevilla online gratis: jornada 2 de LaLiga EA Sports 2026/27 en el Riyadh Air Metropolitano. Sábado 29 de agosto a las 21:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "barcelona-rayo-vallecano-laliga-j3-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 3",
       "home": "FC Barcelona",
       "away": "Rayo Vallecano",
       "date": "2026-08-31T21:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver FC Barcelona – Rayo Vallecano online gratis: jornada 3 de LaLiga EA Sports 2026/27 en el Spotify Camp Nou. Lunes 31 de agosto a las 21:30 (hora española).",
       "broadcasters": [
         {
@@ -89,33 +62,6 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "ESPN+ y ESPN Deportes",
           "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "liverpool-nottingham-premier-j2-2026",
-      "sport": "futbol",
-      "competitionName": "Premier League 2026/27 · Jornada 2",
-      "home": "Liverpool",
-      "away": "Nottingham Forest",
-      "date": "2026-08-29T13:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Liverpool – Nottingham Forest online gratis: jornada 2 de la Premier League 2026/27 en Anfield. Sábado 29 de agosto a las 13:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN y Movistar Plus+",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports y TNT Sports",
-          "url": "https://www.skysports.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC y Peacock",
-          "url": "https://www.peacocktv.com/"
         }
       ]
     },
@@ -180,7 +126,7 @@
       "home": "Aston Villa",
       "away": "Arsenal",
       "date": "2026-08-31T21:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Aston Villa – Arsenal online gratis: jornada 2 de la Premier League 2026/27 en Villa Park. Lunes 31 de agosto a las 21:00 (hora española).",
       "broadcasters": [
         {
@@ -197,33 +143,6 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "NBC y Peacock",
           "url": "https://www.peacocktv.com/"
-        }
-      ]
-    },
-    {
-      "id": "juventus-parma-serie-a-j2-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 2",
-      "home": "Juventus",
-      "away": "Parma",
-      "date": "2026-08-29T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Juventus – Parma online gratis: jornada 2 de la Serie A 2026/27 en el Allianz Stadium. Sábado 29 de agosto a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
         }
       ]
     },
@@ -278,27 +197,6 @@
           "country": "🌍 Internacional",
           "channels": "beIN Sports",
           "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "vuelta-2026-etapa-8",
-      "sport": "ciclismo",
-      "competitionName": "La Vuelta a España 2026 · Etapa 8",
-      "home": "Puçol – Xeraco",
-      "date": "2026-08-29T13:00:00+02:00",
-      "status": "finished",
-      "description": "Ver la Vuelta a España 2026 online gratis: 8ª etapa Puçol – Xeraco (168 km), jornada llana para velocistas. Sábado 29 de agosto, salida en torno a las 13:00 y llegada prevista por la tarde (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
         }
       ]
     },
@@ -423,38 +321,6 @@
       ]
     },
     {
-      "id": "ufc-shanghai-nurmagomedov-song-2026",
-      "sport": "ufc",
-      "competitionName": "UFC Fight Night · Shanghái",
-      "home": "Umar Nurmagomedov",
-      "away": "Song Yadong",
-      "date": "2026-08-29T12:00:00+02:00",
-      "status": "finished",
-      "description": "Ver UFC Shanghái: Nurmagomedov vs Song online gratis: combate estelar de peso gallo en el Oriental Sports Center de Shanghái. Sábado 29 de agosto, cartelera estelar sobre las 12:00 y preliminares desde primera hora de la mañana (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "HBO Max",
-          "url": "https://www.max.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Paramount+",
-          "url": "https://www.paramountplus.com/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "TNT Sports",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "UFC Fight Pass",
-          "url": "https://ufcfightpass.com/"
-        }
-      ]
-    },
-    {
       "id": "vuelta-2026-etapa-12",
       "sport": "ciclismo",
       "competitionName": "La Vuelta a España 2026 · Etapa 12",
@@ -546,6 +412,54 @@
           "country": "🌎 Latinoamérica",
           "channels": "ESPN y Disney+",
           "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "inter-napoli-serie-a-j3-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 3",
+      "home": "Inter de Milán",
+      "away": "Napoli",
+      "date": "2026-09-05T18:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Inter – Napoli online gratis: gran duelo de la jornada 3 de la Serie A 2026/27 entre dos aspirantes al Scudetto en San Siro. Sábado 5 de septiembre a las 18:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-14",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 14",
+      "home": "Jaén – Sierra de la Pandera",
+      "date": "2026-09-05T13:15:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 14ª etapa Jaén – Sierra de la Pandera (152 km), durísima jornada de montaña con final en alto de primera categoría decisivo para la general. Sábado 5 de septiembre, salida a las 13:15 y llegada prevista sobre las 17:19 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
         },
         {
           "country": "🌍 Internacional",
