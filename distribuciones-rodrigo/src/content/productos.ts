@@ -1,0 +1,142 @@
+/**
+ * Catálogo de producto.
+ *
+ * ATENCIÓN: son 85 referencias de muestra, plausibles para el sector pero no
+ * el surtido real (la empresa maneja más de 2.500). Lo natural es exportar
+ * este archivo desde el ERP manteniendo el mismo esquema.
+ */
+
+export type Temperatura = "congelado" | "refrigerado" | "ambiente";
+export type Canal = "restauracion" | "colectividades" | "comercio";
+
+export type Familia = {
+  id: string;
+  nombre: string;
+  descripcion: string;
+  temp: Temperatura;
+  /** Tono de la familia, usado en la retícula de la portada. */
+  tinte: string;
+};
+
+export type Producto = {
+  ref: string;
+  nombre: string;
+  familia: string;
+  subfamilia: string;
+  temp: Temperatura;
+  formato: string;
+  canal: Canal[];
+  destacado?: boolean;
+};
+
+export const TEMPERATURAS: Record<Temperatura, { etiqueta: string; rango: string }> = {
+  congelado: { etiqueta: "Congelado", rango: "\u221218 °C" },
+  refrigerado: { etiqueta: "Refrigerado", rango: "0-4 °C" },
+  ambiente: { etiqueta: "Ambiente", rango: "Seco" },
+};
+
+export const CANALES: Record<Canal, string> = {
+  restauracion: "Restauración",
+  colectividades: "Colectividades",
+  comercio: "Comercio y retail",
+};
+
+export const familias: Familia[] = [
+  { id: "pescados", nombre: "Pescados y mariscos", descripcion: "Producto de lonja y congelado a bordo: pescado blanco y azul, cefalópodos, crustáceos y moluscos.", temp: "congelado", tinte: "var(--color-azul-500)" },
+  { id: "carnes", nombre: "Carnes y elaborados", descripcion: "Vacuno, porcino, aves y elaborados cárnicos en piezas, porciones y formato ración.", temp: "congelado", tinte: "var(--color-rojo-500)" },
+  { id: "charcuteria", nombre: "Charcutería y quesos", descripcion: "Curados, cocidos y loncheados, más una selección de quesos nacionales e internacionales.", temp: "refrigerado", tinte: "var(--color-marino-500)" },
+  { id: "verduras", nombre: "Verduras y guarniciones", descripcion: "Verdura ultracongelada IQF, patata prefrita y guarniciones listas para regenerar.", temp: "congelado", tinte: "#2f7d55" },
+  { id: "precocinados", nombre: "Precocinados y V gama", descripcion: "Soluciones de cocina de ensamblaje: fritos, empanados, masas y platos terminados.", temp: "congelado", tinte: "#7a5aa8" },
+  { id: "panaderia", nombre: "Panadería y bollería", descripcion: "Masas congeladas, pan precocido y bollería para horneado en punto de venta.", temp: "congelado", tinte: "var(--color-amarillo-700)" },
+  { id: "helados", nombre: "Helados y postres", descripcion: "Helado en cubeta y formato individual, tartas heladas y postres de restauración.", temp: "congelado", tinte: "var(--color-azul-300)" },
+  { id: "conservas", nombre: "Conservas y despensa", descripcion: "Conservas vegetales y de pescado, aceites, salsas y producto seco de uso diario.", temp: "ambiente", tinte: "#a4553a" },
+  { id: "envases", nombre: "Envases y desechables", descripcion: "Papel, film, bandejas y envases para reparto y take away de uso profesional.", temp: "ambiente", tinte: "var(--color-frio-500)" },
+];
+
+export const productos: Producto[] = [
+  { ref: "PES-0101", nombre: "Merluza del Cabo lomo s/piel", familia: "pescados", subfamilia: "Pescado blanco", temp: "congelado", formato: "Caja 5 kg · IQF", canal: ["restauracion", "colectividades"], destacado: true },
+  { ref: "PES-0104", nombre: "Merluza del Cabo rodaja", familia: "pescados", subfamilia: "Pescado blanco", temp: "congelado", formato: "Caja 5 kg", canal: ["restauracion", "colectividades", "comercio"] },
+  { ref: "PES-0112", nombre: "Bacalao desalado lomo", familia: "pescados", subfamilia: "Pescado blanco", temp: "refrigerado", formato: "Bandeja 1 kg", canal: ["restauracion"] },
+  { ref: "PES-0118", nombre: "Panga filete s/espinas", familia: "pescados", subfamilia: "Pescado blanco", temp: "congelado", formato: "Caja 5 kg · IQF", canal: ["colectividades"] },
+  { ref: "PES-0125", nombre: "Salmón atlántico lomo", familia: "pescados", subfamilia: "Pescado azul", temp: "congelado", formato: "Caja 4 kg", canal: ["restauracion", "comercio"], destacado: true },
+  { ref: "PES-0131", nombre: "Atún lomo calidad sashimi", familia: "pescados", subfamilia: "Pescado azul", temp: "congelado", formato: "Pieza 2-3 kg", canal: ["restauracion"] },
+  { ref: "PES-0140", nombre: "Boquerón limpio mariposa", familia: "pescados", subfamilia: "Pescado azul", temp: "congelado", formato: "Bloque 1 kg", canal: ["restauracion", "comercio"] },
+  { ref: "PES-0152", nombre: "Gamba blanca cocida 40/60", familia: "pescados", subfamilia: "Crustáceos", temp: "congelado", formato: "Caja 2 kg", canal: ["restauracion", "comercio"], destacado: true },
+  { ref: "PES-0155", nombre: "Langostino crudo pelado 26/30", familia: "pescados", subfamilia: "Crustáceos", temp: "congelado", formato: "Caja 1 kg · IQF", canal: ["restauracion", "colectividades"] },
+  { ref: "PES-0163", nombre: "Anillas de pota rebozadas", familia: "pescados", subfamilia: "Cefalópodos", temp: "congelado", formato: "Caja 5 kg", canal: ["restauracion", "colectividades"] },
+  { ref: "PES-0167", nombre: "Chipirón limpio pequeño", familia: "pescados", subfamilia: "Cefalópodos", temp: "congelado", formato: "Caja 3 kg", canal: ["restauracion"] },
+  { ref: "PES-0172", nombre: "Pulpo cocido pata", familia: "pescados", subfamilia: "Cefalópodos", temp: "congelado", formato: "Bolsa 800 g", canal: ["restauracion", "comercio"] },
+  { ref: "PES-0180", nombre: "Mejillón media concha", familia: "pescados", subfamilia: "Moluscos", temp: "congelado", formato: "Caja 1 kg", canal: ["restauracion", "colectividades"] },
+  { ref: "PES-0184", nombre: "Almeja babosa fresca", familia: "pescados", subfamilia: "Moluscos", temp: "refrigerado", formato: "Malla 1 kg", canal: ["restauracion"] },
+  { ref: "PES-0191", nombre: "Surimi palitos de cangrejo", familia: "pescados", subfamilia: "Elaborados del mar", temp: "congelado", formato: "Caja 1 kg", canal: ["colectividades", "comercio"] },
+  { ref: "CAR-0201", nombre: "Ternera hamburguesa 150 g", familia: "carnes", subfamilia: "Vacuno", temp: "congelado", formato: "Caja 40 uds.", canal: ["restauracion", "colectividades"], destacado: true },
+  { ref: "CAR-0206", nombre: "Entrecot de vacuno porcionado", familia: "carnes", subfamilia: "Vacuno", temp: "congelado", formato: "Caja 5 kg", canal: ["restauracion"] },
+  { ref: "CAR-0212", nombre: "Carrillera de cerdo limpia", familia: "carnes", subfamilia: "Porcino", temp: "congelado", formato: "Caja 5 kg", canal: ["restauracion"] },
+  { ref: "CAR-0218", nombre: "Secreto ibérico", familia: "carnes", subfamilia: "Porcino", temp: "congelado", formato: "Caja 4 kg", canal: ["restauracion"] },
+  { ref: "CAR-0224", nombre: "Pechuga de pollo fileteada", familia: "carnes", subfamilia: "Aves", temp: "congelado", formato: "Caja 5 kg · IQF", canal: ["colectividades", "restauracion"] },
+  { ref: "CAR-0229", nombre: "Alitas de pollo marinadas", familia: "carnes", subfamilia: "Aves", temp: "congelado", formato: "Caja 4 kg", canal: ["restauracion", "comercio"] },
+  { ref: "CAR-0235", nombre: "Costilla de cerdo asada", familia: "carnes", subfamilia: "Elaborados", temp: "congelado", formato: "Caja 6 kg", canal: ["restauracion"] },
+  { ref: "CAR-0241", nombre: "Cordero paletilla", familia: "carnes", subfamilia: "Ovino", temp: "congelado", formato: "Pieza 800 g-1 kg", canal: ["restauracion"] },
+  { ref: "CHA-0301", nombre: "Jamón serrano loncheado", familia: "charcuteria", subfamilia: "Curados", temp: "refrigerado", formato: "Sobre 500 g", canal: ["restauracion", "comercio"], destacado: true },
+  { ref: "CHA-0305", nombre: "Jamón curado pieza deshuesada", familia: "charcuteria", subfamilia: "Curados", temp: "refrigerado", formato: "Pieza 5-6 kg", canal: ["restauracion", "comercio"] },
+  { ref: "CHA-0311", nombre: "Chorizo extra sarta", familia: "charcuteria", subfamilia: "Curados", temp: "refrigerado", formato: "Pieza 1,2 kg", canal: ["restauracion", "comercio"] },
+  { ref: "CHA-0315", nombre: "Salchichón de Vic", familia: "charcuteria", subfamilia: "Curados", temp: "refrigerado", formato: "Pieza 1 kg", canal: ["comercio"] },
+  { ref: "CHA-0322", nombre: "Jamón cocido extra bloque", familia: "charcuteria", subfamilia: "Cocidos", temp: "refrigerado", formato: "Pieza 3 kg", canal: ["colectividades", "comercio"] },
+  { ref: "CHA-0326", nombre: "Pechuga de pavo braseada", familia: "charcuteria", subfamilia: "Cocidos", temp: "refrigerado", formato: "Pieza 2,5 kg", canal: ["colectividades", "comercio"] },
+  { ref: "CHA-0330", nombre: "Bacon ahumado en lonchas", familia: "charcuteria", subfamilia: "Loncheados", temp: "refrigerado", formato: "Bolsa 1 kg", canal: ["restauracion", "colectividades"], destacado: true },
+  { ref: "CHA-0334", nombre: "Mortadela con aceitunas", familia: "charcuteria", subfamilia: "Cocidos", temp: "refrigerado", formato: "Pieza 3 kg", canal: ["colectividades"] },
+  { ref: "CHA-0341", nombre: "Queso semicurado mezcla", familia: "charcuteria", subfamilia: "Quesos", temp: "refrigerado", formato: "Pieza 3 kg", canal: ["restauracion", "comercio"] },
+  { ref: "CHA-0345", nombre: "Queso rallado mezcla fundente", familia: "charcuteria", subfamilia: "Quesos", temp: "refrigerado", formato: "Bolsa 1 kg", canal: ["restauracion", "colectividades"] },
+  { ref: "CHA-0349", nombre: "Mozzarella en barra pizza", familia: "charcuteria", subfamilia: "Quesos", temp: "refrigerado", formato: "Barra 2,5 kg", canal: ["restauracion"] },
+  { ref: "CHA-0353", nombre: "Queso de untar profesional", familia: "charcuteria", subfamilia: "Quesos", temp: "refrigerado", formato: "Tarrina 1,65 kg", canal: ["restauracion", "colectividades"] },
+  { ref: "VER-0401", nombre: "Patata prefrita corte recto 9 mm", familia: "verduras", subfamilia: "Patata", temp: "congelado", formato: "Caja 5 x 2,5 kg", canal: ["restauracion", "colectividades"], destacado: true },
+  { ref: "VER-0405", nombre: "Patata gajo especiada", familia: "verduras", subfamilia: "Patata", temp: "congelado", formato: "Caja 4 x 2,5 kg", canal: ["restauracion"] },
+  { ref: "VER-0411", nombre: "Judía verde plana troceada", familia: "verduras", subfamilia: "Verdura IQF", temp: "congelado", formato: "Bolsa 2,5 kg", canal: ["colectividades"] },
+  { ref: "VER-0415", nombre: "Menestra de verduras", familia: "verduras", subfamilia: "Verdura IQF", temp: "congelado", formato: "Bolsa 2,5 kg", canal: ["colectividades", "comercio"] },
+  { ref: "VER-0419", nombre: "Brócoli en ramilletes", familia: "verduras", subfamilia: "Verdura IQF", temp: "congelado", formato: "Bolsa 2,5 kg", canal: ["colectividades", "restauracion"] },
+  { ref: "VER-0423", nombre: "Guisante fino extra", familia: "verduras", subfamilia: "Verdura IQF", temp: "congelado", formato: "Bolsa 2,5 kg", canal: ["colectividades"] },
+  { ref: "VER-0428", nombre: "Pimiento tricolor en tiras", familia: "verduras", subfamilia: "Verdura IQF", temp: "congelado", formato: "Bolsa 2,5 kg", canal: ["restauracion"] },
+  { ref: "VER-0433", nombre: "Setas variadas salteadas", familia: "verduras", subfamilia: "Guarniciones", temp: "congelado", formato: "Bolsa 1 kg", canal: ["restauracion"] },
+  { ref: "VER-0437", nombre: "Puré de patata copos", familia: "verduras", subfamilia: "Guarniciones", temp: "ambiente", formato: "Saco 5 kg", canal: ["colectividades"] },
+  { ref: "PRE-0501", nombre: "Croqueta de jamón artesana", familia: "precocinados", subfamilia: "Fritos", temp: "congelado", formato: "Caja 4 x 1 kg", canal: ["restauracion", "comercio"], destacado: true },
+  { ref: "PRE-0505", nombre: "Croqueta de bacalao", familia: "precocinados", subfamilia: "Fritos", temp: "congelado", formato: "Caja 4 x 1 kg", canal: ["restauracion"] },
+  { ref: "PRE-0509", nombre: "Nuggets de pollo", familia: "precocinados", subfamilia: "Empanados", temp: "congelado", formato: "Caja 5 kg", canal: ["restauracion", "colectividades"] },
+  { ref: "PRE-0513", nombre: "San Jacobo de jamón y queso", familia: "precocinados", subfamilia: "Empanados", temp: "congelado", formato: "Caja 3 kg", canal: ["colectividades", "comercio"] },
+  { ref: "PRE-0518", nombre: "Empanadilla de atún", familia: "precocinados", subfamilia: "Masas", temp: "congelado", formato: "Caja 60 uds.", canal: ["restauracion", "comercio"] },
+  { ref: "PRE-0522", nombre: "Base de pizza precocida 30 cm", familia: "precocinados", subfamilia: "Masas", temp: "congelado", formato: "Caja 20 uds.", canal: ["restauracion"] },
+  { ref: "PRE-0527", nombre: "Lasaña boloñesa ración", familia: "precocinados", subfamilia: "Platos terminados", temp: "congelado", formato: "Caja 12 x 300 g", canal: ["colectividades", "comercio"] },
+  { ref: "PRE-0531", nombre: "Paella mixta lista para regenerar", familia: "precocinados", subfamilia: "Platos terminados", temp: "congelado", formato: "Bolsa 2 kg", canal: ["colectividades"] },
+  { ref: "PRE-0536", nombre: "Tortilla de patata con cebolla", familia: "precocinados", subfamilia: "Platos terminados", temp: "refrigerado", formato: "Pieza 1 kg", canal: ["restauracion", "comercio"] },
+  { ref: "PRE-0540", nombre: "Patatas bravas con salsa", familia: "precocinados", subfamilia: "Fritos", temp: "congelado", formato: "Caja 4 x 2 kg", canal: ["restauracion"] },
+  { ref: "PAN-0601", nombre: "Barra rústica precocida 250 g", familia: "panaderia", subfamilia: "Pan precocido", temp: "congelado", formato: "Caja 40 uds.", canal: ["restauracion", "comercio"], destacado: true },
+  { ref: "PAN-0605", nombre: "Chapata cristal 100 g", familia: "panaderia", subfamilia: "Pan precocido", temp: "congelado", formato: "Caja 60 uds.", canal: ["restauracion"] },
+  { ref: "PAN-0609", nombre: "Pan de hamburguesa brioche", familia: "panaderia", subfamilia: "Pan de molde y bollos", temp: "congelado", formato: "Caja 48 uds.", canal: ["restauracion"] },
+  { ref: "PAN-0613", nombre: "Pan de molde sin corteza", familia: "panaderia", subfamilia: "Pan de molde y bollos", temp: "ambiente", formato: "Caja 6 uds.", canal: ["colectividades", "comercio"] },
+  { ref: "PAN-0618", nombre: "Croissant recto mantequilla", familia: "panaderia", subfamilia: "Bollería", temp: "congelado", formato: "Caja 60 uds.", canal: ["restauracion", "comercio"] },
+  { ref: "PAN-0622", nombre: "Napolitana de chocolate", familia: "panaderia", subfamilia: "Bollería", temp: "congelado", formato: "Caja 60 uds.", canal: ["restauracion", "comercio"] },
+  { ref: "PAN-0627", nombre: "Masa de hojaldre en plancha", familia: "panaderia", subfamilia: "Masas", temp: "congelado", formato: "Caja 10 planchas", canal: ["restauracion"] },
+  { ref: "HEL-0701", nombre: "Helado vainilla cubeta", familia: "helados", subfamilia: "Cubeta", temp: "congelado", formato: "Cubeta 5 L", canal: ["restauracion", "colectividades"], destacado: true },
+  { ref: "HEL-0705", nombre: "Helado chocolate cubeta", familia: "helados", subfamilia: "Cubeta", temp: "congelado", formato: "Cubeta 5 L", canal: ["restauracion", "colectividades"] },
+  { ref: "HEL-0709", nombre: "Sorbete de limón", familia: "helados", subfamilia: "Cubeta", temp: "congelado", formato: "Cubeta 2,5 L", canal: ["restauracion"] },
+  { ref: "HEL-0714", nombre: "Cono avellana individual", familia: "helados", subfamilia: "Impulso", temp: "congelado", formato: "Caja 24 uds.", canal: ["comercio"] },
+  { ref: "HEL-0718", nombre: "Bombón helado individual", familia: "helados", subfamilia: "Impulso", temp: "congelado", formato: "Caja 30 uds.", canal: ["comercio", "restauracion"] },
+  { ref: "HEL-0723", nombre: "Tarta helada tres chocolates", familia: "helados", subfamilia: "Postres", temp: "congelado", formato: "Pieza 1,2 kg", canal: ["restauracion", "comercio"] },
+  { ref: "HEL-0727", nombre: "Coulant de chocolate", familia: "helados", subfamilia: "Postres", temp: "congelado", formato: "Caja 24 uds.", canal: ["restauracion"] },
+  { ref: "HEL-0731", nombre: "Tarta de queso al horno", familia: "helados", subfamilia: "Postres", temp: "congelado", formato: "Pieza 1,4 kg", canal: ["restauracion"] },
+  { ref: "CON-0801", nombre: "Tomate triturado", familia: "conservas", subfamilia: "Conserva vegetal", temp: "ambiente", formato: "Lata 3 kg", canal: ["restauracion", "colectividades"] },
+  { ref: "CON-0805", nombre: "Pimiento del piquillo entero", familia: "conservas", subfamilia: "Conserva vegetal", temp: "ambiente", formato: "Lata 780 g", canal: ["restauracion"] },
+  { ref: "CON-0809", nombre: "Aceituna manzanilla rellena", familia: "conservas", subfamilia: "Aperitivo", temp: "ambiente", formato: "Cubo 5 kg", canal: ["restauracion", "comercio"] },
+  { ref: "CON-0813", nombre: "Atún claro en aceite de oliva", familia: "conservas", subfamilia: "Conserva de pescado", temp: "ambiente", formato: "Lata 1,8 kg", canal: ["restauracion", "colectividades"], destacado: true },
+  { ref: "CON-0818", nombre: "Aceite de oliva virgen extra", familia: "conservas", subfamilia: "Aceites", temp: "ambiente", formato: "Garrafa 5 L", canal: ["restauracion", "colectividades"] },
+  { ref: "CON-0822", nombre: "Aceite de girasol alto oleico", familia: "conservas", subfamilia: "Aceites", temp: "ambiente", formato: "Garrafa 25 L", canal: ["restauracion"] },
+  { ref: "CON-0827", nombre: "Mayonesa profesional", familia: "conservas", subfamilia: "Salsas", temp: "ambiente", formato: "Cubo 5 L", canal: ["restauracion", "colectividades"] },
+  { ref: "CON-0831", nombre: "Kétchup dosificador", familia: "conservas", subfamilia: "Salsas", temp: "ambiente", formato: "Bolsa 2 kg", canal: ["restauracion"] },
+  { ref: "CON-0836", nombre: "Arroz redondo extra", familia: "conservas", subfamilia: "Despensa", temp: "ambiente", formato: "Saco 5 kg", canal: ["colectividades"] },
+  { ref: "CON-0840", nombre: "Legumbre cocida garbanzo", familia: "conservas", subfamilia: "Despensa", temp: "ambiente", formato: "Lata 3 kg", canal: ["colectividades"] },
+  { ref: "ENV-0901", nombre: "Bandeja take away con tapa", familia: "envases", subfamilia: "Take away", temp: "ambiente", formato: "Caja 300 uds.", canal: ["restauracion", "comercio"] },
+  { ref: "ENV-0905", nombre: "Bolsa kraft asa rizada", familia: "envases", subfamilia: "Take away", temp: "ambiente", formato: "Caja 250 uds.", canal: ["restauracion", "comercio"] },
+  { ref: "ENV-0909", nombre: "Film transparente profesional", familia: "envases", subfamilia: "Cocina", temp: "ambiente", formato: "Rollo 300 m", canal: ["restauracion", "colectividades"] },
+  { ref: "ENV-0913", nombre: "Papel aluminio industrial", familia: "envases", subfamilia: "Cocina", temp: "ambiente", formato: "Rollo 300 m", canal: ["restauracion", "colectividades"] },
+  { ref: "ENV-0917", nombre: "Guante nitrilo azul", familia: "envases", subfamilia: "Higiene", temp: "ambiente", formato: "Caja 100 uds.", canal: ["restauracion", "colectividades"] },
+  { ref: "ENV-0921", nombre: "Servilleta 2 capas", familia: "envases", subfamilia: "Mesa", temp: "ambiente", formato: "Caja 3.000 uds.", canal: ["restauracion", "comercio"] },
+];

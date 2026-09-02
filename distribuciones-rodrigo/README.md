@@ -1,166 +1,187 @@
-# Distribuciones Rodrigo — sitio web
+# Distribuciones Rodrigo — web corporativa
 
-Sitio corporativo de **Distribuciones Rodrigo, S.A.** (Zaragoza), distribuidor
-mayorista de alimentación a temperatura controlada.
+Sitio de **Distribuciones Rodrigo, S.A.** (Zaragoza), distribuidor mayorista de
+alimentación a temperatura controlada.
 
-HTML, CSS y JavaScript planos. **Sin framework, sin build, sin dependencias.**
-Se edita con cualquier editor de texto y se publica copiando la carpeta.
+**Next.js 15 · React 19 · TypeScript · Tailwind CSS 4 · Motion**
+
+Se exporta como sitio estático, así que se puede alojar en cualquier sitio
+—Vercel, Netlify, Cloudflare Pages o un FTP clásico— sin servidor Node.
+
+---
+
+## Arrancar
+
+```bash
+npm install
+npm run dev      # http://localhost:3000
+```
+
+```bash
+npm run build    # genera out/ listo para publicar
+npm run lint     # ESLint
+npm run typecheck
+```
 
 ---
 
 ## Estructura
 
 ```
-index.html            Portada
-empresa.html          Quiénes somos, trayectoria, valores, grupo, equipo
-productos.html        Catálogo con buscador y filtros en vivo
-servicios.html        Servicio, logística, cobertura y operativa
-calidad.html          Seguridad alimentaria, cadena de frío y trazabilidad
-proveedores.html      Propuesta para fabricantes + formulario de compras
-contacto.html         Datos, alta de cliente y mapa
-empleo.html           Trabaja con nosotros
-aviso-legal.html      LSSI-CE
-privacidad.html       RGPD / LOPDGDD
-cookies.html          Política de cookies
-404.html              Página de error
+src/
+  app/                    Rutas (App Router). Una carpeta por página.
+    layout.tsx            Cabecera, pie, fuentes, JSON-LD y tema
+    page.tsx              Portada
+    productos/            Catálogo con buscador
+    empresa/ servicios/ calidad/ proveedores/ contacto/ empleo/
+    aviso-legal/ privacidad/ cookies/
+    not-found.tsx         404
+    sitemap.ts robots.ts  SEO generados en build
+    globals.css           ★ Sistema de diseño completo
 
-assets/css/style.css  ★ Sistema de diseño completo (tokens en :root)
-assets/js/site.js     Tema, menú, animaciones, contadores, cookies, formularios
-assets/js/catalogo.js Buscador del catálogo
-assets/img/           Logotipos, iconos e imagen social
-data/productos.json   ★ AQUÍ se edita el catálogo
+  components/
+    brand.tsx             Logotipo, isotipo e iconografía
+    cabecera.tsx          Barra de contacto, navegación, tema, menú móvil
+    pie.tsx               Pie y aviso de cookies
+    hero.tsx              Portada: titular y panel de frío
+    panel-frio.tsx        Panel animado de la cadena de frío
+    secciones-inicio.tsx  Cifras, familias, segmentos, cadena, grupo, FAQ
+    catalogo.tsx          Buscador, filtros y fichas
+    formulario.tsx        Formulario reutilizable
+    ui.tsx                Contenedor, Sección, Botón, Contador, Tarjeta…
 
-robots.txt            Indexación
-sitemap.xml           Mapa del sitio
-site.webmanifest      Metadatos de aplicación web
+  content/
+    site.ts               ★ Datos de la empresa y textos
+    productos.ts          ★ Catálogo
+
+  lib/motion.ts           Curvas y variantes de animación
 ```
 
----
-
-## Cómo verlo en local
-
-No hace falta compilar nada, pero el catálogo carga un JSON por `fetch`, y eso
-no funciona abriendo el archivo con doble clic (`file://`). Levante un servidor:
-
-```bash
-cd distribuciones-rodrigo
-python3 -m http.server 8000
-# abrir http://localhost:8000
-```
+Los dos archivos marcados con ★ son los que se tocan para actualizar contenido.
 
 ---
 
 ## Tareas habituales
 
-### Cambiar los colores de marca
+### Cambiar textos o datos de contacto
 
-Todo el sitio deriva de cuatro variables. En `assets/css/style.css`, bloque `:root`:
-
-```css
---brand-500: #b4172a;   /* color principal: botones, acentos */
---brand-600: #99101f;   /* texto de acento y estados hover */
---brand-700: #7a0c18;   /* variante más oscura */
---brand-100: #fdeceb;   /* fondo suave de acento */
-```
-
-Hay un bloque equivalente para el tema oscuro más abajo en el mismo archivo.
-Si cambia los colores, **compruebe el contraste** (mínimo 4,5:1 para texto
-normal) antes de publicar.
+Todo está en `src/content/site.ts`: teléfono, correo, dirección, cifras,
+segmentos de cliente, ventajas, empresas del grupo y preguntas frecuentes.
+No hay textos sueltos repartidos por los componentes.
 
 ### Añadir o modificar productos
 
-Edite `data/productos.json`. Cada referencia tiene esta forma:
+`src/content/productos.ts`. Cada referencia es un objeto tipado:
 
-```json
+```ts
 {
-  "ref": "PES-0101",
-  "nombre": "Merluza del Cabo lomo s/piel",
-  "familia": "pescados",
-  "subfamilia": "Pescado blanco",
-  "temp": "congelado",
-  "formato": "Caja 5 kg · IQF",
-  "canal": ["restauracion", "colectividades"],
-  "destacado": true
+  ref: "PES-0101",
+  nombre: "Merluza del Cabo lomo s/piel",
+  familia: "pescados",
+  subfamilia: "Pescado blanco",
+  temp: "congelado",              // congelado | refrigerado | ambiente
+  formato: "Caja 5 kg · IQF",
+  canal: ["restauracion", "colectividades"],
+  destacado: true,                // opcional: sube en relevancia
 }
 ```
 
-- `familia` debe coincidir con un `id` de la lista `familias` del mismo archivo.
-- `temp`: `congelado` | `refrigerado` | `ambiente`.
-- `canal`: cualquier combinación de `restauracion`, `colectividades`, `comercio`.
-- `destacado`: opcional, sube la referencia en el orden por relevancia.
+TypeScript avisa si `familia`, `temp` o `canal` no son válidos. El buscador,
+los filtros y los recuentos se actualizan solos. Lo natural es generar este
+archivo desde el ERP con un script.
 
-El buscador, los filtros y los contadores se actualizan solos. Lo natural es
-exportar el catálogo desde el ERP a este formato con un script, en lugar de
-mantenerlo a mano.
+### Ajustar los colores de marca
 
-### Hacer que los formularios envíen de verdad
+`src/app/globals.css`, bloque `@theme`. Los valores actuales están muestreados
+del logotipo y de la web anterior:
 
-Ahora mismo los formularios validan y abren el gestor de correo del visitante
-con el mensaje ya redactado. Para recibirlos por HTTP, añada `data-endpoint`
-a la etiqueta `<form>`:
-
-```html
-<form class="form" data-contact-form data-endpoint="https://formspree.io/f/XXXX">
+```css
+--color-rojo-500:   #eb4135;   /* letras del logotipo */
+--color-marino-500: #21528b;   /* marco del logotipo */
+--color-azul-500:   #4282bc;   /* barra de contacto e iconos */
+--color-amarillo-500: #fcee4f; /* aro interior del logotipo */
 ```
 
-Sirve cualquier servicio que acepte un `POST` con `FormData`
-(Formspree, Netlify Forms, Web3Forms, un endpoint propio…).
-`assets/js/site.js` se encarga del envío, los estados y los errores.
+Debajo, el bloque de **tokens semánticos** (`--acento`, `--frio`, `--texto`…)
+es lo que usan los componentes. Nunca se escribe un color literal en un
+componente: así los dos temas siguen cuadrando.
+
+> Ojo con el contraste: el rojo de marca (#EB4135) da 3,9:1 con blanco encima,
+> por debajo del mínimo AA. Por eso los botones usan `--acento-fuerte`
+> (#d32d21, 5,0:1) y el #EB4135 queda para el logotipo y los acentos.
+
+### Conectar los formularios
+
+Ahora abren el gestor de correo del visitante. Para recibirlos por HTTP, pase
+`endpoint` al componente:
+
+```tsx
+<Formulario endpoint="https://formspree.io/f/XXXX" … />
+```
+
+Sirve cualquier servicio que acepte `POST` con `FormData` (Formspree, Netlify
+Forms, Web3Forms o un endpoint propio).
 
 ### Publicar
 
-Es un sitio estático: cualquier alojamiento vale.
+```bash
+npm run build     # deja el sitio en out/
+```
 
-- **Netlify / Vercel / Cloudflare Pages**: arrastrar la carpeta, o conectar el
-  repositorio indicando esta carpeta como directorio raíz. Sin comando de build.
-- **Hosting clásico (FTP)**: subir el contenido de la carpeta a `public_html`.
+- **Vercel / Netlify / Cloudflare Pages**: conectar el repositorio indicando
+  esta carpeta como raíz. Detectan Next.js solos.
+- **Hosting clásico (FTP)**: subir el contenido de `out/` a `public_html`.
 
-Después de publicar, en `robots.txt`, `sitemap.xml` y las etiquetas
-`<link rel="canonical">` de cada página el dominio ya apunta a
-`https://distribucionesrodrigo.com`. Si se publica en otro dominio, hay que
-sustituirlo (una búsqueda y reemplazo).
+El dominio está en `src/content/site.ts` (`dominio`). De ahí salen los
+`canonical`, el `sitemap.xml`, el `robots.txt` y los datos estructurados.
 
 ---
 
 ## Qué incluye
 
 **Diseño**
-- Sistema de diseño con tokens: color, tipografía, espaciado, sombras y formas.
-- Tema claro y oscuro. Sigue la preferencia del sistema y permite forzarlo.
-- Responsive real, de 320 px a pantallas grandes.
-- Hoja de estilos de impresión.
+- Sistema de tokens: cambiar cuatro variables reajusta toda la identidad.
+- Tema claro y oscuro, siguiendo la preferencia del sistema y con conmutador
+  que se recuerda entre visitas, sin parpadeo al cargar.
+- Tipografía: Archivo (titulares, con eje de anchura), Public Sans (texto) e
+  IBM Plex Mono (temperaturas, referencias y volúmenes).
+- Responsive de 320 px en adelante.
+
+**Movimiento** (todo respeta `prefers-reduced-motion`)
+- Entrada del titular por máscara, escalonada.
+- Panel de cadena de frío con lectura de temperatura viva y el pedido
+  recorriendo el raíl.
+- La cadena de frío se rellena **con el scroll**: el raíl traza el recorrido
+  a medida que se lee.
+- Contadores que cuentan al entrar en pantalla.
+- Pastilla que se desliza entre pestañas y en la navegación (`layoutId`).
+- El catálogo reordena las fichas con animación de layout al filtrar.
 
 **Catálogo**
 - Búsqueda instantánea, insensible a mayúsculas y tildes, por nombre,
-  referencia, subfamilia, formato o canal.
+  referencia, subfamilia o formato.
 - Filtros combinables por familia, temperatura y canal, con recuento por opción.
-- El estado se refleja en la URL: los filtros se pueden compartir y enlazar.
-- Atajo de teclado `/` para saltar al buscador.
+- El estado va en la URL: `?familia=helados&temp=congelado` se puede compartir.
+- Atajo `/` para saltar al buscador.
 
 **Accesibilidad**
 - Contraste AA verificado en las 12 páginas y en los dos temas.
-- Navegación completa por teclado, enlace de salto al contenido y foco visible.
+- Navegación por teclado, enlace de salto y foco visible.
 - Jerarquía de encabezados correcta y landmarks semánticos.
-- Respeta `prefers-reduced-motion`.
-- **Funciona sin JavaScript**: todo el contenido es visible y los formularios
-  y el acordeón siguen operativos.
 
 **SEO**
-- Metadatos y `canonical` únicos por página.
-- Datos estructurados JSON-LD: `Organization`, `WebSite`, `LocalBusiness`,
-  `BreadcrumbList` y `FAQPage`.
-- Open Graph y Twitter Cards con imagen social.
-- `sitemap.xml`, `robots.txt` y migas de pan.
+- Metadatos y `canonical` por página con la API de metadata de Next.
+- JSON-LD: `Organization`, `WebSite`, `LocalBusiness` y `FAQPage`.
+- `sitemap.xml` y `robots.txt` generados en build.
 
 **Cumplimiento**
-- Aviso legal, política de privacidad y política de cookies redactados para
-  España (LSSI-CE, RGPD y LOPDGDD).
-- Banner de cookies con opción real de rechazar.
+- Aviso legal, privacidad y cookies redactados para España (LSSI-CE, RGPD,
+  LOPDGDD), con banner que permite rechazar de verdad.
 - Sin analítica ni rastreadores de terceros por defecto.
 
 ---
 
 ## Antes de publicar
 
-Queda contenido que solo puede aportar la empresa. Está recogido, punto por
-punto, en **[CONTENIDO-PENDIENTE.md](CONTENIDO-PENDIENTE.md)**.
+Queda contenido que solo puede aportar la empresa:
+**[CONTENIDO-PENDIENTE.md](CONTENIDO-PENDIENTE.md)**.

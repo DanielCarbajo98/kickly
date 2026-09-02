@@ -1,0 +1,316 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Distribuciones Rodrigo — sistema de diseño
+   --------------------------------------------------------------------------
+   La paleta sale del logotipo y de la web actual de la empresa:
+     · Rojo Rodrigo   #EB4135  letras del logotipo
+     · Azul marino    #21528B  marco exterior del logotipo
+     · Azul corporat. #4282BC  barra de contacto e iconos de la web
+     · Amarillo       #FCEE4F  aro interior del logotipo
+     · Gris menú      #444444  barra de navegación de la web
+
+   Los neutros llevan un sesgo frío hacia el azul marino: es una empresa de
+   cadena de frío, no de producto artesano, y el gris cálido no le pega.
+   ========================================================================== */
+
+@theme {
+  /* --- Marca ------------------------------------------------------------ */
+  --color-rojo-50:  #fef2f1;
+  --color-rojo-100: #fde3e1;
+  --color-rojo-300: #f4877e;
+  --color-rojo-500: #eb4135;
+  --color-rojo-600: #d32d21;
+  --color-rojo-700: #ae231a;
+
+  --color-marino-50:  #eef3f9;
+  --color-marino-100: #d8e4f1;
+  --color-marino-300: #6f95c2;
+  --color-marino-500: #21528b;
+  --color-marino-600: #1a4272;
+  --color-marino-700: #143459;
+  --color-marino-900: #0c1f36;
+
+  --color-azul-50:  #eff6fb;
+  --color-azul-100: #dceaf5;
+  --color-azul-300: #8fbcdd;
+  --color-azul-500: #4282bc;
+  --color-azul-600: #35699b;
+
+  --color-amarillo-300: #fdf4a0;
+  --color-amarillo-500: #fcee4f;
+  --color-amarillo-700: #c9b81d;
+
+  /* --- Neutros de sesgo frío -------------------------------------------- */
+  --color-frio-0:   #ffffff;
+  --color-frio-25:  #fafbfd;
+  --color-frio-50:  #f3f6fa;
+  --color-frio-100: #e7ecf3;
+  --color-frio-200: #d3dbe6;
+  --color-frio-300: #b0bccd;
+  --color-frio-400: #7d8da3;
+  --color-frio-500: #5b6a80;
+  --color-frio-600: #435063;
+  --color-frio-700: #2f3a4a;
+  --color-frio-800: #1d2634;
+  --color-frio-900: #131a25;
+  --color-frio-950: #0b111a;
+
+  /* --- Tipografía -------------------------------------------------------- */
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* --- Movimiento -------------------------------------------------------- */
+  --ease-salida: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-suave: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   Tokens semánticos
+   --------------------------------------------------------------------------
+   Todo el sitio se pinta con estas variables, nunca con un color literal.
+   Se declaran completas en `:root` (tema claro) y se redefinen para el tema
+   oscuro en los tres estados posibles del visitante: preferencia del sistema,
+   y elección explícita clara u oscura.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  --fondo: var(--color-frio-25);
+  --fondo-alt: var(--color-frio-50);
+  --superficie: var(--color-frio-0);
+  --superficie-alt: var(--color-frio-50);
+  --linea: var(--color-frio-200);
+  --linea-suave: var(--color-frio-100);
+
+  --texto: var(--color-frio-900);
+  --texto-2: var(--color-frio-600);
+  --texto-3: var(--color-frio-500);
+
+  --acento: var(--color-rojo-500);
+  --acento-fuerte: var(--color-rojo-600);
+  --acento-suave: var(--color-rojo-50);
+  --acento-contraste: #ffffff;
+
+  --frio: var(--color-azul-500);
+  --frio-fuerte: var(--color-azul-600);
+  --frio-suave: var(--color-azul-50);
+
+  --marino: var(--color-marino-500);
+  --marino-profundo: var(--color-marino-900);
+
+  --destello: var(--color-amarillo-500);
+  --destello-texto: var(--color-amarillo-700);
+
+  /* Refrigerado. El amarillo del logotipo no sirve como color de texto
+     (no llega a 4,5:1 sobre claro), así que el frío positivo va en verde. */
+  --fresco: #1f7a4d;
+  --fresco-suave: #e8f4ee;
+
+  /* Superficies invertidas: pie, barra de contacto y bandas de llamada.
+     En oscuro NO se vuelven claras: se hunden. */
+  --invertido-fondo: var(--color-marino-900);
+  --invertido-texto: #f3f6fa;
+
+  --anillo: color-mix(in srgb, var(--acento) 40%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --fondo: var(--color-frio-950);
+    --fondo-alt: #0f1723;
+    --superficie: var(--color-frio-900);
+    --superficie-alt: var(--color-frio-800);
+    --linea: #253143;
+    --linea-suave: #1b2431;
+
+    --texto: #eaeff6;
+    --texto-2: #a8b5c7;
+    --texto-3: #8494a9;
+
+    --acento: #ff5f52;
+    --acento-fuerte: #ff7a66;
+    --acento-suave: #2a1210;
+    --acento-contraste: #1a0a08;
+
+    --frio: #79b4e2;
+    --frio-fuerte: #9acbef;
+    --frio-suave: #0e1d2b;
+
+    --marino: #6f95c2;
+    --marino-profundo: #060d16;
+
+    --destello: var(--color-amarillo-500);
+    --destello-texto: var(--color-amarillo-300);
+    --fresco: #58c78f;
+    --fresco-suave: #0d2419;
+
+    --invertido-fondo: #060d16;
+    --invertido-texto: #eaeff6;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --fondo: var(--color-frio-950);
+  --fondo-alt: #0f1723;
+  --superficie: var(--color-frio-900);
+  --superficie-alt: var(--color-frio-800);
+  --linea: #253143;
+  --linea-suave: #1b2431;
+
+  --texto: #eaeff6;
+  --texto-2: #a8b5c7;
+  --texto-3: #8494a9;
+
+  --acento: #ff5f52;
+  --acento-fuerte: #ff7a66;
+  --acento-suave: #2a1210;
+  --acento-contraste: #1a0a08;
+
+  --frio: #79b4e2;
+  --frio-fuerte: #9acbef;
+  --frio-suave: #0e1d2b;
+
+  --marino: #6f95c2;
+  --marino-profundo: #060d16;
+
+  --destello: var(--color-amarillo-500);
+  --destello-texto: var(--color-amarillo-300);
+  --fresco: #58c78f;
+  --fresco-suave: #0d2419;
+
+  --invertido-fondo: #060d16;
+  --invertido-texto: #eaeff6;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  font-variation-settings: "wdth" 112;
+  text-wrap: balance;
+  margin: 0;
+}
+
+p { text-wrap: pretty; margin: 0; }
+a { color: inherit; text-underline-offset: 3px; }
+
+::selection { background: color-mix(in srgb, var(--acento) 25%, transparent); }
+
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+* { scrollbar-color: var(--linea) transparent; scrollbar-width: thin; }
+
+/* ==========================================================================
+   Utilidades propias
+   ========================================================================== */
+
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* Rotulo tecnico: temperaturas, referencias, volumenes. */
+.dato {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Antetitulo, con el guino al aro amarillo del logotipo */
+.antetitulo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+}
+.antetitulo::before {
+  content: "";
+  width: 1.75rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--destello);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--marino) 35%, transparent);
+}
+
+/* Rail de la cadena de frio: estructura vertical de las secciones */
+.rail {
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    color-mix(in srgb, var(--frio) 55%, transparent) 12%,
+    color-mix(in srgb, var(--frio) 55%, transparent) 88%,
+    transparent
+  );
+}
+
+/* Reticula tecnica de fondo, como el plano de una nave */
+.reticula {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--texto) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--texto) 5%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.mascara-linea { display: block; overflow: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media print {
+  .no-imprimir { display: none !important; }
+  body { background: #fff; color: #000; }
+}
+
+/* Solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
