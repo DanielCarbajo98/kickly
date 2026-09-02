@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" role="img" aria-label="Distribuciones Rodrigo">
+  <title>Distribuciones Rodrigo</title>
+  <defs>
+    <linearGradient id="drLogo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c81f32"/>
+      <stop offset="1" stop-color="#8e0f1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#drLogo)"/>
+  <g stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".38">
+    <path d="M48 12v12M42 15l6 3 6-3M42 21l6-3 6 3"/>
+  </g>
+  <path fill="#fff" d="M18 46V18h13.4c3.5 0 6.3.9 8.2 2.7 2 1.8 3 4.2 3 7.3 0 2.3-.6 4.2-1.7 5.8a9.4 9.4 0 0 1-4.6 3.4L44 46h-7.3l-6.4-8.1h-4.8V46H18Zm7.5-14.1h5.2c1.6 0 2.9-.4 3.7-1.1.9-.7 1.3-1.7 1.3-3.1 0-1.3-.4-2.3-1.3-3-.8-.8-2.1-1.1-3.7-1.1h-5.2v8.3Z"/>
+  <text x="80" y="34" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-weight="600" letter-spacing="-.6" fill="currentColor">Distribuciones Rodrigo</text>
+  <text x="81" y="49" font-family="Helvetica, Arial, sans-serif" font-size="9.2" letter-spacing="3.1" fill="currentColor" opacity=".62">ALIMENTACIÓN · ZARAGOZA</text>
+</svg>
