@@ -1,64 +1,77 @@
 /**
  * Identidad de marca.
  *
- * El logotipo es una RECONSTRUCCIÓN a partir de la web de la empresa: forma
- * de píldora con marco azul marino, aro amarillo, banda roja con
- * "DISTRIBUCIONES" y la palabra "RODRIGO" en rojo. Los colores sí son los
- * reales, muestreados del original:
+ * El logotipo está reconstruido en SVG a partir del original facilitado por la
+ * empresa: píldora con marco azul marino, aro interior amarillo, banda roja
+ * con "DISTRIBUCIONES" y la palabra "RODRIGO", donde la R inicial y la O final
+ * son mayores que las letras centrales, con un subrayado rojo bajo ODRIG.
+ *
+ * Colores muestreados del original:
  *   rojo #EB4135 · marino #21528B · amarillo #FCEE4F
- * Sustituir por el SVG oficial en cuanto la empresa lo facilite.
+ *
+ * Los anchos de letra se fijan con textLength para que el dibujo no dependa de
+ * que Archivo haya terminado de cargar. Aun así, lo ideal es sustituir este
+ * componente por el SVG vectorial oficial cuando la empresa lo facilite.
  */
+
+const PILA_DISPLAY = 'var(--font-display), Archivo, "Arial Black", Helvetica, sans-serif';
 
 export function Logotipo({ className = "", titulo = "Distribuciones Rodrigo" }) {
   return (
-    <svg viewBox="0 0 320 116" role="img" aria-label={titulo} className={className}>
+    <svg viewBox="0 0 640 240" role="img" aria-label={titulo} className={className}>
       <title>{titulo}</title>
-      {/* Marco exterior azul marino */}
+
+      {/* Marco exterior azul marino sobre campo blanco */}
       <rect
-        x="4" y="4" width="312" height="108" rx="54"
-        fill="var(--superficie)" stroke="#21528B" strokeWidth="8"
+        x="12" y="12" width="616" height="216" rx="108"
+        fill="#ffffff" stroke="#21528B" strokeWidth="24"
       />
+
       {/* Aro interior amarillo */}
       <rect
-        x="16.5" y="16.5" width="287" height="83" rx="41.5"
-        fill="none" stroke="#FCEE4F" strokeWidth="5"
+        x="38" y="38" width="564" height="164" rx="82"
+        fill="none" stroke="#FCEE4F" strokeWidth="10"
       />
+
       {/* Banda roja con el nombre largo */}
-      <rect x="108" y="25" width="104" height="15" rx="2.5" fill="#EB4135" />
+      <rect x="208" y="52" width="224" height="26" rx="3" fill="#EB4135" />
       <text
-        x="160" y="36.4" textAnchor="middle" fill="#ffffff"
-        fontFamily="var(--font-display), Archivo, Arial, sans-serif"
-        fontSize="9" fontWeight="700" letterSpacing="2.1"
+        x="320" y="71" textAnchor="middle" fill="#ffffff"
+        fontFamily={PILA_DISPLAY} fontSize="16" fontWeight="800"
+        textLength="192" lengthAdjust="spacingAndGlyphs"
       >
         DISTRIBUCIONES
       </text>
-      {/* Palabra principal */}
+
+      {/* RODRIGO: la R inicial y la O final, mayores que las letras centrales */}
       <text
-        x="158" y="86" textAnchor="middle" fill="#EB4135"
-        fontFamily="var(--font-display), Archivo, Arial, sans-serif"
-        fontSize="46" fontWeight="800" letterSpacing="-0.5"
+        y="172" fill="#EB4135" fontFamily={PILA_DISPLAY} fontWeight="800"
+        lengthAdjust="spacingAndGlyphs"
       >
-        RODRIGO
+        <tspan x="82" fontSize="128" textLength="104">R</tspan>
+        <tspan x="186" fontSize="92" textLength="268">ODRIG</tspan>
+        <tspan x="454" fontSize="128" textLength="104">O</tspan>
       </text>
-      {/* Subrayado corto, como en el original */}
-      <rect x="66" y="90" width="128" height="5" rx="2.5" fill="#EB4135" />
+
+      {/* Subrayado bajo las letras centrales */}
+      <rect x="186" y="178" width="268" height="12" fill="#EB4135" />
     </svg>
   );
 }
 
-/** Versión compacta para la cabecera y el favicon. */
+/** Versión compacta, para el favicon y espacios reducidos. */
 export function Isotipo({ className = "" }) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" className={className}>
-      <rect x="2" y="2" width="60" height="60" rx="17" fill="#21528B" />
+      <rect x="1.5" y="1.5" width="61" height="61" rx="17" fill="#21528B" />
       <rect
-        x="8.5" y="8.5" width="47" height="47" rx="12.5"
+        x="8" y="8" width="48" height="48" rx="12"
         fill="none" stroke="#FCEE4F" strokeWidth="2.5"
       />
       <text
-        x="32" y="46" textAnchor="middle" fill="#EB4135"
-        fontFamily="var(--font-display), Archivo, Arial, sans-serif"
-        fontSize="38" fontWeight="800"
+        x="32" y="47" textAnchor="middle" fill="#EB4135"
+        fontFamily={PILA_DISPLAY} fontSize="40" fontWeight="800"
+        textLength="30" lengthAdjust="spacingAndGlyphs"
       >
         R
       </text>

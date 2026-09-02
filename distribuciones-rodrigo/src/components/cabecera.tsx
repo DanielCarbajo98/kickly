@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useEffect, useState } from "react";
-import { Iconos, Isotipo } from "./brand";
+import { Iconos, Isotipo, Logotipo } from "./brand";
 import { Contenedor } from "./ui";
 import { empresa, navegacion } from "@/content/site";
 
@@ -120,22 +120,8 @@ export function Cabecera() {
         }}
       >
         <Contenedor className="flex min-h-[4.25rem] items-center gap-6">
-          <Link href="/" className="flex shrink-0 items-center gap-3 no-underline">
-            <Isotipo className="h-10 w-10" />
-            <span className="flex flex-col leading-none">
-              <span
-                className="font-[800] tracking-[-0.02em]"
-                style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem" }}
-              >
-                Distribuciones Rodrigo
-              </span>
-              <span
-                className="dato mt-1 text-[0.6rem] uppercase tracking-[0.18em]"
-                style={{ color: "var(--texto-3)" }}
-              >
-                Alimentación · Zaragoza
-              </span>
-            </span>
+          <Link href="/" className="flex shrink-0 items-center gap-3 no-underline" aria-label="Distribuciones Rodrigo, ir al inicio">
+            <Logotipo className="h-11 w-auto sm:h-12" />
           </Link>
 
           <nav aria-label="Navegación principal" className="ml-auto hidden lg:block">
