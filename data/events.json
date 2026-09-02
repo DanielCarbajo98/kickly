@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "real-madrid-malaga-laliga-j3-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 3",
-      "home": "Real Madrid",
-      "away": "Málaga CF",
-      "date": "2026-08-30T17:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Real Madrid – Málaga online gratis: jornada 3 de LaLiga EA Sports 2026/27 en el Santiago Bernabéu. Domingo 30 de agosto a las 17:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "barcelona-rayo-vallecano-laliga-j3-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 3",
@@ -62,60 +35,6 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "ESPN+ y ESPN Deportes",
           "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "chelsea-brighton-premier-j2-2026",
-      "sport": "futbol",
-      "competitionName": "Premier League 2026/27 · Jornada 2",
-      "home": "Chelsea",
-      "away": "Brighton",
-      "date": "2026-08-30T15:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Chelsea – Brighton online gratis: jornada 2 de la Premier League 2026/27 en Stamford Bridge. Domingo 30 de agosto a las 15:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN y Movistar Plus+",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports y TNT Sports",
-          "url": "https://www.skysports.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC y Peacock",
-          "url": "https://www.peacocktv.com/"
-        }
-      ]
-    },
-    {
-      "id": "manchester-united-ipswich-premier-j2-2026",
-      "sport": "futbol",
-      "competitionName": "Premier League 2026/27 · Jornada 2",
-      "home": "Manchester United",
-      "away": "Ipswich Town",
-      "date": "2026-08-30T17:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Manchester United – Ipswich online gratis: jornada 2 de la Premier League 2026/27 en Old Trafford. Domingo 30 de agosto a las 17:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN y Movistar Plus+",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports y TNT Sports",
-          "url": "https://www.skysports.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC y Peacock",
-          "url": "https://www.peacocktv.com/"
         }
       ]
     },
@@ -147,87 +66,12 @@
       ]
     },
     {
-      "id": "napoli-como-serie-a-j2-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 2",
-      "home": "Napoli",
-      "away": "Como",
-      "date": "2026-08-30T18:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Napoli – Como online gratis: jornada 2 de la Serie A 2026/27 en el Diego Armando Maradona. Domingo 30 de agosto a las 18:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "cagliari-inter-serie-a-j2-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 2",
-      "home": "Cagliari",
-      "away": "Inter de Milán",
-      "date": "2026-08-30T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Cagliari – Inter online gratis: jornada 2 de la Serie A 2026/27 en la Unipol Domus. Domingo 30 de agosto a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "vuelta-2026-etapa-9",
-      "sport": "ciclismo",
-      "competitionName": "La Vuelta a España 2026 · Etapa 9",
-      "home": "Villajoyosa – Alto de Aitana",
-      "date": "2026-08-30T13:00:00+02:00",
-      "status": "finished",
-      "description": "Ver la Vuelta a España 2026 online gratis: 9ª etapa Villajoyosa – Alto de Aitana (187 km), gran final en alto de alta montaña antes del descanso. Domingo 30 de agosto, salida sobre las 13:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
       "id": "vuelta-2026-etapa-10",
       "sport": "ciclismo",
       "competitionName": "La Vuelta a España 2026 · Etapa 10",
       "home": "Alcaraz – Elche",
       "date": "2026-09-01T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver la Vuelta a España 2026 online gratis: 10ª etapa Alcaraz – Elche (184 km) tras la jornada de descanso. Martes 1 de septiembre, salida en torno a las 13:00 (hora española).",
       "broadcasters": [
         {
@@ -255,63 +99,6 @@
           "country": "🇪🇸 España",
           "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
           "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
-      "id": "motogp-aragon-2026",
-      "sport": "motor",
-      "competitionName": "MotoGP 2026 · Gran Premio de Aragón",
-      "home": "Gran Premio de Aragón (MotorLand)",
-      "date": "2026-08-30T14:00:00+02:00",
-      "status": "finished",
-      "description": "Ver MotoGP Gran Premio de Aragón 2026 online gratis: carrera del Mundial de MotoGP en MotorLand Aragón (Alcañiz). Domingo 30 de agosto a las 14:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN (MotoGP) y Aragón TV / Aragón Play (en abierto)",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "TNT Sports",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "MotoGP VideoPass",
-          "url": "https://www.motogp.com/"
-        }
-      ]
-    },
-    {
-      "id": "us-open-2026-primera-ronda",
-      "sport": "tenis",
-      "competitionName": "US Open 2026 · Cuadro principal (primera ronda)",
-      "home": "US Open 2026",
-      "date": "2026-08-30T17:00:00+02:00",
-      "status": "finished",
-      "description": "Ver el US Open 2026 online gratis: arranca el cuadro principal del último Grand Slam de la temporada en Nueva York, con Carlos Alcaraz y las grandes estrellas del tenis. Sesiones desde las 17:00 (hora española) del domingo 30 de agosto; sesión nocturna a partir de la 01:00.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ (Movistar Deportes)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN y ESPN+",
-          "url": "https://www.espn.com/espnplus/"
-        },
-        {
-          "country": "🌎 Latinoamérica",
-          "channels": "ESPN y Disney+",
-          "url": "https://www.espn.com/"
         },
         {
           "country": "🌍 Internacional",
@@ -460,6 +247,85 @@
           "country": "🇪🇸 España",
           "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
           "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "arsenal-chelsea-premier-j3-2026",
+      "sport": "futbol",
+      "competitionName": "Premier League 2026/27 · Jornada 3",
+      "home": "Arsenal",
+      "away": "Chelsea",
+      "date": "2026-09-06T17:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Arsenal – Chelsea online gratis: derbi londinense de la jornada 3 de la Premier League 2026/27 en el Emirates Stadium. Domingo 6 de septiembre a las 17:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN y Movistar Plus+",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports",
+          "url": "https://www.skysports.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC y Peacock",
+          "url": "https://www.peacocktv.com/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-15",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 15",
+      "home": "Palma del Río – Córdoba",
+      "date": "2026-09-06T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 15ª etapa Palma del Río – Córdoba (181 km) antes de la segunda jornada de descanso. Domingo 6 de septiembre, salida en torno a las 13:00 y llegada prevista por la tarde (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "us-open-2026-octavos",
+      "sport": "tenis",
+      "competitionName": "US Open 2026 · Octavos de final",
+      "home": "US Open 2026",
+      "date": "2026-09-06T18:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver el US Open 2026 online gratis: octavos de final (ronda de 16) del último Grand Slam de la temporada en Nueva York, con Carlos Alcaraz y las grandes estrellas peleando por los cuartos. Domingo 6 de septiembre, sesiones desde las 18:00 (hora española) y sesión nocturna a partir de la 01:00.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Movistar Deportes)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN y ESPN+",
+          "url": "https://www.espn.com/espnplus/"
+        },
+        {
+          "country": "🌎 Latinoamérica",
+          "channels": "ESPN y Disney+",
+          "url": "https://www.espn.com/"
         },
         {
           "country": "🌍 Internacional",
