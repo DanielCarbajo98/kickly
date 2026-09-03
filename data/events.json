@@ -12,60 +12,6 @@
   },
   "events": [
     {
-      "id": "barcelona-rayo-vallecano-laliga-j3-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 3",
-      "home": "FC Barcelona",
-      "away": "Rayo Vallecano",
-      "date": "2026-08-31T21:30:00+02:00",
-      "status": "finished",
-      "description": "Ver FC Barcelona – Rayo Vallecano online gratis: jornada 3 de LaLiga EA Sports 2026/27 en el Spotify Camp Nou. Lunes 31 de agosto a las 21:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "aston-villa-arsenal-premier-j2-2026",
-      "sport": "futbol",
-      "competitionName": "Premier League 2026/27 · Jornada 2",
-      "home": "Aston Villa",
-      "away": "Arsenal",
-      "date": "2026-08-31T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Aston Villa – Arsenal online gratis: jornada 2 de la Premier League 2026/27 en Villa Park. Lunes 31 de agosto a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN y Movistar Plus+",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports y TNT Sports",
-          "url": "https://www.skysports.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "NBC y Peacock",
-          "url": "https://www.peacocktv.com/"
-        }
-      ]
-    },
-    {
       "id": "vuelta-2026-etapa-10",
       "sport": "ciclismo",
       "competitionName": "La Vuelta a España 2026 · Etapa 10",
@@ -92,7 +38,7 @@
       "competitionName": "La Vuelta a España 2026 · Etapa 11",
       "home": "Cartagena – Lorca",
       "date": "2026-09-02T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver la Vuelta a España 2026 online gratis: 11ª etapa Cartagena – Lorca (156 km). Miércoles 2 de septiembre, salida sobre las 13:00 y llegada prevista por la tarde (hora española).",
       "broadcasters": [
         {
@@ -331,6 +277,141 @@
           "country": "🌍 Internacional",
           "channels": "Eurosport y discovery+",
           "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "athletic-atletico-laliga-j4-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 4",
+      "home": "Athletic Club",
+      "away": "Atlético de Madrid",
+      "date": "2026-09-05T16:15:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Athletic Club – Atlético de Madrid online gratis: duelo de la jornada 4 de LaLiga EA Sports 2026/27 en San Mamés. Sábado 5 de septiembre a las 16:15 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "valencia-barcelona-laliga-j4-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 4",
+      "home": "Valencia CF",
+      "away": "FC Barcelona",
+      "date": "2026-09-06T16:15:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Valencia – FC Barcelona online gratis: jornada 4 de LaLiga EA Sports 2026/27 en Mestalla. Domingo 6 de septiembre a las 16:15 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "everton-manchester-united-premier-j3-2026",
+      "sport": "futbol",
+      "competitionName": "Premier League 2026/27 · Jornada 3",
+      "home": "Everton",
+      "away": "Manchester United",
+      "date": "2026-09-06T15:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Everton – Manchester United online gratis: jornada 3 de la Premier League 2026/27 en Goodison Park. Domingo 6 de septiembre a las 15:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN y Movistar Plus+",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports",
+          "url": "https://www.skysports.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "NBC y Peacock",
+          "url": "https://www.peacocktv.com/"
+        }
+      ]
+    },
+    {
+      "id": "juventus-milan-serie-a-j3-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 3",
+      "home": "Juventus",
+      "away": "AC Milan",
+      "date": "2026-09-06T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Juventus – Milan online gratis: gran partido de la jornada 3 de la Serie A 2026/27 en el Allianz Stadium. Domingo 6 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "roma-atalanta-serie-a-j3-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 3",
+      "home": "AS Roma",
+      "away": "Atalanta",
+      "date": "2026-09-05T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Roma – Atalanta online gratis: jornada 3 de la Serie A 2026/27 en el Estadio Olímpico de Roma. Sábado 5 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
         }
       ]
     }
