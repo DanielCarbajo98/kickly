@@ -12,27 +12,6 @@
   },
   "events": [
     {
-      "id": "vuelta-2026-etapa-10",
-      "sport": "ciclismo",
-      "competitionName": "La Vuelta a España 2026 · Etapa 10",
-      "home": "Alcaraz – Elche",
-      "date": "2026-09-01T13:00:00+02:00",
-      "status": "finished",
-      "description": "Ver la Vuelta a España 2026 online gratis: 10ª etapa Alcaraz – Elche (184 km) tras la jornada de descanso. Martes 1 de septiembre, salida en torno a las 13:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
       "id": "vuelta-2026-etapa-11",
       "sport": "ciclismo",
       "competitionName": "La Vuelta a España 2026 · Etapa 11",
@@ -59,7 +38,7 @@
       "competitionName": "La Vuelta a España 2026 · Etapa 12",
       "home": "Vera – Calar Alto",
       "date": "2026-09-03T13:07:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver la Vuelta a España 2026 online gratis: 12ª etapa Vera – Calar Alto (166,6 km), jornada de montaña con final en alto decisiva para la general. Jueves 3 de septiembre, salida a las 13:07 y llegada prevista sobre las 17:17 (hora española).",
       "broadcasters": [
         {
@@ -412,6 +391,85 @@
           "country": "🌍 Internacional",
           "channels": "beIN Sports",
           "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "udinese-lazio-serie-a-j3-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 3",
+      "home": "Udinese",
+      "away": "Lazio",
+      "date": "2026-09-07T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Udinese – Lazio online gratis: cierre de la jornada 3 de la Serie A 2026/27 en el BluEnergy Stadium de Udine. Lunes 7 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-16",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 16",
+      "home": "Cortegana – La Rábida (Palos de la Frontera)",
+      "date": "2026-09-08T13:05:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 16ª etapa Cortegana – La Rábida, Palos de la Frontera (186 km), jornada llana en Huelva con opciones para los velocistas tras el segundo día de descanso. Martes 8 de septiembre, salida a las 13:05 y llegada prevista sobre las 17:09 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "us-open-2026-cuartos",
+      "sport": "tenis",
+      "competitionName": "US Open 2026 · Cuartos de final",
+      "home": "US Open 2026",
+      "date": "2026-09-08T18:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver el US Open 2026 online gratis: cuartos de final del último Grand Slam del año en Nueva York, con Carlos Alcaraz (campeón defensor) y las grandes estrellas peleando por las semifinales. Martes 8 de septiembre, sesiones desde las 18:00 (hora española) y sesión nocturna a partir de la 01:00.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Movistar Deportes)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN y ESPN+",
+          "url": "https://www.espn.com/espnplus/"
+        },
+        {
+          "country": "🌎 Latinoamérica",
+          "channels": "ESPN y Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
         }
       ]
     }
