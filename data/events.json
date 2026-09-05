@@ -12,27 +12,6 @@
   },
   "events": [
     {
-      "id": "vuelta-2026-etapa-11",
-      "sport": "ciclismo",
-      "competitionName": "La Vuelta a España 2026 · Etapa 11",
-      "home": "Cartagena – Lorca",
-      "date": "2026-09-02T13:00:00+02:00",
-      "status": "finished",
-      "description": "Ver la Vuelta a España 2026 online gratis: 11ª etapa Cartagena – Lorca (156 km). Miércoles 2 de septiembre, salida sobre las 13:00 y llegada prevista por la tarde (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
       "id": "vuelta-2026-etapa-12",
       "sport": "ciclismo",
       "competitionName": "La Vuelta a España 2026 · Etapa 12",
@@ -60,7 +39,7 @@
       "home": "Real Betis",
       "away": "Real Madrid",
       "date": "2026-09-04T21:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Real Betis – Real Madrid online gratis: partidazo de la jornada 4 de LaLiga EA Sports 2026/27 en el Benito Villamarín. Viernes 4 de septiembre a las 21:00 (hora española).",
       "broadcasters": [
         {
@@ -86,7 +65,7 @@
       "competitionName": "La Vuelta a España 2026 · Etapa 13",
       "home": "Almuñécar – Loja",
       "date": "2026-09-04T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver la Vuelta a España 2026 online gratis: 13ª etapa Almuñécar – Loja (192,8 km), jornada de media montaña por tierras de Granada con tres puertos puntuables. Viernes 4 de septiembre, salida en torno a las 13:00 y llegada prevista por la tarde (hora española).",
       "broadcasters": [
         {
@@ -107,7 +86,7 @@
       "competitionName": "US Open 2026 · Tercera ronda",
       "home": "US Open 2026",
       "date": "2026-09-04T17:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver el US Open 2026 online gratis: sigue en directo la tercera ronda del último Grand Slam de la temporada en Nueva York, con Carlos Alcaraz y las grandes estrellas en liza. Viernes 4 de septiembre, sesiones desde las 17:00 (hora española) y sesión nocturna a partir de la 01:00.",
       "broadcasters": [
         {
@@ -465,6 +444,58 @@
           "country": "🌎 Latinoamérica",
           "channels": "ESPN y Disney+",
           "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "f1-italian-gp-monza-2026",
+      "sport": "motor",
+      "competitionName": "Fórmula 1 2026 · GP de Italia",
+      "home": "Gran Premio de Italia (Monza)",
+      "date": "2026-09-06T15:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver el GP de Italia de Fórmula 1 2026 online gratis: carrera del Mundial de F1 en el mítico Autódromo de Monza, el templo de la velocidad. Domingo 6 de septiembre a las 15:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN F1",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "Sky Sport F1 y TV8 (en abierto, diferido)",
+          "url": "https://www.sky.it/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports F1",
+          "url": "https://www.skysports.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "F1 TV Pro",
+          "url": "https://f1tv.formula1.com/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-17",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 17",
+      "home": "Dos Hermanas – Sevilla",
+      "date": "2026-09-09T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 17ª etapa Dos Hermanas – Sevilla (189 km), la jornada más llana de esta edición, ideal para los velocistas. Miércoles 9 de septiembre, salida en torno a las 13:00 y llegada prevista por la tarde (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
         },
         {
           "country": "🌍 Internacional",
