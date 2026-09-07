@@ -12,85 +12,6 @@
   },
   "events": [
     {
-      "id": "real-betis-real-madrid-laliga-j4-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 4",
-      "home": "Real Betis",
-      "away": "Real Madrid",
-      "date": "2026-09-04T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Real Betis – Real Madrid online gratis: partidazo de la jornada 4 de LaLiga EA Sports 2026/27 en el Benito Villamarín. Viernes 4 de septiembre a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "vuelta-2026-etapa-13",
-      "sport": "ciclismo",
-      "competitionName": "La Vuelta a España 2026 · Etapa 13",
-      "home": "Almuñécar – Loja",
-      "date": "2026-09-04T13:00:00+02:00",
-      "status": "finished",
-      "description": "Ver la Vuelta a España 2026 online gratis: 13ª etapa Almuñécar – Loja (192,8 km), jornada de media montaña por tierras de Granada con tres puertos puntuables. Viernes 4 de septiembre, salida en torno a las 13:00 y llegada prevista por la tarde (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
-      "id": "us-open-2026-tercera-ronda",
-      "sport": "tenis",
-      "competitionName": "US Open 2026 · Tercera ronda",
-      "home": "US Open 2026",
-      "date": "2026-09-04T17:00:00+02:00",
-      "status": "finished",
-      "description": "Ver el US Open 2026 online gratis: sigue en directo la tercera ronda del último Grand Slam de la temporada en Nueva York, con Carlos Alcaraz y las grandes estrellas en liza. Viernes 4 de septiembre, sesiones desde las 17:00 (hora española) y sesión nocturna a partir de la 01:00.",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ (Movistar Deportes)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN y ESPN+",
-          "url": "https://www.espn.com/espnplus/"
-        },
-        {
-          "country": "🌎 Latinoamérica",
-          "channels": "ESPN y Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
       "id": "inter-napoli-serie-a-j3-2026",
       "sport": "futbol",
       "competitionName": "Serie A 2026/27 · Jornada 3",
@@ -145,7 +66,7 @@
       "home": "Arsenal",
       "away": "Chelsea",
       "date": "2026-09-06T17:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Arsenal – Chelsea online gratis: derbi londinense de la jornada 3 de la Premier League 2026/27 en el Emirates Stadium. Domingo 6 de septiembre a las 17:30 (hora española).",
       "broadcasters": [
         {
@@ -171,7 +92,7 @@
       "competitionName": "La Vuelta a España 2026 · Etapa 15",
       "home": "Palma del Río – Córdoba",
       "date": "2026-09-06T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver la Vuelta a España 2026 online gratis: 15ª etapa Palma del Río – Córdoba (181 km) antes de la segunda jornada de descanso. Domingo 6 de septiembre, salida en torno a las 13:00 y llegada prevista por la tarde (hora española).",
       "broadcasters": [
         {
@@ -192,7 +113,7 @@
       "competitionName": "US Open 2026 · Octavos de final",
       "home": "US Open 2026",
       "date": "2026-09-06T18:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver el US Open 2026 online gratis: octavos de final (ronda de 16) del último Grand Slam de la temporada en Nueva York, con Carlos Alcaraz y las grandes estrellas peleando por los cuartos. Domingo 6 de septiembre, sesiones desde las 18:00 (hora española) y sesión nocturna a partir de la 01:00.",
       "broadcasters": [
         {
@@ -251,7 +172,7 @@
       "home": "Valencia CF",
       "away": "FC Barcelona",
       "date": "2026-09-06T16:15:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Valencia – FC Barcelona online gratis: jornada 4 de LaLiga EA Sports 2026/27 en Mestalla. Domingo 6 de septiembre a las 16:15 (hora española).",
       "broadcasters": [
         {
@@ -278,7 +199,7 @@
       "home": "Everton",
       "away": "Manchester United",
       "date": "2026-09-06T15:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Everton – Manchester United online gratis: jornada 3 de la Premier League 2026/27 en Goodison Park. Domingo 6 de septiembre a las 15:00 (hora española).",
       "broadcasters": [
         {
@@ -305,7 +226,7 @@
       "home": "Juventus",
       "away": "AC Milan",
       "date": "2026-09-06T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Juventus – Milan online gratis: gran partido de la jornada 3 de la Serie A 2026/27 en el Allianz Stadium. Domingo 6 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -437,7 +358,7 @@
       "competitionName": "Fórmula 1 2026 · GP de Italia",
       "home": "Gran Premio de Italia (Monza)",
       "date": "2026-09-06T15:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver el GP de Italia de Fórmula 1 2026 online gratis: carrera del Mundial de F1 en el mítico Autódromo de Monza, el templo de la velocidad. Domingo 6 de septiembre a las 15:00 (hora española).",
       "broadcasters": [
         {
@@ -496,6 +417,58 @@
           "country": "🇪🇸 España",
           "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
           "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-19",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 19",
+      "home": "Vélez-Málaga – Peñas Blancas (Estepona)",
+      "date": "2026-09-11T11:50:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 19ª etapa Vélez-Málaga – Peñas Blancas, Estepona (210,8 km), penúltima jornada de alta montaña con final en alto de primera categoría, decisiva para la general. Viernes 11 de septiembre, salida a las 11:50 y llegada prevista sobre las 17:14 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "us-open-2026-semifinales",
+      "sport": "tenis",
+      "competitionName": "US Open 2026 · Semifinales",
+      "home": "US Open 2026",
+      "date": "2026-09-11T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver el US Open 2026 online gratis: semifinales del último Grand Slam del año en Nueva York. Las semifinales masculinas se juegan el viernes 11 de septiembre desde las 21:00 (hora española), con Carlos Alcaraz aspirando a la final; las femeninas se disputaron el jueves 10.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Movistar Deportes)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN y ESPN+",
+          "url": "https://www.espn.com/espnplus/"
+        },
+        {
+          "country": "🌎 Latinoamérica",
+          "channels": "ESPN y Disney+",
+          "url": "https://www.espn.com/"
         },
         {
           "country": "🌍 Internacional",
