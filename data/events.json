@@ -12,54 +12,6 @@
   },
   "events": [
     {
-      "id": "inter-napoli-serie-a-j3-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 3",
-      "home": "Inter de Milán",
-      "away": "Napoli",
-      "date": "2026-09-05T18:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Inter – Napoli online gratis: gran duelo de la jornada 3 de la Serie A 2026/27 entre dos aspirantes al Scudetto en San Siro. Sábado 5 de septiembre a las 18:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "vuelta-2026-etapa-14",
-      "sport": "ciclismo",
-      "competitionName": "La Vuelta a España 2026 · Etapa 14",
-      "home": "Jaén – Sierra de la Pandera",
-      "date": "2026-09-05T13:15:00+02:00",
-      "status": "finished",
-      "description": "Ver la Vuelta a España 2026 online gratis: 14ª etapa Jaén – Sierra de la Pandera (152 km), durísima jornada de montaña con final en alto de primera categoría decisivo para la general. Sábado 5 de septiembre, salida a las 13:15 y llegada prevista sobre las 17:19 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
       "id": "arsenal-chelsea-premier-j3-2026",
       "sport": "futbol",
       "competitionName": "Premier League 2026/27 · Jornada 3",
@@ -135,33 +87,6 @@
           "country": "🌍 Internacional",
           "channels": "Eurosport y discovery+",
           "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
-      "id": "athletic-atletico-laliga-j4-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 4",
-      "home": "Athletic Club",
-      "away": "Atlético de Madrid",
-      "date": "2026-09-05T16:15:00+02:00",
-      "status": "finished",
-      "description": "Ver Athletic Club – Atlético de Madrid online gratis: duelo de la jornada 4 de LaLiga EA Sports 2026/27 en San Mamés. Sábado 5 de septiembre a las 16:15 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
         }
       ]
     },
@@ -247,40 +172,13 @@
       ]
     },
     {
-      "id": "roma-atalanta-serie-a-j3-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 3",
-      "home": "AS Roma",
-      "away": "Atalanta",
-      "date": "2026-09-05T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Roma – Atalanta online gratis: jornada 3 de la Serie A 2026/27 en el Estadio Olímpico de Roma. Sábado 5 de septiembre a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
       "id": "udinese-lazio-serie-a-j3-2026",
       "sport": "futbol",
       "competitionName": "Serie A 2026/27 · Jornada 3",
       "home": "Udinese",
       "away": "Lazio",
       "date": "2026-09-07T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Udinese – Lazio online gratis: cierre de la jornada 3 de la Serie A 2026/27 en el BluEnergy Stadium de Udine. Lunes 7 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -454,6 +352,85 @@
       "date": "2026-09-11T21:00:00+02:00",
       "status": "scheduled",
       "description": "Ver el US Open 2026 online gratis: semifinales del último Grand Slam del año en Nueva York. Las semifinales masculinas se juegan el viernes 11 de septiembre desde las 21:00 (hora española), con Carlos Alcaraz aspirando a la final; las femeninas se disputaron el jueves 10.",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Movistar Deportes)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN y ESPN+",
+          "url": "https://www.espn.com/espnplus/"
+        },
+        {
+          "country": "🌎 Latinoamérica",
+          "channels": "ESPN y Disney+",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "real-madrid-rayo-laliga-j5-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 5",
+      "home": "Real Madrid",
+      "away": "Rayo Vallecano",
+      "date": "2026-09-12T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Real Madrid – Rayo Vallecano online gratis: jornada 5 de LaLiga EA Sports 2026/27 en el Santiago Bernabéu. Sábado 12 de septiembre a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "vuelta-2026-etapa-20",
+      "sport": "ciclismo",
+      "competitionName": "La Vuelta a España 2026 · Etapa 20",
+      "home": "La Calahorra – Collado del Alguacil",
+      "date": "2026-09-12T12:36:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Vuelta a España 2026 online gratis: 20ª etapa La Calahorra – Collado del Alguacil (186,8 km), la etapa reina y último gran examen de montaña con más de 5.000 m de desnivel, donde se decide la general. Sábado 12 de septiembre, salida a las 12:36 y llegada por la tarde (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "us-open-2026-final-femenina",
+      "sport": "tenis",
+      "competitionName": "US Open 2026 · Final femenina",
+      "home": "US Open 2026 · Final femenina",
+      "date": "2026-09-12T22:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la final femenina del US Open 2026 online gratis: gran final del cuadro individual femenino del último Grand Slam del año en Nueva York. Sábado 12 de septiembre a las 22:00 (hora española).",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
