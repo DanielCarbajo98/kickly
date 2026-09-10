@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "udinese-lazio-serie-a-j3-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 3",
-      "home": "Udinese",
-      "away": "Lazio",
-      "date": "2026-09-07T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Udinese – Lazio online gratis: cierre de la jornada 3 de la Serie A 2026/27 en el BluEnergy Stadium de Udine. Lunes 7 de septiembre a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
       "id": "vuelta-2026-etapa-16",
       "sport": "ciclismo",
       "competitionName": "La Vuelta a España 2026 · Etapa 16",
@@ -96,7 +69,7 @@
       "competitionName": "La Vuelta a España 2026 · Etapa 17",
       "home": "Dos Hermanas – Sevilla",
       "date": "2026-09-09T13:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver la Vuelta a España 2026 online gratis: 17ª etapa Dos Hermanas – Sevilla (189 km), la jornada más llana de esta edición, ideal para los velocistas. Miércoles 9 de septiembre, salida en torno a las 13:00 y llegada prevista por la tarde (hora española).",
       "broadcasters": [
         {
@@ -338,6 +311,141 @@
           "country": "🌍 Internacional",
           "channels": "Eurosport y discovery+",
           "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "lazio-milan-serie-a-j4-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 4",
+      "home": "Lazio",
+      "away": "AC Milan",
+      "date": "2026-09-12T18:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Lazio – Milan online gratis: gran duelo de la jornada 4 de la Serie A 2026/27 en el Estadio Olímpico de Roma. Sábado 12 de septiembre a las 18:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "levante-barcelona-laliga-j5-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 5",
+      "home": "Levante UD",
+      "away": "FC Barcelona",
+      "date": "2026-09-13T16:15:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Levante – FC Barcelona online gratis: jornada 5 de LaLiga EA Sports 2026/27 en el Estadio Ciudad de Valencia. Domingo 13 de septiembre a las 16:15 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "napoli-bologna-serie-a-j4-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 4",
+      "home": "Napoli",
+      "away": "Bologna",
+      "date": "2026-09-13T18:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Napoli – Bologna online gratis: jornada 4 de la Serie A 2026/27 en el Estadio Diego Armando Maradona. Domingo 13 de septiembre a las 18:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "sassuolo-juventus-serie-a-j4-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 4",
+      "home": "Sassuolo",
+      "away": "Juventus",
+      "date": "2026-09-13T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Sassuolo – Juventus online gratis: jornada 4 de la Serie A 2026/27 en el Mapei Stadium. Domingo 13 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "inter-udinese-serie-a-j4-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 4",
+      "home": "Inter de Milán",
+      "away": "Udinese",
+      "date": "2026-09-14T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Inter – Udinese online gratis: cierre de la jornada 4 de la Serie A 2026/27 en San Siro. Lunes 14 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
         }
       ]
     }
