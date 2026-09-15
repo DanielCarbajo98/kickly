@@ -12,85 +12,6 @@
   },
   "events": [
     {
-      "id": "real-madrid-rayo-laliga-j5-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 5",
-      "home": "Real Madrid",
-      "away": "Rayo Vallecano",
-      "date": "2026-09-12T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Real Madrid – Rayo Vallecano online gratis: jornada 5 de LaLiga EA Sports 2026/27 en el Santiago Bernabéu. Sábado 12 de septiembre a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "vuelta-2026-etapa-20",
-      "sport": "ciclismo",
-      "competitionName": "La Vuelta a España 2026 · Etapa 20",
-      "home": "La Calahorra – Collado del Alguacil",
-      "date": "2026-09-12T12:36:00+02:00",
-      "status": "finished",
-      "description": "Ver la Vuelta a España 2026 online gratis: 20ª etapa La Calahorra – Collado del Alguacil (186,8 km), la etapa reina y último gran examen de montaña con más de 5.000 m de desnivel, donde se decide la general. Sábado 12 de septiembre, salida a las 12:36 y llegada por la tarde (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (La 1 y Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
-      "id": "us-open-2026-final-femenina",
-      "sport": "tenis",
-      "competitionName": "US Open 2026 · Final femenina",
-      "home": "US Open 2026 · Final femenina",
-      "date": "2026-09-12T22:00:00+02:00",
-      "status": "finished",
-      "description": "Ver la final femenina del US Open 2026 online gratis: gran final del cuadro individual femenino del último Grand Slam del año en Nueva York. Sábado 12 de septiembre a las 22:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ (Movistar Deportes)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN y ESPN+",
-          "url": "https://www.espn.com/espnplus/"
-        },
-        {
-          "country": "🌎 Latinoamérica",
-          "channels": "ESPN y Disney+",
-          "url": "https://www.espn.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
       "id": "motogp-san-marino-2026",
       "sport": "motor",
       "competitionName": "MotoGP 2026 · Gran Premio de San Marino",
@@ -165,33 +86,6 @@
           "country": "🌍 Internacional",
           "channels": "Eurosport y discovery+",
           "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
-      "id": "lazio-milan-serie-a-j4-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 4",
-      "home": "Lazio",
-      "away": "AC Milan",
-      "date": "2026-09-12T18:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Lazio – Milan online gratis: gran duelo de la jornada 4 de la Serie A 2026/27 en el Estadio Olímpico de Roma. Sábado 12 de septiembre a las 18:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
         }
       ]
     },
@@ -283,7 +177,7 @@
       "home": "Inter de Milán",
       "away": "Udinese",
       "date": "2026-09-14T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Inter – Udinese online gratis: cierre de la jornada 4 de la Serie A 2026/27 en San Siro. Lunes 14 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -354,6 +248,87 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "ESPN+ y ESPN Deportes",
           "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "barcelona-racing-santander-laliga-j6-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 6",
+      "home": "FC Barcelona",
+      "away": "Racing de Santander",
+      "date": "2026-09-16T21:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver FC Barcelona – Racing de Santander online gratis: jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en el Spotify Camp Nou, con el recién ascendido Racing visitando al Barça. Miércoles 16 de septiembre a las 21:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "atletico-osasuna-laliga-j6-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 6",
+      "home": "Atlético de Madrid",
+      "away": "Osasuna",
+      "date": "2026-09-16T19:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Atlético de Madrid – Osasuna online gratis: jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en el Riyadh Air Metropolitano. Miércoles 16 de septiembre a las 19:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "roma-inter-serie-a-j5-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 5",
+      "home": "AS Roma",
+      "away": "Inter de Milán",
+      "date": "2026-09-19T18:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Roma – Inter online gratis: gran partido de la jornada 5 de la Serie A 2026/27 en el Estadio Olímpico de Roma. Sábado 19 de septiembre a las 18:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
         }
       ]
     }
