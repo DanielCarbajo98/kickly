@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "inter-udinese-serie-a-j4-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 4",
-      "home": "Inter de Milán",
-      "away": "Udinese",
-      "date": "2026-09-14T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Inter – Udinese online gratis: cierre de la jornada 4 de la Serie A 2026/27 en San Siro. Lunes 14 de septiembre a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
       "id": "elche-real-madrid-laliga-j6-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 6",
@@ -72,7 +45,7 @@
       "home": "FC Barcelona",
       "away": "Racing de Santander",
       "date": "2026-09-16T21:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver FC Barcelona – Racing de Santander online gratis: jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en el Spotify Camp Nou, con el recién ascendido Racing visitando al Barça. Miércoles 16 de septiembre a las 21:30 (hora española).",
       "broadcasters": [
         {
@@ -99,7 +72,7 @@
       "home": "Atlético de Madrid",
       "away": "Osasuna",
       "date": "2026-09-16T19:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Atlético de Madrid – Osasuna online gratis: jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en el Riyadh Air Metropolitano. Miércoles 16 de septiembre a las 19:00 (hora española).",
       "broadcasters": [
         {
@@ -277,6 +250,60 @@
           "country": "🌍 Internacional",
           "channels": "beIN Sports",
           "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "malaga-villarreal-laliga-j6-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 6",
+      "home": "Málaga CF",
+      "away": "Villarreal CF",
+      "date": "2026-09-17T21:30:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Málaga – Villarreal online gratis: cierre de la jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en La Rosaleda, con el recién ascendido Málaga recibiendo al Villarreal. Jueves 17 de septiembre a las 21:30 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "sevilla-barcelona-laliga-j7-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 7",
+      "home": "Sevilla FC",
+      "away": "FC Barcelona",
+      "date": "2026-09-19T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Sevilla – FC Barcelona online gratis: partidazo de la jornada 7 de LaLiga EA Sports 2026/27 en el Estadio Ramón Sánchez-Pizjuán. Sábado 19 de septiembre a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
         }
       ]
     }
