@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "elche-real-madrid-laliga-j6-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 6",
-      "home": "Elche CF",
-      "away": "Real Madrid",
-      "date": "2026-09-15T21:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Elche – Real Madrid online gratis: jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en el Estadio Martínez Valero. Martes 15 de septiembre a las 21:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "barcelona-racing-santander-laliga-j6-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 6",
@@ -260,7 +233,7 @@
       "home": "Málaga CF",
       "away": "Villarreal CF",
       "date": "2026-09-17T21:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Málaga – Villarreal online gratis: cierre de la jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en La Rosaleda, con el recién ascendido Málaga recibiendo al Villarreal. Jueves 17 de septiembre a las 21:30 (hora española).",
       "broadcasters": [
         {
@@ -304,6 +277,60 @@
           "country": "🇺🇸 Estados Unidos",
           "channels": "ESPN+ y ESPN Deportes",
           "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "espanyol-elche-laliga-j7-2026",
+      "sport": "futbol",
+      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 7",
+      "home": "RCD Espanyol",
+      "away": "Elche CF",
+      "date": "2026-09-18T21:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Espanyol – Elche online gratis: partido que abre la jornada 7 de LaLiga EA Sports 2026/27 en el RCDE Stadium. Viernes 18 de septiembre a las 21:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ y DAZN (LaLiga)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇲🇽 México",
+          "channels": "Sky Sports México",
+          "url": "https://www.sky.com.mx/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "ESPN+ y ESPN Deportes",
+          "url": "https://www.espn.com/espnplus/"
+        }
+      ]
+    },
+    {
+      "id": "monza-sassuolo-serie-a-j5-2026",
+      "sport": "futbol",
+      "competitionName": "Serie A 2026/27 · Jornada 5",
+      "home": "Monza",
+      "away": "Sassuolo",
+      "date": "2026-09-18T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Monza – Sassuolo online gratis: partido que abre la jornada 5 de la Serie A 2026/27 en el U-Power Stadium. Viernes 18 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "DAZN y Sky Sport",
+          "url": "https://www.dazn.com/it-IT/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "beIN Sports",
+          "url": "https://www.beinsports.com/"
         }
       ]
     }
