@@ -12,60 +12,6 @@
   },
   "events": [
     {
-      "id": "barcelona-racing-santander-laliga-j6-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 6",
-      "home": "FC Barcelona",
-      "away": "Racing de Santander",
-      "date": "2026-09-16T21:30:00+02:00",
-      "status": "finished",
-      "description": "Ver FC Barcelona – Racing de Santander online gratis: jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en el Spotify Camp Nou, con el recién ascendido Racing visitando al Barça. Miércoles 16 de septiembre a las 21:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "atletico-osasuna-laliga-j6-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 6",
-      "home": "Atlético de Madrid",
-      "away": "Osasuna",
-      "date": "2026-09-16T19:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Atlético de Madrid – Osasuna online gratis: jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en el Riyadh Air Metropolitano. Miércoles 16 de septiembre a las 19:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "roma-inter-serie-a-j5-2026",
       "sport": "futbol",
       "competitionName": "Serie A 2026/27 · Jornada 5",
@@ -287,7 +233,7 @@
       "home": "RCD Espanyol",
       "away": "Elche CF",
       "date": "2026-09-18T21:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Espanyol – Elche online gratis: partido que abre la jornada 7 de LaLiga EA Sports 2026/27 en el RCDE Stadium. Viernes 18 de septiembre a las 21:00 (hora española).",
       "broadcasters": [
         {
@@ -314,7 +260,7 @@
       "home": "Monza",
       "away": "Sassuolo",
       "date": "2026-09-18T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Monza – Sassuolo online gratis: partido que abre la jornada 5 de la Serie A 2026/27 en el U-Power Stadium. Viernes 18 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -331,6 +277,27 @@
           "country": "🌍 Internacional",
           "channels": "beIN Sports",
           "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "mundial-ciclismo-2026-crono-elite",
+      "sport": "ciclismo",
+      "competitionName": "Mundial de Ciclismo en Ruta 2026 · Contrarreloj élite",
+      "home": "Contrarreloj individual élite (Montreal)",
+      "date": "2026-09-20T18:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: contrarreloj individual élite en Montreal (Canadá), con los favoritos al maillot arcoíris de la crono. Domingo 20 de septiembre; la prueba masculina arranca sobre las 18:45 y la femenina a partir de las 15:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
         }
       ]
     }
