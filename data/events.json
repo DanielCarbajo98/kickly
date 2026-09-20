@@ -18,7 +18,7 @@
       "home": "AS Roma",
       "away": "Inter de Milán",
       "date": "2026-09-19T18:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Roma – Inter online gratis: gran partido de la jornada 5 de la Serie A 2026/27 en el Estadio Olímpico de Roma. Sábado 19 de septiembre a las 18:00 (hora española).",
       "broadcasters": [
         {
@@ -173,40 +173,13 @@
       ]
     },
     {
-      "id": "malaga-villarreal-laliga-j6-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 6",
-      "home": "Málaga CF",
-      "away": "Villarreal CF",
-      "date": "2026-09-17T21:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Málaga – Villarreal online gratis: cierre de la jornada 6 (entre semana) de LaLiga EA Sports 2026/27 en La Rosaleda, con el recién ascendido Málaga recibiendo al Villarreal. Jueves 17 de septiembre a las 21:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "sevilla-barcelona-laliga-j7-2026",
       "sport": "futbol",
       "competitionName": "LaLiga EA Sports 2026/27 · Jornada 7",
       "home": "Sevilla FC",
       "away": "FC Barcelona",
       "date": "2026-09-19T21:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Sevilla – FC Barcelona online gratis: partidazo de la jornada 7 de LaLiga EA Sports 2026/27 en el Estadio Ramón Sánchez-Pizjuán. Sábado 19 de septiembre a las 21:00 (hora española).",
       "broadcasters": [
         {
@@ -288,6 +261,80 @@
       "date": "2026-09-20T18:45:00+02:00",
       "status": "scheduled",
       "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: contrarreloj individual élite en Montreal (Canadá), con los favoritos al maillot arcoíris de la crono. Domingo 20 de septiembre; la prueba masculina arranca sobre las 18:45 y la femenina a partir de las 15:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "f1-azerbaijan-gp-baku-2026",
+      "sport": "motor",
+      "competitionName": "Fórmula 1 2026 · GP de Azerbaiyán",
+      "home": "Gran Premio de Azerbaiyán (Bakú)",
+      "date": "2026-09-26T13:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver el GP de Azerbaiyán de Fórmula 1 2026 online gratis: carrera del Mundial de F1 en el circuito urbano de Bakú, que este año se disputa en sábado. Sábado 26 de septiembre a las 13:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN F1",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Sky Sports F1",
+          "url": "https://www.skysports.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "F1 TV Pro",
+          "url": "https://f1tv.formula1.com/"
+        }
+      ]
+    },
+    {
+      "id": "inglaterra-espana-nations-league-2026",
+      "sport": "futbol",
+      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
+      "home": "Inglaterra",
+      "away": "España",
+      "date": "2026-09-26T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Inglaterra – España online gratis: estreno de la selección española en la fase de grupos de la UEFA Nations League 2026/27, en Wembley. Sábado 26 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "La 1 de RTVE (en abierto)",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "Channel 4",
+          "url": "https://www.channel4.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UEFA.tv y beIN Sports",
+          "url": "https://www.beinsports.com/"
+        }
+      ]
+    },
+    {
+      "id": "mundial-ciclismo-2026-ruta-elite-masculina",
+      "sport": "ciclismo",
+      "competitionName": "Mundial de Ciclismo en Ruta 2026 · Ruta élite masculina",
+      "home": "Ruta élite masculina (Montreal)",
+      "date": "2026-09-27T15:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: prueba de ruta élite masculina en Montreal (Canadá), donde se decide el maillot arcoíris. Domingo 27 de septiembre, desde las 15:00 y con final previsto sobre las 21:40 (hora española).",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
