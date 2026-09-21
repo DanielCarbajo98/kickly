@@ -44,7 +44,7 @@
       "competitionName": "MotoGP 2026 · Gran Premio de Austria",
       "home": "Gran Premio de Austria (Red Bull Ring)",
       "date": "2026-09-20T14:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver MotoGP Gran Premio de Austria 2026 online gratis: carrera del Mundial de MotoGP en el Red Bull Ring de Spielberg. Domingo 20 de septiembre a las 14:00 (hora española).",
       "broadcasters": [
         {
@@ -71,7 +71,7 @@
       "home": "Atlético de Madrid",
       "away": "Real Madrid",
       "date": "2026-09-20T16:15:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Atlético de Madrid – Real Madrid online gratis: el derbi madrileño, gran partido de la jornada 7 de LaLiga EA Sports 2026/27 en el Riyadh Air Metropolitano. Domingo 20 de septiembre a las 16:15 (hora española).",
       "broadcasters": [
         {
@@ -98,7 +98,7 @@
       "home": "Fiorentina",
       "away": "Napoli",
       "date": "2026-09-20T12:30:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Fiorentina – Napoli online gratis: jornada 5 de la Serie A 2026/27 en el Estadio Artemio Franchi. Domingo 20 de septiembre a las 12:30 (hora española).",
       "broadcasters": [
         {
@@ -125,7 +125,7 @@
       "home": "Juventus",
       "away": "Atalanta",
       "date": "2026-09-20T18:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Juventus – Atalanta online gratis: jornada 5 de la Serie A 2026/27 en el Allianz Stadium. Domingo 20 de septiembre a las 18:00 (hora española).",
       "broadcasters": [
         {
@@ -152,7 +152,7 @@
       "home": "AC Milan",
       "away": "Lecce",
       "date": "2026-09-20T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Milan – Lecce online gratis: jornada 5 de la Serie A 2026/27 en San Siro. Domingo 20 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -200,66 +200,12 @@
       ]
     },
     {
-      "id": "espanyol-elche-laliga-j7-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 7",
-      "home": "RCD Espanyol",
-      "away": "Elche CF",
-      "date": "2026-09-18T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Espanyol – Elche online gratis: partido que abre la jornada 7 de LaLiga EA Sports 2026/27 en el RCDE Stadium. Viernes 18 de septiembre a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "monza-sassuolo-serie-a-j5-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 5",
-      "home": "Monza",
-      "away": "Sassuolo",
-      "date": "2026-09-18T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Monza – Sassuolo online gratis: partido que abre la jornada 5 de la Serie A 2026/27 en el U-Power Stadium. Viernes 18 de septiembre a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
       "id": "mundial-ciclismo-2026-crono-elite",
       "sport": "ciclismo",
       "competitionName": "Mundial de Ciclismo en Ruta 2026 · Contrarreloj élite",
       "home": "Contrarreloj individual élite (Montreal)",
       "date": "2026-09-20T18:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: contrarreloj individual élite en Montreal (Canadá), con los favoritos al maillot arcoíris de la crono. Domingo 20 de septiembre; la prueba masculina arranca sobre las 18:45 y la femenina a partir de las 15:00 (hora española).",
       "broadcasters": [
         {
@@ -335,6 +281,27 @@
       "date": "2026-09-27T15:00:00+02:00",
       "status": "scheduled",
       "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: prueba de ruta élite masculina en Montreal (Canadá), donde se decide el maillot arcoíris. Domingo 27 de septiembre, desde las 15:00 y con final previsto sobre las 21:40 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "RTVE (Teledeporte, en abierto) y Eurosport",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Eurosport y discovery+",
+          "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "mundial-ciclismo-2026-ruta-elite-femenina",
+      "sport": "ciclismo",
+      "competitionName": "Mundial de Ciclismo en Ruta 2026 · Ruta élite femenina",
+      "home": "Ruta élite femenina (Montreal)",
+      "date": "2026-09-26T15:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: prueba de ruta élite femenina en Montreal (Canadá), donde se decide el maillot arcoíris. Sábado 26 de septiembre, desde las 15:00 y con final previsto sobre las 20:10 (hora española).",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
