@@ -12,33 +12,6 @@
   },
   "events": [
     {
-      "id": "roma-inter-serie-a-j5-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 5",
-      "home": "AS Roma",
-      "away": "Inter de Milán",
-      "date": "2026-09-19T18:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Roma – Inter online gratis: gran partido de la jornada 5 de la Serie A 2026/27 en el Estadio Olímpico de Roma. Sábado 19 de septiembre a las 18:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
       "id": "motogp-austria-2026",
       "sport": "motor",
       "competitionName": "MotoGP 2026 · Gran Premio de Austria",
@@ -173,33 +146,6 @@
       ]
     },
     {
-      "id": "sevilla-barcelona-laliga-j7-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 7",
-      "home": "Sevilla FC",
-      "away": "FC Barcelona",
-      "date": "2026-09-19T21:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Sevilla – FC Barcelona online gratis: partidazo de la jornada 7 de LaLiga EA Sports 2026/27 en el Estadio Ramón Sánchez-Pizjuán. Sábado 19 de septiembre a las 21:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
       "id": "mundial-ciclismo-2026-crono-elite",
       "sport": "ciclismo",
       "competitionName": "Mundial de Ciclismo en Ruta 2026 · Contrarreloj élite",
@@ -312,6 +258,99 @@
           "country": "🌍 Internacional",
           "channels": "Eurosport y discovery+",
           "url": "https://www.eurosport.com/"
+        }
+      ]
+    },
+    {
+      "id": "paises-bajos-alemania-nations-league-2026",
+      "sport": "futbol",
+      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
+      "home": "Países Bajos",
+      "away": "Alemania",
+      "date": "2026-09-24T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Países Bajos – Alemania online gratis: duelo de altura de la fase de grupos de la UEFA Nations League 2026/27. Jueves 24 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇳🇱 Países Bajos",
+          "channels": "NOS",
+          "url": "https://nos.nl/"
+        },
+        {
+          "country": "🇩🇪 Alemania",
+          "channels": "RTL",
+          "url": "https://www.rtl.de/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UEFA.tv",
+          "url": "https://www.uefa.tv/"
+        }
+      ]
+    },
+    {
+      "id": "portugal-gales-nations-league-2026",
+      "sport": "futbol",
+      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
+      "home": "Portugal",
+      "away": "Gales",
+      "date": "2026-09-24T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Portugal – Gales online gratis: partido de la fase de grupos de la UEFA Nations League 2026/27 en el Estadio José Alvalade de Lisboa. Jueves 24 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇵🇹 Portugal",
+          "channels": "RTP",
+          "url": "https://www.rtp.pt/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UEFA.tv",
+          "url": "https://www.uefa.tv/"
+        }
+      ]
+    },
+    {
+      "id": "italia-belgica-nations-league-2026",
+      "sport": "futbol",
+      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
+      "home": "Italia",
+      "away": "Bélgica",
+      "date": "2026-09-25T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Italia – Bélgica online gratis: gran partido de la fase de grupos de la UEFA Nations League 2026/27. Viernes 25 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇮🇹 Italia",
+          "channels": "RAI",
+          "url": "https://www.rai.it/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UEFA.tv",
+          "url": "https://www.uefa.tv/"
+        }
+      ]
+    },
+    {
+      "id": "turquia-francia-nations-league-2026",
+      "sport": "futbol",
+      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
+      "home": "Turquía",
+      "away": "Francia",
+      "date": "2026-09-25T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver Turquía – Francia online gratis: partido de la fase de grupos de la UEFA Nations League 2026/27. Viernes 25 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇫🇷 Francia",
+          "channels": "TF1",
+          "url": "https://www.tf1.fr/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UEFA.tv",
+          "url": "https://www.uefa.tv/"
         }
       ]
     }
