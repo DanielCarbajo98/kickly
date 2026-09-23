@@ -12,161 +12,6 @@
   },
   "events": [
     {
-      "id": "motogp-austria-2026",
-      "sport": "motor",
-      "competitionName": "MotoGP 2026 · Gran Premio de Austria",
-      "home": "Gran Premio de Austria (Red Bull Ring)",
-      "date": "2026-09-20T14:00:00+02:00",
-      "status": "finished",
-      "description": "Ver MotoGP Gran Premio de Austria 2026 online gratis: carrera del Mundial de MotoGP en el Red Bull Ring de Spielberg. Domingo 20 de septiembre a las 14:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN (MotoGP)",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "TNT Sports",
-          "url": "https://www.tntsports.co.uk/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "MotoGP VideoPass",
-          "url": "https://www.motogp.com/"
-        }
-      ]
-    },
-    {
-      "id": "atletico-real-madrid-laliga-j7-2026",
-      "sport": "futbol",
-      "competitionName": "LaLiga EA Sports 2026/27 · Jornada 7",
-      "home": "Atlético de Madrid",
-      "away": "Real Madrid",
-      "date": "2026-09-20T16:15:00+02:00",
-      "status": "finished",
-      "description": "Ver Atlético de Madrid – Real Madrid online gratis: el derbi madrileño, gran partido de la jornada 7 de LaLiga EA Sports 2026/27 en el Riyadh Air Metropolitano. Domingo 20 de septiembre a las 16:15 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ y DAZN (LaLiga)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇲🇽 México",
-          "channels": "Sky Sports México",
-          "url": "https://www.sky.com.mx/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "ESPN+ y ESPN Deportes",
-          "url": "https://www.espn.com/espnplus/"
-        }
-      ]
-    },
-    {
-      "id": "fiorentina-napoli-serie-a-j5-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 5",
-      "home": "Fiorentina",
-      "away": "Napoli",
-      "date": "2026-09-20T12:30:00+02:00",
-      "status": "finished",
-      "description": "Ver Fiorentina – Napoli online gratis: jornada 5 de la Serie A 2026/27 en el Estadio Artemio Franchi. Domingo 20 de septiembre a las 12:30 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "juventus-atalanta-serie-a-j5-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 5",
-      "home": "Juventus",
-      "away": "Atalanta",
-      "date": "2026-09-20T18:00:00+02:00",
-      "status": "finished",
-      "description": "Ver Juventus – Atalanta online gratis: jornada 5 de la Serie A 2026/27 en el Allianz Stadium. Domingo 20 de septiembre a las 18:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "milan-lecce-serie-a-j5-2026",
-      "sport": "futbol",
-      "competitionName": "Serie A 2026/27 · Jornada 5",
-      "home": "AC Milan",
-      "away": "Lecce",
-      "date": "2026-09-20T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Milan – Lecce online gratis: jornada 5 de la Serie A 2026/27 en San Siro. Domingo 20 de septiembre a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "DAZN y Sky Sport",
-          "url": "https://www.dazn.com/it-IT/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
-      "id": "mundial-ciclismo-2026-crono-elite",
-      "sport": "ciclismo",
-      "competitionName": "Mundial de Ciclismo en Ruta 2026 · Contrarreloj élite",
-      "home": "Contrarreloj individual élite (Montreal)",
-      "date": "2026-09-20T18:45:00+02:00",
-      "status": "finished",
-      "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: contrarreloj individual élite en Montreal (Canadá), con los favoritos al maillot arcoíris de la crono. Domingo 20 de septiembre; la prueba masculina arranca sobre las 18:45 y la femenina a partir de las 15:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
       "id": "f1-azerbaijan-gp-baku-2026",
       "sport": "motor",
       "competitionName": "Fórmula 1 2026 · GP de Azerbaiyán",
@@ -351,6 +196,58 @@
           "country": "🌍 Internacional",
           "channels": "UEFA.tv",
           "url": "https://www.uefa.tv/"
+        }
+      ]
+    },
+    {
+      "id": "laver-cup-2026",
+      "sport": "tenis",
+      "competitionName": "Laver Cup 2026 · Europa vs Mundo",
+      "home": "Laver Cup 2026 (The O2, Londres)",
+      "date": "2026-09-25T14:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Laver Cup 2026 online gratis: el Equipo Europa se enfrenta al Equipo Mundo en el The O2 de Londres, con algunas de las grandes estrellas del tenis. Del viernes 25 al domingo 27 de septiembre; la sesión de día del viernes arranca sobre las 14:00 y la nocturna a partir de las 20:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Movistar Deportes)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Tennis Channel",
+          "url": "https://www.tennischannel.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Laver Cup (streaming oficial)",
+          "url": "https://lavercup.com/"
+        }
+      ]
+    },
+    {
+      "id": "presidents-cup-2026",
+      "sport": "golf",
+      "competitionName": "Presidents Cup 2026 · EE.UU. vs Internacional",
+      "home": "Presidents Cup 2026 (Medinah)",
+      "date": "2026-09-24T18:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver la Presidents Cup 2026 de golf online gratis: Estados Unidos se mide al equipo Internacional en el Medinah Country Club (Illinois). Del jueves 24 al domingo 27 de septiembre, con las sesiones a partir de la tarde-noche (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Movistar Plus+ (Movistar Golf)",
+          "url": "https://www.movistarplus.es/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Golf Channel y NBC",
+          "url": "https://www.golfchannel.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "Sky Sports Golf",
+          "url": "https://www.skysports.com/golf"
         }
       ]
     }
