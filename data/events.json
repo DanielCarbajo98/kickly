@@ -113,7 +113,7 @@
       "home": "Países Bajos",
       "away": "Alemania",
       "date": "2026-09-24T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Países Bajos – Alemania online gratis: duelo de altura de la fase de grupos de la UEFA Nations League 2026/27. Jueves 24 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -140,7 +140,7 @@
       "home": "Portugal",
       "away": "Gales",
       "date": "2026-09-24T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Portugal – Gales online gratis: partido de la fase de grupos de la UEFA Nations League 2026/27 en el Estadio José Alvalade de Lisboa. Jueves 24 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -248,6 +248,28 @@
           "country": "🌍 Internacional",
           "channels": "Sky Sports Golf",
           "url": "https://www.skysports.com/golf"
+        }
+      ]
+    },
+    {
+      "id": "espana-croacia-nations-league-2026",
+      "sport": "futbol",
+      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
+      "home": "España",
+      "away": "Croacia",
+      "date": "2026-09-29T20:45:00+02:00",
+      "status": "scheduled",
+      "description": "Ver España – Croacia online gratis: segundo partido de la selección española en la fase de grupos de la UEFA Nations League 2026/27, en el Estadio Ramón Sánchez-Pizjuán de Sevilla. Martes 29 de septiembre a las 20:45 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "La 1 de RTVE (en abierto) y RTVE Play",
+          "url": "https://www.rtve.es/play/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UEFA.tv y beIN Sports",
+          "url": "https://www.uefa.tv/"
         }
       ]
     }
