@@ -162,7 +162,7 @@
       "home": "Italia",
       "away": "Bélgica",
       "date": "2026-09-25T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Italia – Bélgica online gratis: gran partido de la fase de grupos de la UEFA Nations League 2026/27. Viernes 25 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -184,7 +184,7 @@
       "home": "Turquía",
       "away": "Francia",
       "date": "2026-09-25T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Turquía – Francia online gratis: partido de la fase de grupos de la UEFA Nations League 2026/27. Viernes 25 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -270,6 +270,33 @@
           "country": "🌍 Internacional",
           "channels": "UEFA.tv y beIN Sports",
           "url": "https://www.uefa.tv/"
+        }
+      ]
+    },
+    {
+      "id": "ufc-fight-night-rosas-barcelos-2026",
+      "sport": "ufc",
+      "competitionName": "UFC Fight Night · Las Vegas",
+      "home": "Raul Rosas Jr.",
+      "away": "Raoni Barcelos",
+      "date": "2026-09-27T02:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver UFC Fight Night: Rosas Jr. vs Barcelos online gratis: combate estelar de peso gallo en el UFC Apex de Las Vegas, con las finales de The Ultimate Fighter en la cartelera. Cartelera estelar en la madrugada del domingo 27 de septiembre, sobre las 02:00 (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "Eurosport y UFC Fight Pass",
+          "url": "https://ufcfightpass.com/"
+        },
+        {
+          "country": "🇺🇸 Estados Unidos",
+          "channels": "Paramount+",
+          "url": "https://www.paramountplus.com/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "UFC Fight Pass",
+          "url": "https://ufcfightpass.com/"
         }
       ]
     }
