@@ -70,7 +70,7 @@
       "competitionName": "Mundial de Ciclismo en Ruta 2026 · Ruta élite masculina",
       "home": "Ruta élite masculina (Montreal)",
       "date": "2026-09-27T15:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: prueba de ruta élite masculina en Montreal (Canadá), donde se decide el maillot arcoíris. Domingo 27 de septiembre, desde las 15:00 y con final previsto sobre las 21:40 (hora española).",
       "broadcasters": [
         {
@@ -107,56 +107,12 @@
       ]
     },
     {
-      "id": "italia-belgica-nations-league-2026",
-      "sport": "futbol",
-      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
-      "home": "Italia",
-      "away": "Bélgica",
-      "date": "2026-09-25T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Italia – Bélgica online gratis: gran partido de la fase de grupos de la UEFA Nations League 2026/27. Viernes 25 de septiembre a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇮🇹 Italia",
-          "channels": "RAI",
-          "url": "https://www.rai.it/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "UEFA.tv",
-          "url": "https://www.uefa.tv/"
-        }
-      ]
-    },
-    {
-      "id": "turquia-francia-nations-league-2026",
-      "sport": "futbol",
-      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
-      "home": "Turquía",
-      "away": "Francia",
-      "date": "2026-09-25T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Turquía – Francia online gratis: partido de la fase de grupos de la UEFA Nations League 2026/27. Viernes 25 de septiembre a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇫🇷 Francia",
-          "channels": "TF1",
-          "url": "https://www.tf1.fr/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "UEFA.tv",
-          "url": "https://www.uefa.tv/"
-        }
-      ]
-    },
-    {
       "id": "laver-cup-2026",
       "sport": "tenis",
       "competitionName": "Laver Cup 2026 · Europa vs Mundo",
       "home": "Laver Cup 2026 (The O2, Londres)",
       "date": "2026-09-25T14:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver la Laver Cup 2026 online gratis: el Equipo Europa se enfrenta al Equipo Mundo en el The O2 de Londres, con algunas de las grandes estrellas del tenis. Del viernes 25 al domingo 27 de septiembre; la sesión de día del viernes arranca sobre las 14:00 y la nocturna a partir de las 20:00 (hora española).",
       "broadcasters": [
         {
@@ -182,7 +138,7 @@
       "competitionName": "Presidents Cup 2026 · EE.UU. vs Internacional",
       "home": "Presidents Cup 2026 (Medinah)",
       "date": "2026-09-24T18:00:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver la Presidents Cup 2026 de golf online gratis: Estados Unidos se mide al equipo Internacional en el Medinah Country Club (Illinois). Del jueves 24 al domingo 27 de septiembre, con las sesiones a partir de la tarde-noche (hora española).",
       "broadcasters": [
         {
@@ -258,7 +214,7 @@
       "home": "Alemania",
       "away": "Grecia",
       "date": "2026-09-27T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Alemania – Grecia online gratis: segunda jornada de la fase de grupos de la UEFA Nations League 2026/27 en el WWK Arena de Augsburgo. Domingo 27 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
