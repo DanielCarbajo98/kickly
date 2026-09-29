@@ -12,59 +12,6 @@
   },
   "events": [
     {
-      "id": "f1-azerbaijan-gp-baku-2026",
-      "sport": "motor",
-      "competitionName": "Fórmula 1 2026 · GP de Azerbaiyán",
-      "home": "Gran Premio de Azerbaiyán (Bakú)",
-      "date": "2026-09-26T13:00:00+02:00",
-      "status": "finished",
-      "description": "Ver el GP de Azerbaiyán de Fórmula 1 2026 online gratis: carrera del Mundial de F1 en el circuito urbano de Bakú, que este año se disputa en sábado. Sábado 26 de septiembre a las 13:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "DAZN F1",
-          "url": "https://www.dazn.com/es-ES/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Sky Sports F1",
-          "url": "https://www.skysports.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "F1 TV Pro",
-          "url": "https://f1tv.formula1.com/"
-        }
-      ]
-    },
-    {
-      "id": "inglaterra-espana-nations-league-2026",
-      "sport": "futbol",
-      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
-      "home": "Inglaterra",
-      "away": "España",
-      "date": "2026-09-26T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Inglaterra – España online gratis: estreno de la selección española en la fase de grupos de la UEFA Nations League 2026/27, en Wembley. Sábado 26 de septiembre a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "La 1 de RTVE (en abierto)",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🇬🇧 Reino Unido",
-          "channels": "Channel 4",
-          "url": "https://www.channel4.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "UEFA.tv y beIN Sports",
-          "url": "https://www.beinsports.com/"
-        }
-      ]
-    },
-    {
       "id": "mundial-ciclismo-2026-ruta-elite-masculina",
       "sport": "ciclismo",
       "competitionName": "Mundial de Ciclismo en Ruta 2026 · Ruta élite masculina",
@@ -72,27 +19,6 @@
       "date": "2026-09-27T15:00:00+02:00",
       "status": "finished",
       "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: prueba de ruta élite masculina en Montreal (Canadá), donde se decide el maillot arcoíris. Domingo 27 de septiembre, desde las 15:00 y con final previsto sobre las 21:40 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
-      "id": "mundial-ciclismo-2026-ruta-elite-femenina",
-      "sport": "ciclismo",
-      "competitionName": "Mundial de Ciclismo en Ruta 2026 · Ruta élite femenina",
-      "home": "Ruta élite femenina (Montreal)",
-      "date": "2026-09-26T15:00:00+02:00",
-      "status": "finished",
-      "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: prueba de ruta élite femenina en Montreal (Canadá), donde se decide el maillot arcoíris. Sábado 26 de septiembre, desde las 15:00 y con final previsto sobre las 20:10 (hora española).",
       "broadcasters": [
         {
           "country": "🇪🇸 España",
@@ -236,7 +162,7 @@
       "home": "Bélgica",
       "away": "Francia",
       "date": "2026-09-28T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver Bélgica – Francia online gratis: gran partido de la segunda jornada de la UEFA Nations League 2026/27 en el Estadio Rey Balduino de Bruselas. Lunes 28 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -248,6 +174,32 @@
           "country": "🌍 Internacional",
           "channels": "UEFA.tv",
           "url": "https://www.uefa.tv/"
+        }
+      ]
+    },
+    {
+      "id": "motogp-japon-2026",
+      "sport": "motor",
+      "competitionName": "MotoGP 2026 · Gran Premio de Japón",
+      "home": "Gran Premio de Japón (Motegi)",
+      "date": "2026-10-04T07:00:00+02:00",
+      "status": "scheduled",
+      "description": "Ver MotoGP Gran Premio de Japón 2026 online gratis: carrera del Mundial de MotoGP en el Mobility Resort Motegi. Domingo 4 de octubre a las 07:00 de la mañana (hora española).",
+      "broadcasters": [
+        {
+          "country": "🇪🇸 España",
+          "channels": "DAZN (MotoGP)",
+          "url": "https://www.dazn.com/es-ES/"
+        },
+        {
+          "country": "🇬🇧 Reino Unido",
+          "channels": "TNT Sports",
+          "url": "https://www.tntsports.co.uk/"
+        },
+        {
+          "country": "🌍 Internacional",
+          "channels": "MotoGP VideoPass",
+          "url": "https://www.motogp.com/"
         }
       ]
     }
