@@ -12,86 +12,13 @@
   },
   "events": [
     {
-      "id": "mundial-ciclismo-2026-ruta-elite-masculina",
-      "sport": "ciclismo",
-      "competitionName": "Mundial de Ciclismo en Ruta 2026 · Ruta élite masculina",
-      "home": "Ruta élite masculina (Montreal)",
-      "date": "2026-09-27T15:00:00+02:00",
-      "status": "finished",
-      "description": "Ver el Mundial de Ciclismo en Ruta 2026 online gratis: prueba de ruta élite masculina en Montreal (Canadá), donde se decide el maillot arcoíris. Domingo 27 de septiembre, desde las 15:00 y con final previsto sobre las 21:40 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "RTVE (Teledeporte, en abierto) y Eurosport",
-          "url": "https://www.rtve.es/play/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Eurosport y discovery+",
-          "url": "https://www.eurosport.com/"
-        }
-      ]
-    },
-    {
-      "id": "laver-cup-2026",
-      "sport": "tenis",
-      "competitionName": "Laver Cup 2026 · Europa vs Mundo",
-      "home": "Laver Cup 2026 (The O2, Londres)",
-      "date": "2026-09-25T14:00:00+02:00",
-      "status": "finished",
-      "description": "Ver la Laver Cup 2026 online gratis: el Equipo Europa se enfrenta al Equipo Mundo en el The O2 de Londres, con algunas de las grandes estrellas del tenis. Del viernes 25 al domingo 27 de septiembre; la sesión de día del viernes arranca sobre las 14:00 y la nocturna a partir de las 20:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ (Movistar Deportes)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Tennis Channel",
-          "url": "https://www.tennischannel.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Laver Cup (streaming oficial)",
-          "url": "https://lavercup.com/"
-        }
-      ]
-    },
-    {
-      "id": "presidents-cup-2026",
-      "sport": "golf",
-      "competitionName": "Presidents Cup 2026 · EE.UU. vs Internacional",
-      "home": "Presidents Cup 2026 (Medinah)",
-      "date": "2026-09-24T18:00:00+02:00",
-      "status": "finished",
-      "description": "Ver la Presidents Cup 2026 de golf online gratis: Estados Unidos se mide al equipo Internacional en el Medinah Country Club (Illinois). Del jueves 24 al domingo 27 de septiembre, con las sesiones a partir de la tarde-noche (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Movistar Plus+ (Movistar Golf)",
-          "url": "https://www.movistarplus.es/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Golf Channel y NBC",
-          "url": "https://www.golfchannel.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "Sky Sports Golf",
-          "url": "https://www.skysports.com/golf"
-        }
-      ]
-    },
-    {
       "id": "espana-croacia-nations-league-2026",
       "sport": "futbol",
       "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
       "home": "España",
       "away": "Croacia",
       "date": "2026-09-29T20:45:00+02:00",
-      "status": "scheduled",
+      "status": "finished",
       "description": "Ver España – Croacia online gratis: segundo partido de la selección española en la fase de grupos de la UEFA Nations League 2026/27, en el Estadio Ramón Sánchez-Pizjuán de Sevilla. Martes 29 de septiembre a las 20:45 (hora española).",
       "broadcasters": [
         {
@@ -102,55 +29,6 @@
         {
           "country": "🌍 Internacional",
           "channels": "UEFA.tv y beIN Sports",
-          "url": "https://www.uefa.tv/"
-        }
-      ]
-    },
-    {
-      "id": "ufc-fight-night-rosas-barcelos-2026",
-      "sport": "ufc",
-      "competitionName": "UFC Fight Night · Las Vegas",
-      "home": "Raul Rosas Jr.",
-      "away": "Raoni Barcelos",
-      "date": "2026-09-27T02:00:00+02:00",
-      "status": "finished",
-      "description": "Ver UFC Fight Night: Rosas Jr. vs Barcelos online gratis: combate estelar de peso gallo en el UFC Apex de Las Vegas, con las finales de The Ultimate Fighter en la cartelera. Cartelera estelar en la madrugada del domingo 27 de septiembre, sobre las 02:00 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇪🇸 España",
-          "channels": "Eurosport y UFC Fight Pass",
-          "url": "https://ufcfightpass.com/"
-        },
-        {
-          "country": "🇺🇸 Estados Unidos",
-          "channels": "Paramount+",
-          "url": "https://www.paramountplus.com/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "UFC Fight Pass",
-          "url": "https://ufcfightpass.com/"
-        }
-      ]
-    },
-    {
-      "id": "alemania-grecia-nations-league-2026",
-      "sport": "futbol",
-      "competitionName": "UEFA Nations League 2026/27 · Fase de grupos",
-      "home": "Alemania",
-      "away": "Grecia",
-      "date": "2026-09-27T20:45:00+02:00",
-      "status": "finished",
-      "description": "Ver Alemania – Grecia online gratis: segunda jornada de la fase de grupos de la UEFA Nations League 2026/27 en el WWK Arena de Augsburgo. Domingo 27 de septiembre a las 20:45 (hora española).",
-      "broadcasters": [
-        {
-          "country": "🇩🇪 Alemania",
-          "channels": "RTL",
-          "url": "https://www.rtl.de/"
-        },
-        {
-          "country": "🌍 Internacional",
-          "channels": "UEFA.tv",
           "url": "https://www.uefa.tv/"
         }
       ]
