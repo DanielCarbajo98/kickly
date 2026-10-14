@@ -1,4 +1,4 @@
-# QuéVoto — Test de afinidad política · Elecciones generales 29N 2026
+# TestElectoral.es — Test de afinidad política · Elecciones generales 29N 2026
 
 Web estática e independiente: test de afinidad política para las elecciones generales del **29 de noviembre de 2026**. Tiene 44 afirmaciones, 11 partidos y el resultado incluye "en qué coincides y en qué discrepas" con cada uno. Está preparada para SEO y monetización con AdSense.
 
@@ -34,10 +34,10 @@ Tras cambiar algo en `src/`, ejecuta `node src/build.mjs`. Eso regenera `public/
 
 ## Publicar (Vercel, 5 minutos)
 
-1. Compra el dominio, por ejemplo **quevoto.es** (alternativas: votoclaro.es, testelectoral.es, miafinidad.es). Comprueba antes su disponibilidad en un registrador como dominios.es, DonDominio o Namecheap.
+1. Dominio: **testelectoral.es** (comprado/disponible). Contiene la palabra clave exacta "test electoral".
 2. En Vercel crea un **proyecto nuevo** desde este mismo repo, con **Root Directory = `elecciones-29n/public`**, Framework "Other" y sin build command.
 3. Añade el dominio en Vercel → Domains y apunta los DNS como te indique.
-4. Si el dominio no es `quevoto.es`, cambia `domain`/`siteUrl` en `src/config.mjs` y ejecuta `node src/build.mjs`.
+4. Si cambias de dominio, cambia `domain`/`siteUrl` en `src/config.mjs` y ejecuta `node src/build.mjs`.
 
 ## Monetización (legal)
 

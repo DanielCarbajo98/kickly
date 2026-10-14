@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /resultado/
 
-Sitemap: https://quevoto.es/sitemap.xml
+Sitemap: https://testelectoral.es/sitemap.xml

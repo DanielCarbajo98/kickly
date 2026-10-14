@@ -3,10 +3,10 @@
  * Después de cambiar algo: `node src/build.mjs`
  * ============================================================ */
 export default {
-  brand: "QuéVoto",                 // nombre visible
-  brandHtml: "Qué<b>Voto</b>",      // logo de texto
-  domain: "quevoto.es",             // dominio sin https://
-  siteUrl: "https://quevoto.es",    // URL canónica (sin barra final)
+  brand: "TestElectoral",           // nombre visible
+  brandHtml: "Test<b>Electoral</b>",// logo de texto
+  domain: "testelectoral.es",             // dominio sin https://
+  siteUrl: "https://testelectoral.es",    // URL canónica (sin barra final)
   electionDate: "2026-11-29T09:00:00+01:00",
   updated: "2026-10-14",            // fecha de última revisión de posiciones
 
@@ -16,7 +16,7 @@ export default {
     name: "[Nombre y apellidos o razón social]",
     nif: "[NIF/CIF]",
     address: "[Dirección postal completa]",
-    email: "hola@quevoto.es",
+    email: "hola@testelectoral.es",
   },
 
   /* Analítica (opcional, solo se carga con consentimiento vía la CMP de Google).
@@ -42,7 +42,7 @@ export default {
     /* Segundos de la animación "Calculando tu resultado". Sin anuncios
      * (AdSense no permite anuncios en pantallas sin contenido). */
     gateSeconds: 4,
-    /* Google Ad Manager rewarded (opcional): "/1234567/quevoto_rewarded".
+    /* Google Ad Manager rewarded (opcional): "/1234567/testelectoral_rewarded".
      * Ofrece ver un anuncio voluntario para saltar la espera. */
     gamRewardedUnit: "",
     /* Otras redes (p. ej. Monetag). NO recomendado junto a AdSense. */

@@ -129,7 +129,7 @@ function home() {
   const faqLd = { "@type": "FAQPage", mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a.replace(/<[^>]+>/g, "") } })) };
   const body = `
 <section class="hero"><div class="wrap">
-<span class="pill"><i></i> Elecciones generales · 29 de noviembre de 2026</span>
+<span class="pill"><i></i> Elecciones generales · 29 nov 2026</span>
 <h1>¿A quién votar el 29N? <em>Descúbrelo en 3 minutos</em></h1>
 <p class="lead">El test de afinidad política más completo: ${questions.length} afirmaciones sobre vivienda, impuestos, inmigración, pensiones o Cataluña comparadas con lo que defiende cada partido. Gratis, anónimo e imparcial.</p>
 <div class="hero-ctas"><a class="btn btn-primary" href="/test/">Empezar el test →</a><a class="btn btn-ghost" href="/metodologia/">¿Cómo funciona?</a></div>
@@ -180,7 +180,7 @@ ${faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${a}</p></detail
     "index.html",
     layout({
       path: "/",
-      title: `Test político 29N: ¿a quién votar en las elecciones generales 2026? | ${C.brand}`,
+      title: `Test electoral 29N: ¿a quién votar en las elecciones generales 2026? | ${C.brand}`,
       description: `Test de afinidad política para las elecciones generales del 29 de noviembre de 2026. Descubre qué partido piensa como tú: PSOE, PP, Vox, Sumar, Podemos y más. Gratis, anónimo e imparcial.`,
       body,
       jsonld: [
