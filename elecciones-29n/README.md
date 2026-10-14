@@ -57,6 +57,17 @@ El precio se define en dos sitios que deben coincidir: `api/_stripe.js` (`PRICE_
 
 **Fiscalidad:** los ingresos hay que declararlos (alta de autónomo o actividad económica, IVA trimestral, modelo 303). Verifactu será obligatorio para autónomos desde el 1 de julio de 2027. Consúltalo con un gestor.
 
+## Publicidad (AdSense)
+
+1. Da de alta el dominio en AdSense y pega tu `ca-pub-…` en `config.mjs → ads.adsenseClient`. Crea los bloques de anuncio y pega sus IDs en `ads.slots`, después ejecuta `node src/build.mjs`. El `ads.txt` se genera solo.
+2. **Consentimiento de cookies (obligatorio en la UE):** en AdSense → *Privacidad y mensajes* → activa el mensaje RGPD, que es la CMP certificada de Google.
+3. **Modelo:** resultado básico gratis con anuncios e informe completo de pago.
+   - **No actives el Offerwall** en `/resultado/`: chocaría con el pago.
+   - Quien paga no ve anuncios en su resultado, porque en esa página AdSense solo se carga si el informe no está desbloqueado.
+4. **No pongas anuncios en pantallas sin contenido** ni recompenses ver anuncios fuera de los formatos oficiales: va contra las políticas de AdSense.
+5. Puedes activar los anuncios automáticos de anclaje y viñeta.
+6. No mezcles redes de *popunders* (Monetag y similares) con AdSense.
+
 ## Encuestas y actualidad (actualizar a mano o con una tarea programada)
 
 - **Encuestas:** añade cada sondeo nuevo arriba en `src/polls.mjs` con su encuestadora, medio, fechas de campo, muestra y URL, y cambia `pollsUpdated`.
