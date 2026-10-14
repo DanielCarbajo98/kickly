@@ -1,0 +1,16 @@
+{
+  // Cloudflare Workers: web estática en public/ + funciones de pago en worker/index.js
+  "name": "partidometro",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "vars": {
+    "SITE_URL": "https://partidometro.es"
+  },
+  "observability": { "enabled": true }
+}
