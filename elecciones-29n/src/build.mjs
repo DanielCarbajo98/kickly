@@ -8,6 +8,7 @@ import { cats, catSlugs, parties, questions, sources } from "./data.mjs";
 import { calendar, faqs } from "./content.mjs";
 import { legal, conditions, privacy, cookies } from "./legal.mjs";
 import { guides } from "./guides.mjs";
+import { seoTopics } from "./seo-topics.mjs";
 import { pollsPage, pollsWidget } from "./polls-page.mjs";
 import { newsPages, latestNews, newsCard } from "./news-page.mjs";
 
@@ -105,7 +106,7 @@ ${body}
 <div><a class="brand" href="/"><span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 17a8 8 0 0 1 16 0"/><path d="M12 17l4.2-5.2"/><circle cx="12" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></span><span>${C.brandHtml}</span></a>
 <p style="margin-top:10px;max-width:440px">Test de afinidad política independiente para las elecciones generales del 29 de noviembre de 2026. Sin afiliación con ningún partido, gobierno ni medio. No es una encuesta ni una recomendación de voto. Tus respuestas no salen de tu dispositivo.</p></div>
 <div><h4>Elecciones 29N</h4><ul><li><a href="/test/">Test: ¿a quién votar?</a></li><li><a href="/encuestas/">Encuestas</a></li><li><a href="/actualidad/">Actualidad de los partidos</a></li><li><a href="/partidos/">Partidos y candidatos</a></li><li><a href="/temas/">Propuestas por tema</a></li><li><a href="/comparar/">Comparar partidos</a></li><li><a href="/calendario-electoral-29n/">Calendario electoral</a></li><li><a href="/como-votar-29n/">Cómo votar</a></li><li><a href="/voto-por-correo-29n/">Voto por correo</a></li><li><a href="/mesa-electoral-29n/">Mesa electoral</a></li></ul></div>
-<div><h4>Transparencia</h4><ul><li><a href="/metodologia/">Metodología e imparcialidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li><li><a href="/privacidad/">Política de privacidad</a></li><li><a href="/cookies/">Política de cookies</a></li><li><a href="/condiciones/">Condiciones de venta</a></li><li><a href="mailto:${C.owner.email}">Contacto y correcciones</a></li></ul></div>
+<div><h4>Transparencia</h4><ul><li><a href="/metodologia/">Metodología e imparcialidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li><li><a href="/privacidad/">Política de privacidad</a></li><li><a href="/cookies/">Política de cookies</a></li><li><a href="/condiciones/">Condiciones de venta</a></li><li><a href="/medios/">Para medios</a></li><li><a href="mailto:${C.owner.email}">Contacto y correcciones</a></li></ul></div>
 </div>
 <p style="margin-top:22px">© 2026 ${esc(C.brand)} · Posiciones revisadas el ${fmtDate(C.updated)}.</p>
 </div></footer>
@@ -315,7 +316,7 @@ function topicPages() {
 <div class="page-head"><h1>Qué proponen los partidos en cada tema (29N 2026)</h1><p>Compara las posiciones de los ${parties.length} partidos en vivienda, impuestos, empleo, inmigración, modelo territorial y más.</p></div>
 <div class="grid g3" style="margin-top:20px">${Object.keys(cats)
     .map((c) => `<a class="card" href="/temas/${catSlugs[c]}/" style="text-decoration:none;color:inherit"><h3>${esc(cats[c])}</h3><p>${questions.filter((q) => q.cat === c).length} afirmaciones comparadas</p></a>`)
-    .join("")}</div>${ad("content")}${ctaBox()}</div>`;
+    .join("")}</div><p style="margin-top:18px"><a href="/pregunta/">Ver las ${questions.length} preguntas: ¿qué partido defiende qué? →</a></p>${ad("content")}${ctaBox()}</div>`;
   write("temas/index.html", layout({ path: "/temas/", nav: "temas", title: `Propuestas de los partidos por temas · Elecciones generales 2026 | ${C.brand}`, description: `Comparativa de propuestas de PSOE, PP, Vox, Sumar, Podemos y demás partidos para el 29N: vivienda, impuestos, pensiones, inmigración, Cataluña, energía y más.`, body: idx, jsonld: [crumbLd([["Temas", "/temas/"]])] }));
 
   for (const c of Object.keys(cats)) {
@@ -324,7 +325,7 @@ function topicPages() {
 <div class="page-head"><h1>${esc(cats[c])}: qué proponen los partidos para el 29N</h1><p>Posición de cada partido sobre ${qs.length} propuestas de ${esc(cats[c].toLowerCase())} en las elecciones generales de 2026, con la justificación de cada una.</p></div>
 ${qs
   .map(
-    (q, i) => `<section class="section" style="padding:24px 0 6px"><h2 style="font-size:24px">${esc(q.text)}</h2>${q.info ? `<p class="note" style="margin-bottom:14px">${esc(q.info)}</p>` : ""}
+    (q, i) => `<section class="section" style="padding:24px 0 6px"><h2 style="font-size:24px"><a href="/pregunta/${seoTopics[q.id][0]}/" style="color:inherit">${esc(q.text)}</a></h2>${q.info ? `<p class="note" style="margin-bottom:14px">${esc(q.info)}</p>` : ""}
 <div class="pos-list">${parties
       .filter((p) => q.pos[p.id])
       .sort((a, b) => q.pos[b.id][0] - q.pos[a.id][0])
@@ -464,6 +465,105 @@ function methodology() {
 </div>${ctaBox()}</div>`;
 }
 
+
+/* ============================================================
+ * UNA PÁGINA POR AFIRMACIÓN ("¿Qué partidos quieren…?")
+ * ============================================================ */
+const names = (ps) => ps.map((p) => p.short).join(", ").replace(/, ([^,]*)$/, " y $1");
+function questionPages() {
+  const all = [];
+  for (const q of questions) {
+    const t = seoTopics[q.id];
+    if (!t) throw new Error("Falta seoTopics para " + q.id);
+    const [slug, h1, topic] = t;
+    const fav = parties.filter((p) => q.pos[p.id][0] > 0).sort((a, b) => q.pos[b.id][0] - q.pos[a.id][0]);
+    const con = parties.filter((p) => q.pos[p.id][0] < 0).sort((a, b) => q.pos[a.id][0] - q.pos[b.id][0]);
+    const neu = parties.filter((p) => q.pos[p.id][0] === 0);
+    const summary = `De los ${parties.length} partidos analizados para el 29N, ${fav.length ? `${fav.length} están a favor (${names(fav)})` : "ninguno está a favor"}, ${con.length ? `${con.length} en contra (${names(con)})` : "ninguno en contra"}${neu.length ? ` y ${neu.length} ${neu.length === 1 ? "tiene" : "tienen"} una posición neutral o ambigua (${names(neu)})` : ""}.`;
+    all.push({ q, slug, h1, topic, summary });
+    const col = (title, ps, color) => `<div class="cmp ${color}"><h4><span class="dot" style="background:var(--${color === "yes" ? "agree" : color === "no" ? "disagree" : "faint"})"></span>${title} (${ps.length})</h4><ul>${ps.map((p) => `<li>${dot(p)} <b><a href="/partidos/${p.id}/" style="color:inherit">${esc(p.short)}</a></b> · ${esc(LBL[q.pos[p.id][0]])}<small>${esc(q.pos[p.id][1])}</small></li>`).join("") || "<li>Ningún partido.</li>"}</ul></div>`;
+    const related = questions.filter((x) => x.cat === q.cat && x !== q);
+    const body = `<div class="wrap">${crumbs([["Temas", "/temas/"], [cats[q.cat], `/temas/${catSlugs[q.cat]}/`], [topic]])}
+<div class="page-head"><h1>${esc(h1)}</h1><p>${esc(summary)}</p></div>
+<div class="card" style="margin-top:14px"><p style="font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:700">Afirmación del test</p><p style="font-family:var(--display);font-size:22px;line-height:1.25;color:var(--text);margin:6px 0 14px">«${esc(q.text)}»</p>${q.info ? `<p>${esc(q.info)}</p>` : ""}<p style="margin-top:14px"><a class="btn btn-primary btn-sm" href="/test/">¿Y tú qué opinas? Haz el test →</a></p></div>
+<section class="section" style="padding-top:22px"><h2>Posición de cada partido sobre ${esc(topic)}</h2>
+<div class="cmp-cols" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">${col("A favor", fav, "yes")}${col("En contra", con, "no")}${neu.length ? col("Neutral o ambiguo", neu, "neu") : ""}</div>
+<p class="disclaimer">Posiciones basadas en programas, declaraciones de 2026 y votaciones en el Congreso. Las marcadas como «estimada» no tienen fuente directa de 2026. <a href="/metodologia/">Metodología</a>. Revisado el ${fmtDate(C.updated)}.</p></section>
+${ad("content")}
+${related.length ? `<section class="section" style="padding-top:0"><h2>Más sobre ${esc(cats[q.cat].toLowerCase())}</h2><div class="party-strip" style="justify-content:flex-start;margin:0">${related.map((x) => `<a class="chip" href="/pregunta/${seoTopics[x.id][0]}/">${esc(seoTopics[x.id][1])}</a>`).join("")}</div></section>` : ""}
+${ctaBox("¿Con qué partido coincides en todo lo demás?")}</div>`;
+    write(`pregunta/${slug}/index.html`, layout({
+      path: `/pregunta/${slug}/`, nav: "temas",
+      title: `${h1} Postura de cada partido (29N) | ${C.brand}`,
+      description: summary.slice(0, 158),
+      body,
+      jsonld: [
+        crumbLd([["Temas", "/temas/"], [cats[q.cat], `/temas/${catSlugs[q.cat]}/`], [topic, `/pregunta/${slug}/`]]),
+        { "@type": "FAQPage", mainEntity: [{ "@type": "Question", name: h1, acceptedAnswer: { "@type": "Answer", text: summary } }] },
+      ],
+    }));
+  }
+  const body = `<div class="wrap">${crumbs([["Temas", "/temas/"], ["Todas las preguntas"]])}
+<div class="page-head"><h1>¿Qué partido defiende qué? ${questions.length} preguntas clave del 29N</h1><p>La postura de cada partido en los temas que más se buscan.</p></div>
+${Object.keys(cats).map((c) => `<h2 style="font-family:var(--display);font-size:22px;margin:26px 0 10px">${esc(cats[c])}</h2><div class="news-list">${all.filter((x) => x.q.cat === c).map((x) => `<a class="news" href="/pregunta/${x.slug}/"><h3>${esc(x.h1)}</h3><p>${esc(x.summary)}</p></a>`).join("")}</div>`).join("")}
+${ctaBox()}</div>`;
+  write("pregunta/index.html", layout({ path: "/pregunta/", nav: "temas", title: `¿Qué partido defiende qué? Las ${questions.length} preguntas clave del 29N | ${C.brand}`, description: "Qué partidos están a favor y en contra de cada propuesta: alquiler, impuestos, inmigración, aborto, Cataluña, nucleares y más. Elecciones generales 29N 2026.", body, jsonld: [crumbLd([["Temas", "/temas/"], ["Todas las preguntas", "/pregunta/"]])] }));
+}
+
+
+/* ============================================================
+ * VERSIÓN PARA MEDIOS (iframe insertable) + página /medios/
+ * ============================================================ */
+function embedPages() {
+  write("embed/index.html", `<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test electoral 29N · ${esc(C.brand)}</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="${U}/test/">
+<base target="_blank">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=${BUILD}">
+<style>body{background:transparent;min-height:0}main{padding:12px 0}</style>
+</head><body><main><div class="wrap" style="max-width:760px"><div id="quiz"></div>
+<p class="embed-credit">Test independiente de <a href="${U}/?utm_source=embed" rel="noopener"><b>${esc(C.brand)}</b></a> · <a href="${U}/metodologia/">Metodología</a> · Tus respuestas no salen de tu dispositivo</p></div></main>
+<script>window.SITE=${JSON.stringify({ siteUrl: U, brand: C.brand, domain: C.domain, payments: { enabled: false }, ads: { gateSeconds: 3 } })};window.EMBED={medio:new URLSearchParams(location.search).get("medio")||""};</script>
+<script src="/assets/data.js?v=${BUILD}"></script><script src="/assets/quiz.js?v=${BUILD}"></script>
+<script>(function(){function s(){parent.postMessage({partidometro:"h",h:document.documentElement.scrollHeight},"*")}if(window.ResizeObserver)new ResizeObserver(s).observe(document.body);setInterval(s,1500);s();})();</script>
+</body></html>`);
+  write("embed.js", `/* ${C.brand}: inserta el test en cualquier web.
+   Uso: <div data-partidometro data-medio="nombre-del-medio"></div><script async src="${U}/embed.js"></script> */
+(function(){
+  var nodes=document.querySelectorAll("[data-partidometro]:not([data-ready])");
+  nodes.forEach(function(n){
+    n.setAttribute("data-ready","1");
+    var f=document.createElement("iframe");
+    f.src="${U}/embed/?medio="+encodeURIComponent(n.getAttribute("data-medio")||location.hostname);
+    f.title="Test electoral 29N · ${C.brand}";
+    f.loading="lazy";
+    f.style.cssText="width:100%;border:0;min-height:640px;display:block";
+    f.setAttribute("allow","clipboard-write; web-share");
+    n.appendChild(f);
+    window.addEventListener("message",function(e){
+      if(e.source===f.contentWindow&&e.data&&e.data.partidometro==="h")f.style.height=Math.max(640,e.data.h+10)+"px";
+    });
+  });
+})();
+`);
+  const code = `<div data-partidometro data-medio="tu-medio"></div>\n<script async src="${U}/embed.js"></script>`;
+  const body = `<div class="wrap">${crumbs([["Para medios"]])}
+<div class="page-head"><h1>El test electoral del 29N, en tu medio</h1><p>Ofrece a tus lectores un test de afinidad política independiente, completo y actualizado, sin desarrollo propio y en dos minutos.</p></div>
+<div class="grid g3" style="margin-top:18px">
+<div class="card"><h3>Listo para usar</h3><p>${questions.length} afirmaciones, ${parties.length} partidos (incluidos los autonómicos), resultado con ranking y opción de compartir. Se adapta a móvil.</p></div>
+<div class="card"><h3>Riguroso y neutral</h3><p>Cada posición está justificada con fuentes y la <a href="/metodologia/">metodología</a> es pública. Sin afiliación política y sin publicidad política.</p></div>
+<div class="card"><h3>Privacidad total</h3><p>El cálculo se hace en el navegador del lector. No se recogen respuestas ni datos personales, así que no hay riesgos RGPD para tu medio.</p></div>
+</div>
+<section class="section prose"><h2>Cómo insertarlo</h2><p>Pega este código donde quieras que aparezca el test. Se ajusta solo a la altura del contenido:</p>
+<pre style="background:var(--surface-2);padding:14px;border-radius:12px;overflow-x:auto;font-size:13.5px"><code>${esc(code)}</code></pre>
+<p>Si prefieres un iframe directo: <code>${esc(`<iframe src="${U}/embed/" style="width:100%;height:900px;border:0"></iframe>`)}</code></p>
+<h2>Versión personalizada</h2><p>Si quieres el test con tu logo y tus colores, preguntas adaptadas a tu comunidad autónoma, una versión para las elecciones autonómicas y municipales de 2027 o datos de uso agregados y anónimos, escríbenos a <a href="mailto:${C.owner.email}?subject=Test%20electoral%20para%20medios">${esc(C.owner.email)}</a>.</p>
+<p class="note">Vista previa: <a href="/embed/" target="_blank" rel="noopener">abrir la versión insertable</a>.</p></section></div>`;
+  write("medios/index.html", layout({ path: "/medios/", title: `Test electoral para medios de comunicación · Insértalo en tu web | ${C.brand}`, description: "Inserta gratis en tu periódico o web el test de afinidad política de las elecciones generales del 29N: independiente, riguroso, adaptado a móvil y sin datos personales.", body, jsonld: [crumbLd([["Para medios", "/medios/"]])] }));
+}
+
 /* ============================================================
  * ARCHIVOS TÉCNICOS
  * ============================================================ */
@@ -498,6 +598,8 @@ quizPages();
 partyPages();
 topicPages();
 comparePages();
+questionPages();
+embedPages();
 contentPages();
 guides({ layout, write, ctaBox, crumbs, crumbLd, ad });
 pollsPage({ layout, write, ctaBox, crumbs, crumbLd, ad, PBY });

@@ -12,6 +12,8 @@
   var LABELS = { "2": "Totalmente de acuerdo", "1": "De acuerdo", "0": "Neutral / no lo tengo claro", "-1": "En desacuerdo", "-2": "Totalmente en desacuerdo" };
   var KEYS = { "2": "++", "1": "+", "0": "=", "-1": "−", "-2": "−−" };
   var STORE = "q29-progress-v1";
+  var EMBED = window.EMBED || null;
+
 
   var state = { mode: null, list: [], i: 0, ans: {}, imp: {} };
 
@@ -241,7 +243,10 @@
   }
 
   /* El resultado vive en /resultado/ (allí se puede activar el Offerwall de AdSense). */
-  function goResults(code) { location.href = "/resultado/#r=" + code; }
+  function goResults(code) {
+    if (EMBED) { viewResults(code); return; }
+    location.href = "/resultado/#r=" + code;
+  }
 
   function rewarded(onGranted) {
     var unit = ADS.gamRewardedUnit;
@@ -290,7 +295,7 @@
     var dec = decode(code);
     if (!dec) return viewStart();
     var R = compute(dec.ans, dec.imp), top = R.ranking[0], second = R.ranking[1];
-    var mine = lsGet(MINE) === code;          // ¿es mi resultado o uno compartido?
+    var mine = EMBED ? true : lsGet(MINE) === code;          // ¿es mi resultado o uno compartido?
     var unlocked = isUnlocked();
     if (mine) lsSet(LAST, code);
     if (unlocked && PAY.enabled) document.body.classList.add("no-ads");
@@ -339,7 +344,7 @@
       '<div class="ad" data-ad="results2" hidden></div>' +
 
       '<section class="card noprint" style="text-align:center;margin-top:24px"><h3>¿Y tus amigos?</h3><p>Comparte el test y comparad resultados. Es anónimo y gratuito.</p>' +
-      '<p style="margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a class="btn btn-primary btn-sm" target="_blank" rel="noopener" href="https://wa.me/?text=' + encodeURIComponent(shareText + " " + shareUrl) + '">Compartir por WhatsApp</a><a class="btn btn-ghost btn-sm" href="/test/">' + (mine ? "Repetir el test" : "Hacer mi test") + "</a></p></section>" +
+      '<p style="margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a class="btn btn-primary btn-sm" target="_blank" rel="noopener" href="https://wa.me/?text=' + encodeURIComponent(shareText + " " + shareUrl) + '">Compartir por WhatsApp</a><a class="btn btn-ghost btn-sm" id="redo" target="_self" href="' + (EMBED ? location.pathname + location.search : "/test/") + '">' + (mine ? "Repetir el test" : "Hacer mi test") + "</a></p></section>" +
       '<p class="disclaimer">Resultado orientativo, no es una recomendación de voto. Compara las posiciones públicas de cada partido con tus respuestas según la <a href="/metodologia/">metodología</a> publicada. Consulta los programas oficiales antes de votar.</p>';
 
     root.innerHTML = html;
@@ -347,7 +352,8 @@
     setTimeout(function () { root.querySelectorAll(".rk-bar i[data-w]").forEach(function (i) { i.style.width = i.dataset.w + "%"; }); }, 80);
 
     var prem = $("#premium");
-    if (unlocked) renderPremium(prem, dec, R);
+    if (EMBED) prem.innerHTML = '<section class="card" style="text-align:center;margin-top:20px"><h3>¿Por qué te sale ' + esc(R.ranking[0].p.short) + '?</h3><p>Mira en qué coincides y en qué discrepas con cada partido, tema a tema.</p><p style="margin-top:12px"><a class="btn btn-primary btn-sm" target="_blank" rel="noopener" href="' + shareUrl + '&yo">Ver el informe completo en ' + esc(domain) + ' →</a></p></section>';
+    else if (unlocked) renderPremium(prem, dec, R);
     else if (mine) renderPaywall(prem, R);
     else prem.innerHTML = "";
 
@@ -581,7 +587,9 @@
     try { history.replaceState(null, "", "/resultado/#r=" + code); } catch (e) {}
     viewResults(code);
   }
-  if (onResults && qs.get("session_id")) {
+  if (EMBED) {
+    viewStart();
+  } else if (onResults && qs.get("session_id")) {
     // Vuelta de Stripe: verificar el pago y desbloquear el informe en este navegador.
     root.innerHTML = '<div class="qcard gate"><h2>Confirmando tu pago…</h2><p>Un momento, por favor.</p></div>';
     var back = lsGet(LAST) || lsGet(MINE);
@@ -599,6 +607,8 @@
   } else if (onResults) {
     if (qs.get("cancelado")) setTimeout(function () { toast("Pago cancelado: no se ha cobrado nada"); }, 300);
     var code = m && decode(m[1]) ? m[1] : (lsGet(LAST) && decode(lsGet(LAST)) ? lsGet(LAST) : null);
+    // Llegada desde la versión insertada en un medio: el resultado es de quien abre el enlace.
+    if (code && /[#&]yo\b/.test(location.hash)) lsSet(MINE, code);
     if (code) showCode(code); else emptyResults();
   } else if (m && decode(m[1])) {
     location.replace("/resultado/#r=" + m[1]);

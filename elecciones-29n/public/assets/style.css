@@ -223,6 +223,8 @@ body.has-sticky{padding-bottom:110px}
 .cmp li{padding:10px 12px;border-radius:12px;font-size:14.5px;line-height:1.45}
 .cmp.yes li{background:var(--agree-soft)}
 .cmp.no li{background:var(--disagree-soft)}
+.cmp.neu li{background:var(--surface-2)}
+.embed-credit{text-align:center;font-size:13px;color:var(--faint);padding:14px 0 6px}
 .cmp li small{display:block;color:var(--dim);margin-top:4px;font-size:13px}
 .cmp li .yo{font-weight:700}
 .qa-table{width:100%;border-collapse:collapse;font-size:14px}
