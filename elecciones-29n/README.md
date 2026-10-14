@@ -18,7 +18,7 @@ public/              ← lo que se publica (ya generado)
 
 Tras cambiar algo en `src/`, ejecuta `node src/build.mjs`. Eso regenera `public/`, incluidos el `sitemap.xml`, `robots.txt` y `ads.txt`.
 
-## Páginas que se generan (74 indexables)
+## Páginas que se generan (108 indexables)
 
 | Tipo | URL | Búsquedas que ataca |
 |---|---|---|
@@ -30,24 +30,44 @@ Tras cambiar algo en `src/`, ejecuta `node src/build.mjs`. Eso regenera `public/
 | ~45 comparativas | `/comparar/pp-vs-vox/` … | PP o Vox, PSOE o Sumar… |
 | Calendario | `/calendario-electoral-29n/` | calendario elecciones 29N |
 | Voto por correo | `/voto-por-correo-29n/` | voto por correo 29N plazo |
-| Legales | `/metodologia/`, `/aviso-legal/`, `/privacidad/`, `/cookies/` | — |
+| Encuestas | `/encuestas/` | encuestas elecciones generales 2026, quién va ganando |
+| Actualidad | `/actualidad/` y una página por noticia | noticias PSOE/PP/Vox 29N… |
+| Guías | `/como-votar-29n/`, `/mesa-electoral-29n/` | mesa electoral cuánto se cobra, cómo votar |
+| Legales | `/metodologia/`, `/aviso-legal/`, `/privacidad/`, `/cookies/`, `/condiciones/` | — |
 
-## Publicar (Vercel, 5 minutos)
+## Publicar (Vercel)
 
-1. Dominio: **testelectoral.es** (comprado/disponible). Contiene la palabra clave exacta "test electoral".
-2. En Vercel crea un **proyecto nuevo** desde este mismo repo, con **Root Directory = `elecciones-29n/public`**, Framework "Other" y sin build command.
-3. Añade el dominio en Vercel → Domains y apunta los DNS como te indique.
-4. Si cambias de dominio, cambia `domain`/`siteUrl` en `src/config.mjs` y ejecuta `node src/build.mjs`.
+1. **Dominio:** pendiente de elegir uno libre. Cuando lo tengas, cambia `domain`, `siteUrl` y `email` en `src/config.mjs`, y la marca si quieres.
+2. **Vercel:** Add New → Project → este repo, con **Root Directory = `elecciones-29n`**. El `vercel.json` ya indica `public/` como salida y sirve las funciones de `api/`.
+   - El plan gratuito (Hobby) de Vercel **no permite uso comercial**. Con anuncios y pagos necesitas el plan **Pro**.
+3. **Variables de entorno** en Vercel → Settings → Environment Variables:
+   - `STRIPE_SECRET_KEY` = `sk_live_…`. Usa primero `sk_test_…` para probar.
+   - `SITE_URL` = `https://tudominio.es`
+4. Añade el dominio en Vercel → Domains.
 
-## Monetización (legal)
+## Informe completo de pago (Stripe)
 
-1. **AdSense**: da de alta el dominio, pega tu `ca-pub-…` en `config.mjs → ads.adsenseClient`, crea los bloques de anuncio y pega sus IDs en `ads.slots`. Después regenera la web; `ads.txt` se genera solo.
-2. **Consentimiento de cookies (obligatorio en la UE)**: en AdSense → *Privacidad y mensajes* → activa el mensaje **RGPD** (la CMP certificada de Google). No hace falta tocar código.
-3. **"Ver un anuncio para ver tu resultado"**: en AdSense → *Privacidad y mensajes* → **Offerwall**. Créalo con la opción "Anuncio recompensado" y aplícalo **solo a la URL `/resultado/`**. Es la forma permitida por Google de condicionar el acceso a un anuncio.
-   - ⚠️ No metas un anuncio de AdSense dentro de una cuenta atrás propia que "desbloquee" el resultado. Las políticas lo prohíben (recompensar la visualización de anuncios y anuncios en pantallas sin contenido), y por eso la animación "Calculando…" no lleva anuncios.
-   - Alternativa: Google Ad Manager con anuncios *rewarded* (`ads.gamRewardedUnit`). El código ya está preparado.
-4. **Anuncios automáticos**: puedes activar Auto ads con anclaje y viñeta, además de los bloques manuales.
-5. **Monetag u otras redes**: se pueden añadir en `ads.extraScripts`, pero **no se recomienda** mezclarlas con AdSense. Los popunders dañan la confianza, el SEO y la cuenta de AdSense.
+1. Crea la cuenta en stripe.com con tus datos fiscales y tu cuenta bancaria.
+2. En Settings → Payment methods, deja activadas Tarjeta, Apple Pay y Google Pay. En Settings → Branding, sube el logo.
+3. Revisa que Settings → Invoices tenga tus datos fiscales: el checkout genera factura o recibo automáticamente.
+4. **Prueba en modo test**: tarjeta `4242 4242 4242 4242`, cualquier fecha futura y cualquier CVC.
+5. Cuando funcione, cambia la clave a `sk_live_…`.
+
+El precio se define en dos sitios que deben coincidir: `api/_stripe.js` (`PRICE_CENTS = 199`) y `src/config.mjs` (`payments.priceLabel`). Con `payments.enabled: false` el informe completo pasa a ser gratis.
+
+**Fiscalidad:** los ingresos hay que declararlos (alta de autónomo o actividad económica, IVA trimestral, modelo 303). Verifactu será obligatorio para autónomos desde el 1 de julio de 2027. Consúltalo con un gestor.
+
+## Encuestas y actualidad (actualizar a mano o con una tarea programada)
+
+- **Encuestas:** añade cada sondeo nuevo arriba en `src/polls.mjs` con su encuestadora, medio, fechas de campo, muestra y URL, y cambia `pollsUpdated`.
+- **Noticias:** añade cada noticia arriba en `src/news.mjs`. Escríbela **siempre con tus propias palabras** y enlaza la fuente. No copies textos de medios: la ley protege a los editores de prensa.
+- Después, `node src/build.mjs`, commit y push.
+
+### ⚠️ Veda de encuestas (art. 69.7 LOREG)
+Del **24 de noviembre a las 00:00** hasta el **29 de noviembre a las 21:00** está prohibido publicar o difundir encuestas.
+- La página `/encuestas/` las oculta sola en el navegador durante ese periodo.
+- Las noticias con encuestas (`poll: true`) se excluyen si se compila en esas fechas.
+- **Aun así, ejecuta `node src/build.mjs` y publica el 23 de noviembre por la noche**, para que los datos no estén ni en el HTML.
 
 ## Legalidad: lo que está hecho y lo que debes hacer tú
 
@@ -56,7 +76,10 @@ Hecho:
 - **No es una encuesta (art. 69 LOREG)**: no se publican resultados agregados de usuarios. Así no hay riesgo con la prohibición de difundir sondeos del 24 al 28 de noviembre.
 - **Imparcialidad**: misma escala y fórmula para todos los partidos, justificación pública de cada posición, metodología publicada, canal de correcciones y sin logotipos de partidos.
 - **Publicidad política**: excluida expresamente (Reglamento UE 2024/900). No vendas patrocinios a partidos.
-- Aviso legal (LSSI art. 10), privacidad (RGPD) y cookies (LSSI art. 22).
+- Aviso legal (LSSI art. 10), privacidad (RGPD), cookies (LSSI art. 22) y condiciones de venta (TRLGDCU).
+- **Venta del informe:** precio con IVA visible, casilla obligatoria de renuncia al desistimiento (art. 103.m TRLGDCU), registrada en los metadatos de Stripe y en el pie de la factura, y garantía de conformidad con devolución si falla.
+- **Encuestas de terceros** con su ficha técnica y veda automática del 24 al 29 de noviembre.
+- **Noticias** de redacción propia, con enlace a la fuente.
 
 Pendiente para ti:
 - [ ] Rellenar en `config.mjs → owner` tu nombre o razón social, NIF y dirección. La LSSI lo exige.

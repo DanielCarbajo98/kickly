@@ -50,7 +50,7 @@ export const parties = [
   },
   {
     id: "frente-amplio", short: "Frente Amplio", name: "Frente Amplio (Sumar, IU, Más Madrid y Comuns)", color: "#E5007D",
-    candidate: "Ada Colau (propuesta, pendiente de confirmar)", scope: "Estatal", ideology: "Izquierda",
+    candidate: "Ada Colau (propuesta; pendiente de un posible acuerdo con Podemos)", scope: "Estatal", ideology: "Izquierda",
     members: "Movimiento Sumar, Izquierda Unida, Más Madrid, Catalunya en Comú y EUPV. Compromís, por ahora, fuera.",
     tagline: "Regulación del alquiler, menos horas de trabajo e impuestos a grandes fortunas.",
     summary: "La coalición a la izquierda del PSOE que sucede a Sumar. Yolanda Díaz no repite y las formaciones han propuesto a Ada Colau como candidata. Podemos ha decidido concurrir por separado.",
@@ -115,9 +115,9 @@ export const parties = [
   },
   {
     id: "bildu", short: "EH Bildu", name: "Euskal Herria Bildu (EH Bildu)", color: "#0F7C74",
-    candidate: "Mertxe Aizpurua (previsiblemente)", scope: "País Vasco y Navarra", ideology: "Izquierda · independentismo vasco",
+    candidate: "Por confirmar (Mertxe Aizpurua no repite)", scope: "País Vasco y Navarra", ideology: "Izquierda · independentismo vasco",
     tagline: "Fiscalidad progresiva, nuevo estatus para Euskadi y sanidad pública blindada.",
-    summary: "La coalición de la izquierda abertzale concurre en el País Vasco y Navarra, y en coalición con ERC para el Senado.",
+    summary: "La coalición de la izquierda abertzale concurre en el País Vasco y Navarra, y en coalición con ERC para el Senado. Su portavoz en el Congreso, Mertxe Aizpurua, ha anunciado que no repetirá; la militancia vota las listas el 17 y 18 de octubre.",
     proposals: [
       "Fiscalidad más progresiva: grandes fortunas, banca y energéticas.",
       "Un nuevo estatus que reconozca a Euskadi como nación y completar las transferencias pendientes.",
@@ -127,7 +127,7 @@ export const parties = [
   },
   {
     id: "pnv", short: "PNV", name: "Partido Nacionalista Vasco (EAJ-PNV)", color: "#1F7A3A",
-    candidate: "Maribel Vaquero (previsiblemente)", scope: "País Vasco", ideology: "Centroderecha · nacionalismo vasco",
+    candidate: "Maribel Vaquero (propuesta)", scope: "País Vasco", ideology: "Centroderecha · nacionalismo vasco",
     tagline: "Autogobierno, vivienda con seguridad jurídica e industria.",
     summary: "El PNV defiende completar el Estatuto de Gernika y el Concierto Económico. En vivienda apoyó la protección de los hogares vulnerables, pero votó contra la prórroga obligatoria de los alquileres.",
     proposals: [

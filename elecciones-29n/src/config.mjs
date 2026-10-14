@@ -23,6 +23,15 @@ export default {
    * Ej.: "G-XXXXXXX" */
   ga4: "",
 
+  /* Informe completo de pago (Stripe). Si enabled = false, el informe
+   * completo se muestra gratis. Requiere en Vercel las variables
+   * STRIPE_SECRET_KEY y SITE_URL (ver README). El precio real se cobra
+   * desde api/_stripe.js (PRICE_CENTS): mantenlos iguales. */
+  payments: {
+    enabled: true,
+    priceLabel: "1,99 €",
+  },
+
   ads: {
     /* Google AdSense: "ca-pub-XXXXXXXXXXXXXXXX". Vacío = sin anuncios. */
     adsenseClient: "",

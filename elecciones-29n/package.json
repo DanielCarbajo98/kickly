@@ -1,0 +1,10 @@
+{
+  "name": "testelectoral",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "images": "NODE_PATH=$(npm root -g) node tools/images.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

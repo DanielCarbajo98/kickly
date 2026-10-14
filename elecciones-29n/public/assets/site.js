@@ -21,6 +21,7 @@
 
   function fillAd(el) {
     if (el.dataset.filled) return;
+    if (document.body.classList.contains("no-ads")) { el.hidden = true; return; }
     var name = el.dataset.ad;
     var slot = (ADS.slots || {})[name];
     el.dataset.filled = "1";
@@ -46,6 +47,7 @@
   }
 
   function stickyAd() {
+    if (document.body.classList.contains("no-ads")) return;
     if (!ADS.sticky || !(ADS.adsenseClient && (ADS.slots || {}).sticky) && !debug) return;
     try { if (sessionStorage.getItem("stickyClosed")) return; } catch (e) {}
     var el = document.createElement("div");

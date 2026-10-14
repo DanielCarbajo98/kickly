@@ -6,6 +6,10 @@ import { fileURLToPath } from "node:url";
 import C from "./config.mjs";
 import { cats, catSlugs, parties, questions, sources } from "./data.mjs";
 import { calendar, faqs } from "./content.mjs";
+import { legal, conditions, privacy, cookies } from "./legal.mjs";
+import { guides } from "./guides.mjs";
+import { pollsPage, pollsWidget } from "./polls-page.mjs";
+import { newsPages, latestNews, newsCard } from "./news-page.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "public");
 const U = C.siteUrl;
@@ -38,14 +42,14 @@ function similarity(a, b) {
 }
 
 /* ---------- layout ---------- */
-function layout({ path: p, title, description, body, jsonld = [], noindex = false, scripts = "", nav = "" }) {
+function layout({ path: p, title, description, body, jsonld = [], noindex = false, scripts = "", nav = "", lazyAds = false, ogType = "website", extraHead = "" }) {
   const url = U + p;
   if (!noindex) pages.push(p);
   const ld = jsonld.map((o) => `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", ...o })}</script>`).join("\n");
   const ga = C.ga4
     ? `<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});gtag('js',new Date());gtag('config','${C.ga4}',{anonymize_ip:true});</script><script async src="https://www.googletagmanager.com/gtag/js?id=${C.ga4}"></script>`
     : "";
-  const adsHead = C.ads.adsenseClient
+  const adsHead = C.ads.adsenseClient && !lazyAds
     ? `<meta name="google-adsense-account" content="${C.ads.adsenseClient}">\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${C.ads.adsenseClient}" crossorigin="anonymous"></script>`
     : "";
   return `<!DOCTYPE html>
@@ -57,7 +61,8 @@ function layout({ path: p, title, description, body, jsonld = [], noindex = fals
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="${noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1"}">
 <link rel="canonical" href="${url}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${ogType}">
+${extraHead}
 <meta property="og:site_name" content="${esc(C.brand)}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
@@ -85,10 +90,10 @@ ${ld}
 <header class="hd"><div class="wrap hd-in">
 <a class="brand" href="/" aria-label="${esc(C.brand)} — inicio"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>${C.brandHtml}</span></a>
 <nav class="hd-nav" aria-label="Principal">
+<a href="/encuestas/"${nav === "enc" ? ' aria-current="page"' : ""}>Encuestas</a>
+<a href="/actualidad/"${nav === "news" ? ' aria-current="page"' : ""}>Actualidad</a>
 <a href="/partidos/"${nav === "partidos" ? ' aria-current="page"' : ""}>Partidos</a>
 <a href="/temas/"${nav === "temas" ? ' aria-current="page"' : ""}>Temas</a>
-<a href="/calendario-electoral-29n/"${nav === "cal" ? ' aria-current="page"' : ""}>Calendario 29N</a>
-<a href="/metodologia/"${nav === "met" ? ' aria-current="page"' : ""}>Metodología</a>
 <a class="hd-cta" href="/test/">Hacer el test</a>
 </nav>
 </div></header>
@@ -99,12 +104,12 @@ ${body}
 <div class="ft-in">
 <div><a class="brand" href="/"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>${C.brandHtml}</span></a>
 <p style="margin-top:10px;max-width:440px">Test de afinidad política independiente para las elecciones generales del 29 de noviembre de 2026. Sin afiliación con ningún partido, gobierno ni medio. No es una encuesta ni una recomendación de voto. Tus respuestas no salen de tu dispositivo.</p></div>
-<div><h4>Test</h4><ul><li><a href="/test/">Hacer el test</a></li><li><a href="/partidos/">Partidos y candidatos</a></li><li><a href="/temas/">Propuestas por tema</a></li><li><a href="/comparar/">Comparar partidos</a></li><li><a href="/calendario-electoral-29n/">Calendario electoral</a></li><li><a href="/voto-por-correo-29n/">Voto por correo</a></li></ul></div>
-<div><h4>Transparencia</h4><ul><li><a href="/metodologia/">Metodología e imparcialidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li><li><a href="/privacidad/">Política de privacidad</a></li><li><a href="/cookies/">Política de cookies</a></li><li><a href="mailto:${C.owner.email}">Contacto y correcciones</a></li></ul></div>
+<div><h4>Elecciones 29N</h4><ul><li><a href="/test/">Test: ¿a quién votar?</a></li><li><a href="/encuestas/">Encuestas</a></li><li><a href="/actualidad/">Actualidad de los partidos</a></li><li><a href="/partidos/">Partidos y candidatos</a></li><li><a href="/temas/">Propuestas por tema</a></li><li><a href="/comparar/">Comparar partidos</a></li><li><a href="/calendario-electoral-29n/">Calendario electoral</a></li><li><a href="/como-votar-29n/">Cómo votar</a></li><li><a href="/voto-por-correo-29n/">Voto por correo</a></li><li><a href="/mesa-electoral-29n/">Mesa electoral</a></li></ul></div>
+<div><h4>Transparencia</h4><ul><li><a href="/metodologia/">Metodología e imparcialidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li><li><a href="/privacidad/">Política de privacidad</a></li><li><a href="/cookies/">Política de cookies</a></li><li><a href="/condiciones/">Condiciones de venta</a></li><li><a href="mailto:${C.owner.email}">Contacto y correcciones</a></li></ul></div>
 </div>
 <p style="margin-top:22px">© 2026 ${esc(C.brand)} · Posiciones revisadas el ${fmtDate(C.updated)}.</p>
 </div></footer>
-<script>window.SITE=${JSON.stringify({ siteUrl: U, electionDate: C.electionDate, ads: C.ads })};</script>
+<script>window.SITE=${JSON.stringify({ siteUrl: U, electionDate: C.electionDate, ads: C.ads, payments: C.payments, brand: C.brand, domain: C.domain })};</script>
 <script src="/assets/site.js?v=${BUILD}" defer></script>
 ${scripts}
 </body>
@@ -138,6 +143,12 @@ function home() {
 <div class="party-strip">${parties.map((p) => `<a class="chip" href="/partidos/${p.id}/">${dot(p)}${esc(p.short)}</a>`).join("")}</div>
 </div></section>
 <div class="wrap">${ad("home")}</div>
+
+<section class="section"><div class="wrap">
+<div class="grid g2">
+${pollsWidget()}
+<div class="card"><h3>Última hora de la campaña</h3><div class="news-list" style="margin-top:10px">${latestNews(null, 3).map((n) => newsCard(n, PBY, dot)).join("")}</div><p style="margin-top:12px"><a href="/actualidad/">Todas las noticias →</a></p></div>
+</div></div></section>
 
 <section class="section"><div class="wrap">
 <h2>Cómo funciona el test electoral</h2>
@@ -219,6 +230,7 @@ function quizPages() {
       title: `Tu resultado del test político 29N | ${C.brand}`,
       description: "Tu afinidad con cada partido en las elecciones generales del 29 de noviembre de 2026.",
       noindex: true,
+      lazyAds: true,
       body: `<div class="wrap" style="padding-top:22px"><div id="quiz"></div></div>`,
       scripts: dataScript,
     }),
@@ -276,6 +288,7 @@ ${byCat
       .map(([o, s]) => `<a class="rk" href="/comparar/${pairId(p, o)}/" style="text-decoration:none;color:inherit"><span class="rk-pos">vs</span><span><span class="rk-name">${dot(o)}${esc(o.short)}</span><span class="rk-bar"><i style="width:${s}%;background:${o.color}"></i></span></span><span class="rk-pct">${s}%</span></a>`)
       .join("")}</div>
 <p class="disclaimer">Coincidencia calculada sobre las ${questions.length} afirmaciones del test.</p></section>
+${(() => { const ln = latestNews(p.id, 4); return ln.length ? `<section class="section" style="padding-top:0"><h2>Últimas noticias de ${esc(p.short)}</h2><div class="news-list">${ln.map((n) => newsCard(n, PBY, dot)).join("")}</div><p style="margin-top:12px"><a href="/actualidad/">Ver toda la actualidad →</a></p></section>` : ""; })()}
 ${ctaBox(`¿Coincides con ${esc(p.short)}? Compruébalo`)}</div>`;
     write(
       `partidos/${p.id}/index.html`,
@@ -416,6 +429,7 @@ ${ad("content")}${ctaBox("¿Ya sabes a quién votar el 29N?")}</div>`;
   write("metodologia/index.html", layout({ path: "/metodologia/", nav: "met", title: `Metodología e imparcialidad del test político | ${C.brand}`, description: "Cómo calculamos tu afinidad con cada partido: fuentes, escala, fórmula, ejes ideológicos, garantías de imparcialidad y limitaciones del test.", body: methodology(), jsonld: [crumbLd([["Metodología", "/metodologia/"]])] }));
   write("aviso-legal/index.html", layout({ path: "/aviso-legal/", title: `Aviso legal | ${C.brand}`, description: `Aviso legal y condiciones de uso de ${C.brand}.`, body: legal(), noindex: false }));
   write("privacidad/index.html", layout({ path: "/privacidad/", title: `Política de privacidad | ${C.brand}`, description: `Política de privacidad de ${C.brand}. Tus respuestas al test no salen de tu dispositivo.`, body: privacy() }));
+  write("condiciones/index.html", layout({ path: "/condiciones/", title: `Condiciones de venta del informe completo | ${C.brand}`, description: `Condiciones de compra del informe completo de afinidad política de ${C.brand}: precio, pago, entrega y derecho de desistimiento.`, body: conditions() }));
   write("cookies/index.html", layout({ path: "/cookies/", title: `Política de cookies | ${C.brand}`, description: `Qué cookies usa ${C.brand} y cómo gestionarlas.`, body: cookies() }));
   write("404.html", layout({ path: "/404", noindex: true, title: `Página no encontrada | ${C.brand}`, description: "Página no encontrada.", body: `<div class="wrap" style="padding:60px 16px;text-align:center"><h1 class="qtext">Esta página no existe</h1><p class="res-sub">Pero el test sí 😉</p><p style="margin-top:20px"><a class="btn btn-primary" href="/test/">Hacer el test</a></p></div>` }));
 }
@@ -450,75 +464,6 @@ function methodology() {
 </div>${ctaBox()}</div>`;
 }
 
-function legal() {
-  const o = C.owner;
-  return `<div class="wrap">${crumbs([["Aviso legal"]])}<div class="page-head"><h1>Aviso legal y condiciones de uso</h1></div><div class="prose" style="margin-top:16px">
-<h2>1. Titular del sitio web</h2>
-<p>En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de que este sitio web (${esc(C.domain)}) es titularidad de:</p>
-<ul><li>Titular: ${esc(o.name)}</li><li>NIF: ${esc(o.nif)}</li><li>Domicilio: ${esc(o.address)}</li><li>Email de contacto: <a href="mailto:${o.email}">${esc(o.email)}</a></li></ul>
-<h2>2. Objeto y naturaleza del servicio</h2>
-<p>${esc(C.brand)} ofrece de forma gratuita un test de afinidad política con fines exclusivamente <b>informativos y educativos</b>, que compara las opiniones del usuario con las posiciones públicas de los partidos que concurren a las elecciones generales del 29 de noviembre de 2026.</p>
-<ul>
-<li>El resultado <b>no constituye una recomendación de voto</b>, ni un sondeo o encuesta electoral en el sentido del artículo 69 de la Ley Orgánica 5/1985, del Régimen Electoral General (LOREG). No se recogen ni publican estimaciones de voto ni resultados agregados de los usuarios.</li>
-<li>${esc(C.brand)} es un proyecto <b>independiente</b>, sin vinculación con ningún partido, candidatura, administración pública ni con la Junta Electoral. No es un sitio oficial.</li>
-<li>Las posiciones atribuidas a cada partido son una interpretación razonada de información pública (programas, declaraciones y votaciones), elaborada con criterios homogéneos y publicada en la <a href="/metodologia/">metodología</a>. Pueden contener errores u omisiones. Cualquier partido o usuario puede solicitar su corrección en ${esc(o.email)}.</li>
-<li>Los nombres y siglas de los partidos se usan solo para identificarlos, con fines informativos y sin ánimo de sugerir respaldo o asociación. No se reproducen sus logotipos.</li>
-</ul>
-<h2>3. Condiciones de uso</h2>
-<p>El uso del sitio es libre y gratuito y no requiere registro. El usuario se compromete a hacer un uso lícito del sitio y a no intentar dañarlo, alterarlo o usarlo con fines fraudulentos.</p>
-<h2>4. Publicidad</h2>
-<p>El sitio se financia con publicidad comercial servida por terceros (como Google AdSense). Los anuncios se identifican como "Publicidad". No se admite publicidad política (Reglamento (UE) 2024/900 sobre transparencia y segmentación de la publicidad política) y la publicidad no influye en el contenido ni en los resultados del test. En algunos casos podemos ofrecer ver un anuncio para acceder al contenido; ese anuncio es siempre voluntario y lo gestiona la red publicitaria.</p>
-<h2>5. Propiedad intelectual</h2>
-<p>Los textos, el diseño, el código y la metodología del sitio pertenecen a su titular. Se permite citar y enlazar el contenido indicando la fuente. Las marcas de terceros pertenecen a sus titulares.</p>
-<h2>6. Responsabilidad</h2>
-<p>El titular trabaja para que la información sea exacta y esté actualizada, pero no garantiza su exactitud ni que esté libre de errores, y no responde de las decisiones que el usuario tome basándose en ella. Recomendamos consultar los programas electorales oficiales. El titular no se responsabiliza del contenido de los sitios enlazados.</p>
-<h2>7. Ley aplicable</h2>
-<p>Estas condiciones se rigen por la legislación española. Para cualquier controversia serán competentes los juzgados y tribunales que correspondan según la normativa aplicable, incluida la de consumidores y usuarios.</p>
-<p class="disclaimer">Última actualización: ${fmtDate(C.updated)}.</p>
-</div></div>`;
-}
-
-function privacy() {
-  const o = C.owner;
-  return `<div class="wrap">${crumbs([["Privacidad"]])}<div class="page-head"><h1>Política de privacidad</h1><p>Resumen: <b>tus respuestas al test y tu resultado no salen de tu dispositivo.</b> No te pedimos datos personales, no tienes que registrarte y no vendemos datos.</p></div><div class="prose" style="margin-top:16px">
-<h2>1. Responsable del tratamiento</h2>
-<p>${esc(o.name)} · NIF ${esc(o.nif)} · ${esc(o.address)} · <a href="mailto:${o.email}">${esc(o.email)}</a>.</p>
-<h2>2. Tus respuestas al test: no las tratamos</h2>
-<p>Las opiniones políticas son una categoría especial de datos protegida por el artículo 9 del Reglamento General de Protección de Datos (RGPD). Por eso hemos diseñado el test para que <b>no las recojamos</b>:</p>
-<ul><li>El cálculo de tu resultado se hace en tu navegador, con JavaScript. Tus respuestas no se envían a nuestros servidores ni a terceros.</li><li>Para que puedas continuar un test a medias, tu progreso se guarda en el almacenamiento local de tu navegador (localStorage). Puedes borrarlo cuando quieras desde tu navegador; se borra solo al terminar el test.</li><li>Si compartes tu resultado, el enlace incluye tus respuestas codificadas después del símbolo "#". Esa parte de la dirección no se envía a nuestro servidor. Compartirlo es una decisión tuya: cualquiera con el enlace puede ver ese resultado.</li><li>No pedimos email, nombre ni registro, y no creamos perfiles ideológicos.</li><li>Si activamos analítica, solo mide eventos anónimos ("test iniciado", "test completado") y nunca tus respuestas ni tu resultado.</li></ul>
-<h2>3. Datos que sí se tratan</h2>
-<table><thead><tr><th>Dato</th><th>Finalidad</th><th>Base jurídica</th></tr></thead><tbody>
-<tr><td>Dirección IP y datos técnicos de la conexión (registros del servidor de alojamiento)</td><td>Servir la web y mantener su seguridad</td><td>Interés legítimo (art. 6.1.f RGPD)</td></tr>
-<tr><td>Cookies y similares de publicidad y medición (Google)</td><td>Mostrar y medir anuncios (personalizados solo si lo aceptas) y estadísticas de uso</td><td>Consentimiento (art. 6.1.a RGPD y art. 22.2 LSSI), que puedes retirar en cualquier momento</td></tr>
-<tr><td>Correos que nos envíes</td><td>Responder tus consultas o correcciones</td><td>Consentimiento / interés legítimo</td></tr>
-</tbody></table>
-<h2>4. Destinatarios y transferencias</h2>
-<p>Proveedores que actúan como encargados o responsables independientes: el proveedor de alojamiento (Vercel Inc.) y Google Ireland Ltd. (AdSense y, en su caso, Google Analytics). Estos proveedores pueden transferir datos a EE. UU. al amparo del Marco de Privacidad de Datos UE-EE. UU. o de cláusulas contractuales tipo. Más información: <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener" target="_blank">cómo usa Google los datos de los sitios asociados</a>. No vendemos ni cedemos datos personales a nadie.</p>
-<h2>5. Conservación</h2>
-<p>Registros técnicos: el plazo del proveedor de alojamiento (normalmente unas semanas). Correos: el tiempo necesario para atender la consulta. Cookies: el indicado en la <a href="/cookies/">política de cookies</a>.</p>
-<h2>6. Tus derechos</h2>
-<p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <a href="mailto:${o.email}">${esc(o.email)}</a>. Si crees que no hemos atendido bien tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" rel="nofollow noopener" target="_blank">aepd.es</a>).</p>
-<h2>7. Menores</h2><p>El sitio está dirigido a mayores de edad con derecho a voto, aunque cualquier persona puede consultarlo con fines informativos. No recogemos datos de menores.</p>
-<p class="disclaimer">Última actualización: ${fmtDate(C.updated)}.</p>
-</div></div>`;
-}
-
-function cookies() {
-  return `<div class="wrap">${crumbs([["Cookies"]])}<div class="page-head"><h1>Política de cookies</h1></div><div class="prose" style="margin-top:16px">
-<p>Usamos cookies y tecnologías similares según el artículo 22.2 de la LSSI y la Guía sobre el uso de las cookies de la AEPD. Las cookies no necesarias solo se instalan si das tu consentimiento en el banner que aparece al entrar. Ese banner lo gestiona una plataforma de consentimiento certificada por Google según el marco TCF de IAB Europe.</p>
-<h2>Tipos de cookies</h2>
-<table><thead><tr><th>Tipo</th><th>Quién</th><th>Para qué</th><th>¿Requiere consentimiento?</th></tr></thead><tbody>
-<tr><td>Técnicas / almacenamiento local (q29-progress, stickyClosed)</td><td>Propias</td><td>Guardar tu progreso del test en tu navegador y recordar si cerraste el anuncio fijo</td><td>No (exentas)</td></tr>
-<tr><td>Consentimiento (FCCDCF, FCNEC)</td><td>Google</td><td>Recordar tus preferencias de cookies</td><td>No (exentas)</td></tr>
-<tr><td>Publicidad (p. ej. __gads, __gpi, IDE)</td><td>Google</td><td>Mostrar anuncios, limitar su frecuencia, medir su rendimiento y, si lo aceptas, personalizarlos</td><td>Sí</td></tr>
-<tr><td>Analítica (_ga, _ga_*)</td><td>Google</td><td>Estadísticas anónimas de uso</td><td>Sí</td></tr>
-</tbody></table>
-<h2>Cómo gestionarlas</h2>
-<p>Puedes cambiar tu elección en cualquier momento desde el enlace "Privacidad y cookies" del banner, o borrar las cookies desde la configuración de tu navegador. Si rechazas las cookies de publicidad, seguirás viendo anuncios, pero no personalizados.</p>
-<p class="disclaimer">Última actualización: ${fmtDate(C.updated)}.</p>
-</div></div>`;
-}
-
 /* ============================================================
  * ARCHIVOS TÉCNICOS
  * ============================================================ */
@@ -529,7 +474,6 @@ function technical() {
   const pub = (C.ads.adsenseClient || "").replace("ca-", "");
   write("ads.txt", pub ? `google.com, ${pub}, DIRECT, f08c47fec0942fa0\n` : `# Añade aquí tu línea de AdSense: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0\n`);
   write("manifest.webmanifest", JSON.stringify({ name: `${C.brand} · Test político 29N`, short_name: C.brand, start_url: "/", display: "standalone", background_color: "#f6f5f1", theme_color: "#2f3cf0", icons: [{ src: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }, { src: "/favicon.svg", sizes: "any", type: "image/svg+xml" }] }, null, 2));
-  write("vercel.json", JSON.stringify({ trailingSlash: true, headers: [{ source: "/assets/(.*)", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] }, { source: "/(.*)", headers: [{ key: "X-Content-Type-Options", value: "nosniff" }, { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" }] }] }, null, 2));
 }
 
 /* ---------- validación de datos ---------- */
@@ -554,5 +498,9 @@ partyPages();
 topicPages();
 comparePages();
 contentPages();
+guides({ layout, write, ctaBox, crumbs, crumbLd, ad });
+pollsPage({ layout, write, ctaBox, crumbs, crumbLd, ad, PBY });
+newsPages({ layout, write, ctaBox, crumbs, crumbLd, ad, PBY, dot });
 technical();
+if (/^\[/.test(C.owner.name) || /^\[/.test(C.owner.nif)) console.warn("⚠️  Faltan los datos del titular en src/config.mjs (owner). Son obligatorios por la LSSI antes de publicar.");
 console.log(`OK · ${pages.length} páginas indexables · ${questions.length} preguntas · ${parties.length} partidos`);
