@@ -593,6 +593,10 @@ function validate() {
 }
 
 validate();
+// Limpia las páginas generadas en compilaciones anteriores (todo menos assets/).
+for (const e of fs.readdirSync(ROOT, { withFileTypes: true })) {
+  if (e.isDirectory() && e.name !== "assets") fs.rmSync(path.join(ROOT, e.name), { recursive: true, force: true });
+}
 home();
 quizPages();
 partyPages();

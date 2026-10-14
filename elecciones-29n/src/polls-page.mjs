@@ -11,7 +11,8 @@ const fmtDate = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("es-ES",
 /* Veda electoral: desde el 24 nov 00:00 hasta el 29 nov 21:00 (cierre en Canarias, hora peninsular). */
 export const BLACKOUT_START = "2026-11-24T00:00:00+01:00";
 export const BLACKOUT_END = "2026-11-29T21:00:00+01:00";
-export function inBlackout(now = new Date()) {
+/* BUILD_NOW permite simular la fecha al compilar (pruebas). */
+export function inBlackout(now = process.env.BUILD_NOW ? new Date(process.env.BUILD_NOW) : new Date()) {
   return now >= new Date(BLACKOUT_START) && now < new Date(BLACKOUT_END);
 }
 
@@ -66,13 +67,15 @@ function hemicycle(seatList) {
 }
 
 export function pollsWidget() {
+  if (inBlackout()) return `<div class="card"><h3>Encuestas</h3><p>Del 24 al 29 de noviembre no se pueden publicar encuestas electorales (art. 69.7 de la LOREG). Volverán tras el cierre de los colegios.</p></div>`;
   const A = pollAverage();
   if (!A) return "";
   const rows = pollParties.filter((p) => A.vote[p.id] != null).sort((a, b) => A.vote[b.id] - A.vote[a.id]).slice(0, 6);
   const max = Math.max(...rows.map((p) => A.vote[p.id]));
   return `<div class="card" data-polls><h3>¿Quién va ganando? Media de encuestas</h3><p>Media de ${A.used.length} encuestas publicadas. Actualizado el ${fmtDate(pollsUpdated)}.</p>
 <div class="poll-hero">${rows.map((p) => `<div class="poll-row"><span class="sc-n"><i class="dot" style="background:${p.color}"></i>${esc(p.short)}</span><span class="rk-bar"><i style="width:${((A.vote[p.id] / max) * 100).toFixed(1)}%;background:${p.color}"></i></span><b>${fmt(A.vote[p.id])}%</b></div>`).join("")}</div>
-<p style="margin-top:12px"><a href="/encuestas/">Ver todas las encuestas y el reparto de escaños →</a></p></div>`;
+<p style="margin-top:12px"><a href="/encuestas/">Ver todas las encuestas y el reparto de escaños →</a></p></div>
+<script>(function(){var n=Date.now();if(n>=${new Date(BLACKOUT_START).getTime()}&&n<${new Date(BLACKOUT_END).getTime()}){var w=document.querySelector('[data-polls]');if(w)w.innerHTML='<h3>Encuestas</h3><p>Del 24 al 29 de noviembre no se pueden publicar encuestas electorales (art. 69.7 de la LOREG).</p>';}})();</script>`;
 }
 
 export function pollsPage({ layout, write, ctaBox, crumbs, crumbLd, ad }) {
