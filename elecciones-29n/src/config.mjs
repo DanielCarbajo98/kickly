@@ -13,9 +13,9 @@ export default {
   /* Datos del titular — OBLIGATORIOS por la LSSI (art. 10).
    * Rellénalos antes de publicar. */
   owner: {
-    name: "Daniel C [completar apellidos]",
+    name: "Daniel Carbajo Fernández",
     nif: "73014871Z",
-    address: "Avenida Salvador Allende, 65, [código postal] [municipio] ([provincia])",
+    address: "Avenida Salvador Allende, 65, 50015 Zaragoza",
     email: "hola@partidometro.es",
   },
 

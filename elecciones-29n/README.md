@@ -100,7 +100,7 @@ Hecho:
 - **Noticias** de redacción propia, con enlace a la fuente.
 
 Pendiente para ti:
-- [ ] Completar en `config.mjs → owner` los apellidos, el código postal y el municipio. Están marcados con [ ].
+- [x] Datos del titular completados.
 - [ ] Activar la CMP de Google antes de mostrar anuncios.
 - [ ] Crear el email de contacto (`hola@tudominio`).
 - [ ] Si facturas con la web, darte de alta como autónomo o declarar los ingresos.
