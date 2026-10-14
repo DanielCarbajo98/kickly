@@ -3,10 +3,10 @@
  * Después de cambiar algo: `node src/build.mjs`
  * ============================================================ */
 export default {
-  brand: "TestElectoral",           // nombre visible
-  brandHtml: "Test<b>Electoral</b>",// logo de texto
-  domain: "testelectoral.es",             // dominio sin https://
-  siteUrl: "https://testelectoral.es",    // URL canónica (sin barra final)
+  brand: "Partidómetro",            // nombre visible
+  brandHtml: "Partidó<b>metro</b>",  // logo de texto
+  domain: "partidometro.es",              // dominio sin https://
+  siteUrl: "https://partidometro.es",     // URL canónica (sin barra final)
   electionDate: "2026-11-29T09:00:00+01:00",
   updated: "2026-10-14",            // fecha de última revisión de posiciones
 
@@ -16,7 +16,7 @@ export default {
     name: "Daniel C [completar apellidos]",
     nif: "73014871Z",
     address: "Avenida Salvador Allende, 65, [código postal] [municipio] ([provincia])",
-    email: "hola@testelectoral.es",
+    email: "hola@partidometro.es",
   },
 
   /* Alojamiento: "cloudflare" (recomendado, gratis con uso comercial) o "vercel". */
@@ -54,7 +54,7 @@ export default {
     /* Segundos de la animación "Calculando tu resultado". Sin anuncios
      * (AdSense no permite anuncios en pantallas sin contenido). */
     gateSeconds: 4,
-    /* Google Ad Manager rewarded (opcional): "/1234567/testelectoral_rewarded".
+    /* Google Ad Manager rewarded (opcional): "/1234567/partidometro_rewarded".
      * Ofrece ver un anuncio voluntario para saltar la espera. */
     gamRewardedUnit: "",
     /* Otras redes (p. ej. Monetag). NO recomendado junto a AdSense. */

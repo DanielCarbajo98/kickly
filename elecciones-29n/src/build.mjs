@@ -88,7 +88,7 @@ ${ld}
 </head>
 <body>
 <header class="hd"><div class="wrap hd-in">
-<a class="brand" href="/" aria-label="${esc(C.brand)} — inicio"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>${C.brandHtml}</span></a>
+<a class="brand" href="/" aria-label="${esc(C.brand)} — inicio"><span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 17a8 8 0 0 1 16 0"/><path d="M12 17l4.2-5.2"/><circle cx="12" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></span><span>${C.brandHtml}</span></a>
 <nav class="hd-nav" aria-label="Principal">
 <a href="/encuestas/"${nav === "enc" ? ' aria-current="page"' : ""}>Encuestas</a>
 <a href="/actualidad/"${nav === "news" ? ' aria-current="page"' : ""}>Actualidad</a>
@@ -102,7 +102,7 @@ ${body}
 </main>
 <footer class="ft"><div class="wrap">
 <div class="ft-in">
-<div><a class="brand" href="/"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>${C.brandHtml}</span></a>
+<div><a class="brand" href="/"><span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 17a8 8 0 0 1 16 0"/><path d="M12 17l4.2-5.2"/><circle cx="12" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></span><span>${C.brandHtml}</span></a>
 <p style="margin-top:10px;max-width:440px">Test de afinidad política independiente para las elecciones generales del 29 de noviembre de 2026. Sin afiliación con ningún partido, gobierno ni medio. No es una encuesta ni una recomendación de voto. Tus respuestas no salen de tu dispositivo.</p></div>
 <div><h4>Elecciones 29N</h4><ul><li><a href="/test/">Test: ¿a quién votar?</a></li><li><a href="/encuestas/">Encuestas</a></li><li><a href="/actualidad/">Actualidad de los partidos</a></li><li><a href="/partidos/">Partidos y candidatos</a></li><li><a href="/temas/">Propuestas por tema</a></li><li><a href="/comparar/">Comparar partidos</a></li><li><a href="/calendario-electoral-29n/">Calendario electoral</a></li><li><a href="/como-votar-29n/">Cómo votar</a></li><li><a href="/voto-por-correo-29n/">Voto por correo</a></li><li><a href="/mesa-electoral-29n/">Mesa electoral</a></li></ul></div>
 <div><h4>Transparencia</h4><ul><li><a href="/metodologia/">Metodología e imparcialidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li><li><a href="/privacidad/">Política de privacidad</a></li><li><a href="/cookies/">Política de cookies</a></li><li><a href="/condiciones/">Condiciones de venta</a></li><li><a href="mailto:${C.owner.email}">Contacto y correcciones</a></li></ul></div>
@@ -191,7 +191,7 @@ ${faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${a}</p></detail
     "index.html",
     layout({
       path: "/",
-      title: `Test electoral 29N: ¿a quién votar en las elecciones generales 2026? | ${C.brand}`,
+      title: `Partidómetro · Test electoral 29N: ¿a quién votar en las elecciones generales 2026?`,
       description: `Test de afinidad política para las elecciones generales del 29 de noviembre de 2026. Descubre qué partido piensa como tú: PSOE, PP, Vox, Sumar, Podemos y más. Gratis, anónimo e imparcial.`,
       body,
       jsonld: [

@@ -1,4 +1,4 @@
-# TestElectoral.es — Test de afinidad política · Elecciones generales 29N 2026
+# Partidómetro (partidometro.es) — Test de afinidad política · Elecciones generales 29N 2026
 
 Web estática e independiente: test de afinidad política para las elecciones generales del **29 de noviembre de 2026**. Tiene 44 afirmaciones, 11 partidos y el resultado incluye "en qué coincides y en qué discrepas" con cada uno. Está preparada para SEO y monetización con AdSense.
 
@@ -37,7 +37,7 @@ Tras cambiar algo en `src/`, ejecuta `node src/build.mjs`. Eso regenera `public/
 
 ## Publicar en Cloudflare Pages (recomendado: gratis y con uso comercial permitido)
 
-1. **Dominio:** cuando lo tengas, cambia `domain`, `siteUrl` y `email` en `src/config.mjs` y ejecuta `node src/build.mjs`.
+1. **Dominio:** `partidometro.es` (comprado). Ya está configurado en `src/config.mjs`.
 2. **Crear el proyecto:** en Cloudflare → Workers & Pages → Create → Pages → *Connect to Git* → este repo.
    - **Production branch:** la rama que quieras publicar.
    - **Build command:** vacío. `public/` ya está generado.

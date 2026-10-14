@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /resultado/
 
-Sitemap: https://testelectoral.es/sitemap.xml
+Sitemap: https://partidometro.es/sitemap.xml

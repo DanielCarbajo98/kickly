@@ -10,7 +10,7 @@ const OUT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "publi
 const browser = await chromium.launch();
 const page = await browser.newPage();
 const font = `<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@500;700&display=swap" rel="stylesheet">`;
-const check = (s, w) => `<svg width="${s}" height="${s}" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#2f3cf0"/><path d="M17 33l10 10 20-22" fill="none" stroke="#fff" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const check = (s) => `<svg width="${s}" height="${s}" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#2f3cf0"/><path d="M13 44a19 19 0 0 1 38 0" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M32 44l11-13" stroke="#fff" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="44" r="5" fill="#fff"/></svg>`;
 
 await page.setViewportSize({ width: 1200, height: 630 });
 await page.setContent(`${font}<body style="margin:0;width:1200px;height:630px;background:#f6f5f1;font-family:Inter,sans-serif;display:flex;flex-direction:column;justify-content:center;padding:0 80px;box-sizing:border-box;position:relative;overflow:hidden">

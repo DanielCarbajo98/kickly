@@ -283,6 +283,7 @@
   function isUnlocked() { return !PAY.enabled || !!lsGet(UNLOCK); }
   function signClass(v) { return v === undefined || v === null ? "vx" : "v" + v; }
   function vtxt(v) { return v === undefined || v === null ? "–" : KEYS[String(v)]; }
+  var GAUGE = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 17a8 8 0 0 1 16 0"/><path d="M12 17l4.2-5.2"/><circle cx="12" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg>';
   var CHECK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 
   function viewResults(code) {
@@ -301,7 +302,7 @@
     var html =
       (!mine ? '<div class="note" style="margin-bottom:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap"><span>Estás viendo el resultado que alguien ha compartido contigo.</span><a class="btn btn-primary btn-sm" href="/test/">Haz tu propio test →</a></div>' : "") +
       '<section class="share-card" id="card" style="--pc:' + top.p.color + '">' +
-      '<div class="sc-top"><span class="sc-brand"><span class="brand-mark">' + CHECK + "</span>" + esc(CFG.brand || "") + '</span><span>Elecciones generales · 29N 2026</span></div>' +
+      '<div class="sc-top"><span class="sc-brand"><span class="brand-mark">' + GAUGE + "</span>" + esc(CFG.brand || "") + '</span><span>Elecciones generales · 29N 2026</span></div>' +
       '<div class="res-kicker">' + (mine ? "Mi partido más afín" : "Su partido más afín") + "</div>" +
       '<div class="res-name">' + esc(top.p.short) + "</div>" +
       '<div class="res-pct">' + Math.round(top.pct) + "%</div>" +
@@ -468,8 +469,10 @@
       x.fillStyle = top.p.color; x.fillRect(0, 0, W, 16);
       // marca
       rr(x, 80, 76, 64, 64, 16); x.fillStyle = "#2f3cf0"; x.fill();
-      x.strokeStyle = "#fff"; x.lineWidth = 8; x.lineCap = "round"; x.lineJoin = "round";
-      x.beginPath(); x.moveTo(97, 109); x.lineTo(107, 119); x.lineTo(127, 97); x.stroke();
+      x.strokeStyle = "#fff"; x.fillStyle = "#fff"; x.lineWidth = 7; x.lineCap = "round";
+      x.beginPath(); x.arc(112, 120, 19, Math.PI, 2 * Math.PI); x.stroke();
+      x.beginPath(); x.moveTo(112, 120); x.lineTo(123, 107); x.stroke();
+      x.beginPath(); x.arc(112, 120, 5, 0, 2 * Math.PI); x.fill();
       x.fillStyle = "#16181d"; x.font = "800 40px " + disp; x.textBaseline = "middle";
       x.fillText(CFG.brand || "", 162, 110);
       x.fillStyle = "#555b66"; x.font = "600 30px " + body; x.textBaseline = "alphabetic";
