@@ -49,7 +49,7 @@ Después de crearlo:
 2. **Settings → Variables and Secrets:** añade `STRIPE_SECRET_KEY` como **Secret**. `SITE_URL` ya viene en `wrangler.jsonc`.
 3. **Settings → Domains & Routes:** añade `partidometro.es` y `www.partidometro.es`. El dominio tiene que tener los DNS en Cloudflare.
 
-La configuración está en `wrangler.jsonc`: la web estática se sirve desde `public/` y `worker/index.js` responde a `/api/checkout` y `/api/verify`. Para probar en local: `npx wrangler dev`.
+La configuración está en `wrangler.jsonc`: la web estática se sirve desde `public/` y `worker/index.js` responde a `/api/checkout` y `/api/verify`. Para probar en local: `npx wrangler dev`. Cada push a la rama de producción despliega automáticamente.
 
 *Alternativas:* Cloudflare Pages usa `functions/` y Vercel usa `api/` + `vercel.json`, este último con plan Pro.
 
