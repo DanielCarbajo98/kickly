@@ -470,6 +470,7 @@ function methodology() {
 function technical() {
   const today = new Date().toISOString().slice(0, 10);
   write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((p) => `  <url><loc>${U}${p}</loc><lastmod>${today}</lastmod><changefreq>${p === "/" || p === "/test/" ? "daily" : "weekly"}</changefreq><priority>${p === "/" ? "1.0" : p === "/test/" ? "0.9" : p.startsWith("/comparar/") || p.startsWith("/partidos/") || p.startsWith("/temas/") ? "0.7" : "0.5"}</priority></url>`).join("\n")}\n</urlset>\n`);
+  write("_headers", `/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n`);
   write("robots.txt", `User-agent: *\nAllow: /\nDisallow: /resultado/\n\nSitemap: ${U}/sitemap.xml\n`);
   const pub = (C.ads.adsenseClient || "").replace("ca-", "");
   write("ads.txt", pub ? `google.com, ${pub}, DIRECT, f08c47fec0942fa0\n` : `# Añade aquí tu línea de AdSense: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0\n`);
@@ -502,5 +503,5 @@ guides({ layout, write, ctaBox, crumbs, crumbLd, ad });
 pollsPage({ layout, write, ctaBox, crumbs, crumbLd, ad, PBY });
 newsPages({ layout, write, ctaBox, crumbs, crumbLd, ad, PBY, dot });
 technical();
-if (/^\[/.test(C.owner.name) || /^\[/.test(C.owner.nif)) console.warn("⚠️  Faltan los datos del titular en src/config.mjs (owner). Son obligatorios por la LSSI antes de publicar.");
+if (/\[/.test(C.owner.name + C.owner.nif + C.owner.address)) console.warn("⚠️  Faltan los datos del titular en src/config.mjs (owner). Son obligatorios por la LSSI antes de publicar.");
 console.log(`OK · ${pages.length} páginas indexables · ${questions.length} preguntas · ${parties.length} partidos`);

@@ -13,11 +13,14 @@ export default {
   /* Datos del titular — OBLIGATORIOS por la LSSI (art. 10).
    * Rellénalos antes de publicar. */
   owner: {
-    name: "[Nombre y apellidos o razón social]",
-    nif: "[NIF/CIF]",
-    address: "[Dirección postal completa]",
+    name: "Daniel C [completar apellidos]",
+    nif: "73014871Z",
+    address: "Avenida Salvador Allende, 65, [código postal] [municipio] ([provincia])",
     email: "hola@testelectoral.es",
   },
+
+  /* Alojamiento: "cloudflare" (recomendado, gratis con uso comercial) o "vercel". */
+  hosting: "cloudflare",
 
   /* Analítica (opcional, solo se carga con consentimiento vía la CMP de Google).
    * Ej.: "G-XXXXXXX" */

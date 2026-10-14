@@ -35,15 +35,22 @@ Tras cambiar algo en `src/`, ejecuta `node src/build.mjs`. Eso regenera `public/
 | Guías | `/como-votar-29n/`, `/mesa-electoral-29n/` | mesa electoral cuánto se cobra, cómo votar |
 | Legales | `/metodologia/`, `/aviso-legal/`, `/privacidad/`, `/cookies/`, `/condiciones/` | — |
 
-## Publicar (Vercel)
+## Publicar en Cloudflare Pages (recomendado: gratis y con uso comercial permitido)
 
-1. **Dominio:** pendiente de elegir uno libre. Cuando lo tengas, cambia `domain`, `siteUrl` y `email` en `src/config.mjs`, y la marca si quieres.
-2. **Vercel:** Add New → Project → este repo, con **Root Directory = `elecciones-29n`**. El `vercel.json` ya indica `public/` como salida y sirve las funciones de `api/`.
-   - El plan gratuito (Hobby) de Vercel **no permite uso comercial**. Con anuncios y pagos necesitas el plan **Pro**.
-3. **Variables de entorno** en Vercel → Settings → Environment Variables:
-   - `STRIPE_SECRET_KEY` = `sk_live_…`. Usa primero `sk_test_…` para probar.
-   - `SITE_URL` = `https://tudominio.es`
-4. Añade el dominio en Vercel → Domains.
+1. **Dominio:** cuando lo tengas, cambia `domain`, `siteUrl` y `email` en `src/config.mjs` y ejecuta `node src/build.mjs`.
+2. **Crear el proyecto:** en Cloudflare → Workers & Pages → Create → Pages → *Connect to Git* → este repo.
+   - **Production branch:** la rama que quieras publicar.
+   - **Build command:** vacío. `public/` ya está generado.
+   - **Root directory:** `elecciones-29n`
+   - **Build output directory:** `public`
+   - Las funciones de pago (`functions/api/`) se despliegan solas.
+3. **Variables:** en Settings → Variables and Secrets añade `STRIPE_SECRET_KEY` (tipo *Secret*) y `SITE_URL` = `https://tudominio.es`.
+4. **Dominio personalizado:** en Custom domains añade tu dominio. Lo más fácil es pasar los DNS del dominio a Cloudflare, que es gratis.
+5. **Analítica sin cookies (opcional):** activa Cloudflare Web Analytics, que es gratis.
+
+**Plan gratuito:** permite uso comercial, tráfico web ilimitado y 100.000 peticiones al día a las funciones. Solo se usan al pagar, así que sobra.
+
+*Alternativa Vercel:* Root Directory `elecciones-29n`, usa `api/` y `vercel.json`. Necesita el plan Pro para uso comercial. Si lo usas, pon `hosting: "vercel"` en `config.mjs`.
 
 ## Informe completo de pago (Stripe)
 
@@ -93,7 +100,7 @@ Hecho:
 - **Noticias** de redacción propia, con enlace a la fuente.
 
 Pendiente para ti:
-- [ ] Rellenar en `config.mjs → owner` tu nombre o razón social, NIF y dirección. La LSSI lo exige.
+- [ ] Completar en `config.mjs → owner` los apellidos, el código postal y el municipio. Están marcados con [ ].
 - [ ] Activar la CMP de Google antes de mostrar anuncios.
 - [ ] Crear el email de contacto (`hola@tudominio`).
 - [ ] Si facturas con la web, darte de alta como autónomo o declarar los ingresos.

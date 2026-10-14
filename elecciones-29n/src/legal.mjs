@@ -89,7 +89,7 @@ ${titular}
 <p>La analítica, si está activa, solo mide eventos anónimos como «test iniciado», «test completado» o «compra realizada». Nunca recoge tus respuestas ni tu resultado.</p>
 <h2>4. Destinatarios y transferencias internacionales</h2>
 <ul>
-<li><b>Vercel Inc.</b>: alojamiento de la web y de las funciones de servidor que verifican el pago.</li>
+<li><b>${C.hosting === "vercel" ? "Vercel Inc." : "Cloudflare, Inc."}</b>: alojamiento de la web, red de distribución y funciones de servidor que verifican el pago.</li>
 <li><b>Stripe Payments Europe, Ltd.</b> (Irlanda): procesamiento del pago y emisión del justificante. Ver la <a href="https://stripe.com/es/privacy" rel="nofollow noopener" target="_blank">política de privacidad de Stripe</a>.</li>
 <li><b>Google Ireland Ltd.</b>: publicidad (AdSense) y, en su caso, analítica. Ver <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener" target="_blank">cómo usa Google los datos de los sitios asociados</a>.</li>
 <li>La Agencia Tributaria y otras administraciones, cuando lo exija la ley.</li>

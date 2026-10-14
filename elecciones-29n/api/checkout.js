@@ -31,7 +31,7 @@ export default async function handler(req, res) {
         "metadata[producto]": "informe-completo",
         "metadata[renuncia_desistimiento]": "aceptada",
         "metadata[renuncia_fecha]": now,
-        "payment_intent_data[description]": "Informe completo TestElectoral",
+        "payment_intent_data[description]": "Informe completo de afinidad política",
         "custom_text[submit][message]":
           "Contenido digital de acceso inmediato: al pagar confirmas que pierdes el derecho de desistimiento una vez desbloqueado el informe (art. 103.m TRLGDCU).",
       },
